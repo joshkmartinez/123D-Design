@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Water 
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="water_watergroup"
+                label="Water"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="water_type" label="Type"
+                  tooltip="Selects the texture of the water (swimming pool, river, lake, ocean, etc.)">
+        <Choice id="water_swimming_pool" label="Swimming Pool"/>
+        <Choice id="water_reflecting_pool" label="Generic Reflecting Pool"/>
+        <Choice id="water_river" label="Generic Stream/River"/>
+        <Choice id="water_lake" label="Generic Pond/Lake"/>
+        <Choice id="water_ocean" label="Generic Sea/Ocean"/>
+      </ChooseList>
+      
+      <ChooseList id="water_tint_enable" label="Color"
+                  tooltip="Adjusts the tint of the water (tropical, algae/green, murky/brown, etc.).">
+        <Choice id="water_tropical" label="Tropical"/>
+        <Choice id="water_algae" label="Algae/Green"/>
+        <Choice id="water_murky" label="Murky/Brown"/>
+        <Choice id="water_reflecting_pool" label="Generic Reflecting Pool"/>
+        <Choice id="water_river" label="Generic Stream/River"/>
+        <Choice id="water_lake" label="Generic Pond/Lake"/>
+        <Choice id="water_ocean" label="Generic Sea/Ocean"/>
+        <ChoiceDetail id="water_custom" label="Custom">
+          <MappableColorByObject id="water_tint_color" label="Custom Color" coloronly="true"
+                 tooltip="Sets a color via RGB value.">
+            <BoolColorByObject id="water_color_by_object" />
+          </MappableColorByObject>
+        </ChoiceDetail>
+        <Dependency id="water_color_dep" on="water_type" requires="water_swimming_pool|water_reflecting_pool" not="true" else="hidden"/>
+      </ChooseList>
+      
+      
+      <Float id="water_bump_amount"
+             label="Wave Height"
+             min="0.0" max="5.0"
+             hiddenvalue="0.0"
+             tooltip="Adjusts relative wave height of the water. Enter a value between 0 (no waves) and 5 (big waves).">
+        <Dependency id="water_bump_dep"
+                    on="water_type"
+                    requires="water_reflecting_pool"
+                    not="true"
+                    else="hidden"/>
+      </Float>
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

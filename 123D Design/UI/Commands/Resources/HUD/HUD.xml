@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HUDs>
+  <HUD Id="NeutronDebugHUDQAT" Movable="false">
+    <DropDownButton Id="ManagementShellCommand" HasSplitter="True" >
+      <DropDownItem Id="ManagementShellCommand" />
+      <DropDownItem Id="AssetShellCommand" />
+      <DropDownItem Id="WebShellCommand" />
+      <DropDownItem Id="DockAssetToolbarsToTopCommand" />
+      <DropDownItem Id="DockAssetToolbarsToBottomCommand" />
+      <DropDownItem Id="CloseAssetCommand" />
+      <DropDownItem Id="CloseDocumentCommand" />
+      <DropDownItem Id="VideosCommand" />
+      <DropDownItem Id="ExitApplicationCommand" />
+    </DropDownButton>
+    <Button Id="NewDocumentCommand" />
+    <Button Id="OpenDocumentCommand" />
+    <Button Id="SaveDocumentCommand" />
+    <Button Id="UndoCommand" />
+    <Button Id="RedoCommand" />
+    <NewLine />
+    <Button Id="InsertAssetCommand" Text="Specify second corner" ShowText="true"/>
+    <Separator/>
+
+    <Button Id="ShowWorkspaceFullScreenCommand" />
+    <Button Id="ShowWorkspaceNormalCommand" />
+    <Button Id="PreviousAssetCommand" />
+    <Button Id="NextAssetCommand" />
+    <Button Id="InsertAssetCommand" />
+  </HUD>
+
+  <HUD Id="NeutronDebugHUD" DebugHUD="true" >
+    <!--The following code test the IsVisible code to make sure that two separator are not displayed together-->
+
+    <Button Id="Fillet_Constant" Text="Constant" />
+    <Button Id="IgnorePinned" Text="Ignore Pinned" ShowText="true" NoIcon="true"/>
+    <Separator />
+    <DropDownButton Id="Extrude_Extents" ShowText="true" Text="Extents (DropDown)" SynchronizedWithCurrentItem="true"  HasSplitter="True">
+      <DropDownItem Id="Common_Distance" Text="Distance" Description="Distance"/>
+      <DropDownItem Id="Common_ToNext" Text="face/body" Description="To next face/body"/>
+      <DropDownItem Id="Common_ToSelected" Text="face/point" Description="To selected face/point"/>
+      <DropDownItem Id="Common_Between" Text="Between two" Description="Between two faces/planes"/>
+      <DropDownItem Id="Common_ThroughAll" Text="Through All" Description="Through All"/>
+    </DropDownButton>
+    <NewLine />
+
+    <DropDownEntry Id="Hole" Value="1.234" WidthString="000.000 cm" AutoHide="false">
+      <DropDownItem Id="Hole_depth" Text="Hole Depth" />
+      <DropDownItem Id="Hole_diameter" Text="Hole Diameter" />
+      <DropDownItem Id="ThreadDepth" Text="Thread Depth" />
+      <DropDownItem Id="Hole_counterborediameter" Text="Counter bore diameter" />
+      <DropDownItem Id="Hole_counterboredepth" Text="Counter bore depth" />
+      <DropDownItem Id="Hole_spotface" Text="Spotface"  />
+      <DropDownItem Id="SpotfaceDepth" Text="Spotface Depth"  />
+    </DropDownEntry>
+  </HUD>
+  
+  <HUD Id="NeutronDebugHUDDyn" DebugHUD="true">
+    <Button Id="Button1" Text="Button1" ShowText="true" NoIcon="true"/>
+    <NewLine />
+    <DynamicControls Id="firstSetOfControls"/>
+    <NewLine />
+    <Button Id="Button2" Text="Button2" ShowText="true" NoIcon="true"/>    
+    <NewLine />
+    <DynamicControls Id="thirdSetOfControls"/>
+    <NewLine />
+    <DropDownButton Id="Extrude_Extents" ShowText="true" Text="Extents (DropDown)" SynchronizedWithCurrentItem="true"  HasSplitter="True">
+      <DropDownItem Id="Common_Distance" Text="Distance" Description="Distance"/>
+      <DropDownItem Id="Common_ToNext" Text="face/body" Description="To next face/body"/>
+      <DropDownItem Id="Common_ToSelected" Text="face/point" Description="To selected face/point"/>
+      <DropDownItem Id="Common_Between" Text="Between two" Description="Between two faces/planes"/>
+      <DropDownItem Id="Common_ThroughAll" Text="Through All" Description="Through All"/>
+    </DropDownButton>
+    <NewLine />
+    <DynamicControls Id="secondSetOfControls"/>
+  </HUD>
+  
+  <HUD Id="NeutronDebugHUDSlider" DebugHUD="true">        
+    <Slider Id="Slider1" NoIcon="true" NumSliders="2"
+        Text="Size:" ShowText="true"
+        ShowValue="true" UseText="false"
+        ValueType="int" LowerLimit="-5" UpperLimit="10" WidthSlider="100"/>
+    <NewLine/>
+    <Slider Id="Slider2" NoIcon="true" NumSliders="2"
+        Text="Size:" ShowText="true" 
+        ShowValue="true" UseText="false"
+        ValueList="(-2.0, -1.0, 0.0, 0.3, 2, 5, 9 ,20 ,25,60)"
+        ValueType="float" LowerLimit="0" UpperLimit="10" WidthSlider="100"/>
+    <NewLine/>
+    <Slider Id="Slider3" NoIcon="true" NumSliders="2"
+        Text="Size:" ShowText="true" 
+        ShowValue="true" UseText="false"
+        ValueList="(0.0, 0.1, 0.2, 0.5, 0.8, 0.9, 1.0)"
+        ValueType="float" LowerLimit="0" UpperLimit="10" WidthSlider="100"/>
+    <NewLine/>
+    <Slider Id="Slider4" NoIcon="true" NumSliders="2"
+        Text="Opacity:" ShowText="true" 
+        ShowValue="true" UseText="false" NumTickMarks="4" NumSnappingPointsPerTickMark="5"
+        ValueType="float" LowerLimit="0.1" UpperLimit="10.0" WidthSlider="100"/>
+    <NewLine/>
+    <DynamicControls Id="myDynControls"/>
+    <Label Text="Component Size" />
+    <Slider Id="Slider5" NoIcon="true" NumSliders="2"
+        Text="Min." ShowText="true"
+        ShowValue="true" UseText="false"
+        ValueType="float" LowerLimit="0.00" UpperLimit="10" WidthSlider="200"/>
+    <NewLine/>
+    <Slider Id="Slider6" NoIcon="true" NumSliders="2"
+        Text="Min." ShowText="true"
+        ShowValue="true" UseText="false" WidthValue="60"
+        ValueType="float" LowerLimit="0.00" UpperLimit="10" WidthSlider="200"/>
+    <NewLine/>
+    <Slider Id="Slider7" NoIcon="true" NumSliders="2"
+        Text="Opacity:" ShowText="true" WidthValue="40"
+        ShowValue="true" UseText="true" NumTickMarks="4" NumSnappingPointsPerTickMark="5"
+        ValueType="float" LowerLimit="0.1" UpperLimit="10.0000000000" WidthSlider="100"/>
+    <Slider Id="Slider8" NoIcon="true" NumSliders="2"
+        Text="Opacity:" ShowText="true"
+        ShowValue="true" UseText="true" NumTickMarks="4" NumSnappingPointsPerTickMark="5"
+        ValueType="float" LowerLimit="0.1" UpperLimit="10.0000000000" WidthSlider="100"/>
+    <NewLine/>
+  </HUD>
+  
+  <HUD Id="NeutronDebugHUDLarge" DebugHUD="true">
+
+    <Button Id="Clip Test"  Text="CLIP THIS TEXT ; CLIP THIS TEXT" ShowText="true"/>
+    <Label Text="Label" />
+    <DropDownButton Id="Extrude_Extents" ShowText="true" Text="Extents (DropDown)" SynchronizedWithCurrentItem="true"  HasSplitter="True">
+      <DropDownItem Id="Common_Distance" Text="Distance" Description="Distance"/>
+      <DropDownItem Id="Common_ToNext" Text="face/body" Description="To next face/body"/>
+      <DropDownItem Id="Common_ToSelected" Text="face/point" Description="To selected face/point"/>
+      <DropDownItem Id="Common_Between" Text="Between two" Description="Between two faces/planes"/>
+      <DropDownItem Id="Common_ThroughAll" Text="Through All" Description="Through All"/>
+    </DropDownButton>
+    <DropDownButton Id="Extrude_Extents2" ShowText="true" Text="Extents (DropDown)" SynchronizedWithCurrentItem="true"  HasSplitter="True" WidthString="Width String Test" Position="(20,40)">
+      <DropDownItem Id="Common_Distance" Text="Distance" Description="Distance"/>
+      <DropDownItem Id="Common_ToNext" Text="face/body" Description="To next face/body"/>
+      <DropDownItem Id="Common_ToSelected" Text="face/point" Description="To selected face/point"/>
+      <DropDownItem Id="Common_Between" Text="Between two" Description="Between two faces/planes"/>
+      <DropDownItem Id="Common_ThroughAll" Text="Through All" Description="Through All"/>
+    </DropDownButton>
+    <NewLine />
+
+
+
+    <DropDownEntry Id="Hole" Value="1.234" WidthString="000.000 cm" AutoHide="false" Position="(500,50)">
+      <DropDownItem Id="Hole_depth" Text="Hole Depth" />
+      <DropDownItem Id="Hole_diameter" Text="Hole Diameter" />
+      <DropDownItem Id="ThreadDepth" Text="Thread Depth" />
+      <DropDownItem Id="Hole_counterborediameter" Text="Counter bore diameter" />
+      <DropDownItem Id="Hole_counterboredepth" Text="Counter bore depth" />
+      <DropDownItem Id="Hole_spotface" Text="Spotface"  />
+      <DropDownItem Id="SpotfaceDepth" Text="Spotface Depth"  />
+    </DropDownEntry>
+
+    <DropDownButton Id="Common_ToSelected" Text="Selector" Expandable="False" HasSplitter="True" SynchronizedWithCurrentItem="true" >
+      <DropDownItem Id="Common_SelectProfile"  Text="Profile"/>
+      <DropDownItem Id="Common_SelectSolid"  Text="Solids"/>
+    </DropDownButton>
+    <Separator />
+
+    <DropDownButton Id="Solid" Text="Output"  SynchronizedWithCurrentItem="true">
+      <DropDownItem Id="Common_Solid" Text="Solid output" />
+      <DropDownItem Id="Common_Surface" Text="Surface output" />
+    </DropDownButton>
+    <DropDownButton Id="ExtrudeType" Text="ExtrudeType" ShowText="true" IsActive="true" SynchronizedWithCurrentItem="true" Position="(40,90)">
+      <DropDownItem Id="Common_Join" Text="Join"/>
+      <DropDownItem Id="Common_Cut" Text="Cut"/>
+      <DropDownItem Id="Common_Intersect" Text="Intersect"/>
+      <DropDownItem Id="Common_Solid" Text="New Solid"/>
+      <Separator/>
+      <DropDownItem Id="Common_Solid" Text="Add Item" />
+    </DropDownButton>
+    <DropDownButton Id="Direction" Text="Direction" SynchronizedWithCurrentItem="true">
+      <DropDownItem Id="Common_direction1" Text="Direction 1" HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction2" Text="Direction 2" HasRemoveButton="true"/>
+      <DropDownItem Id="Common_Symmetric" Text="Symmetric" HasRemoveButton="true"/>
+      <DropDownItem Id="Common_Asymmetric" Text="Asymmetric" HasRemoveButton="true"/>
+      <DropDownItem Id="DropDownNotVisible" Text="NotVisible" ShowText="true" IsVisible="false"/>
+    </DropDownButton>
+    <DropDownButton Id="Direction" Text="Menu" ShowText="true" NoIcon="true">
+      <DropDownItem Id="A" Text="Direction 1" NoIcon="true" IsCheckable="true" />
+      <DropDownItem Id="B" Text="Direction 2" NoIcon="true" IsCheckable="true"  IsActive="true" />
+      <Separator/>
+      <DropDownItem Id="C" Text="Symmetric" NoIcon="true" IsCheckable="true" IsActive="true" />
+      <DropDownItem Id="D" Text="Asymmetric" NoIcon="true" IsCheckable="true" />
+    </DropDownButton>
+    <DropDownButton Id="ActiveTest" Text="Active Test" ShowText="true" NoIcon="true">
+      <DropDownItem Id="A" Text="Active A" NoIcon="true" />
+      <DropDownItem Id="B" Text="Active B" NoIcon="true" IsActive="true" />
+      <Separator/>
+      <DropDownItem Id="C" Text="Active C" NoIcon="true" IsActive="true" />
+      <DropDownItem Id="D" Text="Active D" NoIcon="true" />
+    </DropDownButton>
+    <DropDownButton Id="Direction" Text="ActiveTestIcon" SynchronizedWithCurrentItem="true">
+      <DropDownItem Id="Common_direction1" Text="Active A" />
+      <DropDownItem Id="Common_direction2" Text="Active B" />
+      <DropDownItem Id="Common_Symmetric" Text="Active C" IsActive="true" />
+      <DropDownItem Id="Common_Asymmetric" Text="Active D" />
+    </DropDownButton>
+
+    <Separator/>
+    <DropDownButton Id="ManyItems" ShowText="true" NoIcon="true" SynchronizedWithCurrentItem="true">
+      <DropDownItem Id="1" Text="1. Curve" NoIcon="true" />
+      <DropDownItem Id="2" Text="2. Curve" NoIcon="true" />
+      <DropDownItem Id="3" Text="3. Curve" NoIcon="true" />
+      <DropDownItem Id="4" Text="4. Curve" NoIcon="true" />
+      <DropDownItem Id="5" Text="5. Curve" NoIcon="true" />
+      <DropDownItem Id="6" Text="6. Edge" NoIcon="true" />
+      <DropDownItem Id="7" Text="7. Edge" NoIcon="true" />
+      <DropDownItem Id="8" Text="8. Edge" NoIcon="true" />
+      <DropDownItem Id="9" Text="9. Edge" NoIcon="true" />
+      <DropDownItem Id="10" Text="10. Edge" NoIcon="true" />
+      <DropDownItem Id="11" Text="11. Face" NoIcon="true" />
+      <DropDownItem Id="12" Text="12. Face" NoIcon="true" />
+      <DropDownItem Id="13" Text="13. Face" NoIcon="true" />
+      <DropDownItem Id="14" Text="14. Face" NoIcon="true" />
+      <DropDownItem Id="15" Text="15. Face" NoIcon="true" />
+      <DropDownItem Id="16" Text="16. Face" NoIcon="true" />
+      <DropDownItem Id="17" Text="17. Face" NoIcon="true" />
+      <DropDownItem Id="18" Text="18. Face" NoIcon="true" />
+      <DropDownItem Id="19" Text="19. Face" NoIcon="true" />
+      <DropDownItem Id="20" Text="20. Face" NoIcon="true" />
+      <DropDownItem Id="21" Text="21. Face" NoIcon="true" />
+      <DropDownItem Id="22" Text="22. Face" NoIcon="true" />
+      <DropDownItem Id="23" Text="23. Face" NoIcon="true" />
+      <DropDownItem Id="24" Text="24. Face" NoIcon="true" />
+      <DropDownItem Id="25" Text="25. Face" NoIcon="true" />
+      <DropDownItem Id="26" Text="26. Face" NoIcon="true" />
+      <DropDownItem Id="27" Text="27. Face" NoIcon="true" />
+      <DropDownItem Id="28" Text="28. Face" NoIcon="true" />
+      <DropDownItem Id="29" Text="29. Face" NoIcon="true" />
+      <DropDownItem Id="30" Text="30. Face" NoIcon="true" />
+      <DropDownItem Id="31" Text="31. Face" NoIcon="true" />
+      <DropDownItem Id="32" Text="32. Face" NoIcon="true" />
+      <DropDownItem Id="33" Text="33. Face" NoIcon="true" />
+      <DropDownItem Id="34" Text="34. Face" NoIcon="true" />
+      <DropDownItem Id="35" Text="35. Face" NoIcon="true" />
+      <DropDownItem Id="36" Text="36. Face" NoIcon="true" />
+      <DropDownItem Id="37" Text="37. Face" NoIcon="true" />
+      <DropDownItem Id="38" Text="38. Face" NoIcon="true" />
+      <DropDownItem Id="39" Text="39. Face" NoIcon="true" />
+      <DropDownItem Id="40" Text="40. Face" NoIcon="true" />
+      <DropDownItem Id="41" Text="41. Face" NoIcon="true" />
+      <DropDownItem Id="42" Text="42. Face" NoIcon="true" />
+      <DropDownItem Id="43" Text="43. Face" NoIcon="true" />
+      <DropDownItem Id="44" Text="44. Face" NoIcon="true" />
+      <DropDownItem Id="45" Text="45. Face" NoIcon="true" />
+      <DropDownItem Id="46" Text="46. Face" NoIcon="true" />
+      <DropDownItem Id="47" Text="47. Face" NoIcon="true" />
+      <DropDownItem Id="48" Text="48. Face" NoIcon="true" />
+      <DropDownItem Id="49" Text="49. Face" NoIcon="true" />
+      <DropDownItem Id="50" Text="50. Face" NoIcon="true" />
+      <DropDownItem Id="51" Text="51. Face" NoIcon="true" />
+      <DropDownItem Id="52" Text="52. Face" NoIcon="true" />
+      <DropDownItem Id="53" Text="53. Face" NoIcon="true" />
+      <DropDownItem Id="54" Text="54. Face" NoIcon="true" />
+      <DropDownItem Id="55" Text="55. Face" NoIcon="true" />
+      <DropDownItem Id="56" Text="56. Face" NoIcon="true" />
+      <DropDownItem Id="57" Text="57. Face" NoIcon="true" />
+      <DropDownItem Id="58" Text="58. Face" NoIcon="true" />
+      <DropDownItem Id="59" Text="59. Face" NoIcon="true" />
+      <DropDownItem Id="60" Text="60. Face" NoIcon="true" />
+      <DropDownItem Id="61" Text="61. Face" NoIcon="true" />
+      <DropDownItem Id="62" Text="62. Face" NoIcon="true" />
+      <DropDownItem Id="63" Text="63. Face" NoIcon="true" />
+      <DropDownItem Id="64" Text="64. Face" NoIcon="true" />
+      <DropDownItem Id="65" Text="65. Face" NoIcon="true" />
+      <DropDownItem Id="66" Text="66. Face" NoIcon="true" />
+      <DropDownItem Id="67" Text="67. Face" NoIcon="true" />
+      <DropDownItem Id="68" Text="68. Face" NoIcon="true" />
+      <DropDownItem Id="69" Text="69. Face" NoIcon="true" />
+      <DropDownItem Id="70" Text="70. Face" NoIcon="true" />
+      <DropDownItem Id="71" Text="71. Face" NoIcon="true" />
+      <DropDownItem Id="72" Text="72. Face" NoIcon="true" />
+      <DropDownItem Id="73" Text="73. Face" NoIcon="true" />
+      <DropDownItem Id="74" Text="74. Face" NoIcon="true" />
+      <DropDownItem Id="75" Text="75. Face" NoIcon="true" />
+      <DropDownItem Id="76" Text="76. Face" NoIcon="true" />
+      <DropDownItem Id="77" Text="77. Face" NoIcon="true" />
+      <DropDownItem Id="78" Text="78. Face" NoIcon="true" />
+      <DropDownItem Id="79" Text="79. Face" NoIcon="true" />
+      <DropDownItem Id="80" Text="80. Face" NoIcon="true" />
+      <DropDownItem Id="81" Text="81. Face" NoIcon="true" />
+      <DropDownItem Id="82" Text="82. Face" NoIcon="true" />
+      <DropDownItem Id="83" Text="83. Face" NoIcon="true" />
+      <DropDownItem Id="84" Text="84. Face" NoIcon="true" />
+      <DropDownItem Id="85" Text="85. Face" NoIcon="true" />
+      <DropDownItem Id="86" Text="86. Face" NoIcon="true" />
+      <DropDownItem Id="87" Text="87. Face" NoIcon="true" />
+    </DropDownButton>
+    <Button Id="Common_Ok" Text="Ok" />
+    <Separator/>
+
+    <ComboBox Id="ManyComboItems"  NoIcon="true" ShowText="true" >
+      <DropDownItem Id="1" Text="1. Curve" NoIcon="true" />
+      <DropDownItem Id="2" Text="2. Curve" NoIcon="true" />
+      <DropDownItem Id="3" Text="3. Curve" NoIcon="true" />
+      <DropDownItem Id="4" Text="4. Curve" NoIcon="true" />
+      <DropDownItem Id="5" Text="5. Curve" NoIcon="true" />
+      <DropDownItem Id="6" Text="6. Edge" NoIcon="true" />
+      <DropDownItem Id="7" Text="7. Edge" NoIcon="true" />
+      <DropDownItem Id="8" Text="8. Edge" NoIcon="true" />
+      <DropDownItem Id="9" Text="9. Edge" NoIcon="true" />
+      <DropDownItem Id="10" Text="10. Edge" NoIcon="true" />
+      <DropDownItem Id="11" Text="11. Face" NoIcon="true" />
+      <DropDownItem Id="12" Text="12. Face" NoIcon="true" />
+      <DropDownItem Id="13" Text="13. Face" NoIcon="true" />
+      <DropDownItem Id="14" Text="14. Face" NoIcon="true" />
+      <DropDownItem Id="15" Text="15. Face" NoIcon="true" />
+      <DropDownItem Id="16" Text="16. Face" NoIcon="true" />
+      <DropDownItem Id="17" Text="17. Face" NoIcon="true" />
+      <DropDownItem Id="18" Text="18. Face" NoIcon="true" />
+      <DropDownItem Id="19" Text="19. Face" NoIcon="true" />
+      <DropDownItem Id="20" Text="20. Face" NoIcon="true" />
+      <DropDownItem Id="21" Text="21. Face" NoIcon="true" />
+      <DropDownItem Id="22" Text="22. Face" NoIcon="true" />
+      <DropDownItem Id="23" Text="23. Face" NoIcon="true" />
+      <DropDownItem Id="24" Text="24. Face" NoIcon="true" />
+      <DropDownItem Id="25" Text="25. Face" NoIcon="true" />
+      <DropDownItem Id="26" Text="26. Face" NoIcon="true" />
+      <DropDownItem Id="27" Text="27. Face" NoIcon="true" />
+      <DropDownItem Id="28" Text="28. Face" NoIcon="true" />
+      <DropDownItem Id="29" Text="29. Face" NoIcon="true" />
+      <DropDownItem Id="30" Text="30. Face" NoIcon="true" />
+      <DropDownItem Id="31" Text="31. Face" NoIcon="true" />
+      <DropDownItem Id="32" Text="32. Face" NoIcon="true" />
+      <DropDownItem Id="33" Text="33. Face" NoIcon="true" />
+      <DropDownItem Id="34" Text="34. Face" NoIcon="true" />
+      <DropDownItem Id="35" Text="35. Face" NoIcon="true" />
+      <DropDownItem Id="36" Text="36. Face" NoIcon="true" />
+      <DropDownItem Id="37" Text="37. Face" NoIcon="true" />
+      <DropDownItem Id="38" Text="38. Face" NoIcon="true" />
+      <DropDownItem Id="39" Text="39. Face" NoIcon="true" />
+      <DropDownItem Id="40" Text="40. Face" NoIcon="true" />
+      <DropDownItem Id="41" Text="41. Face" NoIcon="true" />
+      <DropDownItem Id="42" Text="42. Face" NoIcon="true" />
+      <DropDownItem Id="43" Text="43. Face" NoIcon="true" />
+      <DropDownItem Id="44" Text="44. Face" NoIcon="true" />
+      <DropDownItem Id="45" Text="45. Face" NoIcon="true" />
+      <DropDownItem Id="46" Text="46. Face" NoIcon="true" />
+      <DropDownItem Id="47" Text="47. Face" NoIcon="true" />
+      <DropDownItem Id="48" Text="48. Face" NoIcon="true" />
+      <DropDownItem Id="49" Text="49. Face" NoIcon="true" />
+      <DropDownItem Id="50" Text="50. Face" NoIcon="true" />
+      <DropDownItem Id="51" Text="51. Face" NoIcon="true" />
+      <DropDownItem Id="52" Text="52. Face" NoIcon="true" />
+      <DropDownItem Id="53" Text="53. Face" NoIcon="true" />
+      <DropDownItem Id="54" Text="54. Face" NoIcon="true" />
+      <DropDownItem Id="55" Text="55. Face" NoIcon="true" />
+      <DropDownItem Id="56" Text="56. Face" NoIcon="true" />
+      <DropDownItem Id="57" Text="57. Face" NoIcon="true" />
+      <DropDownItem Id="58" Text="58. Face" NoIcon="true" />
+      <DropDownItem Id="59" Text="59. Face" NoIcon="true" />
+      <DropDownItem Id="60" Text="60. Face" NoIcon="true" />
+      <DropDownItem Id="61" Text="61. Face" NoIcon="true" />
+      <DropDownItem Id="62" Text="62. Face" NoIcon="true" />
+      <DropDownItem Id="63" Text="63. Face" NoIcon="true" />
+      <DropDownItem Id="64" Text="64. Face" NoIcon="true" />
+      <DropDownItem Id="65" Text="65. Face" NoIcon="true" />
+      <DropDownItem Id="66" Text="66. Face" NoIcon="true" />
+      <DropDownItem Id="67" Text="67. Face" NoIcon="true" />
+      <DropDownItem Id="68" Text="68. Face" NoIcon="true" />
+      <DropDownItem Id="69" Text="69. Face" NoIcon="true" />
+      <DropDownItem Id="70" Text="70. Face" NoIcon="true" />
+      <DropDownItem Id="71" Text="71. Face" NoIcon="true" />
+      <DropDownItem Id="72" Text="72. Face" NoIcon="true" />
+      <DropDownItem Id="73" Text="73. Face" NoIcon="true" />
+      <DropDownItem Id="74" Text="74. Face" NoIcon="true" />
+      <DropDownItem Id="75" Text="75. Face" NoIcon="true" />
+      <DropDownItem Id="76" Text="76. Face" NoIcon="true" />
+      <DropDownItem Id="77" Text="77. Face" NoIcon="true" />
+      <DropDownItem Id="78" Text="78. Face" NoIcon="true" />
+      <DropDownItem Id="79" Text="79. Face" NoIcon="true" />
+      <DropDownItem Id="80" Text="80. Face" NoIcon="true" />
+      <DropDownItem Id="81" Text="81. Face" NoIcon="true" />
+      <DropDownItem Id="82" Text="82. Face" NoIcon="true" />
+      <DropDownItem Id="83" Text="83. Face" NoIcon="true" />
+      <DropDownItem Id="84" Text="84. Face" NoIcon="true" />
+      <DropDownItem Id="85" Text="85. Face" NoIcon="true" />
+      <DropDownItem Id="86" Text="86. Face" NoIcon="true" />
+      <DropDownItem Id="87" Text="87. Face" NoIcon="true" />
+    </ComboBox>
+    <Button Id="Common_Ok" Text="Ok" />
+
+    <NewLine/>
+
+    <ComboBox Id="Selected" Text="2 Selected (0.1234 in)" Width="150" >
+      <DropDownItem Id="Common_direction2" Text="1 Selected (0.1234 in)" HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction2" Text="2 Selected (0.1334 in)"  HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction2" Text="3 Selected (0.1534 in)"  HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction1" Text="4 Selected (0.1274 in)"  HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction2" Text="2 Selected (0.1234 in)"  HasRemoveButton="true"/>
+      <DropDownItem Id="Common_direction1" Text="1 Selected (0.1234 in)"  HasRemoveButton="true"/>
+      <DropDownItem Id="Common_Join" Text="Click to add" Description="Click to add(Constant)"  />
+      <DropDownItem Id="ComboNotVisible"  Text="NotVisible" ShowText="true" IsVisible="false"/>
+      <Separator/>
+      <DropDownItem Id="Common_Cut" Text="3 Selected (Variable)"  />
+      <DropDownItem Id="ClickToAddVariable" Text="Click to add" Description="Click to add(Variable)"  NoIcon="true" />
+    </ComboBox>
+    <Separator/>
+
+    <DropDownEntry Id="DistanceRVEC1" Width="90" Value="Disabled" NoIcon="false" IsEnabled="false"/>
+    <DropDownEntry Id="DistanceRVEC1" Width="90" Value="34.5003" NoIcon="false" ValueError="true"/>
+    <DropDownEntry Id="DistanceRVEC2" Width="90" Text="MyLabel:" ShowText="true" Value="12.5790" />        
+   </HUD>
+
+
+
+
+  <!--************************************************************************************    -->
+  <!--MarginTestCmd                                                                       -->
+  <!--This is a debug Mini-toolbar for Margins and Custom Items                                -->
+  <!--It is not used inside Inventor.  No localization needs to be done on this Mini-toolbar  -->
+  <!--************************************************************************************    -->
+
+  <!--MarginTest CommandBase-->
+  <!--HUD Id="PartMarginTestCmd"!-->
+  <!--Test by replacing PartRevolveCmd with the following - just rename this to MaterialCmd and rename MaterialCmd to MaterialCmd_HIDE !-->
+  <HUD Id="PartMarginTestCmd">
+    <Button Margin="Top" Id="ID_TopMargin1" Text="Top Margin1 " Width="80" ShowText="true" />
+    <DropDownEntry Id="MaterialRVEC" Value="6.000 in" Text="RVEC" Width="90" HasSplitter="True" AutoHide="false">
+      <DropDownItem Id="Common_Measure" Text="Measure" />
+      <DropDownItem Id="Common_ShowDimensions" Text="Show Dimensions" />
+      <DropDownItem Id="Common_ListParameters" Text="List Parameters" NoIcon="true" />
+    </DropDownEntry>
+    <Button Margin="Top" Id="ID_TopMargin2" Text="Top Margin2 " Width="90" ShowText="true" />
+    <Separator Margin="Top" Width="30"/>
+    <Button Id="ID_TopMargin3" Margin="Top" Text="Top Margin3 " Width="80" ShowText="true" />
+    <CustomItem CustomItemType="AdColorWheel" Id="INTERNAL_COLORWHEEL_3" Margin="Top" Width="118" Text="RGB" WidthString="MMM" ShowText="true" >
+    </CustomItem>
+    <NewLine Margin="Top" />
+    <Button Margin="Top" Id="ID_TopMargin4" Text="Top Margin4 " Width="80" ShowText="true" />
+
+    <Button Id="ID_RightMargin1" Text="Right Margin1" Width="80" Margin="Right" ShowText="true" />
+    <Button Id="ID_RightMargin2" Text="Right Margin2" Width="60" Margin="Right" ShowText="true" />
+    <NewLine Margin="Right" />
+    <Button Id="ID_RightMargin3" Text="Right Margin3" Width="80" Margin="Right" ShowText="true" />
+
+    <Button Id="ID_BottomMargin1" Text="Bottom Margin" Width="90" Margin="Bottom" ShowText="true" />
+    <Button Id="ID_BottomMargin2" Text="Bottom Margin" Width="80" Margin="Bottom" ShowText="true" />
+    <Separator Margin="Bottom"/>
+    <Button Id="ID_BottomMargin3" Text="Bottom Margin" Width="80" Margin="Bottom" ShowText="true" />
+    <Button Id="ID_BottomMargin4" Text="Bottom Margin" Width="80" Margin="Bottom" ShowText="true" />
+    <Button Id="ID_BottomMargin5" Text="Bottom Margin" Width="80" Margin="Bottom" ShowText="true" />
+
+
+    <!--Left Margin Items-->
+    <CustomItem CustomItemType="AdColorWheel" Margin="Left" Id="INTERNAL_COLORWHEEL" Width="122" AutoHide="false">
+    </CustomItem>
+    <NewLine Margin="Left" />
+
+    <DropDownButton Id="ID_CMOverride_ColorMode" Text="Color Mode (DropDown)" IsSynchronizedWithCurrentItem="true" ShowText="true" AutoHide="true">
+      <DropDownItem Id="ID_CMOverride_Color_RGB" Text="RGB" ItemDataInt="0"/>
+      <DropDownItem Id="ID_CMOverride_Color_HSB" Text="HSB" ItemDataInt="1"/>
+    </DropDownButton>
+    <Separator Width="30"/>
+    <Button Id="ID_CMOverride_SaveAppearance" Text="Save Appearance" Tooltip="Save Appearance To Library" ShowText="true" AutoHide="true"/>
+    <CustomItem CustomItemType="AdColorWheel" Id="INTERNAL_COLORWHEEL_2" Width="100" AutoHide="false">
+    </CustomItem>
+    <Button Id="ID_Body1" Text="Body 1" Width="60" ShowText="true" />
+    <NewLine/>
+
+    <!--R/G/B Edit Fields - Custom Item-->
+    <CustomItem CustomItemType="AdIntegerEditor" Id="INTERNAL_RED" Text="R:" Width="70" ShowText="true" Value="255" WidthString="MM" AutoHide="true">
+    </CustomItem>
+    <CustomItem CustomItemType="AdIntegerEditor" Id="INTERNAL_GREEN" Text="G:" Width="70" ShowText="true" Value="55" WidthString="MM" AutoHide="true">
+    </CustomItem>
+    <CustomItem CustomItemType="AdIntegerEditor" Id="INTERNAL_BLUE" Text="B:" Width="70" ShowText="true" Value="5" WidthString="MM" AutoHide="true">
+    </CustomItem>
+    <NewLine/>
+    <Separator SeparatorFillType="Line" Width="-1"/>
+    <NewLine/>
+
+    <Label Text="Texture " Width="80"/>
+    <DropDownButton Id="ID_CMOverride_TextureList" Text="Texture (DropDown)" Width="80" ShowText="true" IsSynchronizedWithCurrentItem="true">
+      <DropDownButton Id="ID_CMOverride_Texture_Metal" Text="Metal" ShowText="true" IsSynchronizedWithCurrentItem="false">
+        <DropDownItem Id="Texture_Metal_Polished" Text="Polished"/>
+        <DropDownItem Id="Texture_Metal_Semi-Polished" Text="Semi-Polished"/>
+        <DropDownItem Id="Texture_Metal_Satin" Text="Satin"/>
+      </DropDownButton>
+      <DropDownButton Id="ID_CMOverride_Texture_Wood" Text="Wood" ShowText="true" IsSynchronizedWithCurrentItem="false">
+        <DropDownItem Id="Texture_Wood_Ash" Text="Ash"/>
+        <DropDownItem Id="Texture_Wood_Birch" Text="Birch"/>
+        <DropDownItem Id="Texture_Wood_Cherry" Text="Cherry"/>
+      </DropDownButton>
+      <DropDownItem Id="ID_CMOverride_Texture_None" Text="None"/>
+    </DropDownButton>
+  </HUD>
+
+  <!--Measure Command HUDs-->
+  <HUD Id="MeasureCmdFirstSelection" Movable="false">  </HUD>
+  <HUD Id="MeasureCmdSecondSelection" Movable="false">  </HUD>
+  <HUD Id="MeasureCmdThirdSelection" Movable="false">  </HUD>
+</HUDs>

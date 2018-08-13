@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="StoneSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+	<localname val="Stone" />
+
+  <Reference id="stone_color"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Choice id="stone_application"
+          val="stone_polished"
+          label="Finish" >
+    <ChoiceValue id="stone_polished"
+                 val="0"
+                 label="Polished"/>
+    <ChoiceValue id="stone_glossy"
+                 val="1"
+                 label="Glossy" />
+    <ChoiceValue id="stone_matte"
+                 val="2"
+                 label="Matte" />
+    <ChoiceValue id="stone_unfinished"
+                 val="3"
+                 label="Unfinished" />
+  </Choice>
+
+  <Choice id="stone_bump"
+          val="stone_none"
+          label="Type" >
+    <ChoiceValue id="stone_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="stone_polishedgranite"
+                 val="1"
+                 label="Polished Granite" />
+    <ChoiceValue id="stone_stonewall"
+                 val="2"
+                 label="Stone Wall" />
+    <ChoiceValue id="stone_glossymarble"
+                 val="3"
+                 label="Glossy Marble" />
+    <ChoiceValue id="stone_custom"
+                 val="4"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="stone_bump_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="stone_bump_amount"
+         val="0.05"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="1.0" />
+  </Float>
+
+  <Choice id="stone_pattern"
+          val="stone_custom"
+          label="Bump Pattern" >
+    <ChoiceValue id="stone_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="stone_custom"
+                 val="1"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="stone_pattern_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="stone_pattern_amount"
+         val="0.15"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="2.0" />
+  </Float>
+
+  <!-- These URL were once delared using File tag-->
+  <!-- Internal parameters-->
+  <URL id="granite_tex"
+       val="Mats/Stone/external.dependency/Simple_Stone_Mtl_Granite_bump.jpg"
+       label="Granite Texture" />
+  <URL id="stonewall_tex"
+       val="Mats/Stone/external.dependency/Simple_Stone_Mtl_StoneWall_bump.jpg"
+       label="Stonewall Texture" />
+  <URL id="marble_tex"
+       val="Mats/Stone/external.dependency/Simple_Stone_Mtl_Marble_bump.jpg"
+       label="Marble Texture" />
+
+  <Boolean id="stone_ao_on"
+           val="false"
+           label="Ambient Occlusion" />
+
+  <Integer id="stone_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="stone_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="stone_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="stone_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="stone_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="stone_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="stone_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter-->
+  <Integer id="uv_channel"
+           val="1"
+           label="UV Channel" />
+
+  <!-- Internal parameter-->
+  <Float id="tiling"
+         val="1.0"
+         label="Tiling" />
+
+  <!-- Internal parameter-->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Stone/StoneUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Stone/StoneAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Stone/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/Stone/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Stone/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/Stone/Generic.xml" />
+
+</AssetSchema>
+

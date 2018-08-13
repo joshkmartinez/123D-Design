@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Metallic
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="metallicpaint_metallicpaintgroup"
+                label="Metallic Paint"
+                orientation="Vertical"
+                expanded="true">
+
+      <MappableColor id="metallicpaint_base_color" label="Color" colorbyobject="true"
+             tooltip="Selects the base color of the paint.">
+        <BoolColorByObject id="metallicpaint_base_color_by_object" />
+      </MappableColor>
+      <Float id="metallicpaint_base_highlightspread"
+             label="Highlight Spread"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Adjusts the very blurred reflectivity of the base coat under the very sharp reflections of the topcoat." />
+    </StackPanel>
+      
+      <!-- Flecks -->
+    <StackPanel id="metallicpaint_flecks"
+                label="Flecks"
+                labelid="metallicpaint_flecks_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="metallicpaint_flecks_enable">
+
+      <ChooseList id="metallicpaint_flecks"
+                  label="Flecks"
+                  labelid="metallicpaint_flecks_list_label" 
+                  onebased="true"
+                  tooltip="Enables the use of reflective flakes in the paint.">
+        <Choice id="metallicpaint_flecks_enable" label="Enabled"/>
+      </ChooseList>
+      <MappableColorByObject id="metallicpaint_flecks_color"
+             label="Color"
+             tooltip="Defaults to white, with tone (going to black) attenuating the fleck effect against the base coat; a medium grey base color with a black fleck color will show no flecks, but a medium grey fleck on the same base color will show 50% of the fleck effect."
+             coloronly="true">
+        <BoolColorByObject id="metallicpaint_flecks_color_by_object" />
+      </MappableColorByObject>
+      
+      <Float id="metallicpaint_flecks_size"
+             label="Size"
+             units="%" precision="1"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Adjusts the size of the flecks.">
+      </Float>
+    </StackPanel>
+
+      
+      <!-- Pearl -->
+
+    <StackPanel id="metallicpaint_pearl"
+                label="Pearl"
+                labelid="metallicpaint_pearl_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="metallicpaint_pearl_chromatic">
+
+      <ChooseList id="metallicpaint_pearl"
+                  label="Type"
+                  labelid="metallicpaint_pearl_list_label" 
+                  onebased="true"
+                  tooltip="Selects Chromatic or Second Color.">
+        <Choice id="metallicpaint_pearl_chromatic" label="Chromatic"/>
+        <Choice id="metallicpaint_pearl_custom" label="Second Color"/>
+      </ChooseList>
+
+      <MappableColorByObject id="metallicpaint_pearl_color"
+             label="Color"
+             coloronly="true"
+             tooltip="Adjusts the Pearl color.">
+        <BoolColorByObject id="metallicpaint_pearl_color_by_object" />
+        <Dependency id="metallicpaint_pearl_dependency1"
+	            on="metallicpaint_pearl"
+	            requires="metallicpaint_pearl_custom"
+		    else="hidden"/>
+      </MappableColorByObject>
+      
+      <Float id="metallicpaint_pearl_ior"
+             label="Blend"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Slides to mix the colors from 0-100.">
+        <Dependency id="metallicpaint_pearl_dependency2"
+                    on="metallicpaint_pearl"
+                    requires="metallicpaint_pearl_custom"
+                    else="hidden"/>
+      </Float>
+
+      <Float id="metallicpaint_pearl_amount"
+             label="Amount"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Adjusts the blend between the pearl effect and the base color.">
+      </Float>
+    </StackPanel>
+      
+      <!-- Top Coat -->
+    <StackPanel id="metallicpaint_topcoat_panel"
+                label="Top Coat"
+                orientation="Vertical">
+
+      <ChooseList id="metallicpaint_topcoat"
+                  label="Type"
+                  tooltip="Selects from among Matte, Chrome, Car Paint, and Custom.">
+        <Choice id="metallicpaint_topcoat_carpaint" label="Car Paint"/>
+        <Choice id="metallicpaint_topcoat_chrome" label="Chrome"/>
+        <Choice id="metallicpaint_topcoat_matte" label="Matte"/>
+        <Choice id="metallicpaint_topcoat_custom" label="Custom"/>
+      </ChooseList>
+      
+      <Float id="metallicpaint_topcoat_glossy"
+             label="Glossiness"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Slides from 100 (totally reflective) to 0 (matte).">
+        <Dependency id="metallicpaint_topcoat_dependency0"
+                    on="metallicpaint_topcoat"
+                    requires="metallicpaint_topcoat_custom"
+                    else="hidden"/>
+      </Float>
+      
+      <Float id="metallicpaint_topcoat_falloff"
+             label="Angle Falloff"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Slides from 0=No Fresnel effect (constant reflections like Chrome) to 100=High Fresnel (really reflective only in a narrow zone at extreme angles. Extreme limit placed for realistic top coats (on a scale combining Fresnel bias, power, and scale), with Car Paint around 80.)">
+        <Dependency id="metallicpaint_topcoat_dependency1"
+                    on="metallicpaint_topcoat"
+                    requires="metallicpaint_topcoat_custom"
+                    else="hidden"/>
+      </Float>
+      
+      <!-- Finish -->
+      <ChooseList id="metallicpaint_finish"
+                  label="Finish"
+                  tooltip="Selects Smooth or Orange Peel.">
+        <Choice id="metallicpaint_finish_smooth" label="Smooth"/>
+        <Choice id="metallicpaint_finish_peeling" label="Orange Peel"/>
+      </ChooseList>
+      
+      <Float id="metallicpaint_finish_peelamount"
+             label="Amount"
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Slides to choose Chromatic Finish amount between 1-100.">
+        <Dependency id="metallicpaint_finish_dependency0"
+                    on="metallicpaint_finish"
+                    requires="metallicpaint_finish_peeling"
+                    else="hidden"/>
+      </Float>
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

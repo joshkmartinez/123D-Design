@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Glazing
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="glazing_glazinggroup"
+                label="Glazing"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="glazing_transmittance_color"
+                  label="Color"
+                  tooltip="Adjusts the color of the glazing and the amount of light that is transmitted through the glass.">
+        <Choice id="glazing_clear" label="Clear"/>
+        <Choice id="glazing_green" label="Green"/>
+        <Choice id="glazing_gray" label="Gray"/>
+        <Choice id="glazing_blue" label="Blue"/>
+        <Choice id="glazing_bluegreen" label="Blue Green"/>
+        <Choice id="glazing_bronze" label="Bronze"/>
+        <ChoiceDetail id="glazing_custom_color" label="Custom">
+          <MappableColor id="glazing_transmittance_map"
+                         label="Custom Color"
+                         colorbyobject="true"
+                         tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+            <BoolColorByObject id="glazing_color_by_object" />
+          </MappableColor>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      <Percent id="glazing_reflectance"
+               label="Reflectance"
+               min="0"
+               max="100"
+               precision="0"
+               tooltip="Adjusts the amount of light that reflects off the surface of the glass rather than passing through it. Enter a value between 0% and 100%."/>
+      <Integer id="glazing_no_levels"
+               label="Sheets of Glass"
+               tooltip="Adjusts the number of panes of glass; e.g., for double glazing, set this value to 2. Enter a number between 1 and 6."
+               min="1"
+               max="6"/>
+      
+      <!--
+          <Integer id="glazing_reflection_depth" label="Reflection Depth"/>
+          <Integer id="glazing_refraction_depth" label="Refraction Depth"/>
+          -->
+      
+    </StackPanel>
+    <StackPanel id="glazing_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="glazing_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="glazing_refr_depth"
+       label="Override Refraction Depth"
+       labelid="glazing_refr_depth_control_label"
+       checkbox="true"
+       checkonvalue="4"
+       checkoffvalue="-1"
+       orientation="Vertical">
+      <Integer id="glazing_refr_depth"
+         label="Refraction Max Trace Depth"
+         tooltip="When checked, the material's refraction depth is controlled locally and an additional transparency ray will be casted when the limit is reached, limiting the 'dark edge' effect typically found on solid glass objects."
+         min="-1"
+         max="20"
+         forcenumeric="spinbox">
+      </Integer>
+    </StackPanel>
+  </Fields>
+</adsui>
+

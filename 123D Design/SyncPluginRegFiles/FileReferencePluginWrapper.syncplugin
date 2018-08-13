@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SyncPlugins>
+  <SyncPlugin Name="File Reference Plugin" Module="FileReferencePluginWrapper.dll">
+    <FileLinkResolver FileTypes="*" Priority="0"/>
+  </SyncPlugin>
+</SyncPlugins>

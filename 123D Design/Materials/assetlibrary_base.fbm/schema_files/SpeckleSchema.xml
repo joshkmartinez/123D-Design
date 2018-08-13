@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Specle
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap3dSchema"
+        file="../Common/TextureMap3dSchema.xml" />
+
+  <UID  val="SpeckleSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Speckle" />
+  <Color id="speckle_Color1"
+         valR="0"
+         valG="0"
+         valB="0"
+         label="Color 1"
+         allowconnectedassets="single" />
+  
+  <Color id="speckle_Color2"
+         valR="1"
+         valG="1"
+         valB="1"
+         label="Color 2"
+         allowconnectedassets="single" />
+  
+  <Float id="speckle_Size"
+         val="0.04"
+         label="Size">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Speckle/SpeckleUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Speckle/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Speckle/OGS.xml"/>
+
+  <PropertyAlias alias="speckle_Offset"
+                 id="texture_Offset" />
+  <PropertyAlias alias="speckle_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="speckle_Tiling"
+                 id="texture_Tiling" />
+  <PropertyAlias alias="speckle_Angle"
+                 id="texture_Angle" />
+  <PropertyAlias alias="speckle_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="speckle_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="speckle_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="speckle_RealWorldOffsetZ"
+                 id="texture_RealWorldOffsetZ" />
+</AssetSchema>

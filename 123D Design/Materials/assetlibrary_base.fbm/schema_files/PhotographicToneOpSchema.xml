@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Photographic Tone Mapping
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="PhotographicToneOpSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="postprocessing"/>
+
+  <!-- ToneOp properties -->
+  <!-- Whether the effect is active. -->
+  <!-- label is not defined in previous UI -->
+  <Boolean id="active"
+           val="true"
+           label="Active" />
+
+  <Float id="whitepoint"
+         val="100.0"
+         label="Whitepoint:"/>
+  
+  <Float id="film_iso"
+         val="100.0"
+         label="Film speed (ISO):"/>
+  
+  <Float id="camera_shutter"
+         val="0.125"
+         label="Shutter Speed:"/>
+
+  <Float id="f_number"
+         val="8.0"
+         label="Aperture (f-stop):"/>
+
+  <Float id="vignetting"
+         val="0.0"
+         label="Vigneting:"/>
+
+  <Float id="crush_blacks"
+         val="0.2"
+         label="Shadows:"/>
+
+  <Float id="burn_highlights"
+         val="0.25"
+         label="Highlights (Burn):"/>
+
+  <Float id="saturation"
+         val="1.0"
+         label="Color Saturation:"/>
+
+  <Float id="focal_length"
+         val="0.5"
+         label=""/>
+
+  <Float id="aperture"
+         val="0.0"
+         label=""/>
+  
+  <Float id="aspect_ratio"
+         val="1.0"
+         label=""/>
+
+  <Integer id="image_x_resolution"
+         val="256"
+         label=""/>
+  
+  <Integer id="image_y_resolution"
+         val="256"
+         label=""/>
+
+  <ui id="UIDefinition"
+      val="PostProcessing/PhotographicToneOp/PhotographicToneOpUI.xml"/>
+
+  <implementation id="ImplementationOGS"
+                 val="PostProcessing/PhotographicToneOp/OGS.xml" />
+</AssetSchema>

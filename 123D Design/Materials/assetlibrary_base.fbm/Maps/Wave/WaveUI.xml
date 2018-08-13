@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Wave map
+    </Title>
+  </PageInfo>
+  
+  <Fields>
+    <StackPanel id="wave_Appearance"
+                label="Appearance"
+                orientation="Vertical"
+                expanded="true">
+      <MappableColor id="wave_Color1"
+                     label="Color 1"
+                     noimagetexture="true"
+                     swappartner="wave_Color2"
+                     tooltip="Specifies the first color of the waves." />
+      <MappableColor id="wave_Color2"
+                     label="Color 2"
+                     noimagetexture="true"
+                     swappartner="wave_Color1"
+                     tooltip="Specifies the second color of the waves." />
+      <ChooseList id="wave_Distribution"
+                  label="Distribution"
+                  tooltip="Specifies the distribution of the waves. 3D distributes the wave centers on the surface on an imaginary sphere, affecting all sides of a 3D object. 2D distributes the wave in circles centered on the XY plane, which is more appropriate for flat water surfaces such as oceans and lakes.">
+        <Choice id="wave_2D" label="2D"/>
+        <Choice id="wave_3D" label="3D"/>
+      </ChooseList>
+    </StackPanel>    
+    <StackPanel id="wave_paramgroup"
+                label="Waves"
+                orientation="Vertical">
+      <Integer id="wave_NumWaveSets"
+               label="Number"
+               min="1" max="50" forcenumeric="spinbox"
+               tooltip="Specifies how many wave sets are used in the pattern. For calm water, set this to a low number. Range = 1 to 50; Default = 3."/>
+      <Float id="wave_WaveRadius"
+             label="Radius" min="0" max="1000000000.0" forcenumeric="spinbox"
+             tooltip="Specifies the radius of the imaginary sphere (3D distribution) or circle (2D distribution) whose surface is the origin of each wave set. A large radius produces large circular wave patterns, while a small radius produces dense, smaller waves. Default = 39.37."/>
+      <Float id="wave_WaveLenMin"
+             label="Len Min"
+             min="0" max="1000000000.0" forcenumeric="spinbox"
+             tooltip="Defines the minimum interval for each wave center. If values are close together, the waves appear more regular; if they are farther apart, the waves are less regular. Default = 1.97."/>
+      <Float id="wave_WaveLenMax"
+             label="Len Max"
+             min="0" max="1000000000.0" forcenumeric="spinbox"
+             tooltip="Defines the maximum interval for each wave center. If values are close together, the waves appear more regular; if they are farther apart, the waves are less regular. Default = 1.97."/>
+      <Float id="wave_Amplitude"
+             label="Amplitude"
+             min="0" max="10000" forcenumeric="spinbox"
+             tooltip="Specifies the amplitudes of the waves.  Range = 0 to 10000; Default = 1."/>
+      <Float id="wave_Phase"
+             label="Phase"
+             min="0" max="10000" forcenumeric="spinbox"
+             tooltip="Shifts the wave pattern. Range = 0 to 10000; Default = 0."/>
+      <Integer id="wave_RandomSeed"
+               label="Random Seed"
+               min="0" max="65535"
+               forcenumeric="spinbox"
+               tooltip="Provides a seed number to generate the water pattern. The pattern changes with each seed. Range = 0 to 65535; default = 30159."/>
+    </StackPanel>
+    <StackPanel id="wave_transforms_group"
+                label="Transforms"
+                orientation="Vertical"
+                expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="wave_Position"
+                  label="Position"
+                  orientation="Vertical"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <SampleSize id="texture_RealWorldOffsetZ"
+                    label=""
+                    rightlabel="Z"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Z axis."/>
+        <Vector3 id="texture_Angle"
+                 label="XYZ Rotation"
+                 forcenumeric="slider"
+                 tooltip="Specify the Rotation of the area represented by the image above."/>
+      </StackPanel>
+    </StackPanel>
+  </Fields>
+  
+</adsui>
+

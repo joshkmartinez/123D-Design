@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Toolbars>
+ 
+  <Toolbar Id="CommandToolbar" Style="ToolbarLargeStyle">
+    <Button Id="NTestImportCommand" />
+    <!-- Button Id="NTestTestPlanarMoveManipulatorCommand" /-->
+    <HoverButton Id="PropertiesTB" ToolbarId="PropertiesTB" />
+   </Toolbar>
+
+
+  <CommandToolbar Id="NTest">
+    <DropDownButton Id="ActivateEnvironmentCommand" ShowText="true" Width="67" Text="Environments" SynchronizedWithCurrentItem="true" />
+
+    <!-- ** Modeling Panel ** -->
+    <Panel Id="NTestPanel" _LCLZId="lclzHarness" _LCLZText="Harness" Environment="NTestHarnessEnvironment">
+      <Controls>
+        <Button Id="NTestImportCommand" />
+      </Controls>
+    </Panel>
+
+    <!-- ** Debug Panel ** -->
+    <!-- ** Note BV: I want to come up with a way to not have to copy common  ** -->
+    <!-- **          standalone environment panels like Debug.   ** -->
+    <Panel Id="DebugDialog" _LCLZId="lclzDebug" _LCLZText="Debug"  Environment="DebugEnvironment" >
+      <Controls>
+		<Button Id="NewSingleDocumentCommand" />
+		<DropDownButton Id="NewDocumentCommand" />
+		<Button Id="OpenDocumentCommand" />
+		<Button Id="SaveDocumentCommand" />
+		<Button Id="SaveDocumentAsCommand" />
+		<Button Id="ReturnToEnvironmentCommand" />
+        <Button Id="HideTextCommandsCommand" />
+        <Button Id="ShowTextCommandsCommand" />
+        <Button Id="HideDebugDialogCommand" />
+        <Button Id="ShowDebugDialogCommand" />
+      </Controls>
+    </Panel>
+
+  </CommandToolbar>
+  
+</Toolbars>

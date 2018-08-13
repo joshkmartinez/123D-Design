@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandMessages version="3.0" InternalName="CommandMessages">
+  <ErrorType name="EdgeBlend" error="操作に失敗しました: 入力値が正しくありません。別の値を使用してください。" warning="Warning"/>
+  <HelpMsgType CmdName="移動/回転(Ctrl+T)" primaryHelp="オブジェクトを 1 つ以上選択して移動または回転します"/>
+  <HelpMsgType CmdName="移動/回転(Cmd+T)" primaryHelp="オブジェクトを 1 つ以上選択して移動または回転します"/>
+  <HelpMsgType CmdName="位置合わせ(A)" primaryHelp="選択したオブジェクトを位置合わせします"/>
+  <HelpMsgType CmdName="スマート スケール(Ctrl+B)" primaryHelp="オブジェクトを 1 つ以上選択してスマート スケールを行います"/>
+  <HelpMsgType CmdName="スマート スケール(Cmd+B)" primaryHelp="オブジェクトを 1 つ以上選択してスマート スケールを行います"/>
+  <HelpMsgType CmdName="スケール(S)" primaryHelp="オブジェクトを 1 つ以上選択してスケールします"/>
+  <HelpMsgType CmdName="ルーラー(R)" primaryHelp="ルーラーの基準点とオブジェクト間の距離を計測します"/>
+  <HelpMsgType CmdName="スマート回転" primaryHelp="平面を中心にしてオブジェクトを移動します" />
+  
+  <HelpMsgType CmdName="ボックス" primaryHelp="ボックスを挿入します"/>
+  <HelpMsgType CmdName="球" primaryHelp="球を挿入します"/>
+  <HelpMsgType CmdName="円柱" primaryHelp="円柱を挿入します"/>
+  <HelpMsgType CmdName="円錐" primaryHelp="円錐を挿入します"/>
+  <HelpMsgType CmdName="トーラス" primaryHelp="トーラスを挿入します"/>
+  <HelpMsgType CmdName="ウェッジ" primaryHelp="ウェッジを挿入します"/>
+  <HelpMsgType CmdName="プリズム" primaryHelp="プリズムを挿入します"/>
+  <HelpMsgType CmdName="角錐" primaryHelp="角錐を挿入します"/>
+  <HelpMsgType CmdName="半球" primaryHelp="半球を挿入します"/>
+  <HelpMsgType CmdName="長方形" primaryHelp="スケッチ四角形を挿入します"/>
+  <HelpMsgType CmdName="円" primaryHelp="スケッチ円を挿入します"/>
+  <HelpMsgType CmdName="楕円" primaryHelp="スケッチ楕円を挿入します"/>
+  <HelpMsgType CmdName="ポリゴン" primaryHelp="スケッチ ポリゴンを挿入します"/>
+  
+  <HelpMsgType CmdName="スケッチ四角形" primaryHelp="四角形スケッチを作成します"/>
+  <HelpMsgType CmdName="スケッチ円" primaryHelp="円形状スケッチを作成します"/>
+  <HelpMsgType CmdName="スケッチ楕円" primaryHelp="楕円状スケッチを作成します"/>
+  <HelpMsgType CmdName="スケッチ ポリゴン" primaryHelp="ポリゴン状スケッチを作成します"/>
+  <HelpMsgType CmdName="ポリライン" primaryHelp="ポリラインを作成します"/>
+  <HelpMsgType CmdName="スプライン" primaryHelp="スプラインを作成します"/>
+  <HelpMsgType CmdName="2 点円弧" primaryHelp="2 点円弧を作成します"/>
+  <HelpMsgType CmdName="3 点円弧" primaryHelp="3 点円弧を作成します"/>
+  <HelpMsgType CmdName="スケッチ フィレット" primaryHelp="スケッチ フィレットを作成します"/>
+  <HelpMsgType CmdName="トリム" primaryHelp="スケッチ プロファイルをトリムします"/>
+  <HelpMsgType CmdName="延長" primaryHelp="スケッチ プロファイルを延長します"/>
+  <HelpMsgType CmdName="オフセット" primaryHelp="スケッチ プロファイルをオフセットします"/>
+  <HelpMsgType CmdName="投影" primaryHelp="スケッチ平面に別のスケッチ プロファイルまたは面を投影します"/>
+  
+  <HelpMsgType CmdName="押し出し(U)" primaryHelp="閉じたスケッチまたはソリッドの面を選択して、押し出します"/>
+  <HelpMsgType CmdName="スイープ(W)" primaryHelp="閉じたスケッチまたはソリッドの面をスイープし、ガイド パスに沿ってソリッド オブジェクトを作成します"/>
+  <HelpMsgType CmdName="回転(V)" primaryHelp="閉じたスケッチまたはソリッドの面を回転して、回転軸を中心としたソリッド オブジェクトを作成します"/>
+  <HelpMsgType CmdName="ロフト(L)" primaryHelp="閉じたスケッチまたはソリッドの面を使用してロフトを作成します"/>
+  
+  <HelpMsgType CmdName="プレス/プル(P)" primaryHelp="ソリッドの面を移動して、歪みを最小限に抑えながらパーツのサイズを変更します"/>
+  <HelpMsgType CmdName="ツイーク(K)" primaryHelp="ソリッドの面またはエッジを移動して、パーツを変形またはスキューします"/>
+  <HelpMsgType CmdName="面を分割(B)" primaryHelp="スケッチまたはソリッドを使用してソリッドの面を分割します"/>
+  <HelpMsgType CmdName="フィレット(E)" primaryHelp="丸みのあるエッジを作成します"/>
+  <HelpMsgType CmdName="面取り(C)" primaryHelp="平らなベベル エッジを作成します"/>
+  <HelpMsgType CmdName="ソリッドを分割(Alt+B)" primaryHelp="スケッチまたはソリッドを使用してソリッドを分割します"/>
+  <HelpMsgType CmdName="シェル(J)" primaryHelp="ソリッドの面を選択してシェイプを凹めます"/>
+  
+  <HelpMsgType CmdName="四角形パターン(N)" primaryHelp="2 方向に沿って、選択したソリッドの四角形パターンを作成します"/>
+  <HelpMsgType CmdName="円形パターン(Shift+N)" primaryHelp="軸を中心に、選択したソリッドの円形パターンを作成します"/>
+  <HelpMsgType CmdName="パス パターン(Alt+N)" primaryHelp="パスに沿って、選択したソリッドのパターンを作成します"/>
+  <HelpMsgType CmdName="ミラー(Alt+M)" primaryHelp="対称面を中心に、選択したソリッドのミラーを作成します"/>
+  
+  <HelpMsgType CmdName="グループ化(Ctrl+G)" primaryHelp="選択したすべてのソリッドをグループ化します"/>
+  <HelpMsgType CmdName="グループ化(Cmd+G)" primaryHelp="選択したすべてのソリッドをグループ化します"/>
+  <HelpMsgType CmdName="グループ解除(Ctrl+Shift+G)" primaryHelp="選択したグループ内のソリッドをグループ解除します"/>
+  <HelpMsgType CmdName="グループ解除(Cmd+Shift+G)" primaryHelp="選択したグループ内のソリッドをグループ解除します"/>
+  <HelpMsgType CmdName="すべてグループ解除" primaryHelp="選択したグループとサブグループからソリッドをグループ解除します"/>
+
+  <HelpMsgType CmdName="結合" primaryHelp="複数のオブジェクトを追加または削除して、カスタム形状を作成します"/>
+  <HelpMsgType CmdName="マージ([)" primaryHelp="選択範囲を結合してマージします"/>
+  <HelpMsgType CmdName="切除(])" primaryHelp="重なり合った部分を除外します"/>
+  <HelpMsgType CmdName="交差(\)" primaryHelp="重なり合った部分のみを保持します"/>
+  <HelpMsgType CmdName="分離(Shift+P)" primaryHelp="選択したソリッドから個別のパーツを生成します" />
+  
+  <HelpMsgType CmdName="スナップ(;)" primaryHelp="手動でオブジェクト スナップします"/>
+  
+  <HelpMsgType CmdName="計測(Shift+M)" primaryHelp="オブジェクトの距離、体積、面積を計測します"/>
+  
+  <HelpMsgType CmdName="マテリアル(`)" primaryHelp="表示マテリアルを選択します"/>
+
+</CommandMessages>

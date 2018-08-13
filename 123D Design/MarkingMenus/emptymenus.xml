@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<markMenuParameters>
+	<visualPrefs>
+		<background>background.png</background>
+	</visualPrefs>
+	<menuStructure>
+		<markMenu name="root">
+			<markMenuItem text="North" position="north">
+				<markMenu name="north">
+					<markMenuItem text="Invisible" visible="no"/>
+				</markMenu>
+			</markMenuItem>
+			<markMenuItem text="South" position="south">
+				<markMenu name="south">
+				</markMenu>
+			</markMenuItem>
+			<markMenuItem text="East" position="east"/>
+			<markMenuItem text="West" position="west"/>
+			<markMenuItem text="Invisible" position="overflow" visible="no"/>
+		</markMenu>
+		<markMenu name="secondary" bounds="3,3,32,32"
+				boundsImage="Sample.png" boundsRolloverImage="Sample_over.png" boundsPressedImage="Sample_press.png">
+		</markMenu>
+		<markMenu name="ViewCube" bounds="1240,50,64,60">
+			<markMenuItem text="Home" position="overflow" visible="no"/>
+		</markMenu>
+	</menuStructure>
+</markMenuParameters>

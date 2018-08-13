@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      DecalAppearance
+    </Title>
+  </PageInfo>
+  <Fields>
+    <Reference id ="decApp_diffuse" label ="Decal Image File:" />
+    <Percent id="decApp_reflectivity_at_0deg" label="Reflectivity:" minlabel="dull" maxlabel="mirror" tooltip="Specify how much the decal will reflect other objects around it"/>
+    <Percent id="decApp_transparency" label="Transparency:" minlabel="opaque" maxlabel="transparent"/>
+    <FloatMenu id="decApp_glossiness" label="Finish:" min="0.0" max="1.0" tooltip="Specify the brightness of the specular highlights (hot spots) on the decal" >
+      <FloatMenuChoice id="decApp_glossiness_matte" label="Matte" value="0.0" />
+      <FloatMenuChoice id="decApp_glossiness_semi_gloss" label="Semi-gloss" value="0.35" />
+      <FloatMenuChoice id="decApp_glossiness_gloss" label="Gloss" value="0.7" />
+      <FloatMenuChoice id="decApp_glossiness_high_gloss" label="High Gloss" value="1.0" />
+    </FloatMenu>
+    <FloatMenu id="decApp_self_illum_luminance" label="Luminance (cd/m^2):" tooltip="Specify whether and how brightly the decal is illuminated">
+      <FloatMenuChoice id="decApp_self_illum_luminance_not_illuminated" label="Not illuminated" value="0" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_dim_glow" label="Dim glow" value="10" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_led_panel" label="LED panel" value="100" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_lcd_screen" label="LCD screen" value="140" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_cell_phone_screen" label="Cell phone screen" value="200" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_crt_television" label="CRT television" value="250" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_lamp_ext" label="Lamp shade exterior" value="1300" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_lamp_int" label="Lamp shade interior" value="2500" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_desk_lamp_lens" label="Desk lamp lens" value="10000" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_halogen_lamp_lens" label="Halogen lamp lens" value="10000" />
+      <FloatMenuChoice id="decApp_self_illum_luminance_frosted_bulb" label="Frosted bulb" value="210000" />
+    </FloatMenu>
+
+    <Color id="decApp_bump_map" label="Bump Pattern:" decalbump="1" tooltip="Use dark and light areas of an image to specify raised and lowered areas on the decal"/>
+    <Percent id="decApp_bump_amount" label="Bump Amount:"/>
+    <MappableFloat id="decApp_cutout_opacity" label="Cutouts:" decal="1" nosinglevalue="true" tooltip="Use a black and white image to cut away areas of the decal. Black areas are cut away."/>
+  </Fields>
+</adsui>
+

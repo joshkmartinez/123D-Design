@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Color
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="ColorSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Color" />
+  <Color  id="color_color_input"
+          valR=".5"
+          valG=".8"
+          valB=".2"
+          label="Color:"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Color/ColorUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Color/MentalImage.xml"/>
+</AssetSchema>

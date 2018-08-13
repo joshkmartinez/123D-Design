@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="TextureMap2dSchema"
+        file="../Common/TextureMap2dSchema.xml" />
+
+  <UID  val="CheckerSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture" />
+
+  <localtype val="Texture" />
+  <localname val="Checker" />
+  <Color id="checker_color1" 
+         valR="0" 
+         valG="0" 
+         valB="0" 
+         label="Color 1"
+         allowconnectedassets="single" />
+          
+  <Color id="checker_color2" 
+         valR="1" 
+         valG="1" 
+         valB="1" 
+         label="Color 2"
+         allowconnectedassets="single" />
+
+  <Float id="checker_soften"
+         val="0"
+         label="Soften" >
+    <Bounds minimum="0"
+            maximum="5" />
+  </Float>
+    
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition" 
+      val="Maps/Checker/CheckerUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Checker/MentalImage.xml" />
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Checker/OGS.xml" />
+  
+  <PropertyAlias alias="checker_UVScale"
+                 id="texture_UVScale" />
+  <PropertyAlias alias="checker_ScaleLock"
+                 id="texture_ScaleLock" />
+  <PropertyAlias alias="checker_WAngle"
+                 id="texture_WAngle" />
+  <PropertyAlias alias="checker_UOffset"
+                 id="texture_UOffset" />
+  <PropertyAlias alias="checker_VOffset"
+                 id="texture_VOffset" />
+  <PropertyAlias alias="checker_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="checker_RealWorldScaleX"
+                 id="texture_RealWorldScaleX" />
+  <PropertyAlias alias="checker_RealWorldScaleY"
+                 id="texture_RealWorldScaleY" />
+  <PropertyAlias alias="checker_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="checker_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="checker_MapChannel"
+                 id="texture_MapChannel" />
+  <PropertyAlias alias="checker_MapChannel_ID_Advanced"
+                 id="texture_MapChannel_ID_Advanced" />
+  <PropertyAlias alias="checker_MapChannel_UVWSource_Advanced"
+                 id="texture_MapChannel_UVWSource_Advanced" />
+  <PropertyAlias alias="checker_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="checker_RepeatX"
+                 id="texture_URepeat" />
+  <PropertyAlias alias="checker_RepeatY"
+                 id="texture_VRepeat" />
+
+</AssetSchema>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<implementation render="ImplementationGeneric" val="Generic.xml">
+   <language name="Protein" version="2.0"/>
+   <api name="Protein" version="2.0"/>
+   <root_bindings name="root"/>
+
+   <constants>
+     <float   name="ceramic_diffuse_image_fade"             val="1.0"/>
+     <boolean name="ceramic_is_metal"                       val="false"/>
+     <float   name="ceramic_transparency"                   val="0.0"/>
+     <float   name="ceramic_transparency_image_fade"        val="1.0"/>
+     <float   name="ceramic_refraction_index"               val="1.4"/>
+     <float   name="ceramic_refraction_translucency_weight" val="0.5"/>
+     <float   name="ceramic_cutout_opacity"                 val="1.0"/>
+     <boolean name="ceramic_backface_cull"                  val="false"/>
+     <float   name="ceramic_self_illum_luminance"           val="0"/>
+     <float   name="ceramic_self_illum_color_temperature"   val="0.0"/>
+     <integer name="ceramic_refraction_glossy_samples"      val="1"/>
+   </constants>
+
+  <operator function="CeramicReflectivityAt0DegBOF" name="reflectivity_at_0deg">
+    <map_interface source="ceramic_type"     destination="type"/>
+    <map_interface source="ceramic_application"     destination="application"/>
+  </operator>
+
+  <operator function="CeramicReflectivityAt90DegBOF" name="reflectivity_at_90deg">
+    <map_interface source="ceramic_type"     destination="type"/>
+    <map_interface source="ceramic_application"     destination="application"/>
+  </operator>
+
+  <operator function="CeramicReflGlossBOF" name="refl_gloss">
+    <map_interface source="ceramic_type"     destination="type"/>
+    <map_interface source="ceramic_application"     destination="application"/>
+  </operator>
+
+  <operator function="CeramicBumpMapAmountSpiderBOF" name="bump_amount">
+    <map_interface source="ceramic_pattern" destination="pattern" />
+    <map_interface source="ceramic_pattern_amount" destination="pattern_amount" />
+    <map_interface source="ceramic_bump_amount" destination="bump_amount" />
+  </operator>
+
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="ceramic_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="ceramic_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+   <bindings target="GenericMaterial" name="root">
+     <map_interface source="ceramic_color_by_object"                destination="color_by_object"/>
+     <map_interface source="ceramic_color"                          destination="generic_diffuse"/>
+     <map_constant  source="ceramic_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+     <map_operator  source="reflectivity_at_0deg"                   destination="generic_reflectivity_at_0deg"/>
+     <map_operator  source="reflectivity_at_90deg"                  destination="generic_reflectivity_at_90deg"/>
+     <map_operator  source="refl_gloss"                             destination="generic_glossiness"/>
+     <map_constant  source="ceramic_is_metal"                       destination="generic_is_metal"/>
+     <map_constant  source="ceramic_transparency"                   destination="generic_transparency"/>
+     <map_constant  source="ceramic_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+     <map_constant  source="ceramic_refraction_index"               destination="generic_refraction_index"/>
+     <map_constant  source="ceramic_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+     <map_constant  source="ceramic_cutout_opacity"                 destination="generic_cutout_opacity"/>
+     <map_constant  source="ceramic_backface_cull"                  destination="generic_backface_cull"/>
+     <map_constant  source="ceramic_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+     <map_constant  source="ceramic_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+     <map_operator  source="bump_amount"                            destination="generic_bump_amount"/>
+     <map_bindings  source="bump_map"                               destination="generic_bump_map"/>
+     <map_interface source="reflection_glossy_samples"              destination="generic_reflection_glossy_samples"/>
+     <map_constant  source="ceramic_refraction_glossy_samples"      destination="generic_refraction_glossy_samples"/>
+     <map_interface source="ceramic_ao_on"                          destination="generic_ao_on"/>
+     <map_interface source="ceramic_ao_samples"                     destination="generic_ao_samples"/>
+     <map_interface source="ceramic_ao_distance"                    destination="generic_ao_distance"/>
+     <map_interface source="ceramic_ao_details"                     destination="generic_ao_details"/>
+     <map_bindings  source="round_corner_radius_map"                destination="generic_roundcorners_radius"/>
+     <map_operator  source="round_corner_radius_BOF"                destination="generic_roundcorners_radius"/>  
+     <map_interface source="ceramic_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+     <map_interface source="ceramic_refl_depth"                     destination="generic_refl_depth"/>
+     <map_interface source="common_Tint_toggle"                     destination="common_Tint_toggle"/>
+     <map_interface source="common_Tint_color"                      destination="common_Tint_color"/> 
+   </bindings>
+
+
+  <!-- Generic only accepts one bump map. When the original asset has more than one map connected, this can evaluate which one has higher priority to convert. -->
+  <operator function="CeramicBumpMapPropertyNameSpiderBOF" name="bump_map_property_name">
+    <map_interface source="ceramic_pattern" destination="pattern" />
+  </operator>
+
+  <bindings target="bump_map" name="bump_map">
+    <map_operator source="bump_map_property_name" destination="property_name" />
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="ceramic_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="ceramic_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+  
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

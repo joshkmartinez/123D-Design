@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="ConcreteSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Concrete" />
+	
+  <Choice id="concrete_finish" 
+          val="concrete_straight"
+          label="Type" >
+    <ChoiceValue id="concrete_straight"
+                 val="0"
+                 label="Broom Straight" />
+    <ChoiceValue id="concrete_curved"
+                 val="1"
+                 label="Broom Curved" />
+    <ChoiceValue id="concrete_smooth"
+                 val="2"
+                 label="Smooth" />
+    <ChoiceValue id="concrete_polished"
+                 val="3"
+                 label="Polished" />
+    <ChoiceValue id="concrete_custom"
+                 val="4"
+                 label="Stamped/Custom" />
+  </Choice>
+
+  <Reference id="concrete_bump_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+  
+  <Float id="concrete_bump_amount" 
+         val="1.0"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="2.0" />
+  </Float>
+
+  <Choice id="concrete_sealant" 
+          val="concrete_none"
+          label="Sealant" >
+    <ChoiceValue id="concrete_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="concrete_epoxy"
+                 val="1"
+                 label="Epoxy" />
+    <ChoiceValue id="concrete_acrylic"
+                 val="2"
+                 label="Acrylic" />
+  </Choice>
+
+  <Boolean id="concrete_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="concrete_color" 
+          valR=".471" 
+          valG=".471" 
+          valB=".471"
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Choice  id="concrete_brightmode" 
+           val="concrete_automatic"
+           label="Weathering" >
+    <ChoiceValue id="concrete_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="concrete_automatic"
+                 val="1"
+                 label="Automatic" />
+    <ChoiceValue id="concrete_custom"
+                 val="2"
+                 label="Custom - Image" />
+  </Choice>
+
+  <Reference id="concrete_bm_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <!-- These URL were once delared using File tag-->
+  <!-- Internal parameters-->
+  <URL id="broom_curved" 
+       val="Mats/Concrete/external.dependency/Simple_Concrete_Mtl_BroomCurved_pattern.jpg"
+       label="Broom Curved"/>
+  <URL id="broom_straight" 
+       val="Mats/Concrete/external.dependency/Simple_Concrete_Mtl_BroomStraight_pattern.jpg"
+       label="Broom Straight" />
+
+
+  <Boolean id="concrete_ao_on"
+           val="false"
+           label="Ambient Occlusion" />
+
+  <Integer id="concrete_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="concrete_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="concrete_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="concrete_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="concrete_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="concrete_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="concrete_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples" 
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+  
+  <!-- Internal parameters-->
+  <Integer id="uv_channel" 
+           val="1"
+           label="UV Channel" />
+  <Float id="scale" 
+         val="1.0"
+         label="Scale" />
+  <Integer id="mode" 
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Concrete/ConcreteUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Concrete/ConcreteAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Concrete/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/Concrete/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Concrete/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/Concrete/Generic.xml" />
+
+</AssetSchema>
+
+

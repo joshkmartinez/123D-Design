@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SimpleSymbolDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SymbolDefinition-1.1.0.xsd" version="1.1.0">
+ <Name>TRACKS</Name>
+ <Graphics>
+  <Path>
+   <Geometry>M 1.5,0 l 0,2.5 M 1.5,0 l 0,-2.5 </Geometry>
+   <LineColor>%LINECOLOR%</LineColor>
+   <LineWeight>%LINEWEIGHT%</LineWeight>
+   <LineWeightScalable>false</LineWeightScalable>
+  </Path>
+  <Path>
+   <Geometry>M 0,0 L 1.5,0 M 1.5,0 L 3,0 </Geometry>
+   <LineColor>%LINECOLOR%</LineColor>
+   <LineWeight>%LINEWEIGHT%</LineWeight>
+   <LineWeightScalable>false</LineWeightScalable>
+  </Path>
+ </Graphics>
+ <LineUsage>
+  <Repeat>3</Repeat>
+  <DefaultPath>
+   <LineColor>%LINECOLOR%</LineColor>
+   <LineWeight>%LINEWEIGHT%</LineWeight>
+   <LineWeightScalable>false</LineWeightScalable>
+  </DefaultPath>
+ </LineUsage>
+ <ParameterDefinition>
+  <Parameter>
+   <Identifier>LINECOLOR</Identifier>
+   <DefaultValue>ff000000</DefaultValue>
+   <DisplayName>Line &amp;Color</DisplayName>
+   <Description>Line Color</Description>
+   <DataType>LineColor</DataType>
+  </Parameter>
+  <Parameter>
+   <Identifier>LINEWEIGHT</Identifier>
+   <DefaultValue>0.0</DefaultValue>
+   <DisplayName>Line &amp;Thickness</DisplayName>
+   <Description>Line Thickness</Description>
+   <DataType>LineWeight</DataType>
+  </Parameter>
+ </ParameterDefinition>
+</SimpleSymbolDefinition>

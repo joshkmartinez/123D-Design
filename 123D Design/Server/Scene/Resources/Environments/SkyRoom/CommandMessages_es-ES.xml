@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandMessages version="3.0" InternalName="CommandMessages">
+  <ErrorType name="EdgeBlend" error="La operación ha fallado: Entrada incorrecta. Intente utilizar otro valor" warning="Warning"/>
+  <HelpMsgType CmdName="Mover / Rotar (Ctrl+T)" primaryHelp="Seleccionar uno o más objetos que desee mover o rotar"/>
+  <HelpMsgType CmdName="Mover / Rotar (Cmd+T)" primaryHelp="Seleccionar uno o más objetos que desee mover o rotar"/>
+  <HelpMsgType CmdName="Alinear (A)" primaryHelp="Alinear objetos seleccionados"/>
+  <HelpMsgType CmdName="Escala inteligente (Ctrl+B)" primaryHelp="Seleccionar uno o más objetos para modificar con escala inteligente"/>
+  <HelpMsgType CmdName="Escala inteligente (Cmd+B)" primaryHelp="Seleccionar uno o más objetos para modificar con escala inteligente"/>
+  <HelpMsgType CmdName="Escalar (S)" primaryHelp="Seleccionar uno o más objetos para escalar"/>
+  <HelpMsgType CmdName="Regla (R)" primaryHelp="Medir distancia entre origen de regla y objeto(s) seleccionados"/>
+  <HelpMsgType CmdName="Rotación inteligente" primaryHelp="Posicionar objeto/s en plano" />
+
+  <HelpMsgType CmdName="Cubo" primaryHelp="Insertar un cubo"/>
+  <HelpMsgType CmdName="Esfera" primaryHelp="Insertar una esfera"/>
+  <HelpMsgType CmdName="Cilindro" primaryHelp="Insertar un cilindro"/>
+  <HelpMsgType CmdName="Cono" primaryHelp="Insertar un cono"/>
+  <HelpMsgType CmdName="Toroide" primaryHelp="Insertar un toroide"/>
+  <HelpMsgType CmdName="Cuña" primaryHelp="Insertar una cuña"/>
+  <HelpMsgType CmdName="Prisma" primaryHelp="Insertar un prisma"/>
+  <HelpMsgType CmdName="Pirámide" primaryHelp="Insertar una pirámide"/>
+  <HelpMsgType CmdName="Semiesfera" primaryHelp="Insertar una semiesfera"/>
+  <HelpMsgType CmdName="Rectángulo" primaryHelp="Insertar un boceto de rectángulo"/>
+  <HelpMsgType CmdName="Círculo" primaryHelp="Insertar un boceto de círculo"/>
+  <HelpMsgType CmdName="Elipse" primaryHelp="Insertar un boceto de elipse"/>
+  <HelpMsgType CmdName="Polígono" primaryHelp="Insertar un boceto de polígono"/>
+
+  <HelpMsgType CmdName="Boceto de rectángulo" primaryHelp="Crear boceto de rectángulo"/>
+  <HelpMsgType CmdName="Boceto de círculo" primaryHelp="Crear un boceto de círculo"/>
+  <HelpMsgType CmdName="Boceto de elipse" primaryHelp="Crear un boceto de elipse"/>
+  <HelpMsgType CmdName="Boceto de polígono" primaryHelp="Crear boceto de polígono"/>
+  <HelpMsgType CmdName="Polilínea" primaryHelp="Crear una polilínea"/>
+  <HelpMsgType CmdName="Spline" primaryHelp="Crear una spline"/>
+  <HelpMsgType CmdName="Arco por dos puntos" primaryHelp="Crear arco por dos puntos"/>
+  <HelpMsgType CmdName="Arco por tres puntos" primaryHelp="Crear arco por tres puntos"/>
+  <HelpMsgType CmdName="Empalme de boceto" primaryHelp="Crear empalme de boceto"/>
+  <HelpMsgType CmdName="Recortar" primaryHelp="Recortar perfiles del boceto"/>
+  <HelpMsgType CmdName="Alargar" primaryHelp="Alargar perfiles de boceto"/>
+  <HelpMsgType CmdName="Desfasar" primaryHelp="Desfasar perfiles del boceto"/>
+  <HelpMsgType CmdName="Proyectar" primaryHelp="Proyectar perfiles de boceto o caras en un plano del boceto"/>
+
+  <HelpMsgType CmdName="Extrusión (U)" primaryHelp="Seleccionar boceto cerrado o cara de un sólido par extruir"/>
+  <HelpMsgType CmdName="Barrido (W)" primaryHelp="Hacer un barrido de un boceto cerrado o una cara de un sólido para crear un sólido a lo largo de una ruta establecida"/>
+  <HelpMsgType CmdName="Revolución (V)" primaryHelp="Revolucionar un boceto cerrado o una cara de un sólido para crear un objeto sólido alrededor del eje de revolución"/>
+  <HelpMsgType CmdName="Solevación (L)" primaryHelp="Crear un solevado usando bocetos cerrados o caras de un sólido"/>
+
+  <HelpMsgType CmdName="Empujar/Tirar (P)" primaryHelp="Cambiar tamaño de cuerpo mediante desplazamiento de una cara de un sólido"/>
+  <HelpMsgType CmdName="Ajustar (K)" primaryHelp="Deformar cuerpos mediante desplazamiento de caras o aristas de un sólido"/>
+  <HelpMsgType CmdName="Dividir cara (B)" primaryHelp="Dividir caras de un sólido usando bocetos u otro sólido"/>
+  <HelpMsgType CmdName="Empalme (E)" primaryHelp="Crear bordes redondeados"/>
+  <HelpMsgType CmdName="Chaflán (C)" primaryHelp="Crear bordes planos con bisel"/>
+  <HelpMsgType CmdName="Dividir sólido (Alt+B)" primaryHelp="Dividir sólido usando bocetos u otro sólido"/>
+  <HelpMsgType CmdName="Cáscara (J)" primaryHelp="Eliminar cara al seleccionar cara de un sólido"/>
+
+  <HelpMsgType CmdName="Patrón rectangular (N)" primaryHelp="Crear patrón rectangular de sólidos seleccionados a lo largo de dos direcciones "/>
+  <HelpMsgType CmdName="Patrón circular (Shift+N)" primaryHelp="Crear patrón circular de sólidos seleccionados alrededor de un eje"/>
+  <HelpMsgType CmdName="Patrón con trayectoria (Alt+N)" primaryHelp="Crear patrón de sólidos a lo largo de una ruta"/>
+  <HelpMsgType CmdName="Simetría (Alt+M)" primaryHelp="Crear simetría de sólidos seleccionados sobre un plano de simetría"/>
+
+  <HelpMsgType CmdName="Agrupar (Ctrl+G)" primaryHelp="Agrupar todos los sólidos seleccionados"/>
+  <HelpMsgType CmdName="Agrupar (Cmd+G)" primaryHelp="Agrupar todos los sólidos seleccionados"/>
+  <HelpMsgType CmdName="Desagrupar (Ctrl+Shift+G)" primaryHelp="Desagrupar sólidos de grupo seleccionado"/>
+  <HelpMsgType CmdName="Desagrupar (Cmd+Shift+G)" primaryHelp="Desagrupar sólidos de grupo seleccionado"/>
+  <HelpMsgType CmdName="Desagrupar todo" primaryHelp="Desagrupar sólidos de grupo seleccionado y sus subgrupos"/>
+
+  <HelpMsgType CmdName="Combinar" primaryHelp="Crear figura agregando y sustrayendo varios objetos"/>
+  <HelpMsgType CmdName="Unir ([)" primaryHelp="Fusionar selección"/>
+  <HelpMsgType CmdName="Sustraer (])" primaryHelp="Exluir masa de un sólido a través de sustracción de otros sólidos"/>
+  <HelpMsgType CmdName="Interseccion (\)" primaryHelp="Mantener sólo partes superpuestas en selección de sólidos"/>
+  <HelpMsgType CmdName="Separar (Shift+P)" primaryHelp="Generar partes individuales del sólido seleccionado" />
+
+  <HelpMsgType CmdName="Ajustar (;)" primaryHelp="Salto al objeto manual"/>
+
+  <HelpMsgType CmdName="medir (Shift+M)" primaryHelp="Medir la distancia, volumen, área de los objetos"/>
+
+  <HelpMsgType CmdName="Material (`)" primaryHelp="Elija un material visual"/>
+
+</CommandMessages>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <float   name="masonrycmu_diffuse_image_fade"             val="1."/>
+    <float   name="masonrycmu_reflectivity_at_90deg"          val="0.5"/>
+    <boolean name="masonrycmu_is_metal"                       val="false"/> 
+    <float   name="masonrycmu_transparency"                   val="0.0"/>
+    <float   name="masonrycmu_transparency_image_fade"        val="0.0"/>
+    <float   name="masonrycmu_refraction_index"               val="1.4"/>
+    <float   name="masonrycmu_refraction_translucency_weight" val="0.5"/>
+    <float   name="masonrycmu_cutout_opacity"                 val="1.0"/>
+    <boolean name="masonrycmu_backface_cull"                  val="false"/>
+    <float   name="masonrycmu_self_illum_luminance"           val="0.0"/>
+    <float   name="masonrycmu_self_illum_color_temperature"   val="0.0"/>
+    <integer name="masonrycmu_refraction_glossy_samples"      val="1"/>
+  </constants>
+
+  <operator function="MasonryCMUBrdf0DegreeReflBOF" name="brdf_0_degree_refl">
+    <map_interface source="masonrycmu_type"        destination="type"/>
+    <map_interface source="masonrycmu_application" destination="application"/>
+  </operator>
+  
+  <operator function="MasonryCMUReflGlossBOF" name="refl_gloss">
+    <map_interface source="masonrycmu_type"        destination="type"/>
+    <map_constant  source="masonrycmu_application" destination="application"/>
+  </operator>
+
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="masonrycmu_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="masonrycmu_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <map_interface source="masonrycmu_color_by_object"                destination="color_by_object"/>
+    <map_interface source="masonrycmu_color"                          destination="generic_diffuse"/>
+    <map_constant  source="masonrycmu_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+    <map_operator  source="brdf_0_degree_refl"                        destination="generic_reflectivity_at_0deg"/>
+    <map_constant  source="masonrycmu_reflectivity_at_90deg"          destination="generic_reflectivity_at_90deg"/>
+    <map_operator  source="refl_gloss"                                destination="generic_glossiness"/>
+    <map_constant  source="masonrycmu_is_metal"                       destination="generic_is_metal"/>
+    <map_constant  source="masonrycmu_transparency"                   destination="generic_transparency"/>
+    <map_constant  source="masonrycmu_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+    <map_constant  source="masonrycmu_refraction_index"               destination="generic_refraction_index"/>
+    <map_constant  source="masonrycmu_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+    <map_constant  source="masonrycmu_cutout_opacity"                 destination="generic_cutout_opacity"/>
+    <map_constant  source="masonrycmu_backface_cull"                  destination="generic_backface_cull"/>
+    <map_constant  source="masonrycmu_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+    <map_constant  source="masonrycmu_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+    <map_interface source="masonrycmu_pattern_height"                 destination="generic_bump_amount"/>
+    <map_interface source="masonrycmu_pattern_map"                    destination="generic_bump_map"/>
+    <map_interface source="reflection_glossy_samples"                 destination="generic_reflection_glossy_samples"/>
+    <map_constant  source="masonrycmu_refraction_glossy_samples"      destination="generic_refraction_glossy_samples"/>
+    <map_interface source="masonrycmu_ao_on"                          destination="generic_ao_on"/>
+    <map_interface source="masonrycmu_ao_samples"                     destination="generic_ao_samples"/>
+    <map_interface source="masonrycmu_ao_distance"                    destination="generic_ao_distance"/>
+    <map_interface source="masonrycmu_ao_details"                     destination="generic_ao_details"/>
+    <map_bindings  source="round_corner_radius_map"                   destination="generic_roundcorners_radius"/>
+    <map_operator  source="round_corner_radius_BOF"                   destination="generic_roundcorners_radius"/>  
+    <map_interface source="masonrycmu_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+    <map_interface source="masonrycmu_refl_depth"                     destination="generic_refl_depth"/>
+    <map_interface source="common_Tint_toggle"                     destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                      destination="common_Tint_color"/> 
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="masonrycmu_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="masonrycmu_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

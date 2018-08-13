@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SkyRoom version="3.0" InternalName="SkyRoom">
+  <OriginOffset X="0.0" Y="0.0" Z="0.0" />
+  <Features>
+    <Feature Shape="Ground.JSON" Texture="Ground.png" IsSurrounding="1" IsGroundPlane="1"/>
+  </Features>
+  <Lighting AmbientGain=".35" GlossyGain="1.0" SharpGain="1.0" AmbientLightColor="0.50 0.50 0.50" AmbientLightGain="0.225">
+    <Light type="Directional" Color="1 1 1" Gain="0.900" Space="View" Direction="0.1 -0.55 -0.9" />
+    <Light type="Directional" Color="1 1 1" Gain="0.50" Space="View" Direction="0.8 0.8 0.8" />
+  </Lighting>
+  <Scaling FitTo="2" AutoScale="1" AutoScaleFactor="10"/>
+  <Grid ARGB="1 0.215 0.729 0.882" />  <!--<Grid color/>-->
+  <GridBackground ARGB="0.3 0.215 0.729 0.882"/> 
+  <Background RGB="0.914 0.914 0.914" />
+  <RotationPreset rotateDegrees="45" />
+  <NudgePreset nudgeDistanceCM="0.1" />
+  <DisplayName>
+    <Name Language="1028">Grey Room</Name>
+    <Name Language="1029">Pokojová šedá</Name>
+    <Name Language="1031">Grauer Raum</Name>
+    <Name Language="1033">Grey Room</Name>
+    <Name Language="1036">Pièce grise</Name>
+    <Name Language="1038">Grey Room</Name>
+    <Name Language="1040">Stanza grigia</Name>
+    <Name Language="1041">Grey Room</Name>
+    <Name Language="1042">Grey Room</Name>
+    <Name Language="1045">Szare wnętrze</Name>
+    <Name Language="1046">Ferro ambiente</Name>
+    <Name Language="1049">Серая комната</Name>
+    <Name Language="2052">Sky Room</Name>
+    <Name Language="3082">Sala gris</Name>
+  </DisplayName>
+ <SelectEffectInfo BaseColorRGBA="0 0.466 0.733 0.6" BackFaceColorRGBA="0 0.407 0.666 0.15" HaloColorRGBA="0 1 0.478 1" HiddenLineColorRGBA="0 0 0 0.5" LineColorRGBA="0 0.109 0.176 1" GlowColorRGBA = "0.3, 0.47, 0.84, 0.33"
+                    BlurWeight="0" HaloWidth="3" LinesWidth="3" UseBase="1" UseGlow="0" UseHalo="1" UseHiddenLines="1" UseLines="1" QuickHalo="0" DilateOne="1"/>
+					
+ <HighlightEffectInfo BaseColorRGBA="1 1 1 0.2" BackFaceColorRGBA="0 0 0 0.15" HaloColorRGBA="0 1 0.478 0.3" HiddenLineColorRGBA="0 0 0 0.2" LineColorRGBA="0 0.109 0.176 1" GlowColorRGBA = "0.3, 0.47, 0.84, 0.33"
+                    BlurWeight="0" HaloWidth="3" LinesWidth="3" UseBase="1" UseGlow="0" UseHalo="1" UseHiddenLines="1" UseLines="1" QuickHalo="0" DilateOne="1"/>
+					
+  <MaterialPreviewSelectEffectInfo BaseColorRGBA="1 1 1 0.1" BackFaceColorRGBA="0 0 0 0.1" HaloColorRGBA="0 1 0.478 0.5" HiddenLineColorRGBA="0 0 0 0.2" LineColorRGBA="0 0.109 0.176 1" GlowColorRGBA = "0.3, 0.47, 0.84, 0.33"
+                    BlurWeight="0" HaloWidth="3" LinesWidth="3" UseBase="1" UseGlow="1" UseHalo="1" UseHiddenLines="1" UseLines="1" QuickHalo="0" DilateOne="1"/>
+					
+  <SketchSelectEffectInfo BaseColorRGBA="0.105 0.650 0.709 0.5" BackFaceColorRGBA="0.191 0.752 0.458 0" HaloColorRGBA="0 1 0.478 0" HiddenLineColorRGBA="0 0 0 0.2" LineColorRGBA="0 0 0 1" LineColor2RGBA="0 0 0 1" GlowColorRGBA = "1 1 1 1"
+                    BlurWeight="2" HaloWidth="2" LinesWidth="1" UseBase="1" UseGlow="0" UseHalo="0" UseHiddenLines="1" UseLines="1" QuickHalo="0" DilateOne="1"/>
+  <SketchEntityColor ARGB="1 0.137 0.792 0.862" /> <!--<Sketch line color while sketching - dk blue/>-->
+  <SketchConstraintColor ARGB="1 0 0.129 0.270" />
+  <SketchInferenceColor ARGB="1 0 0 0" /> <!--<onhover line color/>-->
+  <SketchInferenceMouseColor ARGB="1" />
+  <DimensionPreviewColor ARGB="1.0 0.1686 0.1686 0.1686" /> 
+  <SketchProfileColor ARGB="0.4 0.203 0.956 0.949" /> <!--<Sketch Inside color/ - lightblue>-->
+  <SketchLineColor ARGB="1 0 0.654 0.725" />  <!--<Sketch outline color - blue/>-->
+  <SketchFixedLineColor ARGB="1 0.05 1.0 0.4" />
+  <TextBorderColor ARGB="1 0.8 0.1 1"/>
+  <SketchTextColor ARGB="1 0 0.161 0.255" />   <!--<Text Color/>-->
+  <SketchTextHighlightColor ARGB="1 1 0.52 0" />   <!--<Text Highlight Color/>-->
+  <SketchDimensionColor ARGB="1 0 0 0" /> <!--<Arrows showing dimensions/>-->
+  <SketchDimensionInfoColor ARGB="1 0 0 0" />
+  <SketchPreviewColor ARGB="1 1 0 0" />
+
+  <WorkAxisColor ARGB="1 1 1  0" />
+  <WorkPlaneColor ARGB="0.4 1 0.7 0.1"/>
+  <OriginXAxisColor ARGB="1.0 1 0 0" />
+  <OriginYAxisColor ARGB="1.0 0 1 0" />
+  <OriginZAxisColor ARGB="1.0 0 0 1" />
+  <AdornerUnspecifiedColor ARGB="1 1 0 1"/>
+  <AdornerSelectedColor ARGB="1.0 0 0.36 0.4"/>
+  <AdornerHighlightedColor ARGB="0.5 0 0 0"/>
+  <AdornerSelectedAndHighlightedColor ARGB="0.5 0 0.36 0.4"/>
+  <AdornerImplicitSelectionColor ARGB="1 1 0.4 0"/>
+  <WorkPlaneAdornerColor ARGB="0.75 0.75 0.75 0.75"/>
+  <DMBodyPreviewColor ARGB="0.3 1 1 0"/>
+  <DMEdgePreviewColor ARGB="1 0 0 0"/>
+  <TBCutPreviewColor ARGB="0.3 1 0 0"/>
+  <DraftFacePreviewColor ARGB="1 1 1 0"/>
+  <ModelEdgeColor ARGB="1 0.3 0.3 0.3"/>
+  <ColorCycleTable>
+    <ColorCycle name="Goldenrod" RGB="0.85 0.65 0.13" />
+    <ColorCycle name="PaleTurquoise" RGB="0.69 0.93 0.93" />
+    <ColorCycle name="YellowGreen" RGB="0.6 0.8 0.2" />
+    <ColorCycle name="SteelBlue" RGB="0.27 0.51 0.71" />
+    <ColorCycle name="DarkGreen" RGB="0 0.39 0" />
+    <ColorCycle name="Lavender" RGB="0.9 0.9 0.98" />
+    <ColorCycle name="Gainsboro" RGB="0.86 0.86 0.86" />
+    <ColorCycle name="MediumPurple" RGB="0.58 0.44 0.86" />
+    <ColorCycle name="LightSalmon" RGB="1 0.63 0.48" />
+    <ColorCycle name="IndianRed" RGB="0.8 0.36 0.36" />
+  </ColorCycleTable>
+</SkyRoom>

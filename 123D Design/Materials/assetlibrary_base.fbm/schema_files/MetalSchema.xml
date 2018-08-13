@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="MetalSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="3"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+  <localname val="Metal" />
+
+
+  <Choice id="metal_type" 
+          val="metal_aluminum"
+          label="Type" >
+    <ChoiceValue id="metal_aluminum"
+                 val="0"
+                 label ="Aluminum" />
+    <ChoiceValue id="metal_galvanized_alu"
+                 val="1"
+                 label="Anodized Aluminum" />
+    <ChoiceValue id="metal_chrome"
+                 val="2"
+                 label ="Chrome" />
+    <ChoiceValue id="metal_copper"
+                 val="3"
+                 label ="Copper" />
+    <ChoiceValue id="metal_brass"
+                 val="4"
+                 label ="Brass" />
+    <ChoiceValue id="metal_bronze"
+                 val="5"
+                 label ="Bronze" />
+    <ChoiceValue id="metal_stainless_steel"
+                 val="6"
+                 label ="Stainless Steel" />
+    <ChoiceValue id="metal_zinc"
+                 val="7"
+                 label ="Zinc" />
+  </Choice>
+
+  <Boolean id="metal_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="metal_color" 
+          valR=".6" 
+          valG=".6" 
+          valB=".6"
+          label="Color"
+          allowconnectedassets="single" />
+  
+  <Float  id="metal_patina" 
+          val=".0"
+          label="Patina" >
+    <Bounds minimum="0.0"
+            maximum="1.0" />
+  </Float>
+
+  <Choice id="metal_finish" 
+          val="metal_polished"
+          label="Finish" >
+    <ChoiceValue id="metal_polished"
+                 val="0"
+                 label="Polished" />
+    <ChoiceValue id="metal_semi_polished"
+                 val="1"
+                 label="Semi-polished" />
+    <ChoiceValue id="metal_satin"
+                 val="2"
+                 label="Satin" />
+    <ChoiceValue id="metal_brushed"
+                 val="3"
+                 label="Brushed" />
+  </Choice>
+
+  <Choice id="metal_pattern" 
+          val="metal_none"
+          label="Relief Pattern" >
+    <ChoiceValue id="metal_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="metal_knurl"
+                 val="1"
+                 label="Knurl" />
+    <ChoiceValue id="metal_diamond_plate"
+                 val="2"
+                 label="Diamond Plate" />
+    <ChoiceValue id="metal_checker_plate"
+                 val="3"
+                 label="Checker Plate" />
+    <ChoiceValue id="metal_custom"
+                 val="4"
+                 label="Custom - Image" />
+  </Choice>
+
+  <Float  id="metal_pattern_height" 
+          val=".3"
+          label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="2.0" />
+  </Float>
+  
+  <Float  id="metal_pattern_scale" 
+          val="1.0"
+          label="Scale" >
+    <Bounds minimum="0.0" />
+  </Float>
+  
+  <Reference id="metal_pattern_shader"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Choice id="metal_perforations" 
+          val="metal_perf_none"
+          label="Cutouts" >
+    <ChoiceValue id="metal_perf_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="metal_perf_circles_staggered"
+                 val="1"
+                 label="Staggered Circles" />
+    <ChoiceValue id="metal_perf_circles_straight"
+                 val="2"
+                 label="Straight Circles" />
+    <ChoiceValue id="metal_perf_squares"
+                 val="3"
+                 label="Squares" />
+    <ChoiceValue id="metal_perf_grecian"
+                 val="4"
+                 label="Grecian" />
+    <ChoiceValue id="metal_perf_cloverleaf"
+                 val="5"
+                 label="Cloverleaf" />
+    <ChoiceValue id="metal_perf_hexagon"
+                 val="6"
+                 label="Hexagon" />
+    <ChoiceValue id="metal_perf_custom"
+                 val="7"
+                 label="Custom" />
+  </Choice>
+
+  <Float  id="metal_perforations_size"
+          val="0.5"
+          label="Size" >
+    <Bounds minimum="0.0001"/>
+  </Float>
+  
+  <Float  id="metal_perforations_center" 
+          val=".6875"
+          label="Center Spacing" >
+    <Bounds minimum="0.0001"/>
+  </Float>
+
+  <!-- Internal parameter -->
+  <Float  id="metal_perforations_space" 
+          val="0.2"
+          label="Perforations Space" />
+
+  <Reference id="metal_perforations_shader"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <!-- These URL were once delared using File tag-->
+  <!-- Internal parameters -->
+  <URL id="brush_def_map" 
+       val="Mats/Metal/external.dependency/Simple_Metal_Mtl_Brush_pattern.jpg"
+       label="Brush Def Map" />
+  <URL id="break_def_map" 
+       val="Mats/Metal/external.dependency/Simple_Metal_Mtl_Break_pattern.jpg"
+       label="Break Def Map" />
+  <URL id="bump_diamond_map" 
+       val="Mats/Metal/external.dependency/Simple_Metal_Mtl_DiamondPlate_pattern.jpg"
+       label="Bump Diamond Map" />
+  <URL id="bump_checker_map" 
+       val="Mats/Metal/external.dependency/Simple_Metal_Mtl_CheckerPlate_pattern.jpg"
+       label="Bump Checker Map" />
+
+  <Boolean id="metal_ao_on"
+         val="false"
+         label="Ambient Occlusion" />
+
+  <Integer id="metal_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="metal_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="metal_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="metal_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="metal_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="metal_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="metal_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter -->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Metal/metalUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Metal/metalAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Metal/MentalImage.xml" />
+   
+  <implementation id="ImplementationOGS"
+                  val="Mats/Metal/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Metal/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric" 
+                  val="Mats/Metal/Generic.xml" />
+
+</AssetSchema>
+
+

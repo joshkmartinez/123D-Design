@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <label tag="server.DrawCurve" devLabel="Draw Curve" label="画曲线"/>
+  <label tag="server.EditLayer" devLabel="Edit Layer" label="编辑层次"/>
+  <label tag="server.EffectBrush" devLabel="Effect Brush" label="画笔效果"/>
+</Resource>

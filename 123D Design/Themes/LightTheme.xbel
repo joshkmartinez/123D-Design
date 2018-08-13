@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel version="1.0">
+<!--Colors and LinearGradients-->
+<Color name="NormalTextColor">
+    <rgba r="0" g="0" b="0"  a="255"/>
+</Color>
+<Color name="HoverTextColor">
+    <hex value="#FF0000FF"/>
+</Color>
+<Color name="MissingTextColor">
+  <hex value="#F40000"/>
+</Color>
+<Color name="BrowserBackgroundColor">
+  <hex value="0xBBBBBB"/>
+</Color>
+<!--Containers-->
+<Color name="Container1">
+    <hex value="#EFEFEF"/>
+</Color>
+<Color name="Container2">
+    <hex value="#E1E1E1"/>
+</Color>
+<Color name="Container3">
+    <hex value="#BBBBBB"/>
+</Color>
+<Color name="Container4">
+    <hex value="#A6A6A6"/>
+</Color>
+<Color name="Container5">
+    <hex value="#1E1E1E"/>
+</Color>
+<Color name="Container6">
+    <hex value="#000000"/>
+</Color>
+<Color name="C6PlusTR2">
+    <hex value="#000000BF"/>
+</Color>
+<Color name="WidgetContainer1">
+    <hex value="#FEFEFE" anchor="0.0"/>
+    <hex value="#EEEEEF" anchor="1.0"/>
+</Color>
+<Color name="WidgetContainer2">
+    <hex value="#FEFEFEFF"/>
+</Color>
+<Color name="WidgetContainer3">
+    <hex value="#FEFEFEFF"/>
+</Color>
+<Color name="WidgetContainer4">
+    <hex value="#FEFEFEFF"/>
+</Color>
+<Color name="WidgetContainer5">
+    <hex value="#CAE2F7FF"/>
+</Color>
+<Color name="WidgetContainer6">
+    <hex value="#FEFEFEFF"/>
+</Color>
+<Color name="WidgetContainer7">
+    <hex value="#CACACAFF"/>
+</Color>
+<Color name="WidgetContainer8">
+    <hex value="#BABABAFF"/>
+</Color>
+<Color name="WidgetContainerDisabled1">
+    <hex value="#FEFEFE" anchor="0.0"/>
+    <hex value="#EEEEEF" anchor="1.0"/>
+</Color>
+<Color name="NoImageSelectedContainer">
+    <hex value="#FFFFFFE5"/>
+</Color>
+<Color name="WidgetContainer9">
+  <hex value="#F2F2F2FF"/>
+</Color>
+<Color name="HoverContainer1">
+    <hex value="#D1EBFA" anchor="0.0"/>
+    <hex value="#C6E8F7" anchor="1.0"/>
+</Color>
+<Color name="HoverContainer2">
+    <hex value="#FFFFFF3F"/>
+</Color>
+<Color name="HoverContainer3">
+    <hex value="#D1EBFAFF"  anchor="0.0"/>
+    <hex value="#C6E8F7FF"  anchor="1.0"/>
+</Color>
+<Color name="TreeViewDropIndicatorBackground">
+    <hex value="#D1EBFAFF"  anchor="0.0"/>
+    <hex value="#C6E8F7FF"  anchor="1.0"/>
+</Color>
+<Color name="TreeViewDropIndicatorBorder">
+    <hex value="#0160BFFF"/>
+</Color>
+<Color name="ClickContainer1">
+    <hex value="#C3DCF4" anchor="0.0"/>
+    <hex value="#AED1F1" anchor="1.0"/>
+</Color>
+<Color name="InternalShadow">
+    <hex value="#84B4E3"/>
+</Color>
+<Color name="ActiveContainer1">
+    <hex value="#C3DCF4" anchor="0.0"/>
+    <hex value="#AED1F1" anchor="1.0"/>
+</Color>
+<Color name="ActiveContainer2">
+    <hex value="#BBD8F3FF"/>
+</Color>
+<Color name="ActiveContainer3">
+    <hex value="#C3DCF4"  anchor="0.0"/>
+    <hex value="#AED1F1"  anchor="1.0"/>
+</Color>
+<Color name="ControlActive1">
+    <hex value="#0066FFFF"/>
+</Color>
+<Color name="C1PlusGradient">
+  <hex value="#EFEFEF" anchor="0.0"/>
+  <hex value="#ECECEC" anchor="1.0"/>
+</Color>
+<Color name="C2PlusGradient">
+  <hex value="#E2E2E2" anchor="0.0"/>
+  <hex value="#DBDBDB" anchor="1.0"/>
+</Color>
+<Color name="C3PlusGradient">
+  <hex value="#CDCDCD" anchor="0.0"/>
+  <hex value="#BDBDBD" anchor="1.0"/>
+</Color>
+<Color name="C4PlusGradient">
+  <hex value="#AEAEAE" anchor="0.0"/>
+  <hex value="#9E9E9E" anchor="1.0"/>
+</Color>
+<Color name="DropDownGroupLabel">
+ <hex value="#D9D9D9"/>
+</Color>
+<Color name="ToolTipBackground">
+  <hex value="#EFEFEF" anchor="0.0"/>
+  <hex value="#ECECEC" anchor="1.0"/>
+</Color>
+<Color name="DropDownContainer">
+  <hex value="#EBEBEB" anchor="0.0"/>
+  <hex value="#D2D2D2" anchor="1.0"/>
+</Color>  
+<!--Borders-->
+<Color name="FocusOutline1">
+    <hex value="#4195DB"/>
+</Color>
+<Color name="HoverOutline1">
+    <hex value="#0160BF"/>
+</Color>
+<Color name="HoverOutline2">
+    <hex value="#FFFFFF4C"/>
+</Color>
+<Color name="HoverOutline3">
+    <hex value="#0160BFFF"/>
+</Color>
+<Color name="ClickOutline1">
+    <hex value="#0160BF"/>
+</Color>
+<Color name="ActiveOutline1">
+    <hex value="#0160BF"/>
+</Color>
+<Color name="ActiveOutline3">
+    <hex value="#0160BFFF"/>
+</Color>
+<Color name="ToolTipBorder">
+  <hex value="#606060"/>
+</Color>
+
+<!--Borders and Highlights-->
+<Color name="Outline1">
+    <hex value="#FFFFFF33"/>
+</Color>
+<Color name="Outline2">
+    <hex value="#00000066"/>
+</Color>
+<Color name="WidgetOutline1">
+    <hex value="#00000033"/>
+</Color>
+<Color name="WidgetOutline2">
+    <hex value="#AEAEAE"/>
+</Color>
+<Color name="WidgetOutline3">
+    <hex value="#00000033"/>
+</Color>
+<Color name="WidgetOutline4">
+    <hex value="#00000033"/>
+</Color>
+<Color name="WidgetOutline5">
+    <hex value="#0000003F"/>
+</Color>
+<Color name="WidgetOutline6">
+    <hex value="#00000033"/>
+</Color>
+<Color name="WidgetOutline7">
+    <hex value="#959595FF"/>
+</Color>
+<Color name="WidgetOutline8">
+    <hex value="#656565"/>
+</Color>
+<Color name="WidgetOutlineDisabled1">
+    <hex value="#00000033"/>
+</Color>
+<Color name="Border1">
+  <hex value="#0000004C"/>
+</Color>
+<Color name="Border2">
+  <hex value="#00000019"/>
+</Color>
+<Color name="Border3">
+  <hex value="#747474FF"/>
+</Color>
+<Color name="Highlight1">
+  <hex value="#FFFFFF4C"/>
+</Color>
+<Color name="Highlight2">
+  <hex value="#FFFFFF19"/>
+</Color>
+<Color name="HeaderBorderTop">
+    <hex value="#7F7F7F"/>
+</Color>
+<Color name="HeaderBorderBottom">
+    <hex value="#7F7F7F"/>
+</Color>
+<Color name="HeaderBorderHighlight">
+    <hex value="#D4D4D4"/>
+</Color>
+<Color name="HighLightTopToolbarLine">
+    <hex value="#646564"/>
+</Color>
+  
+  
+<!--Font Colors-->
+<Color name="FontNormal1">
+    <hex value="#191919"/>
+</Color>
+<Color name="FontBold1">
+    <hex value="#262626"/>
+</Color>
+<Color name="FontLight1">
+    <hex value="#737373"/>
+</Color>
+<Color name="FontSearch1">
+    <hex value="#191919"/>
+</Color>
+<Color name="FontSearch2">
+    <hex value="#393939"/>
+</Color>
+<Color name="FontSearchPrompt">
+    <hex value="#707070"/>
+</Color>
+<Color name="FontActive1">
+    <hex value="#0160BF"/>
+</Color>
+<Color name="FontActive2">
+    <hex value="#191919"/>
+</Color>
+<Color name="FontColorDisabled">
+    <hex value="#737373"/>
+</Color>
+<Color name="FontNormalDisabled1">
+    <hex value="#191919"/>
+</Color>
+<!--Separator Colors-->
+<Color name="Separator1">
+    <hex value="#00000026"/>
+</Color>
+<Color name="Separator2">
+    <hex value="#00000033"/>
+</Color>
+<Color name="MBViewSeparator">
+    <hex value="#D8D8D8"/>
+</Color>
+
+<Color name="HoverBackground">
+    <hex value="#D1EBFAFF" anchor="0.0"/>
+    <hex value="#C6E8F7FF" anchor="1.0"/>
+</Color>
+<Color name="PressedBackground">
+    <rgba r="195" g="220" b="244" a="255" anchor="0.0"/>
+    <rgba r="174" g="209" b="241" a="255" anchor="1.0"/>
+</Color>
+<Color name="CheckMark">
+    <hex value="#2D2D2D"/>
+</Color>
+<Color name="Triangle">
+    <hex value="#2D2D2D"/>
+</Color>
+<Color name="MissFile">
+    <hex value="#0160BF"/>
+</Color>
+
+<!--Material Browser-->
+<!--Background-->
+<Color name="MBInSceneMaterialViewBackground">
+    <hex value="#E2E2E2"/>
+</Color>
+<Color name="MBInSceneToolBarFrameBorderColor">
+    <!--Border1-->
+    <hex value="#0000004C"/>
+</Color>
+<Color name="MBInSceneMaterialViewItemHoverBackground">
+    <!--HoverContainer1 (solid)-->
+    <hex value="#C6E8F7"/>
+</Color>
+<Color name="MBLibraryMaterialViewItemHoverFontColor">
+    <!--FontActive2-->
+    <hex value="#191919"/>
+</Color>
+
+<Color name="MBSplitterBackground">
+    <!--Background-->
+    <hex value="#EEEEEE"/>
+</Color>
+<Color name="MBSplitterBorderColor">
+    <!--Border-->
+    <hex value="#CCCCCC"/>
+</Color>
+
+<Color name="MBFrameBackground">
+    <!--Container2-->
+    <hex value="#E1E1E1"/>
+</Color>
+<Color name="MBFrameBackgroundGradient">
+  <!--C3PlusGradient-->
+  <hex value="#CDCDCD" anchor="0.0"/>
+  <hex value="#BDBDBD" anchor="1.0"/>
+</Color>
+<Color name="MBViewBackground">
+    <hex value="#E2E2E2"/>
+</Color>
+<Color name="MBViewItemBackground">
+    <hex value="#E6E6E6"/>
+</Color>
+<Color name="MBViewItemBackgroundOdd">
+    <hex value="#FFFFFFFF"/>
+</Color>
+<Color name="MBViewItemSelectionBackground">
+    <hex value="#B3CBEC"  anchor="0.0"/>
+    <hex value="#A5BCDC"  anchor="1.0"/>
+</Color>
+<Color name="MBTreeViewItemSelectionBackground">
+    <hex value="#B3CBEC"  anchor="0.0"/>
+    <hex value="#A5BCDC"  anchor="1.0"/>
+</Color>
+<Color name="MBViewItemSelectionOutline">
+    <hex value="#5A82B4"/>
+</Color>
+<Color name="MBViewItemHoverBackground">
+    <hex value="#D5E0F3" anchor="0.0"/>
+    <hex value="#C3CFDF" anchor="1.0"/>
+</Color>
+<Color name="MBViewItemHoverOutline">
+    <hex value="#5A82B4"/>
+</Color>
+<Color name="MBViewItemSelectedGroupBackground">
+    <hex value="#D1D1D1"/>
+</Color>
+<Color name="MBSeparator1">
+    <!--Separator1-->
+    <hex value="#00000026"/>
+</Color>
+<Color name="MBHeaderViewBackground">
+    <hex value="#FFFFFFFF"/>
+</Color>
+<Color name="MBLibraryHeaderBackgroundGradient">
+  <hex value="#F1F1F1" anchor="0.0"/>
+  <hex value="#D2D2D2" anchor="1.0"/>
+</Color>
+<Color name="MBSearchResultHeaderBackground">
+  <hex value="#DBDBDB" anchor="0.0"/>
+  <hex value="#CCCCCC" anchor="1.0"/>
+</Color>
+
+<!--Font Color-->
+<Color name="MBViewItemSelectionColor">
+    <!--FontActive2-->
+    <hex value="#191919"/>
+</Color>
+<Color name="MBTreeViewItemSelectionColor">
+    <hex value="#FFFFFF"/>
+</Color>
+<Color name="MBViewFontColor">
+    <!--FontNormal1-->
+    <hex value="#191919"/>
+</Color>
+<Color name="MBInSceneMaterialFontColor">
+    <!--FontNormal1-->
+    <hex value="#191919"/>
+</Color>
+<Color name="MBMaterialGroupFontColorDisabled">
+  <hex value="#7B7B7B"/>
+</Color>
+    
+<!--Border Color-->
+<Color name="MBFrameHighlight1">
+    <!--Highlight1-->
+    <hex value="#FFFFFF4C"/>
+</Color>
+<Color name="MBFrameBorder1">
+    <!--Border1-->
+    <hex value="#0000004C"/>
+</Color>
+<Color name="MBFrameBorder3">
+    <!--Border3-->
+    <hex value="#747474FF"/>
+</Color>
+<Color name="MBHorizontalSplitterBorderColor">
+    <hex value="#ACACAC"/>
+</Color>
+<Color name="MBBottomToolBarFrameTopBorderColor">
+    <hex value="#838383"/>
+</Color>
+<Color name="MBSearchResultBottomBorderColor">
+    <hex value="#808180"/>
+</Color>
+
+<!--End of Material Browser-->
+
+<!--Appearance Editor-->
+
+<Color name="AppearanceEditorBackground">
+    <!--Background-->
+    <hex value="#9B9B9B"/>
+</Color>
+<Color name="AppearanceEditorSplitterBorderColor">
+    <!--Border-->
+    <hex value="#CCCCCC"/>
+</Color>
+<Color name="PreviewAreaContainer">
+  <hex value="#E2E2E2"/>    
+</Color>
+<Color name="AppearanceEditorHeaderBackgroundGradient">
+    <hex value="#C2C2C2" anchor="0.0"/>
+    <hex value="#AAAAAA" anchor="1.0"/>
+</Color>
+<Color name="MEFrameBackgroundGradient">
+  <hex value="#CDCDCD" anchor="0.0"/>
+  <hex value="#BDBDBD" anchor="1.0"/>
+</Color>
+  
+<!--End of Appearance Editor-->
+
+<!--Texture Editor-->
+<!--Background-->
+<Color name="TexturePreviewWindowContainer">
+    <hex value="#404040"/>
+</Color>
+<!--DimensionText-->
+<Color name="DimensionTextFontColor">
+    <hex value="#FFFFFF"/>
+</Color>
+<!--DimensionLine-->
+<Color name="DimensionLineColor">
+    <hex value="#FFFFFF4C"/>
+</Color>
+
+<!--End of Texture Editor-->
+
+<!--TitleBar-->
+<!--TitleBarTopColor-->
+<Color name="TitleBarTopColor">
+  <hex value="#00000050"/>
+</Color>
+
+<!--TitleBarBottomColor-->
+<Color name="TitleBarBottomColor">
+  <hex value="#000000FF"/>
+</Color>
+
+<!--TitleBarTextColor-->
+<Color name="TitleBarTextColor">
+  <hex value="#FEFEFEFF"/>
+</Color>
+
+<!--TitleBarCloseButtonColor-->
+<Color name="TitleBarCloseButtonColor">
+  <hex value="#414141FF"/>
+</Color>
+<!--End of TitleBar-->
+
+<!--AspectTypeButton-->
+<Color name="AspectTabBottomBorder">
+  <hex value="#6C6D6F"/>
+</Color>
+<Color name="AspectTabBottomUncheckedBorder">
+  <hex value="#BABCBE"/>
+</Color>
+
+<Color name="AspectTabbarGradient">
+  <hex value="#EFEFEF" anchor="0.0"/>
+  <hex value="#DBDBDB" anchor="1.0"/> 
+</Color>
+  <!--End of AspectTypeButton-->
+
+  <!--QTMsgBox-->
+  <Color name="MsgBoderBackground">
+    <hex value="#FFFFFFFF"/>
+  </Color>
+  <Color name="MsgLabelText">
+    <hex value="#2B56AAFF"/>
+  </Color>
+  <Color name="MsgBottomBackground">
+    <hex value="#F0F0F0FF"/>
+  </Color>
+  <!--End of QTMsgBox-->
+
+<!--Icon resources-->
+<Icon name="MiniButtonToggleOn" file=":/Images/MiniIconUnlock.png"/>
+<Icon name="MiniButtonToggleOff" file=":/Images/MiniIconLock.png"/>
+<Icon name="MiniButtonToggleOnHover" file=":/Images/Unlock_lightBG.png"/>
+<Icon name="MiniButtonToggleOffHover" file=":/Images/Lock_lightBG.png"/>
+<Icon name="InvalidLibraryIcon" file=":/Images/InvalidLibrary-Light.png"/>
+<Icon name="ParameterLinkButton" file=":/Images/link_16.png"/>
+<Icon name="Progress0" file=":/Images/progress0.png"/>
+<Icon name="Progress1" file=":/Images/progress1.png"/>
+<Icon name="Progress2" file=":/Images/progress2.png"/>
+<Icon name="Progress3" file=":/Images/progress3.png"/>
+<Icon name="Progress4" file=":/Images/progress4.png"/>
+<Icon name="Progress5" file=":/Images/progress5.png"/>
+<Icon name="Progress6" file=":/Images/progress6.png"/>
+<Icon name="Progress7" file=":/Images/progress7.png"/>
+<Icon name="Progress8" file=":/Images/progress8.png"/>
+<Icon name="Progress9" file=":/Images/progress9.png"/>
+<Icon name="Progress10" file=":/Images/progress10.png"/>
+<Icon name="Progress11" file=":/Images/progress11.png"/>
+<Icon name="Progress12" file=":/Images/progress12.png"/>
+<Icon name="Progress13" file=":/Images/progress13.png"/>
+<Icon name="Progress14" file=":/Images/progress14.png"/>
+<Icon name="Progress15" file=":/Images/progress15.png"/>
+<Icon name="Progress16" file=":/Images/progress16.png"/>
+<Icon name="Progress17" file=":/Images/progress17.png"/>
+<Icon name="Progress18" file=":/Images/progress18.png"/>
+<Icon name="Progress19" file=":/Images/progress19.png"/>
+<Icon name="Progress20" file=":/Images/progress20.png"/>
+<Icon name="Progress21" file=":/Images/progress21.png"/>
+<Icon name="DownArrow"  file=":/Images/DownArrow_LT.png"/>
+
+<String name="BranchClosed" value=":/branch-closedLt.png"/>
+<String name="BranchOpen" value=":/branch-openLt.png"/>
+<String name="BranchClosedSelected" value=":/branch-closedDk.png"/>
+<String name="BranchOpenSelected" value=":/branch-openDk.png"/>
+<String name="VScrollBarAddLine" value=":/VScrollBar_AddLine_LT.png"/>
+<String name="VScrollBarSubLine" value=":/VScrollBar_SubLine_LT.png"/>
+<String name="HScrollBarAddLine" value=":/HScrollBar_AddLine_LT.png"/>
+<String name="HScrollBarSubLine" value=":/HScrollBar_SubLine_LT.png"/>
+<String name="BreadcrumbHome_idle" value=":/Images/BreadcrumbHome_idle.png"/>
+<String name="BreadcrumbHome_hover" value=":/Images/BreadcrumbHome_hover.png"/>
+<String name="BreadcrumbHome_down" value=":/Images/BreadcrumbHome_down.png"/>
+<String name="BreadcrumbItem_idle" value=":/Images/BreadcrumbItem_idle.png"/>
+<String name="BreadcrumbItem_hover" value=":/Images/BreadcrumbItem_hover.png"/>
+<String name="BreadcrumbItem_down" value=":/Images/BreadcrumbItem_down.png"/>
+<String name="BreadcrumbItem_nodropdown" value=":/Images/BreadcrumbItem_nodropdown.png"/> 
+<String name="ContectMenu" value=":/Images/ContectMenu.png"/>
+<String name="hide tree" value=":/Images/hide tree.png"/>
+<String name="show tree" value=":/Images/show tree.png"/>
+
+<Int name="SearchBoxFixedWidth" value="240" />
+
+</xbel>

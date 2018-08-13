@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for SunAndSky
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="SunAndSkySchema"/>
+
+  <Integer id="SchemaVersion"
+           val="2"
+           public="false"
+           readonly="true" />
+
+  <type val="environment"/>
+
+  <localtype val="Environment" />
+  <localname val="Sun and Sky" />
+	
+  <!-- Environment properties -->
+  <!-- Tells the renderer whether or not this environment lights the scene. -->
+  <!-- label is not defined in previous UI -->
+  <Boolean id="ProvidesLighting"
+           val="true"
+           label="Provides Lighting" />
+  <!-- There are no bounds information for all numeric fields in UI definition -->
+  <!-- Sky and sun light parameters -->
+
+  <Boolean id="illuminationOn"
+           val="true"
+           label="Illumination On:"/>
+  
+  <Boolean id="backgroundOn"
+           val="true"
+           label="Background On:"/>
+  
+  <Boolean id="hazeOn"
+           val="true"
+           label="Haze On:"/>
+
+  <Float id="multiplier"
+         val="1.0"
+         label="Multiplier:"/>
+  
+  <!-- The hard-coded Protein phsycal scale is PI; we need to pass 1/PI-->
+  <Vector3 id="rgb_unit_conversion"
+           valX="0.3183098862"
+           valY="0.3183098862"
+           valZ="0.3183098862"
+           label="Color Conversion:"/>
+
+  <!-- no label info in UI definition -->
+  <Float id="haze"
+         val="0.0"
+         label="Sky Haziness/Cloudiness:"
+         allowconnectedassets="single" />
+  
+  <!-- no label info in UI definition -->
+  <Float id="haze_small"
+         val="0.0"
+         label="Haze Small"
+         allowconnectedassets="single" />
+  
+  <!-- no label info in UI definition -->
+  <Integer id="ImageSwitch"
+           val="0"
+           label="Image Switch:"/>
+
+  <Float id="redblueshift"
+         val="0.0"
+         label="Red/Blue Shift:"/>
+  
+  <Float id="saturation"
+         val="1.0"
+         label="Saturation:"/>
+
+  <Float id="horizon_height"
+         val="0.0"
+         label="Horizon Height:"/>
+  
+  <Float id="horizon_blur"
+         val="0.1"
+         label="Horizon Blur:"/>
+  
+  <Color id="ground_color"
+         valR="0.2"
+         valG="0.2"
+         valB="0.2"
+         label="Ground Color:"/>
+  
+  <Color id="night_color"
+         valR="0.0"
+         valG="0.0"
+         valB="0.0"
+         label="Night Color:"/>
+
+  <!-- The north direction, in degrees, relative to the X axis, defined clockwise. -->
+  <Float id="north_offset_from_x"
+         val="0.0"
+         label="North Azimuth:"/>
+
+  <Boolean id="use_altitude_azimuth"
+           val="false"
+           label="Override Sun Position:"/>
+  
+  <Float id="Altitude"
+         val="90"
+         label="Sun Altitude:"/>
+  
+  <Float id="Azimuth"
+         val="180"
+         label="Sun Azimuth:"/>
+  
+  <!-- no label info in UI definition -->
+  <String id="Location"
+          val="Montreal\, Canada"
+          label="Location"/>
+  
+  <Float id="Latitude"
+         val="45.560398"
+         label="Scene Latitude:"/>
+  
+  <Float id="Longitude"
+         val="-73.560226"
+         label="Scene Longitude:"/>
+  
+  <Integer id="Year"
+           val="2008"
+           label="Year:"/>
+  
+  <Integer id="Month"
+           val="6"
+           label="Month:"/>
+  
+  <Integer id="Day"
+           val="21"
+           label="Day:"/>
+  
+  <Float id="TimeZoneOffset"
+         val="-5.0"
+         label="Time Zone Offset:"/>
+  
+  <Boolean id="DST"
+           val="true"
+           label="DST In Use:"/>
+  
+  <Float id="Time"
+         val="10.0"
+         label="Time:"/>
+
+  <String id="sun"
+          val=""
+          label="Sun Shader:"/>
+
+  <Float id="sun_disk_intensity"
+         val="1.0"
+         label="Disk Intensity:"/>
+  
+  <Float id="sun_disk_scale"
+         val="4.0"
+         label="Disk Scale:"/>
+  
+  <Float id="sun_glow_intensity"
+         val="1.0"
+         label="Glow Intensity:"/>
+  
+  <!-- no label info in UI definition -->
+  <Float id="shadow_softness"
+         val="1.0"
+         label="Shadow Softness"/>
+
+  <Boolean id="use_background"
+           val="false"
+           label="Use Background:"/>
+  
+  <String id="background"
+          val=""
+          label="Background Shader:"/>
+  
+  <!-- no label info in UI definition -->
+  <Integer id="flags"
+           val="0"
+           label="Flags"/>
+
+  <Float id="visibility_distance"
+         val="0"
+         label="Visibility Distance (10% Haze):"/>
+  
+  <!-- no label info in UI definition -->
+  <Boolean id="automatic_photon_energy"
+           val="true"
+           label="Automatic Photon Energy:"/>
+  
+  <Boolean id="cast_shadows"
+           val="true"
+           label="Turns on shadows:"/>
+  
+  <Float id="intensity_factor"
+         val="1.0"
+         label="Brightness of the sun:"/>
+  
+  <Color id="sun_color"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Sun Color:"/>
+
+  <!-- End of sky and sun light parameters -->
+
+  <!-- Light object parameters -->
+  <!-- no label info in UI definition -->
+  <Choice id="lightobjecttype"
+          val="directional"
+          label="Type:">
+    <ChoiceValue id="origin"
+                 val="0"
+                 label="Point"/>
+    <ChoiceValue id="spot"
+                 val="1"
+                 label="Spot"/>
+    <ChoiceValue id="directional"
+                 val="2"
+                 label="Directional"/>
+  </Choice>
+  
+  <!-- no label info in UI definition -->
+  <Choice id="lightobjectareatype"
+          val="none"
+          label="Area Type:">
+    <ChoiceValue id="none"
+                 val="0"
+                 label="No Area"/>
+    <ChoiceValue id="rectangle"
+                 val="1"
+                 label="Rectangle"/>
+    <ChoiceValue id="disc"
+                 val="2"
+                 label="Disc"/>
+    <ChoiceValue id="sphere"
+                 val="3"
+                 label="Sphere"/>
+    <ChoiceValue id="cylinder"
+                 val="4"
+                 label="Cylinder"/>
+    <ChoiceValue id="object"
+                 val="5"
+                 label="Object"/>
+    <ChoiceValue id="user"
+                 val="6"
+                 label="User"/>
+  </Choice>
+
+  <!-- no label info in UI definition -->
+  <Float id="lightobjectexponent"
+         val="0.0"
+         label="Attenuation:"/>
+
+  <!-- no label info in UI definition -->
+  <Boolean id="lightobjectvisible"
+           val="false"
+           label="Visible"/>
+
+  <Integer id="sort_order" 
+           val="0"
+           public="false"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Environments/SunAndSky/SunAndSkyUI.xml"/>
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Environments/SunAndSky/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                 val="Environments/SunAndSky/OGS.xml" />  
+</AssetSchema>

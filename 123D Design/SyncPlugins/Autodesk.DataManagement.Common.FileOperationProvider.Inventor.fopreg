@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectivity.ExtensionSettings3>
+
+    <!-- IFileReferencesProvider implementation -->
+    <extension
+      interface="Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core.IFileReferencesProvider, Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core"
+      type="Autodesk.DataManagement.Common.FileOperationProvider.Inventor.FileReferenceProvider, Autodesk.DataManagement.Common.FileOperationProvider.Inventor"
+      runtime="x64">
+ 
+      <!-- FOS core settings for a provider -->
+      <setting key="Id" value="{C8B8FBF2-5A38-435D-9DD9-F53F2995CE9D}"/>
+      <setting key="Name" value="Inventor"/>
+      <setting key="LoadEnabled" value="true"/>
+      <setting key="Enabled" value="true"/>
+      <setting key="SupportedExtensions" value=".iam; .ipt; .ipn; .idw; .dwg"/>
+      <setting key="UnsupportedExtensions" value=""/>
+      <setting key="AdhereToExtensions" value="true"/>
+      <setting key="Priority" value="30"/>
+    
+      <!-- IFileReferencesProvider settings -->
+      <!-- SupportsUpdate: indicates if the UpdateReference method is supported by the provider implementation -->
+      <setting key="SupportsUpdate" value="true"/>
+
+      <!-- Custom provider properties -->
+      <!-- Inventor.ProjectFile -->
+      <setting key="Inventor.ProjectFile" value="ProviderProperty"/>
+      <setting key="Inventor.ProjectFile.Default"            value=""/>
+      <setting key="Inventor.ProjectFile.OutputPropertyName" value="Inventor.ProjectFile.Used"/>
+      <setting key="Inventor.ProjectFile.Description"        value="Project file (.ipj) to use with get/update file references."/>
+      <setting key="Inventor.ProjectFile.Public"             value="true"/>
+  
+      <!-- Inventor.ApprenticeAndObjectDBXCompatibilityForDWG.Check -->
+      <setting key="Inventor.ApprenticeAndObjectDBXCompatibilityForDWG.Check" value="ProviderProperty"/>
+      <setting key="Inventor.ApprenticeAndObjectDBXCompatibilityForDWG.Check.Default"     value="true"/>
+      <setting key="Inventor.ApprenticeAndObjectDBXCompatibilityForDWG.Check.Description" value="Check for compatibility of ObjectDBX between Apprentice and Providers."/>
+      <setting key="Inventor.ApprenticeAndObjectDBXCompatibilityForDWG.Check.Public"      value="true"/>
+
+    </extension>
+  </connectivity.ExtensionSettings3>
+</configuration>

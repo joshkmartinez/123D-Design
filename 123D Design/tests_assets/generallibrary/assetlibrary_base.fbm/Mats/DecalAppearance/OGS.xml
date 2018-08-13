@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+    <implementation render="OGS">
+      <language name="HLSL" version="2.0"/>
+      <api name="DirectX" version="9.0c"/>
+      <root_bindings name="root"/>
+      <bindings target="shader" name="root">
+        <desc val="../../OGSProtein.dll" tag="DecalAppearance"/>
+      </bindings>
+    </implementation>

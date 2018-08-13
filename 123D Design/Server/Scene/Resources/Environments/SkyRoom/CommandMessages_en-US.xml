@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandMessages version="3.0" InternalName="CommandMessages">
+  <ErrorType name="EdgeBlend" error="Operation Failed: Incorrect input value. Try using different value" warning="Warning" />
+  <HelpMsgType CmdName="Move / Rotate (Ctrl+T)" primaryHelp="Select one or more objects to move or rotate" />
+  <HelpMsgType CmdName="Move / Rotate (Cmd+T)" primaryHelp="Select one or more objects to move or rotate" />
+  <HelpMsgType CmdName="Align (A)" primaryHelp="Align the selected objects" />
+  <HelpMsgType CmdName="Smart Scale (Ctrl+B)" primaryHelp="Select one or more objects to smart scale" />
+  <HelpMsgType CmdName="Smart Scale (Cmd+B)" primaryHelp="Select one or more objects to smart scale" />
+  <HelpMsgType CmdName="Scale (S)" primaryHelp="Select one or more objects to scale" />
+  <HelpMsgType CmdName="Ruler (R)" primaryHelp="Measure distance between ruler origin and object/s" />
+  <HelpMsgType CmdName="Smart Rotate" primaryHelp="Position object/s about the plane" />
+  
+  <HelpMsgType CmdName="Box" primaryHelp="Insert a Box" />
+  <HelpMsgType CmdName="Sphere" primaryHelp="Insert a Sphere" />
+  <HelpMsgType CmdName="Cylinder" primaryHelp="Insert a Cylinder" />
+  <HelpMsgType CmdName="Cone" primaryHelp="Insert a Cone" />
+  <HelpMsgType CmdName="Torus" primaryHelp="Insert a Torus" />
+  <HelpMsgType CmdName="Wedge" primaryHelp="Insert a Wedge" />
+  <HelpMsgType CmdName="Prism" primaryHelp="Insert a Prism" />
+  <HelpMsgType CmdName="Pyramid" primaryHelp="Insert a Pyramid" />
+  <HelpMsgType CmdName="Hemisphere" primaryHelp="Insert a Hemisphere" />
+  <HelpMsgType CmdName="Rectangle" primaryHelp="Insert a Sketch Rectangle" />
+  <HelpMsgType CmdName="Circle" primaryHelp="Insert a Sketch Circle" />
+  <HelpMsgType CmdName="Ellipse" primaryHelp="Insert a Sketch Ellipse" />
+  <HelpMsgType CmdName="Polygon" primaryHelp="Insert a Sketch Polygon" />
+  
+  <HelpMsgType CmdName="Sketch Rectangle" primaryHelp="Create a Rectangular Sketch" />
+  <HelpMsgType CmdName="Sketch Circle" primaryHelp="Create a Circular Sketch" />
+  <HelpMsgType CmdName="Sketch Ellipse" primaryHelp="Create an Elliptical Sketch" />
+  <HelpMsgType CmdName="Sketch Polygon" primaryHelp="Create a Polygon Sketch" />
+  <HelpMsgType CmdName="Polyline" primaryHelp="Create a Polyline" />
+  <HelpMsgType CmdName="Spline" primaryHelp="Create a Spline" />
+  <HelpMsgType CmdName="Two Point Arc" primaryHelp="Create a Two Point Arc" />
+  <HelpMsgType CmdName="Three Point Arc" primaryHelp="Create a Three Point Arc" />
+  <HelpMsgType CmdName="Sketch Fillet" primaryHelp="Create a Sketch Fillet" />
+  <HelpMsgType CmdName="Trim" primaryHelp="Trim Sketch Profiles" />
+  <HelpMsgType CmdName="Extend" primaryHelp="Extend Sketch Profiles" />
+  <HelpMsgType CmdName="Offset" primaryHelp="Offset Sketch Profiles" />
+  <HelpMsgType CmdName="Project" primaryHelp="Project another sketch profiles or faces on a sketch plane" />
+  
+  <HelpMsgType CmdName="Extrude (U)" primaryHelp="Select a closed sketch or face of a solid to Extrude" />
+  <HelpMsgType CmdName="Sweep (W)" primaryHelp="Sweep closed sketch or face of a solid to create an solid object along guided path" />
+  <HelpMsgType CmdName="Revolve (V)" primaryHelp="Revolve closed sketch or face of a solid to create an solid object about revolution axis" />
+  <HelpMsgType CmdName="Loft (L)" primaryHelp="Create Loft using closed sketches or faces of a solid" />
+  
+  <HelpMsgType CmdName="Press Pull (P)" primaryHelp="Resize part with minimal distortion by moving a face of a solid" />
+  <HelpMsgType CmdName="Tweak (K)" primaryHelp="Distort or skew part by moving face or edge of a solid" />
+  <HelpMsgType CmdName="Split Face (B)" primaryHelp="Split face of a solid using sketch or solid" />
+  <HelpMsgType CmdName="Fillet (E)" primaryHelp="Create rounded edges" />
+  <HelpMsgType CmdName="Chamfer (C)" primaryHelp="Create flat, beveled edges" />
+  <HelpMsgType CmdName="Split Solid (Alt+B)" primaryHelp="Split solid using sketch or solid" />
+  <HelpMsgType CmdName="Shell (J)" primaryHelp="Hollow-out shape by selecting face of a solid" />
+  
+  <HelpMsgType CmdName="Rectangular Pattern (N)" primaryHelp="Create rectangular pattern of selected solids along two directions" />
+  <HelpMsgType CmdName="Circular Pattern (Shift+N)" primaryHelp="Create circular pattern of selected solids about axis" />
+  <HelpMsgType CmdName="Path Pattern (Alt+N)" primaryHelp="Create pattern of selected solids along path" />
+  <HelpMsgType CmdName="Mirror (Alt+M)" primaryHelp="Create mirror of selected solids about mirror plane" />
+  
+  <HelpMsgType CmdName="Group (Ctrl+G)" primaryHelp="Group all selected solids" />
+  <HelpMsgType CmdName="Group (Cmd+G)" primaryHelp="Group all selected solids" />
+  <HelpMsgType CmdName="Ungroup (Ctrl+Shift+G)" primaryHelp="Ungroup solids from selected group" />
+  <HelpMsgType CmdName="Ungroup (Cmd+Shift+G)" primaryHelp="Ungroup solids from selected group" />
+  <HelpMsgType CmdName="Ungroup All" primaryHelp="Ungroup solids from selected group and its subgroups" />
+
+  <HelpMsgType CmdName="Combine" primaryHelp="Create custom shape from adding, subtracting multiple objects" />
+  <HelpMsgType CmdName="Merge ([)" primaryHelp="Combine and merge selection" />
+  <HelpMsgType CmdName="Subtract (])" primaryHelp="Exclude overlapping parts" />
+  <HelpMsgType CmdName="Intersect (\)" primaryHelp="Keep only overlapping parts" />
+  <HelpMsgType CmdName="Separate (Shift+P)" primaryHelp="Generate individual parts from a selected solid" />
+  
+  <HelpMsgType CmdName="Snap (;)" primaryHelp="Manually snap object" />
+  
+  <HelpMsgType CmdName="Measure (Shift+M)" primaryHelp="Measure the distance, volume, area of the object/s" />
+  
+  <HelpMsgType CmdName="Material (`)" primaryHelp="Choose a visual material" />
+
+</CommandMessages>

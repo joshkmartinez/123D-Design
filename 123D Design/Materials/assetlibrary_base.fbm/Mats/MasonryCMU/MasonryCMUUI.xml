@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Masonry and CMU
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="masonrycmu_masonrycmugroup"
+                label="Masonry"
+                orientation="Vertical"
+                expanded="true">
+
+      <ChooseList id="masonrycmu_type" label="Type"
+                  tooltip="Controls the application method, either CMU or masonry.">
+        <Choice id="masonrycmu_cmu" label="CMU"/>
+        <Choice id="masonrycmu_masonry" label="Masonry"/>
+      </ChooseList>
+
+      <MappableColor id="masonrycmu_color"
+                     label="Color"
+                     colorbyobject="true"
+                     tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+        <BoolColorByObject id="masonrycmu_color_by_object" />
+      </MappableColor>
+
+      <ChooseList id="masonrycmu_application" label="Finish"
+                  tooltip=" Controls the texture of the finished surface (glossy, matte, unfinished).">
+        <Choice id="masonrycmu_glossy" label="Glossy"/>
+        <Choice id="masonrycmu_matte" label="Matte"/>
+        <Choice id="masonrycmu_unfinished" label="Unfinished"/>
+      </ChooseList>
+
+    </StackPanel>
+
+      <StackPanel id="masonrycmu_pattern"
+                  label="Relief Pattern"
+                  labelid="masonrycmu_pattern_map_panel_label" 
+                  orientation="Vertical"
+                  checkbox="true"
+                  checkonvalue="masonrycmu_custom"
+                  checkboxid2="masonrycmu_pattern_map">
+       <ChooseList id="masonrycmu_pattern" 
+                   onebased="true" 
+                   label="Type"
+                   labelid="masonry_pattern_list_label">
+         <Choice id="masonrycmu_custom" label="Custom"/>
+       </ChooseList>
+       <MappableFloat id="masonrycmu_pattern_map"
+                         label="Image"
+                         labelid="masonrycmu_pattern_map_image_label"
+                         tooltip="Controls relief patterns or tiling. A bump pattern defines raised and lowered areas based on dark and light areas of an image file."
+                         bump="true"
+                         nosinglevalue="true"/>
+          <Float id="masonrycmu_pattern_height"
+                 label="Amount"
+                 min="0.0" max="2.0"
+                 tooltip="Uses a slider to control relief patterns or tiling. "/>
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

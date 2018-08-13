@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translations>
+	<label tag="TextCommandPrompt" devLabel="Type Commands Here - Type '?' or '??' For Help" label="Ype-tay ommands-cay ere-hay - ype-tay '?' or '??' or-fay elp-hay" />
+	<label tag="lclzSaveFile" devLabel="Save file" label="Ave-say ile-fay" />
+</translations>

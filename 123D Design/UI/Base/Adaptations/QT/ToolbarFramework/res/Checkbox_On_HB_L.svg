@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Light_ON"
+   x="0px"
+   y="0px"
+   width="16px"
+   height="16px"
+   viewBox="0 0 16 16"
+   enable-background="new 0 0 16 16"
+   xml:space="preserve"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="Checkbox_On_HB_L.svg"><metadata
+   id="metadata3023"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs3021" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1680"
+   inkscape:window-height="998"
+   id="namedview3019"
+   showgrid="false"
+   inkscape:zoom="15.125"
+   inkscape:cx="-10.049587"
+   inkscape:cy="8"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Light_ON" />
+<path
+   opacity="0.8"
+   fill="none"
+   stroke="#FFFFFF"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   d="M13.4,3.1  C13,2.7,12.6,2.5,12,2.5H4c-0.6,0-1.1,0.2-1.4,0.6C2.2,3.4,2,3.9,2,4.5v8c0,0.6,0.2,1,0.6,1.4C2.9,14.3,3.4,14.5,4,14.5h8  c0.6-0.1,1-0.3,1.4-0.6C13.8,13.5,14,13.1,14,12.5v-8C13.9,3.9,13.7,3.4,13.4,3.1"
+   id="path3006" />
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="7.9995"
+   y1="1.5"
+   x2="7.9995"
+   y2="13.5005">
+	<stop
+   offset="0"
+   style="stop-color:#A1A1A1"
+   id="stop3009" />
+	<stop
+   offset="1"
+   style="stop-color:#F0F0F0"
+   id="stop3011" />
+</linearGradient>
+<path
+   d="m 13.603306,11.5 v -8 c -0.1,-0.6 -0.3,-1.1 -0.6,-1.4 -0.4,-0.4 -0.8,-0.6 -1.4,-0.6 h -8 c -0.6,0 -1.1,0.2 -1.4,0.6 -0.4,0.3 -0.6,0.8 -0.6,1.4 v 8 c 0,0.5 0.2,1 0.6,1.4 0.3,0.4 0.8,0.6 1.4,0.6 h 8 c 0.6,-0.1 1,-0.3 1.4,-0.6 0.4,-0.4 0.6,-0.9 0.6,-1.4 z"
+   id="path3013"
+   style="fill:#769adb;fill-opacity:1"
+   inkscape:connector-curvature="0" />
+<path
+   fill="none"
+   stroke="#404040"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   d="M14,3.5c-0.1-0.6-0.3-1.1-0.6-1.4  C13,1.7,12.6,1.5,12,1.5H4c-0.6,0-1.1,0.2-1.4,0.6C2.2,2.4,2,2.9,2,3.5v8c0,0.5,0.2,1,0.6,1.4C2.9,13.3,3.4,13.5,4,13.5h8  c0.6-0.1,1-0.3,1.4-0.6C13.8,12.5,14,12,14,11.5V3.5"
+   id="path3015" />
+<path
+   d="m 6.566116,10 -2,-2 -1,1 3,3 6,-8 -1,-1 -5,7 z"
+   id="path3017"
+   inkscape:connector-curvature="0" />
+</svg>

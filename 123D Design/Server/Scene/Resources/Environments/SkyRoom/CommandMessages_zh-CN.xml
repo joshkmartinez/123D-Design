@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- we need chinese translation for 'error', 'CmdName', 'primaryHelp' attributes -->
+<CommandMessages version="3.0" InternalName="CommandMessages">
+  <ErrorType name="EdgeBlend" error="操作失败: 输入值不正确。尝试使用不同的值" warning="Warning"/>
+  <HelpMsgType CmdName="移动/旋转(Ctrl+T)" primaryHelp="选择一个或多个要移动或旋转的对象"/>
+  <HelpMsgType CmdName="移动/旋转(Cmd+T)" primaryHelp="选择一个或多个要移动或旋转的对象"/>
+  <HelpMsgType CmdName="对齐(A)" primaryHelp="对齐选定对象"/>
+  <HelpMsgType CmdName="智能缩放(Ctrl+B)" primaryHelp="选择一个或多个对象来进行智能缩放" />
+  <HelpMsgType CmdName="智能缩放(Cmd+B)" primaryHelp="选择一个或多个对象来进行智能缩放" />
+  <HelpMsgType CmdName="缩放(S)" primaryHelp="选择一个或多个要缩放的对象"/>
+  <HelpMsgType CmdName="标尺(R)" primaryHelp="测量标尺原点与对象之间的距离"/>
+  <HelpMsgType CmdName="智能旋转" primaryHelp="围绕面来放置对象" />
+  
+  <HelpMsgType CmdName="长方体" primaryHelp="插入长方体"/>
+  <HelpMsgType CmdName="球体" primaryHelp="插入球体"/>
+  <HelpMsgType CmdName="圆柱体" primaryHelp="插入圆柱体"/>
+  <HelpMsgType CmdName="圆锥体" primaryHelp="插入圆锥体"/>
+  <HelpMsgType CmdName="圆环体" primaryHelp="插入圆环体"/>
+  <HelpMsgType CmdName="楔形体" primaryHelp="插入一个楔形体" />
+  <HelpMsgType CmdName="棱柱体" primaryHelp="插入一个棱柱体" />
+  <HelpMsgType CmdName="锥体" primaryHelp="插入一个锥体" />
+  <HelpMsgType CmdName="半球体" primaryHelp="插入一个半球体" />
+  <HelpMsgType CmdName="矩形" primaryHelp="插入草图矩形"/>
+  <HelpMsgType CmdName="圆" primaryHelp="插入草图圆"/>
+  <HelpMsgType CmdName="椭圆" primaryHelp="插入草图椭圆"/>
+  <HelpMsgType CmdName="多边形" primaryHelp="插入草图多边形"/>
+  
+  <HelpMsgType CmdName="草图矩形" primaryHelp="创建矩形草图"/>
+  <HelpMsgType CmdName="草图圆" primaryHelp="创建环形草图"/>
+  <HelpMsgType CmdName="草图椭圆" primaryHelp="创建椭圆草图"/>
+  <HelpMsgType CmdName="草图多边形" primaryHelp="创建多边形草图"/>
+  <HelpMsgType CmdName="多段线" primaryHelp="创建多段线"/>
+  <HelpMsgType CmdName="样条曲线" primaryHelp="创建样条曲线"/>
+  <HelpMsgType CmdName="两点圆弧" primaryHelp="创建两点圆弧"/>
+  <HelpMsgType CmdName="三点圆弧" primaryHelp="创建三点圆弧"/>
+  <HelpMsgType CmdName="草图圆角" primaryHelp="创建草图圆角"/>
+  <HelpMsgType CmdName="修剪" primaryHelp="修剪草图轮廓"/>
+  <HelpMsgType CmdName="延伸" primaryHelp="延伸草图轮廓"/>
+  <HelpMsgType CmdName="偏移" primaryHelp="偏移草图轮廓"/>
+  <HelpMsgType CmdName="投影" primaryHelp="在草图平面上投影另一个草图轮廓或面"/>
+  
+  <HelpMsgType CmdName="拉伸(U)" primaryHelp="选择封闭草图或实体的面进行拉伸"/>
+  <HelpMsgType CmdName="扫掠(W)" primaryHelp="沿着引导路径扫掠封闭的草图或实体的面来创建实体模型。"/>
+  <HelpMsgType CmdName="旋转(V)" primaryHelp="围绕旋转轴旋转封闭的草图或实体的面来创建模型。"/>
+  <HelpMsgType CmdName="放样(L)" primaryHelp="使用封闭草图或实体的面创建放样"/>
+  
+  <HelpMsgType CmdName="压/拉(P)" primaryHelp="通过移动实体的面，以最小的扭曲调整零件大小"/>
+  <HelpMsgType CmdName="扭曲(K)" primaryHelp="通过移动实体的面或边，扭曲或倾斜零件"/>
+  <HelpMsgType CmdName="分割面(B)" primaryHelp="使用草图或实体分割实体的面"/>
+  <HelpMsgType CmdName="圆角(E)" primaryHelp="创建圆角边"/>
+  <HelpMsgType CmdName="倒角(C)" primaryHelp="创建展开的斜角边"/>
+  <HelpMsgType CmdName="分割实体(Alt+B)" primaryHelp="使用草图或实体分割实体"/>
+  <HelpMsgType CmdName="抽壳(J)" primaryHelp="通过选择实体的面，挖空实体"/>
+  
+  <HelpMsgType CmdName="矩形阵列(N)" primaryHelp="创建选定实体沿两个方向的矩形阵列"/>
+  <HelpMsgType CmdName="环形阵列(Shift+N)" primaryHelp="创建选定实体围绕轴的环形阵列"/>
+  <HelpMsgType CmdName="路径阵列(Alt+N)" primaryHelp="创建选定实体沿路径的阵列"/>
+  <HelpMsgType CmdName="镜像(Alt+M)" primaryHelp="创建选定实体围绕镜像平面的镜像"/>
+  
+  <HelpMsgType CmdName="分组(Ctrl+G)" primaryHelp="对所有选定的实体进行分组"/>
+  <HelpMsgType CmdName="分组(Cmd+G)" primaryHelp="对所有选定的实体进行分组"/>
+  <HelpMsgType CmdName="解组(Ctrl+Shift+G)" primaryHelp="将实体从选定组中解组"/>
+  <HelpMsgType CmdName="解组(Cmd+Shift+G)" primaryHelp="将实体从选定组中解组"/>
+  <HelpMsgType CmdName="全部解组" primaryHelp="将实体从选定组及其子组中解组"/>
+
+  <HelpMsgType CmdName="合并" primaryHelp="通过添加、减去多个对象创建自定义形状"/>
+  <HelpMsgType CmdName="合并([)" primaryHelp="合并选择的实体"/>
+  <HelpMsgType CmdName="相减(])" primaryHelp="排除重叠部分"/>
+  <HelpMsgType CmdName="相交(\)" primaryHelp="保留相交的部分"/>
+  <HelpMsgType CmdName="分离(Shift+P)" primaryHelp="由一个选择的对象生成多个部件" />
+  
+  <HelpMsgType CmdName="吸附(;)" primaryHelp="手动吸附对象"/>
+  
+  <HelpMsgType CmdName="测量(Shift+M)" primaryHelp="测量对象的距离、体积、面积"/>
+  
+  <HelpMsgType CmdName="材质(`)" primaryHelp="选择视觉材质"/>
+
+</CommandMessages>

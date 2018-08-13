@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+<label commandName="LangDialogEnglish" devLabel="English" translation="English" />
+<label commandName="LangDialogJapanese" devLabel="Japanese" translation="日本語 (Japanese)" />
+<label commandName="LangDialogSpanish" devLabel="Spanish" translation="Español (Spanish)" />
+<label commandName="LangDialogTurkish" devLabel="Turkish" translation="Türk (Turkish)" />
+<label commandName="LangDialogChinese" devLabel="Simplified Chinese" translation="简体中文 (Simplified Chinese)" />
+</Resource>

@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="GenericSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Generic" />
+	
+  <Boolean id="color_by_object" 
+           val="false"
+           label="Color By Object"/>
+  
+  <Color id="generic_diffuse" 
+         valR=".315" 
+         valG=".315" 
+         valB=".315"
+         label="Color"
+         allowconnectedassets="single" />
+  
+  <Float id="generic_diffuse_image_fade" 
+         val="1.0"
+         label="Image Fade" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Float id="generic_reflectivity_at_0deg" 
+         val="0.0"
+         label="Reflectivity"
+         allowconnectedassets="single" />
+  
+  <Float id="generic_reflectivity_at_90deg" 
+         val="0.0"
+         label="Reflectivity"
+         allowconnectedassets="single" />
+  
+  <Float id="generic_glossiness" 
+         val="0.5"
+         label="Glossiness"
+         allowconnectedassets="single" />
+  
+  <Boolean id="generic_is_metal" 
+           val="false"
+           label="Highlights" />
+
+  <Float id="generic_transparency" 
+         val="0.0" 
+         label="Transparency"
+         allowconnectedassets="single" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Float id="generic_transparency_image_fade" 
+         val="1.0"
+         label="Image Fade" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Float id="generic_refraction_index" 
+         val="1.52"
+         label="Refraction" >
+    <Bounds minimum="0.01"
+          maximum="5" />
+  </Float>
+  
+  <Float id="generic_refraction_translucency_weight" 
+         val="0.0"
+         label="Translucency"
+         allowconnectedassets="single" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Float id="generic_cutout_opacity" 
+         val="1.0"
+         label="Cutouts"
+         allowconnectedassets="single" />
+
+  <!-- Internal parameter-->
+  <Boolean id="generic_backface_cull" 
+           val="false"
+           label="Backface Cull" />
+  
+  <Float id="generic_self_illum_luminance" 
+         val="0."
+         label="Self Illumination" />
+  
+  <Float id="generic_self_illum_color_temperature" 
+         val="6500"
+         label="Color Temperature" />
+  
+  <Color id="generic_self_illum_filter_map" 
+         valR="1" 
+         valG="1" 
+         valB="1"
+         label="Filter Color"
+         allowconnectedassets="single" />
+
+  <Float id="generic_bump_amount" 
+         val="0.3"
+         label="Amount"
+         allowconnectedassets="single" >
+    <Bounds minimum="-1000"
+            maximum="1000" />
+  </Float>
+  
+  <Color id="generic_bump_map" 
+         valR="0" 
+         valG="0" 
+         valB="0"
+         label="Bump"
+         allowconnectedassets="single" />
+
+  <Boolean id="generic_ao_on"
+           val="false"
+           label="Ambient Occlusion" />
+  
+  <Integer id="generic_ao_samples" 
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+  
+  <Float id="generic_ao_distance" 
+         val="4"
+         label="Max Distance" />
+  
+  <Boolean id="generic_ao_details" 
+           val="true"
+           label="Use Color From Other Materials" />
+
+  <Float id="generic_roundcorners_radius" 
+         val="0.0"
+         label="Round Corners"
+         allowconnectedassets="single" />
+  
+  <Boolean id="generic_roundcorners_allow_different_materials" 
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="generic_refl_depth" 
+           val="0"
+          label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+  
+  <Integer id="generic_refr_depth" 
+           val="-1"
+           label="Override Refraction Depth" >
+    <Bounds minimum="-1"
+            maximum="20" />
+  </Integer>
+  
+  <Integer id="generic_reflection_glossy_samples" 
+           val="12"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+  
+  <Integer id="generic_refraction_glossy_samples" 
+           val="12"
+           label="Refraction Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter-->
+  <Integer id="mode" 
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Generic/GenericUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Generic/GenericAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Generic/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/Generic/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Generic/PreviewColor.xml" />
+
+</AssetSchema>
+
+

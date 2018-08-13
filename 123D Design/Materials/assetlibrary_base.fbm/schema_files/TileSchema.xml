@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the schema for Tile
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap2dSchema"
+        file="../Common/TextureMap2dSchema.xml" />
+
+  <UID  val="TileSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Tile Texture" />
+  <!-- Tiles -->
+  <Choice id="tile_BrickType"
+          val="tile_BrickType_stack_bond"
+          label="Type">
+    <ChoiceValue id="tile_BrickType_running_bond"
+                 val="0"
+                 label="Running Bond"/>
+    <ChoiceValue id="tile_BrickType_common_flemish_bond"
+                 val="1"
+                 label="Common Flemish Bond"/>
+    <ChoiceValue id="tile_BrickType_english_bond"
+                 val="2"
+                 label="English Bond"/>
+    <ChoiceValue id="tile_BrickType_half_running_bond"
+                 val="3"
+                 label="1/2 Running Bond"/>
+    <ChoiceValue id="tile_BrickType_stack_bond"
+                 val="4"
+                 label="Stack Bond"/>
+    <ChoiceValue id="tile_BrickType_fine_running_bond"
+                 val="5"
+                 label="Fine Running Bond"/>
+    <ChoiceValue id="tile_BrickType_fine_stack_bond"
+                 val="6"
+                 label="Fine Stack Bond"/>
+    <ChoiceValue id="tile_BrickType_custom"
+                 val="7"
+                 label="Custom"/>
+  </Choice>
+  
+  <Color id="tile_BrickColor"
+         valR="0.6"
+         valG="0.6"
+         valB="0.6"
+         label="Tile Color"
+         allowconnectedassets="single" />
+  
+  <Float id="tile_HorizontalCount"
+         val="4"
+         label="Tile Count">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_VerticalCount"
+         val="4"
+         label="">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_ColorVariance"
+         val="0"
+         label="Color Variance">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_FadeVariance"
+         val="0.05"
+         label="Fade Variance">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+
+  <!-- Grout -->
+  <Color id="tile_MortarColor"
+         valR="0.2"
+         valG="0.2"
+         valB="0.2"
+         label="Grout Color"
+         allowconnectedassets="single" />
+  
+  <Float id="tile_HorizontalGap"
+         val="0.5"
+         label="Gap Width">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_VerticalGap"
+         val="0.5"
+         label="Vert">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_EdgeRoughness"
+         val="0.0"
+         label="Roughness">
+    <Bounds minimum="0"
+            maximum="200" />
+  </Float>
+
+  <!-- Rows and column editing -->
+  <Integer id="tile_RandomSeed"
+           val="32192"
+           label="Randomize">
+    <Bounds minimum="0" />
+  </Integer>
+  
+  <Float id="tile_LineShift"
+         val="0.5"
+         label="Line Shift">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="tile_RandomShift"
+         val="0."
+         label="Random">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Boolean id="tile_UseRowEdit"
+           val="false"
+           label="Row Modify"/>
+  
+  <Float id="tile_ChangeRow"
+         val="1"
+         label="Amount">
+    <Bounds minimum="0.0"
+            maximum="5.0" />
+  </Float>
+  
+  <Integer id="tile_PerRow"
+           val="1"
+           label="Every">
+    <Bounds minimum="0"
+            maximum="50" />
+  </Integer>
+  
+  <Boolean id="tile_UseColumnEdit"
+           val="false"
+           label="Column Modify"/>
+  
+  <Float id="tile_ChangeColumn"
+         val="1"
+         label="Amount" >
+  <Bounds minimum="0.0"
+        maximum="5.0" />
+  </Float>
+  
+  <Integer id="tile_PerColumn"
+           val="1"
+           label="Every">
+    <Bounds minimum="0"
+            maximum="50" />
+  </Integer>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Tile/TileUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Tile/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Tile/OGS.xml">
+  </implementation>
+
+  <PropertyAlias alias="tile_UVScale"
+                 id="texture_UVScale" />
+  <PropertyAlias alias="tile_ScaleLock"
+                 id="texture_ScaleLock" />
+  <PropertyAlias alias="tile_WAngle"
+                 id="texture_WAngle" />
+  <PropertyAlias alias="tile_UOffset"
+                 id="texture_UOffset" />
+  <PropertyAlias alias="tile_VOffset"
+                 id="texture_VOffset" />
+  <PropertyAlias alias="tile_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="tile_RealWorldScaleX"
+                 id="texture_RealWorldScaleX" />
+  <PropertyAlias alias="tile_RealWorldScaleY"
+                 id="texture_RealWorldScaleY" />
+  <PropertyAlias alias="tile_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="tile_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="tile_MapChannel"
+                 id="texture_MapChannel" />
+  <PropertyAlias alias="tile_MapChannel_UVWSource"
+                 id="texture_MapChannel_UVWSource_Advanced" />
+  <PropertyAlias alias="tile_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="tile_RepeatX"
+                 id="texture_URepeat" />
+  <PropertyAlias alias="tile_RepeatY"
+                 id="texture_VRepeat" />
+</AssetSchema>
+

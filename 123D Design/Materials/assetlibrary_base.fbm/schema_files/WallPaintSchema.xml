@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+<!-- =====================================================================
+     This is the common schema for WallPaint
+ ===================================================================== -->
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="WallPaintSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+  <localname val="Wall Paint" />
+
+  <Boolean id="wallpaint_color_by_object"
+           val="false"
+           label="Custom Color"/>
+  
+  <Color  id="wallpaint_color"
+          valR=".95"
+          valG=".95"
+          valB=".899"
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Choice id="wallpaint_finish"
+          val="wallpaint_flat"
+          label="Finish">
+    <ChoiceValue id="wallpaint_flat"
+                 val="0"
+                 label="Flat/Matte"/>
+    <ChoiceValue id="wallpaint_eggshell"
+                 val="1"
+                 label="Eggshell"/>
+    <ChoiceValue id="wallpaint_platinum"
+                 val="2"
+                 label="Platinum"/>
+    <ChoiceValue id="wallpaint_pearl"
+                 val="3"
+                 label="Pearl"/>
+    <ChoiceValue id="wallpaint_semigloss"
+                 val="4"
+                 label="Semi-gloss"/>
+    <ChoiceValue id="wallpaint_gloss"
+                 val="5"
+                 label="Gloss"/>
+  </Choice>
+
+  <Choice id="wallpaint_application"
+          val="wallpaint_roller"
+          label="Application">
+    <ChoiceValue id="wallpaint_roller"
+                 val="0"
+                 label="Roller"/>
+    <ChoiceValue id="wallpaint_brush"
+                 val="1"
+                 label="Brush"/>
+    <ChoiceValue id="wallpaint_spray"
+                 val="2"
+                 label="Spray"/>
+  </Choice>
+
+  <Boolean id="wallpaint_ao_on"
+           label="Ambient Occlusion"
+           val="false"/>
+  
+  <Integer id="wallpaint_ao_samples"
+           label="Samples"
+           val="16" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+  
+  <Float id="wallpaint_ao_distance"
+         label="Max Distance"
+         val="4" />
+  
+  <Boolean id="wallpaint_ao_details"
+           label="Use Color From Other Materials"
+           val="false"/>
+
+  <Boolean id="wallpaint_roundcorners_on"
+           val="false"
+           label="Round Corners"/>
+  
+  <Float id="wallpaint_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+  
+  <Boolean id="wallpaint_roundcorners_allow_different_materials"
+           label="Blend with Other Materials"
+           val="false"/>
+
+  <Integer id="wallpaint_refl_depth"
+           label="Reflection Max Trace Depth"
+           val="0" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+  
+  <Integer id="wallpaint_reflection_glossy_samples"
+           label="Reflection Glossy Samples"
+           val="32">
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameters -->
+  <Integer id="mode"
+           val="4"
+           label="Mode"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/WallPaint/wallPaintUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/WallPaint/wallPaintAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/WallPaint/MentalImage.xml" />
+   
+  <implementation id="ImplementationOGS"
+                  val="Mats/WallPaint/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/WallPaint/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/WallPaint/Generic.xml" />
+
+</AssetSchema>
+

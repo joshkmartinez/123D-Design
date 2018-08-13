@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Decal
+    </Title>
+  </PageInfo>
+  <Fields>
+    <Vector3 id="top_left-1" label="Top Left 1:"/>
+    <Vector3 id="top_right-1" label="Top Right 1:"/>
+    <Vector3 id="bottom_right-1" label="Bottom Right 1:"/>
+    <Vector3 id="bottom_left-1" label="Bottom Left 1:"/>
+    <!--Vector3 id="top_right-2" label="Top Right 2:"/>
+        <Vector3 id="bottom_left-2" label="Bottom Left 2:"/-->
+    
+  </Fields>
+</adsui>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProductIds>
+	<!-- [Legacy Format for 2013 Product Lines] -->
+	
+	<!-- AutoCAD -->
+	<Product Id="Id_AutoCAD_2012" Name="AutoCAD 2012" SynhubName="AutoCAD" />
+	<Product Id="Id_AutoCAD_2013" Name="AutoCAD 2013" SynhubName="AutoCAD" />
+	
+	<!-- AutoCAD Architecture -->
+	<Product Id="Id_AutoCAD_Architecture_2012" Name="AutoCAD Architecture 2012" SynhubName="AutoCAD" />
+	<Product Id="Id_AutoCAD_Architecture_2013" Name="AutoCAD Architecture 2013" SynhubName="AutoCAD" />
+	
+	<!-- 3ds Max -->
+	<Product Id="Id_3ds_Max_2012" Name="3ds Max 2012" SynhubName="3ds Max" />
+	<Product Id="Id_3ds_Max_2013" Name="3ds Max 2013" SynhubName="3ds Max" />
+	
+	<!-- Inventor -->
+	<Product Id="Id_Inventor_2013" Name="Inventor 2013" SynhubName="Inventor" />
+	
+	<!-- Revit -->
+	<Product Id="Id_Revit_2013" Name="Revit 2013" SynhubName="Revit" />
+	<Product Id="Id_Revit_Architecture_2013" Name="Revit Architecture 2013" SynhubName="Revit" />
+	<Product Id="Id_Revit_MEP_2013" Name="Revit MEP 2013" SynhubName="Revit" />
+	<Product Id="Id_Revit_Structure_2013" Name="Revit Structure 2013" SynhubName="Revit" />
+	<Product Id="Id_Revit_LT_2013" Name="Revit LT 2013" SynhubName="Revit" />
+
+	<!-- Showcase -->
+	<Product Id="Id_Showcase_2013" Name="Showcase 2013" SynhubName="Showcase" />
+	
+	<!-- [New Format] -->
+	
+	<!-- AutoCAD -->
+	<Product Id="Id_AutoCAD" Name="AutoCAD" SynhubName="AutoCAD" />
+	<Product Id="Id_AutoCAD_Architecture" Name="AutoCAD Architecture" SynhubName="AutoCAD" />
+	
+	<!-- 3ds Max -->
+	<Product Id="Id_3ds_Max" Name="3ds Max" SynhubName="3ds Max" />
+	
+	<!-- Inventor -->
+	<Product Id="Id_Inventor" Name="Inventor" SynhubName="Inventor" />
+	
+	<!-- Revit -->
+	<Product Id="Id_Revit" Name="Revit" SynhubName="Revit" />
+	<Product Id="Id_Revit_Architecture" Name="Revit Architecture" SynhubName="Revit" />
+	<Product Id="Id_Revit_MEP" Name="Revit MEP" SynhubName="Revit" />
+	<Product Id="Id_Revit_Structure" Name="Revit Structure" SynhubName="Revit" />
+	<Product Id="Id_Revit_LT" Name="Revit LT" SynhubName="Revit" />
+
+	<!-- Showcase -->
+	<Product Id="Id_Showcase" Name="Showcase" SynhubName="Showcase" /></ProductIds>

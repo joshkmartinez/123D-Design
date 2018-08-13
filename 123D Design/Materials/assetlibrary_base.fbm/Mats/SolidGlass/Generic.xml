@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <color   name="solidglass_diffuse"                        valR="0.0" valG="0.0" valB="0.0" valA="1."/>
+    <float   name="solidglass_diffuse_image_fade"             val="1."/>
+    <boolean name="solidglass_is_metal"                       val="false"/>
+    <float   name="solidglass_transparency"                   val="0.85"/>
+    <float   name="solidglass_transparency_image_fade"        val="1."/>
+    <float   name="solidglass_refraction_translucency_weight" val="0.5"/>
+    <float   name="solidglass_cutout_opacity"                 val="1."/>
+    <boolean name="solidglass_backface_cull"                  val="false"/>
+    <float   name="solidglass_self_illum_luminance"           val="0.0"/>
+    <float   name="solidglass_self_illum_color_temperature"   val="0.0"/>
+    <String  name="solidglass_bump_map_asset_name"            val="Noise"/>
+    <String  name="solidglass_bump_map_asset_bindings"        val="bump_map_asset_noise"/>
+  </constants>
+
+  <operator function="SolidDiffuseColorBOF" name="diffuse_color">
+    <map_interface source="solidglass_transmittance" destination="transmittance"/>
+  </operator>
+
+  <operator function="SolidGlossinessBOF" name="solidglass_glossiness">
+  </operator>
+
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="solidglass_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="solidglass_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <map_interface source="solidglass_color_by_object"                destination="color_by_object"/>
+    <map_interface source="solidglass_transmittance_custom_color"     destination="generic_diffuse"/>
+    <map_operator  source="diffuse_color"                             destination="generic_diffuse"/>
+    <map_constant  source="solidglass_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+    <map_interface source="solidglass_reflectance"                    destination="generic_reflectivity_at_0deg"/>
+    <map_interface source="solidglass_reflectance"                    destination="generic_reflectivity_at_90deg"/>
+    <map_operator  source="solidglass_glossiness"                     destination="generic_glossiness"/>
+    <map_constant  source="solidglass_is_metal"                       destination="generic_is_metal"/>
+    <map_constant  source="solidglass_transparency"                   destination="generic_transparency"/>
+    <map_constant  source="solidglass_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+    <map_interface source="solidglass_refr_ior"                       destination="generic_refraction_index"/>
+    <map_constant  source="solidglass_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+    <map_constant  source="solidglass_cutout_opacity"                 destination="generic_cutout_opacity"/>
+    <map_constant  source="solidglass_backface_cull"                  destination="generic_backface_cull"/>
+    <map_constant  source="solidglass_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+    <map_constant  source="solidglass_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+    <map_interface source="solidglass_bump_amount"                    destination="generic_bump_amount"/>
+    <map_interface source="solidglass_bump_map"                       destination="generic_bump_map"/>
+    <map_bindings  source="bump_map_asset"                            destination="generic_bump_map"/>
+    <map_interface source="reflection_glossy_samples"                 destination="generic_reflection_glossy_samples"/>
+    <map_interface source="refraction_glossy_samples"                 destination="generic_refraction_glossy_samples"/>
+    <map_bindings  source="round_corner_radius_map"                   destination="generic_roundcorners_radius"/>
+    <map_operator  source="round_corner_radius_BOF"                   destination="generic_roundcorners_radius"/>    
+    <map_interface source="solidglass_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+    <map_interface source="solidglass_refl_depth"                     destination="generic_refl_depth"/> 
+    <map_interface source="solidglass_refr_depth"                     destination="generic_refr_depth"/>
+    <map_interface source="common_Tint_toggle"                        destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                         destination="common_Tint_color"/>  
+  </bindings>
+
+  <!-- Connected Asset for Bump_map -->
+  <operator function="SolidglassBumpMapAssetNameBOF" name="bump_map_asset_name">
+    <map_interface source="solidglass_bump_enable"        destination="type"/>
+    <map_constant source="solidglass_bump_map_asset_name" destination="asset_name"/>
+  </operator>
+
+  <operator function="SolidglassBumpMapAssetBindingsBOF" name="bump_map_asset_bindings">
+    <map_interface source="solidglass_bump_enable"            destination="type"/>
+    <map_constant source="solidglass_bump_map_asset_bindings" destination="bindings_name"/>
+  </operator>
+
+  <bindings target="bump_map_asset_instance" name="bump_map_asset">
+    <map_operator  source="bump_map_asset_name"     destination="asset_name"/>
+    <map_operator  source="bump_map_asset_bindings" destination="bindings_name"/>
+  </bindings>
+
+  <!-- Noise Asset Binding Operators for Glossiness -->
+  <operator function="SolidglassBumpMapAssetNoiseSizeBOF" name="bump_map_asset_noiseSize">
+    <map_interface source="solidglass_bump_enable" destination="type"/>
+  </operator>
+
+  <operator function="SolidglassBumpMapAssetNoiseCol1BOF" name="bump_map_asset_noiseCol1">
+    <map_interface source="solidglass_bump_enable" destination="type"/>
+  </operator>
+
+  <operator function="SolidglassBumpMapAssetNoiseCol2BOF" name="bump_map_asset_noiseCol2">
+    <map_interface source="solidglass_bump_enable" destination="type"/>
+  </operator>
+
+  <operator function="SolidglassBumpMapAssetNoiseTypeBOF" name="bump_map_asset_noiseType">
+    <map_interface source="solidglass_bump_enable" destination="type"/>
+  </operator>
+
+  <bindings target="bump_map_asset_noise_instance" name="bump_map_asset_noise">
+    <map_operator  source="bump_map_asset_noiseSize" destination="noise_Size"/>
+    <map_operator  source="bump_map_asset_noiseCol1" destination="noise_Color1"/>
+    <map_operator  source="bump_map_asset_noiseCol2" destination="noise_Color2"/>
+    <map_operator  source="bump_map_asset_noiseType" destination="noise_Type"/>
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="solidglass_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="solidglass_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <boolean name="decApp_color_by_object"         val="false"/>
+    <float   name="decApp_diffuse_image_fade"      val="1."/>
+    <float   name="decApp_transparency_image_fade" val="1."/>
+    <boolean name="decApp_is_metal"                val="false"/>
+  </constants>
+
+  <bindings target="shader" name="root">
+    <map_constant  source="decApp_color_by_object"                destination="color_by_object"/>
+    <map_interface source="decApp_diffuse"                        destination="generic_diffuse"/>
+    <map_constant  source="decApp_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+    <map_interface source="decApp_reflectivity_at_0deg"           destination="generic_reflectivity_at_0deg"/>
+    <map_interface source="decApp_reflectivity_at_90deg"          destination="generic_reflectivity_at_90deg"/>
+    <map_interface source="decApp_glossiness"                     destination="generic_glossiness"/>
+    <map_constant  source="decApp_is_metal"                       destination="generic_is_metal"/>
+    <map_interface source="decApp_transparency"                   destination="generic_transparency"/>
+    <map_constant  source="decApp_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+    <map_interface source="decApp_refraction_index"               destination="generic_refraction_index"/>
+    <map_interface source="decApp_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+    <map_interface source="decApp_cutout_opacity"                 destination="generic_cutout_opacity"/>
+    <map_interface source="decApp_backface_cull"                  destination="generic_backface_cull"/>
+    <map_interface source="decApp_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+    <map_interface source="decApp_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+    <map_interface source="decApp_self_illum_filter_map"          destination="generic_self_illum_filter_map"/>
+    <map_interface source="decApp_bump_ammount"                   destination="generic_bump_amount"/>
+    <map_interface source="decApp_bump_map"                       destination="generic_bump_map"/>
+    <map_interface source="decApp_reflection_glossy_samples"      destination="generic_reflection_glossy_samples"/>
+    <map_interface source="decApp_refraction_glossy_samples"      destination="generic_refraction_glossy_samples"/>
+    <map_interface source="common_Tint_toggle"                    destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                     destination="common_Tint_color"/>
+  </bindings>
+</implementation>

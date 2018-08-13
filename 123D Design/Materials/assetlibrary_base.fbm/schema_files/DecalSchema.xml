@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="DecalSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Decal" />	
+	
+  <!--It was once delared using Material tag-->
+  <!-- Internal parameter-->
+  <Reference id="surface_material"
+             allowconnectedassets="single"
+             label="Surface Material:" />
+
+  <!--It was once delared using Material tag-->
+  <!-- Internal parameter-->
+  <Reference id="decal-1"
+             allowconnectedassets="single"
+             label="Decal 1:" />
+  
+  <Vector3 id="top_left-1"
+           label="Top Left 1:" />
+  <Vector3 id="top_right-1"
+           label="Top Right 1:" />
+  <Vector3 id="bottom_right-1"
+           label="Bottom Right 1:" />
+  <Vector3 id="bottom_left-1"
+           label="Bottom Left 1:" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Decal/DecalUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Decal/MentalImage.xml" />
+
+  <implementation id="ImplementationOGS"
+                  val="Mats/Decal/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Decal/PreviewColor.xml" />
+
+</AssetSchema>
+

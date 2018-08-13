@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+    <implementation render="PreviewColor">
+      <language name="PreviewColorLanguage" version="1.0"/>
+      <api name="PreviewColorAPI" version="1.0"/>
+      <root_bindings name="root"/>
+
+      <constants>
+        <float name="opaque" val="1"/>
+
+        <color name="aluminum_color" valR="0.957" valG="0.957" valB="0.957"/>
+        <color name="chrome_color" valR="0.957" valG="0.957" valB="0.957"/>
+        <color name="copper_color" valR="0.737" valG="0.314" valB="0.184"/>
+        <color name="brass_color" valR="0.796" valG="0.604" valB="0.231"/>
+        <color name="bronze_color" valR="0.412" valG="0.302" valB="0.231"/>
+        <color name="stainless_color" valR="0.745" valG="0.737" valB="0.729"/>
+        <color name="zinc_color" valR="0.647" valG="0.678" valB="0.694"/>
+      </constants>
+
+      <operator function="SwitchOperator" name="color_switch">
+        <map_interface source="metal_type" destination="switch"/>
+        <map_constant source="aluminum_color" destination="case_0"/>
+        <map_interface source="metal_color" destination="case_1"/>
+        <map_constant source="chrome_color" destination="case_2"/>
+        <map_constant source="copper_color" destination="case_3"/>
+        <map_constant source="brass_color" destination="case_4"/>
+        <map_constant source="bronze_color" destination="case_5"/>
+        <map_constant source="stainless_color" destination="case_6"/>
+        <map_constant source="zinc_color" destination="case_7"/>
+      </operator>
+
+      <operator function="AssignOp" name="assign">
+        <map_constant source="opaque" destination="X"/>
+      </operator>
+
+      <bindings target="previewcolor" name="root">
+        <map_operator source="color_switch" destination="color"/>
+        <map_operator source="assign" destination="alpha"/>
+      </bindings>
+    </implementation>

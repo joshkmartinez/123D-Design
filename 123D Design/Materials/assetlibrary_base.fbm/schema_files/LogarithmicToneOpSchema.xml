@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Logarithmic Tone Mapping
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="LogarithmicToneOpSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="postprocessing"/>
+  
+  <!-- ToneOp properties -->
+  <!-- Whether the effect is active. -->
+  <!-- label is not defined in previous UI -->
+  <Boolean id="active"
+           val="true"
+           label="Active" />
+
+  <Float id="brightness"
+         val="65.0"
+         label="Brightness:"/>
+
+  <Float id="contrast"
+         val="50.0"
+         label="Contrast:"/>
+
+  <Float id="midtones"
+         val="1.0"
+         label="Mid Tones:"/>
+
+  <Boolean id="colorCorrection"
+           val="false"
+           label="Color Correction" />
+
+  <Color id="whiteColor"
+        valR="1.0"
+        valG="1.0"
+        valB="1.0"
+        label="White Color:"/>
+
+  <Boolean id="colorDifferentiation"
+           val="false"
+           label="Desaturate Low Levels" />
+
+  <Boolean id="colorMapIndependent"
+           val="false"
+           label="Affect Indirect Only" />
+
+  <Boolean id="exterior"
+           val="false"
+           label="Exterior Daylight" />
+
+  <ui id="UIDefinition"
+      val="PostProcessing/LogarithmicToneOp/LogarithmicToneOpUI.xml"/>
+
+  <implementation id="ImplementationOGS"
+                 val="PostProcessing/LogarithmicToneOp/OGS.xml" />
+</AssetSchema>

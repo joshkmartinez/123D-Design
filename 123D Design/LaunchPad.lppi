@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Products>
+    <Product ProductId="3ds_Max_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_3ds_Max.png">
+    </Product>
+    <Product ProductId="AutoCAD_Architecture_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_AutoCAD_Architecture.png">
+    </Product>
+    <Product ProductId="AutoCAD_Mechanical_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_AutoCAD_Mechanical.png">
+    </Product>
+    <Product ProductId="Inventor_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_Inventor.png">
+    </Product>
+    <Product ProductId="Navisworks_Manage_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_Navisworks.png">
+    </Product>
+    <Product ProductId="Showcase_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_Showcase.png">
+    </Product>
+    <Product ProductId="Navisworks_Simulate_2012"
+             ExecutableFile="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@Location)/acad.exe"
+             Name="RegValue(HKEY_LOCAL_MACHINE/SOFTWARE/Autodesk/AutoCAD/R18.2/ACAD-A001:$(CurrentOrAnyLocaleId)@ProductName)"
+             Image="Image/Factory_Design_Suite_2012_Vault.png">
+    </Product>
+</Products>

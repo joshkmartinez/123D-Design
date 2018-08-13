@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Paint
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="wallpaint_paintgroup" label="Wall Paint" orientation="Vertical" expanded="true">
+      <MappableColorByObject id="wallpaint_color"
+             label="Color"
+             coloronly="true"
+             tooltip="Adjusts the color and amount of light reflected from the paint.">
+        <BoolColorByObject id="wallpaint_color_by_object" />
+      </MappableColorByObject>
+      <ChooseList id="wallpaint_finish"
+                  tooltip="Adjusts paint glossiness (6 preset choices)."
+                  label="Finish">
+        <Choice id="wallpaint_flat" label="Flat/Matte"/>
+	<Choice id="wallpaint_eggshell" label="Eggshell"/>
+	<Choice id="wallpaint_platinum" label="Platinum"/>
+	<Choice id="wallpaint_pearl" label="Pearl"/>
+	<Choice id="wallpaint_semigloss" label="Semi-gloss"/>
+        <Choice id="wallpaint_gloss" label="Gloss"/>
+      </ChooseList>
+      <ChooseList id="wallpaint_application"
+                  label="Application"
+                  tooltip="Adjusts paint texture to roller (fine bump), brush (streaks), or spray (smooth).">
+	<Choice id="wallpaint_roller" label="Roller"/>
+	<Choice id="wallpaint_brush" label="Brush"/>
+	<Choice id="wallpaint_spray" label="Spray"/>
+      </ChooseList>
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROD_IND_USER_DEP version="7.0.1.0">
+    <MC3OptIn value="0" />
+    <MC3OptInBeta value="0" />
+    <MC3ParticipationType value="0" />
+    <MC3ParticipationTypeBeta value="0" />
+    <MC3RePrompted value="0" />
+    <NotificationRemindOn value="1" />
+    <NotificationRemindOnBeta value="1" />
+    <DisplayUnexpectedCloseDialog value="1" />
+    <ActiveNotificationDisplayedDate value="0" />
+    <ActiveNotificationNextDisplayDate value="0" />
+    <ActiveNotificationNextDisplayDateBeta value="0" />
+    <LastStateUpdate value="UNSET" />
+    <LastStateUpdateBeta value="UNSET" />
+    <CustomerID value="" />
+</PROD_IND_USER_DEP>

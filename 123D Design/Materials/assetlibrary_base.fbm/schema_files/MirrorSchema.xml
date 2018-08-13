@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="MirrorSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+  <localname val="Mirror" />
+
+  <Boolean id="mirror_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color id="mirror_tintcolor" 
+         valR="1.0" 
+         valG="1.0" 
+         valB="1.0"
+         label="Tint Color"
+         allowconnectedassets="single" />
+  
+  <Boolean id="mirror_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="mirror_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="mirror_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="mirror_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <!-- Internal parameter -->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Mirror/MirrorUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Mirror/MirrorAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Mirror/MentalImage.xml" />
+   
+  <implementation id="ImplementationOGS"
+                  val="Mats/Mirror/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Mirror/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric" 
+                  val="Mats/Mirror/Generic.xml" />
+
+</AssetSchema>

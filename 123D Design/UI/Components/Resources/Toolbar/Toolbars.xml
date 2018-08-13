@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Toolbars>
+  <Toolbar Id="CommandToolbar" Style="ToolbarLargeStyle">
+    <Button Id="SaveAsSATCommand" />
+    <Button Id="SaveAsASMCommand" />
+    <Button Id="ShowAffectedFacesCommand" />
+    <Button Id="DumpEntityCommand" />
+  </Toolbar>
+</Toolbars>

@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="MetallicPaintSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Metallic Paint" />
+	
+  <Boolean id="metallicpaint_base_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="metallicpaint_base_color" 
+          valR="1." 
+          valG=".0" 
+          valB=".0"
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Float  id="metallicpaint_base_highlightspread"
+          val=".5"
+          label="Highlight Spread" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <Choice id="metallicpaint_flecks" 
+          val="metallicpaint_flecks_enable"
+          label="Flecks" >
+    <ChoiceValue id="metallicpaint_flecks_none"
+                 val="0"
+                 label ="None" />
+    <ChoiceValue id="metallicpaint_flecks_enable"
+                 val="1"
+                 label="Enabled" />
+  </Choice>
+  
+  <Boolean id="metallicpaint_flecks_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="metallicpaint_flecks_color" 
+          valR=".471" 
+          valG=".471" 
+          valB=".471"
+          label="Color"
+          allowconnectedassets="single" />
+  
+  <Float  id="metallicpaint_flecks_size" 
+          val=".015"
+          label="Size" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <Choice id="metallicpaint_pearl" 
+          val="metallicpaint_pearl_chromatic"
+          label="Pearl" >
+    <ChoiceValue id="metallicpaint_pearl_none"
+                 val="0"
+                 label ="None" />
+    <ChoiceValue id="metallicpaint_pearl_chromatic"
+                 val="1"
+                 label="Chromatic" />
+    <ChoiceValue id="metallicpaint_pearl_custom"
+                 val="2"
+                 label ="Second Color" />
+  </Choice>
+  
+  <Float  id="metallicpaint_pearl_amount" 
+          val=".5"
+          label="Amount" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Boolean id="metallicpaint_pearl_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="metallicpaint_pearl_color" 
+          valR=".8" 
+          valG=".118" 
+          valB="0.0"
+          label="Color"
+          allowconnectedassets="single" />
+  
+  <Float  id="metallicpaint_pearl_ior" 
+          val=".2"
+          label="Blend" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <Choice id="metallicpaint_topcoat" 
+          val="metallicpaint_topcoat_carpaint"
+          label="Top Coat" >
+    <ChoiceValue id="metallicpaint_topcoat_carpaint"
+                 val="0"
+                 label="Car Paint"  />
+    <ChoiceValue id="metallicpaint_topcoat_chrome"
+                 val="1"
+                 label="Chrome" />
+    <ChoiceValue id="metallicpaint_topcoat_matte"
+                 val="2"
+                 label="Matte" />
+    <ChoiceValue id="metallicpaint_topcoat_custom"
+                 val="3"
+                 label="Custom" />
+  </Choice>
+  
+  <Float  id="metallicpaint_topcoat_glossy" 
+          val=".8"
+          label="Glossiness" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Float  id="metallicpaint_topcoat_falloff" 
+          val=".2"
+          label="Angle Falloff" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Choice id="metallicpaint_finish" 
+          val="metallicpaint_finish_smooth"
+          label="Finish" >
+    <ChoiceValue id="metallicpaint_finish_smooth"
+                 val="0"
+                 label="Smooth" />
+    <ChoiceValue id="metallicpaint_finish_peeling"
+                 val="1"
+                 label="Orange Peel" />
+  </Choice>
+  
+  <Float  id="metallicpaint_finish_peelamount" 
+          val=".05"
+          label="Amount" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <Boolean id="metallicpaint_ao_on"
+        val="false"
+        label="Ambient Occlusion" />
+
+  <Integer id="metallicpaint_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="metallicpaint_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="metallicpaint_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="metallicpaint_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="metallicpaint_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="metallicpaint_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="metallicpaint_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="metallicpaint_reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter -->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/MetallicPaint/MetallicPaintUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/MetallicPaint/MetallicPaintAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/MetallicPaint/MentalImage.xml" />
+ 
+  <implementation id="ImplementationOGS"
+                  val="Mats/MetallicPaint/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/MetallicPaint/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric" 
+                  val="Mats/MetallicPaint/Generic.xml" />
+
+</AssetSchema>
+
+

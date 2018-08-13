@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Plastic and Vinyl
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="plasticvinyl_plasticvinylgroup"
+                label="Plastic"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="plasticvinyl_type" label="Type"
+                  tooltip="Selects from among Plastic (solid or transparent) or vinyl.">
+        <Choice id="plasticvinyl_plasticsolid" label="Plastic (Solid)"/>
+        <Choice id="plasticvinyl_plastictransparent" label="Plastic (Transparent)"/>
+        <Choice id="plasticvinyl_vinyl" label="Vinyl"/>
+      </ChooseList>
+      
+      <MappableColor id="plasticvinyl_color"
+                     label="Color"
+                     colorbyobject="true"
+                     tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+        <BoolColorByObject id="plasticvinyl_color_by_object" />
+      </MappableColor>
+      
+      <ChooseList id="plasticvinyl_application" label="Finish"
+                  tooltip="Selects from among polished, glossy, or matte.">
+        <Choice id="plasticvinyl_polished" label="Polished"/>
+        <Choice id="plasticvinyl_glossy" label="Glossy"/>
+        <Choice id="plasticvinyl_matte" label="Matte"/>
+      </ChooseList>
+    </StackPanel>
+      
+    <StackPanel id="plasticvinyl_bump"
+                label="Finish Bumps"
+                labelid="plasticvinyl_bump_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="plasticvinyl_custom"
+                checkboxid2="plasticvinyl_bump_map">
+      
+      <ChooseList id="plasticvinyl_bump"
+                  onebased="true"
+                  label="Finish Bumps"
+                  labelid="plasticvinyl_bump_list_label" 
+                  tooltip="Selects a bitmap image for the bump roughness.">
+        <Choice id="plasticvinyl_custom" label="Custom">
+        </Choice>
+      </ChooseList>
+      <MappableFloat id="plasticvinyl_bump_map"
+                     nosinglevalue="true"
+                     bump="true"
+                     tooltip="Selects a bitmap image for the bump roughness."
+                     label="Image"/>
+      <Float id="plasticvinyl_bump_amount"
+             label="Amount"
+             min="0.0"
+             max="1.0"
+             tooltip="Slides from 0 to 1 to control the height of the bumps."/>
+    </StackPanel>
+      
+    <StackPanel id="plasticvinyl_pattern"
+                label="Relief Pattern"
+                labelid="plasticvinyl_pattern_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="plasticvinyl_custom"
+                checkboxid2="plasticvinyl_pattern_map">
+      
+      <ChooseList id="plasticvinyl_pattern"
+                  label="Bump Pattern"
+                  labelid="plasticvinyl_pattern_list_label" 
+                  onebased="true"
+                  tooltip="Create raised and lowered regions based on dark and light areas of an image file you provide.">
+        <Choice id="plasticvinyl_custom" label="Custom">
+        </Choice>
+      </ChooseList>
+      <MappableFloat id="plasticvinyl_pattern_map"
+                     nosinglevalue="true"
+                     tooltip="Selects a bitmap image for the relief pattern."
+                     bump="true"
+                     label="Image"/>
+      <Float id="plasticvinyl_pattern_amount"
+             label="Amount"
+             min="0.0"
+             max="2.0"
+             tooltip="Slides from 0 to 2 to control the height of the bumps."/>
+    </StackPanel>
+    
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

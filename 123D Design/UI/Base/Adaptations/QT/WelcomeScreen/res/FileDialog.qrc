@@ -1,0 +1,66 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource prefix="/W2IqtToolkit">
+    <file alias="CollapsedArrowImg">INV_Collapsed_16x16.png</file>
+    <file alias="ExpandedArrowImg">INV_Expanded_16x16.png</file>
+    <file alias="FidelityImg">INV_DisplayOptions_16x16.png</file>
+    <file alias="HomeImg">INV_Home_16x16.png</file>
+    <file alias="HelpImg">btnHelp_Image.png</file>
+    <file alias="PanelToggleImg">INV_PanelToggle_16x16.png</file>
+    <file alias="NavigateBackImg">INV_Back_16x16.png</file>
+    <file alias="NavigateForwardImg">INV_Forward_16x16.png</file>
+    <file alias="VideoImg">animation_32x32.png</file>
+    <file alias="ExternalContentImg">ExternalContent_16x16.png</file>
+    <file alias="FileNewImg">INV_File_New_Cmd_32x32.png</file>
+    <file alias="FileOpenImg">INV_File_Open_Cmd_32x32.png</file>
+    <file alias="FileOpen360Img">open_from_cloud_16x16.png</file>
+    <file alias="ProjectImg">projects_32x32.png</file>
+    <file alias="TutorialsImg">tutorials_32x32.png</file>
+    <file alias="NoRecentFileImg">NoRecentFile_32x32.png</file>
+    <file alias="NoThumbnailImg">NoThumbnail_32x32.png</file>
+    <file>ScrollBarHover.png</file>
+    <file>ScrollBarIdle.png</file>
+    <file>ScrollBarDown.png</file>
+    <file>Checkbox_selected.png</file>
+    <file>Checkbox_unselected.png</file>
+    <file>WhatsNew.png</file>
+    <file>ADS_Exchange.png</file>
+    <file>ADS_Cloud.png</file>
+    <file>cloudFile.png</file>
+    <file>localFile.png</file>
+    <file>facebook.png</file>
+    <file>twitter.png</file>
+    <file>facebookHover.png</file>
+    <file>twitterHover.png</file>
+    <file>notification.png</file>
+    <file>ButtonDisabled.png</file>
+    <file>ButtonDown_left.png</file>
+    <file>ButtonHover_left.png</file>
+    <file>ButtonIdle_left.png</file>
+    <file>ButtonDown_right.png</file>
+    <file>ButtonHover_right.png</file>
+    <file>ButtonIdle_right.png</file>
+    <file>ButtonDown_middle.png</file>
+    <file>ButtonHover_middle.png</file>
+    <file>ButtonIdle_middle.png</file>
+    <file>splash.png</file>
+    <file>splash@2x.png</file>
+    <file>splash@15x.png</file>
+    <file>ScrollBar.qml</file>
+    <file>Button.qml</file>
+    <file>Checkbox.qml</file>
+    <file>Link.qml</file>
+    <file>LabelLink.qml</file>
+    <file>CloudSectionItem.qml</file>
+    <file>VideoItemDelegate.qml</file>
+    <file>Divider.qml</file>
+    <file>HeaderTextSection.qml</file>
+    <file>WelcomeScreenLearnPage.qml</file>
+    <file>WelcomeScreenExtendPage.qml</file>
+    <file>WelcomeScreenWorkPage.qml</file>
+    <file>WelcomeScreenView.qml</file>
+    <file>SplashScreen.qml</file>
+    <file>NotificationCenterSection.qml</file>
+    <file>NotificationItemDelegate.qml</file>
+    <file>Close32.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,22 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/MarkingMenus">
+  <file alias="BackArrowBlack.svg">BackArrowBlack.svg</file>
+  <file alias="BackArrowWhite.svg">BackArrowWhite.svg</file>
+  <file alias="Checkbox_On_L.svg">Checkbox_On_L.svg</file>
+  <file alias="Checkbox_Off_L.svg">Checkbox_Off_L.svg</file>
+  <file alias="Options_L.svg">Options_L.svg</file>
+  <file alias="menuArrowDown_L.svg">menuArrowDown_L.svg</file>
+  <file alias="menuArrowLeft_L.svg">menuArrowLeft_L.svg</file>
+  <file alias="menuArrowRight_L.svg">menuArrowRight_L.svg</file>
+  <file alias="menuArrowUp_L.svg">menuArrowUp_L.svg</file>
+  <file alias="Checkbox_On_D.svg">Checkbox_On_D.svg</file>
+  <file alias="Checkbox_Off_D.svg">Checkbox_Off_D.svg</file>
+  <file alias="menuArrowDown_D.svg">menuArrowDown_D.svg</file>
+  <file alias="menuArrowLeft_D.svg">menuArrowLeft_D.svg</file>
+  <file alias="menuArrowRight_D.svg">menuArrowRight_D.svg</file>
+  <file alias="menuArrowUp_D.svg">menuArrowUp_D.svg</file>
+  <file alias="Options_D.svg">Options_D.svg</file>
+  <file alias="Checkmark_D.svg">Checkmark_D.svg</file>
+  <file alias="Checkmark_L.svg">Checkmark_L.svg</file>
+</qresource>
+</RCC>

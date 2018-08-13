@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Decal bump map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <ImageFileReference id="decalbumpmap_Bitmap" label="Image File:">
+      <Boolean id="decalbumpmap_Invert" label="Invert:" tooltip="Swap the bright and dark areas of the image."/>
+    </ImageFileReference>
+  </Fields>
+</adsui>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LaunchPad XlfFile="LaunchPad.xlf">
+    <Applications>
+        <Application Id="3ds_Max_2012" Description="tr(Rapidly iterate, review and approve design concepts)"/>
+        <Application Id="AutoCAD_Architecture_2012" Description="tr(Purpose built tools for architectural drawing and design)"/>
+        <Application Id="AutoCAD_Mechanical_2012" Description="tr(Purpose built tools to accelerate the mechincal design process)"/>
+        <Application Id="Inventor_2012" Description="tr(Create compelling 3D visual layouts of machine lines)"/>
+        <Application Id="Navisworks_Manage_2012" Description="tr(Create a single real-time, whole-project view for effective 3D coordination)"/>
+        <Application Id="Navisworks_Simulate_2012" Description="tr(Create a single real-time, whole-project view for effective 3D coordination)"/>
+        <Application Id="Showcase_2012" Description="tr(Transform digital prototypes into photorealistic imagery and immersive, interactive presentations)"/>
+    </Applications>
+</LaunchPad>
+

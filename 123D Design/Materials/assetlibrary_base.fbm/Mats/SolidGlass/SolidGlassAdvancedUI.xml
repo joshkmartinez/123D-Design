@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Solid Glass
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="solidglass_solidglassgroup"
+                label="Solid Glass"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="solidglass_transmittance"
+                  label="Color"
+                  tooltip="Selects a predefined color, or Custom.">
+        <Choice id="solidglass_clear" label="Clear"/>
+        <Choice id="solidglass_green" label="Green"/>
+        <Choice id="solidglass_gray" label="Gray"/>
+        <Choice id="solidglass_blue" label="Blue"/>
+        <Choice id="solidglass_bluegreen" label="Blue Green"/>
+        <Choice id="solidglass_bronze" label="Bronze"/>
+        <ChoiceDetail id="solidglass_custom_color" label="Custom">
+          <MappableColor id="solidglass_transmittance_custom_color"
+                         tooltip="Select a color, image, or procedural texture to create the appearance of the material."
+                         colorbyobject="true"
+                         label="Custom Color">
+            <BoolColorByObject id="solidglass_color_by_object" />
+          </MappableColor>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      
+      <Percent id="solidglass_reflectance"
+               label="Reflectance"
+               min="0" max="100"
+               precision="0"
+               tooltip="Adjusts the amount of light that reflects off the surface of the glass rather than passing through it. Default is 15, range is 0-100."/>
+      
+      <FloatMenu id="solidglass_refr_ior"
+                 label="Refraction"
+                 max="5" min="0.01"
+                 tooltip="Adjusts the amount that light bends when it passes through a surface. Default is 1.52, range 0-5."
+                 >
+        <FloatMenuChoice id="solidglass_refr_ior_air"
+                         label="Air" value="1.0" />
+        <FloatMenuChoice id="solidglass_refr_ior_water"
+                         label="Water" value="1.33" />
+        <FloatMenuChoice id="solidglass_refr_ior_alcohol"
+                         label="Alcohol" value="1.36" />
+        <FloatMenuChoice id="solidglass_refr_ior_quartz"
+                         label="Quartz" value="1.46" />
+        <FloatMenuChoice id="solidglass_refr_ior_glass"
+                         label="Glass" value="1.52" />
+        <FloatMenuChoice id="solidglass_refr_ior_diamond"
+                         label="Diamond" value="2.3" />
+        <FloatMenuChoice id="solidglass_refr_ior_custom"
+                         label="Custom" value="0.0" />
+      </FloatMenu>
+      
+      <Float id="solidglass_glossiness"
+             label="Roughness"
+             min="0.0"
+             max="1.0"
+             tooltip="Adjusts the roughness of the glass surface. Reduce to get smooth, shiny glass, or increase to get frosted glass. Default is 0, range is 0-1."/>
+    </StackPanel>
+    
+    <StackPanel id="solidglass_bump_enable"
+                label="Relief Pattern"
+                labelid="solidglass_bump_enable_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="solidglass_rippled">
+      
+      <ChooseList id="solidglass_bump_enable"
+                  label="Type"
+                  labelid="solidglass_bump_enable_list_label" 
+                  onebased="true"
+                  tooltip="Selects from rippled (rough noise), wavy (soft noise), or custom.">
+        <Choice id="solidglass_rippled" label="Rippled"/>
+        <Choice id="solidglass_wavy" label="Wavy"/>
+        <ChoiceDetail id="solidglass_custom" label="Custom">
+          <MappableFloat id="solidglass_bump_map"
+                         tooltip="Selects a bitmap image for the relief pattern."
+                         nosinglevalue="true"
+                         bump="true"
+                         label="Image"/>
+        </ChoiceDetail>
+      </ChooseList>
+      <Float id="solidglass_bump_amount"
+             label="Amount"
+             min="0.0"
+             max="2.0"
+             tooltip="Slides from 0 to 2 to control the height of the bumps."/>
+      
+    </StackPanel>
+    <StackPanel id="solidglass_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="solidglass_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="solidglass_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="solidglass_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="refraction_glossy_samples"
+         label="Refraction Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy refractions."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="solidglass_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="solidglass_refr_depth"
+       label="Override Refraction Depth"
+       labelid="solidglass_refr_depth_control_label"
+       checkbox="true"
+       checkonvalue="4"
+       checkoffvalue="-1"
+       orientation="Vertical">
+      <Integer id="solidglass_refr_depth"
+         label="Refraction Max Trace Depth"
+         tooltip="When checked, the material's refraction depth is controlled locally and an additional transparency ray will be casted when the limit is reached, limiting the 'dark edge' effect typically found on solid glass objects."
+         min="-1"
+         max="20"
+         forcenumeric="spinbox">
+      </Integer>
+    </StackPanel>
+  </Fields>
+</adsui>

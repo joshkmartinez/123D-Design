@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandMessages version="3.0" InternalName="CommandMessages">
+  <ErrorType name="EdgeBlend" error="İşlem Başarısız Oldu: Hatalı giriş değeri. Farklı değer kullanarak deneyin" warning="Warning"/>
+  <HelpMsgType CmdName="Taşı / Döndür (Cmd+T)" primaryHelp="Taşımak veya döndürmek için bir veya daha fazla nesne seçin"/>
+  <HelpMsgType CmdName="Taşı / Döndür (Ctrl+T)" primaryHelp="Taşımak veya döndürmek için bir veya daha fazla nesne seçin"/>
+  <HelpMsgType CmdName="Hizala (A)" primaryHelp="Seçilen nesneleri hizalayın"/>
+  <HelpMsgType CmdName="Akıllı Ölçek (Ctrl+B)" primaryHelp="Akıllı ölçek için bir veya daha fazla nesne seç"/>
+  <HelpMsgType CmdName="Akıllı Ölçek (Cmd+B)" primaryHelp="Akıllı ölçek için bir veya daha fazla nesne seç"/>
+  <HelpMsgType CmdName="Ölçek (S)" primaryHelp="Ölçeklendirmek için bir veya daha fazla nesne seç"/>
+  <HelpMsgType CmdName="Cetvel (R)" primaryHelp="Cetvel orijini ve nesneler arasındaki mesafeyi ölçün"/>
+  
+  <HelpMsgType CmdName="Kutu" primaryHelp="Kutu Ekle"/>
+  <HelpMsgType CmdName="Küre" primaryHelp="Küre Ekle"/>
+  <HelpMsgType CmdName="Silindir" primaryHelp="Silindir Ekle"/>
+  <HelpMsgType CmdName="Koni" primaryHelp="Koni Ekle"/>
+  <HelpMsgType CmdName="Simit" primaryHelp="Simit Ekle"/>
+  <HelpMsgType CmdName="Kama" primaryHelp="Bir Kama Ekle"/>
+  <HelpMsgType CmdName="Prizma" primaryHelp="Prizma Ekle"/>
+  <HelpMsgType CmdName="Piramit" primaryHelp="Bir Piramit ekle"/>
+  <HelpMsgType CmdName="Yarımküre" primaryHelp="Bir Yarımküre ekle"/>
+  <HelpMsgType CmdName="Dikdörtgen" primaryHelp="Eskize Bir Dikdörtgen Ekle"/>
+  <HelpMsgType CmdName="Daire" primaryHelp="Eskize Bir Daire Ekle"/>
+  <HelpMsgType CmdName="Elips" primaryHelp="Eskize Bir Elips Ekle"/>
+  <HelpMsgType CmdName="Çokgen" primaryHelp="Eskize Bir Çokgen Ekle"/>
+  
+  <HelpMsgType CmdName="Dikdörtgen Çiz" primaryHelp="Dikdörtgen Çizimi Oluştur"/>
+  <HelpMsgType CmdName="Daire Çiz" primaryHelp="Dairesel bir eskiz oluştur"/>
+  <HelpMsgType CmdName="Elips Çiz" primaryHelp="Bir elips Eskiz oluştur"/>
+  <HelpMsgType CmdName="Çokgen Çiz" primaryHelp="Bir Çokgen Eskiz oluştur"/>
+  <HelpMsgType CmdName="DevamlıÇizgi" primaryHelp="DevamlıÇizgi oluştur"/>
+  <HelpMsgType CmdName="Eğri" primaryHelp="Bir Eğri oluştur"/>
+  <HelpMsgType CmdName="İki nokta Arc" primaryHelp="İki nokta yay oluştur"/>
+  <HelpMsgType CmdName="Üç Noktalı Ark" primaryHelp="Üç Nokta Yay Oluştur"/>
+  <HelpMsgType CmdName="Eskiz Radyusu" primaryHelp="Bir eskiz Radyus oluştur"/>
+  <HelpMsgType CmdName="Kırpma" primaryHelp="Eskiz Profillerini kırp"/>
+  <HelpMsgType CmdName="Genişlet" primaryHelp="Eskiz Profillerini uzat"/>
+  <HelpMsgType CmdName="Ötele" primaryHelp="Eskiz Profillerini ötele"/>
+  <HelpMsgType CmdName="Proje" primaryHelp="Başka bir eskizi veya yüzey izdüşümünü eskiz düzlemine aktar"/>
+  
+  <HelpMsgType CmdName="Kabartma (U)" primaryHelp="Ekstürüzyon için kapalı eskiz veya bir katını yüzünü seçin."/>
+  <HelpMsgType CmdName="Süpürme (W)" primaryHelp="Gösterilmiş yol boyunca katı bir nesne oluşturmak için kapalı çizim veya katı model yüzünü tarayın."/>
+  <HelpMsgType CmdName="Döndür (V)" primaryHelp="Döndürme kapalı, döndürme ekseni etrafında bir katı modelin katı yüzünü veya çizimini oluşturun"/>
+  <HelpMsgType CmdName="Yükseğe atma (L)" primaryHelp="Kapalı Eskizleri veya katı yüzleri kullanarak Loft oluşturun"/>
+  
+  <HelpMsgType CmdName="Bas Çek (P)" primaryHelp="Katının bir yüzünü hareket ettirerek parçayı en az çarpılmayla yeniden boyutlandır"/>
+  <HelpMsgType CmdName="İnce ayar (K)" primaryHelp="Hareketli yüzeyin bir parçasını çarpıt veya katı bir kenarı bükün"/>
+  <HelpMsgType CmdName="Yüzey bölme (B)" primaryHelp="Eskiz veya katı kullanarak katının yüzünü böl"/>
+  <HelpMsgType CmdName="Dolgu (E)" primaryHelp="Yuvarlatılmış kenarlar oluştur"/>
+  <HelpMsgType CmdName="Pah (C)" primaryHelp="Düz, Eğik kenarlar oluştur"/>
+  <HelpMsgType CmdName="Katı ayırma (Alt+B)" primaryHelp="Eskiz veya katı kullanarak katı böl"/>
+  <HelpMsgType CmdName="Kabuk (J)" primaryHelp="Katının içini bir yüzey seçerek boşalt"/>
+  
+  <HelpMsgType CmdName="Dikdörtgen desen (N)" primaryHelp="İki yön boyunca seçilen katı maddede dikdörtgen desen oluşturma"/>
+  <HelpMsgType CmdName="Dairesel desen (Shift+N)" primaryHelp="Eksen etrafında seçili katılar ile dairesel çoğaltma oluştur"/>
+  <HelpMsgType CmdName="Desen yolu (Alt+N)" primaryHelp="Yörünge boyunca seçili katılardan çoğaltma oluştur"/>
+  <HelpMsgType CmdName="Ayna (Alt+M)" primaryHelp="Aynalama düzlemine göre seçili katıları aynala"/>
+  
+  <HelpMsgType CmdName="Grup (Ctrl+G)" primaryHelp="Seçili katıları grup yap"/>
+  <HelpMsgType CmdName="Grup (Cmd+G)" primaryHelp="Seçili katıları grup yap"/>
+  <HelpMsgType CmdName="Grubu çöz (Ctrl+Shift+G)" primaryHelp="Seçili Gruptan katıları çöz    "/>
+  <HelpMsgType CmdName="Grubu çöz (Cmd+Shift+G)" primaryHelp="Seçili Gruptan katıları çöz    "/>
+  <HelpMsgType CmdName="Tüm Grubu Çöz" primaryHelp="Seçili gruptan ya da alt gruplardan katıları çıkar"/>
+
+  <HelpMsgType CmdName="Birleştir" primaryHelp="Nesneleri ekleyip, çıkararak özel şekil oluşturun"/>
+  <HelpMsgType CmdName="Birleştir ([)" primaryHelp="Seçili nesneleri bir araya getir ve birleştir"/>
+  <HelpMsgType CmdName="Çıkart (])" primaryHelp="Üst üste binen parçalar ekstrüzyon"/>
+  <HelpMsgType CmdName="Keşişim (\)" primaryHelp="Yalnızca çakışan parçaları tut"/>
+  <HelpMsgType CmdName="Ayır (Shift+P)" primaryHelp="katı seçilmiş bireysel kısımları oluşturmak" />
+  
+  <HelpMsgType CmdName="Kenetleme (;)" primaryHelp="El ile nesne yakala"/>
+  
+  <HelpMsgType CmdName="Ölç (Shift+M)" primaryHelp="Nesne(ler)in mesafe, alan ve hacmini ölçün"/>
+  
+  <HelpMsgType CmdName="Malzeme (`)" primaryHelp="Görsel bir malzeme seçin"/>
+  <HelpMsgType CmdName="Akıllı Döndür" primaryHelp="Position object/s about the plane"/>
+  
+</CommandMessages>

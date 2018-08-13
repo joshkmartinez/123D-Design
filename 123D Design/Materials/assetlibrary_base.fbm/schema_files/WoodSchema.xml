@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Wood
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap3dSchema"
+        file="../Common/TextureMap3dSchema.xml" />
+
+  <UID  val="WoodSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Wood" />
+  <Color id="wood_Color1"
+         valR="0.8"
+         valG="0.699"
+         valB="0.299"
+         label="Color 1"
+         allowconnectedassets="single" />
+  
+  <Color id="wood_Color2"
+         valR="0.499"
+         valG="0.299"
+         valB="0.0"
+         label="Color 2"
+         allowconnectedassets="single" />
+  
+  <Float id="wood_Thickness"
+         val="0.5"
+         label="Grain Thickness">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="wood_RadialNoise"
+         val="1.0"
+         label="Radial Noise">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="wood_AxialNoise"
+         val="1.0"
+         label="Axial Noise">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Wood/WoodUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Wood/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Wood/OGS.xml"/>
+  
+  <PropertyAlias alias="wood_Offset"
+                 id="texture_Offset" />
+  <PropertyAlias alias="wood_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="wood_Tiling"
+                 id="texture_Tiling" />
+  <PropertyAlias alias="wood_Angle"
+                 id="texture_Angle" />
+  <PropertyAlias alias="wood_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="wood_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="wood_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="wood_RealWorldOffsetZ"
+                 id="texture_RealWorldOffsetZ" />
+</AssetSchema>

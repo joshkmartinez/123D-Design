@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="StructuralCommonSchema"
+        file="../Common/StructuralCommonSchema.xml" />
+
+  <UID  val="StructuralBasicSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="Structural" />
+
+  <localtype val="Physical" />
+  <localname val="Basic" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Structural/Basic/BasicStructuralUI.xml"/>
+
+</AssetSchema>
+
+

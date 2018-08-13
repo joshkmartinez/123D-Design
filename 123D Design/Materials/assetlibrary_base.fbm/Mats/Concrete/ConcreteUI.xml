@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Concrete
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="concrete_base"
+                label="Concrete"
+                orientation="Vertical"
+                expanded="true">
+      
+      <MappableColor id="concrete_color"
+                     label="Color"
+                     colorbyobject="true"
+                     tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+        <BoolColorByObject id="concrete_color_by_object" />
+      </MappableColor>
+
+      <ChooseList id="concrete_sealant"
+                  label="Sealant"
+                  tooltip="Specifies the substance used to seal the concrete surface.">
+        <Choice id="concrete_none" label="None"/>
+        <Choice id="concrete_epoxy" label="Epoxy"/>
+        <Choice id="concrete_acrylic" label="Acrylic"/>
+      </ChooseList>
+    </StackPanel>
+      
+
+    <StackPanel id="concrete_finish"
+                label="Finish Bumps"
+                orientation="Vertical">
+      <ChooseList id="concrete_finish"
+                  label="Type"
+                  labelid="concrete_finish_list_label"
+                  tooltip="Controls the surface texture often found in concrete. ">
+        <Choice id="concrete_straight" label="Broom Straight"/>
+        <Choice id="concrete_curved" label="Broom Curved"/>
+        <Choice id="concrete_smooth" label="Smooth"/>
+        <Choice id="concrete_polished" label="Polished"/>
+        <ChoiceDetail id="concrete_custom" label="Stamped/Custom">
+          <MappableFloat id="concrete_bump_map"
+                         label="Image"
+                         nosinglevalue="true"
+                         tooltip="Uses a bitmap image to select the finish."
+                         bump="true"/>
+          <Float id="concrete_bump_amount"
+                 label="Amount"
+                 min="0.0" max="2.0"
+                 tooltip="Slides to change surface texture."/>
+        </ChoiceDetail>
+      </ChooseList>
+    </StackPanel>
+      
+      
+    <StackPanel id="concrete_brightmode"
+                label="Weathering"
+                labelid="concrete_brightmode_panel_label" 
+                orientation="Vertical"
+                checkbox="on"
+                checkonvalue="concrete_automatic">
+      <ChooseList id="concrete_brightmode"
+                  label="Type"
+                  labelid="concrete_brightmode_list_label" 
+                  onebased="true"
+                  tooltip="Adds weathering (staining or discoloration) automatically.">
+        <Choice id="concrete_automatic" label="Automatic"/>
+        <ChoiceDetail id="concrete_brightmode_custom"
+                      label="Custom - Image">
+          <MappableFloat id="concrete_bm_map"
+                         label="Image"
+                         tooltip="Adds weathering (staining or discoloration) based on a selected image."
+                         nosinglevalue="true"/>
+        </ChoiceDetail>
+      </ChooseList>
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>

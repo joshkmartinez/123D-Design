@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for AmbientOcclusion
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="AmbientOcclusionSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="sceneeffect"/>
+   <localtype val="Scene Effect" />
+    <localname val="Ambient Occlusion" />
+  <Color  id="ssao_filter_color"
+          valR=".8"
+          valG=".8"
+          valB=".8"
+          label="Filter Color:"/>
+
+  <Choice id="ssao_quality"
+          val="ssao_high"
+          label="Quality:">
+    <ChoiceValue id="ssao_low"
+                 val="0"
+                 label="Coarse (Fastest)"/>
+    <ChoiceValue id="ssao_medium"
+                 val="1"
+                 label="Medium"/>
+    <ChoiceValue id="ssao_high"
+                 val="2"
+                 label="Fine (Slowest)"/>
+    <ChoiceValue id="ssao_custom"
+                 val="3"
+                 label="Custom"/>
+  </Choice>
+
+  <Float id="ssao_sample_radius"
+         val="0.1"
+         label="Sample Radius:">
+    <Bounds minimum="0.001"/>
+  </Float>
+
+  <Integer id="ssao_sample_count"
+           val="16"
+           label="Samples:">
+    <Bounds minimum="1"/>
+  </Integer>
+
+  <Float id="ssao_blur_radius"
+         val="16.0"
+         label="Blur:">
+    <Bounds minimum="0.001"/>
+  </Float>
+
+  <Float id="ssao_blend_amount"
+         val="1.0"
+         label="Blending:">
+    <Bounds minimum="0.001"/>
+  </Float>
+
+
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="SceneEffects/AmbientOcclusionUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationOGS"
+                  val="SceneEffects/OGS.xml"/>
+
+  <PropertyAlias alias="ao_filter_color"
+                 id="ssao_filter_color" />
+</AssetSchema>

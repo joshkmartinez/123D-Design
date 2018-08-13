@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Plastic and Vinyl
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="plasticvinyl_plasticvinylgroup"
+                label="Plastic"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="plasticvinyl_type" label="Type"
+                  tooltip="Selects from among Plastic (solid or transparent) or vinyl.">
+        <Choice id="plasticvinyl_plasticsolid" label="Plastic (Solid)"/>
+        <Choice id="plasticvinyl_plastictransparent" label="Plastic (Transparent)"/>
+        <Choice id="plasticvinyl_vinyl" label="Vinyl"/>
+      </ChooseList>
+      
+      <MappableColor id="plasticvinyl_color"
+                     label="Color"
+                     colorbyobject="true"
+                     tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+        <BoolColorByObject id="plasticvinyl_color_by_object" />
+      </MappableColor>
+      
+      <ChooseList id="plasticvinyl_application" label="Finish"
+                  tooltip="Selects from among polished, glossy, or matte.">
+        <Choice id="plasticvinyl_polished" label="Polished"/>
+        <Choice id="plasticvinyl_glossy" label="Glossy"/>
+        <Choice id="plasticvinyl_matte" label="Matte"/>
+      </ChooseList>
+    </StackPanel>
+      
+    <StackPanel id="plasticvinyl_bump"
+                label="Finish Bumps"
+                labelid="plasticvinyl_bump_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="plasticvinyl_custom"
+                checkboxid2="plasticvinyl_bump_map">
+      
+      <ChooseList id="plasticvinyl_bump"
+                  onebased="true"
+                  label="Finish Bumps"
+                  labelid="plasticvinyl_bump_list_label" 
+                  tooltip="Selects a bitmap image for the bump roughness.">
+        <Choice id="plasticvinyl_custom" label="Custom">
+        </Choice>
+      </ChooseList>
+      <MappableFloat id="plasticvinyl_bump_map"
+                     nosinglevalue="true"
+                     bump="true"
+                     tooltip="Selects a bitmap image for the bump roughness."
+                     label="Image"/>
+      <Float id="plasticvinyl_bump_amount"
+             label="Amount"
+             min="0.0"
+             max="1.0"
+             tooltip="Slides from 0 to 1 to control the height of the bumps."/>
+    </StackPanel>
+      
+    <StackPanel id="plasticvinyl_pattern"
+                label="Relief Pattern"
+                labelid="plasticvinyl_pattern_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="plasticvinyl_custom"
+                checkboxid2="plasticvinyl_pattern_map">
+      
+      <ChooseList id="plasticvinyl_pattern"
+                  label="Bump Pattern"
+                  labelid="plasticvinyl_pattern_list_label" 
+                  onebased="true"
+                  tooltip="Create raised and lowered regions based on dark and light areas of an image file you provide.">
+        <Choice id="plasticvinyl_custom" label="Custom">
+        </Choice>
+      </ChooseList>
+      <MappableFloat id="plasticvinyl_pattern_map"
+                     nosinglevalue="true"
+                     tooltip="Selects a bitmap image for the relief pattern."
+                     bump="true"
+                     label="Image"/>
+      <Float id="plasticvinyl_pattern_amount"
+             label="Amount"
+             min="0.0"
+             max="2.0"
+             tooltip="Slides from 0 to 2 to control the height of the bumps."/>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="plasticvinyl_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">
+      <Integer id="plasticvinyl_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="plasticvinyl_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="plasticvinyl_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="plasticvinyl_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="plasticvinyl_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="plasticvinyl_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="plasticvinyl_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="refraction_glossy_samples"
+         label="Refraction Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy refractions."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="plasticvinyl_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="plasticvinyl_refr_depth"
+       label="Override Refraction Depth"
+       labelid="plasticvinyl_refr_depth_control_label"
+       checkbox="true"
+       checkonvalue="4"
+       checkoffvalue="-1"
+       orientation="Vertical">
+      <Integer id="plasticvinyl_refr_depth"
+         label="Refraction Max Trace Depth"
+         tooltip="When checked, the material's refraction depth is controlled locally and an additional transparency ray will be casted when the limit is reached, limiting the 'dark edge' effect typically found on solid glass objects."
+         min="-1"
+         max="20"
+         forcenumeric="spinbox">
+      </Integer>
+    </StackPanel>
+  </Fields>
+</adsui>

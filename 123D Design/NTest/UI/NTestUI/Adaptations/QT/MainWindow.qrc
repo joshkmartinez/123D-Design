@@ -1,0 +1,20 @@
+<RCC>
+  <qresource>
+    <file>Images/NTest.png</file>
+    <file>Images/AddTest.png</file>
+    <file>Images/DeleteTest.png</file>
+    <file>Images/DeleteAllTests.png</file>
+    <file>Images/Run.png</file>
+    <file>Images/Pause.png</file>
+    <file>Images/Stop.png</file>
+    <file>Images/Settings.png</file>
+    <file>Images/Passed.png</file>
+    <file>Images/Failed.png</file>
+    <file>Images/Remote.png</file>
+    <file>Images/DebugRun.png</file>
+    <file>Images/DebugStep.png</file>
+    <file>Images/DebugStop.png</file>
+    <file>Images/ContinueOnError.png</file>
+    <file>Images/Follow.png</file>
+  </qresource>
+</RCC>

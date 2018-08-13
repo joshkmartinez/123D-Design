@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectivity.ExtensionSettings3>
+
+    <!-- IFileReferencesProvider implementation -->
+    <extension interface="Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core.IFileReferencesProvider, Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core"
+               type="Autodesk.DataManagement.Common.FileOperationProvider.AutoCAD.FileReferenceProvider, Autodesk.DataManagement.Common.FileOperationProvider.AutoCAD"
+               runtime="x64">
+
+      <!-- FOS core settings for a provider -->
+      <setting key="Id" value="{102BD4D1-C581-4CCD-BFD3-8967EB6BF0FF}"/>
+      <setting key="Name" value="AutoCAD"/>
+      <setting key="LoadEnabled" value="true"/>
+      <setting key="Enabled" value="true"/>
+      <setting key="SupportedExtensions" value=".dwg; .dwt; .dws"/>
+      <setting key="UnsupportedExtensions" value=""/>
+      <setting key="AdhereToExtensions" value="true"/>
+      <setting key="Priority" value="10"/>
+
+      <!-- IFileReferencesProvider settings -->
+      <!-- SupportsUpdate: indicates if the UpdateReference method is supported by the provider implementation -->
+      <setting key="SupportsUpdate" value="true"/>
+
+      <!-- Custom provider properties -->
+      <!-- AutoCAD.UseETransmit -->
+      <setting key="AutoCAD.UseETransmit" value="ProviderProperty"/>
+      <setting key="AutoCAD.UseETransmit.Default" value="true"/>
+      <setting key="AutoCAD.UseETransmit.OutputPropertyName" value=""/>
+      <setting key="AutoCAD.UseETransmit.Description" value="Use eTransmit business logic for acquiring file references."/>
+      <setting key="AutoCAD.UseETransmit.Public" value="true"/>
+
+      <!-- include dll resolution to the folder that the provider resides in -->
+      <resolveFolder lookup="RelativeToExtension" path="." appendToPath="true"/>
+      <!-- include dll resolution to the folder that ObjectDBX resides in. This one is relative to the location of the provider dll -->
+      <resolveFolder lookup="RelativeToExtension" path="..\RealDwg" appendToPath="true"/>
+      <!--<resolveFolder lookup="RelativeToExtension" path="..\..\..\..\..\..\..\..\RealDwg\19.1.6.0.0\binary\win_vc10\x64\Release" appendToPath="true"/>-->
+    
+    </extension>
+  </connectivity.ExtensionSettings3>
+</configuration>

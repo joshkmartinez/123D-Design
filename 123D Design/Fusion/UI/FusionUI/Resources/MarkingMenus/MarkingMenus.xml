@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Menus>
+
+
+    <!-- ///////////////////////////////////////////-->
+    <!-- ** This document defines the contents of the Radial Menu & Context Menu for each workspace.  The *Context* menus have very little difference.  When adding items to the context menu, consider adding them to ALL workspaces to maintain consistency **-->
+    <!-- ///////////////////////////////////////////-->
+    
+    
+    <!-- *********************** -->
+    <!-- ** Sculpt (Tspline) Workspace ** -->
+    <!-- *********************** -->
+    <MarkingMenu EnvId="TSplineEnvironment">
+        <Menu TypeId="BaseMenu">
+            <MenuItem Id="RepeatCommand" Position="North" />
+            <MenuItem Id="TSplineEditCommand" Position="Northeast" />
+            <MenuItem Id="RedoCommand" Position="East" />
+            <MenuItem Id="TSplineAppendFaceCommand" Position="Southeast" />
+            <!-- Sketch 2nd tier marking menu -->
+            <MenuItem Text="Sketch" Position="South">
+                <MenuItem Id="SketchStop" Position="North" />
+                <MenuItem Id="ShapeRectangleTwoPoint" Position="Northeast" />
+                <MenuItem Id="SketchGeomConstraintCmd" Position="East" />
+                <MenuItem Id="Project" Position="Southeast" />
+                <MenuItem Id="DrawPolyline" Position="South" />
+                <MenuItem Id="Offset" Position="Southwest" />
+                <MenuItem Id="SketchDimension" Position="West" />
+                <MenuItem Id="CircleCenterRadius" Position="Northwest" />
+            </MenuItem>
+            <MenuItem Id="TSplineExtrudeCommand" Position="Southwest" />
+            <MenuItem Id="UndoCommand" Position="West" />
+            <MenuItem Id="FusionDeleteCommand" Position="Northwest" />
+        </Menu>
+        
+        <Menu TypeId="Overflow">
+            
+            <!-- ******** Object-Specific Commands/Options ******** -->
+            
+            <!--Various quick-access commands -->
+            <MenuItem Id="AlignComponentsCmd"/>
+            <Separator />
+            
+            <MenuItem Id="FusionMoveCommand" />
+            
+            <MenuItem Id="SketchCreate"/>
+            <MenuItem Id="Extrude" />
+            <MenuItem Id="WorkPlaneOffsetFromPlaneCommand" />
+            
+            <MenuItem Id="WorkAxisThroughCylinderCommand" />
+            
+            <MenuItem Id="FusionFilletEdgesCommand" />
+            <MenuItem Id="FusionChamferCommand" />
+            <Separator />
+            
+            
+            <!--Structure-type commands -->
+            <MenuItem Id="FusionGroundComponentsCommand" />
+            <MenuItem Id="FusionUnGroundComponentsCommand" />
+            <MenuItem Id="FusionMoveComponentsCommand" />
+            <Separator />
+            
+            <MenuItem Id="FusionCreateEmptyComponentCommand" />
+            <MenuItem Id="FusionCreateComponentFromBodyCommand" />
+            
+            <MenuItem Id="FusionFindFeaturesCommand" />
+            <MenuItem Id="DissolveFeaturesCmdDef" />
+            
+            <MenuItem Id="FusionMakeIndependentCommand" />
+            
+            <MenuItem Id="FusionCreateSurfaceGroupCommand" />
+            <MenuItem Id="FusionMoveToSurfaceGroupCommand" />
+            
+            <MenuItem Id="TSpline2BRepCommand" />
+            
+            <MenuItem Id="FusionInsertComponentCommand" />
+            <MenuItem Id="FusionSaveAsComponentCommand" />
+            <Separator />
+            
+            
+            <!-- Feature Edit & Dissolve -->
+            <MenuItem Id="FusionFilletEditCommand" />
+            <MenuItem Id="FusionChamferEditCommand" />
+            <MenuItem Id="FusionHoleEditCommand" />
+			<MenuItem Id="FusionThreadEditCommand" />
+            <MenuItem Id="PatternCircularEdit" />
+            <MenuItem Id="PatternRectangularEdit" />
+            <MenuItem Id="PatternOnPathEdit" />
+            <MenuItem Id="DissolveFeatureCmdDef" />
+            
+            
+            <!-- Sketch Selection -->
+            <MenuItem Id="SketchActivate"/>
+            <MenuItem Id="SliceSketchCommand" />
+            <MenuItem Id="UnsliceSketchCommand" />
+            <MenuItem Id="ShowProfile"/>
+            <MenuItem Id="HideProfile"/>
+            <!-- <MenuItem Id="SketchGridOn"/> -->
+            <!-- <MenuItem Id="SketchGridOff"/> -->
+            <!-- <MenuItem Id="SketchSnapOn"/> -->
+            <!-- <MenuItem Id="SketchSnapOff"/> -->
+            <MenuItem Id="SketchFixConstraintCmd" />
+            <MenuItem Id="DeleteCoincidentConstraintCmd" />
+            <MenuItem Id="SaveSketchAsDWG"/>
+            <Separator />
+            
+            <MenuItem Id="SketchLookAt"/>
+            
+            
+            <!-- Spline -->
+            <MenuItem Id="SplineCloseCurve" />
+            <MenuItem Id="SplineInsertPoint" />
+            <MenuItem Id="AddTangentHandle" />
+            <MenuItem Id="AddCurvatureHandle" />
+            <MenuItem Id="DeleteCurvatureCommand" />
+            <MenuItem Id="DeleteTangentCommand" />
+            <!-- Curvature comb -->
+            <MenuItem Id="FusionToggleSetupCurveCurvatureCombCommand" />
+            <MenuItem Id="FusionCurveCurvatureCombSetupCommand" />
+            <Separator />
+            
+            
+            <!-- Joint Selection -->
+            <MenuItem Id="FusionMoveJointsCommand" />
+            <MenuItem Id="EditJointCmd" />
+            <MenuItem Id="EditJointDOFLimitsCmd" />
+            <MenuItem Id="LockJointDOFCmd" />
+            <MenuItem Id="UnlockJointDOFCmd" />
+            <MenuItem Id="LockJointCmd" />
+            <MenuItem Id="UnlockJointCmd" />
+            <MenuItem Id="SuppressJointOccurrenceCmd" />
+            <MenuItem Id="UnsuppressJointOccurrenceCmd" />
+            <MenuItem Id="AnimateJointCmd" />
+            <MenuItem Id="AnimateModelCmd" />
+            <Separator />
+            <MenuItem Id="RestoreJointCmd" />
+            <MenuItem Id="RedefineJointHomeCmd" />
+            <Separator />
+            
+            
+            <!-- Select corresponding Joints/Components -->
+            <MenuItem Id="SelectJointsByComponentCmd" />
+            <MenuItem Id="SelectJointComponentsCmd" />
+            <Separator />
+            
+            
+            <!-- Motion Relationship Selection -->
+            <MenuItem Id="EditMotionRelationshipCmd" />
+            <MenuItem Id="SuppressMotionRelationshipCmd" />
+            <MenuItem Id="UnsuppressMotionRelationshipCmd" />
+            <Separator />
+            
+            
+            <!-- Motion Study Selection -->
+            <MenuItem Id="EditMotionStudyCmd" />
+            <Separator />
+            
+            <!-- Joint Origin Selection -->
+            <MenuItem Id="EditJointOriginCmd" />
+            <Separator />
+            
+            
+            <!-- ContactSet Selection -->
+            <MenuItem Id="EditContactSetCmd" />
+            <MenuItem Id="SuppressContactSetCmd" />
+            <MenuItem Id="UnsuppressContactSetCmd" />
+            
+            
+            <!-- ContactSets Selection -->
+            <MenuItem Id="ContactSetCmd" />
+            <MenuItem Id="EnableAllContactCmd" />
+            <MenuItem Id="EnableContactSetsCmd" />
+            <MenuItem Id="DisableAllContactCmd" />
+            
+            
+            <!-- Tspline Selection -->
+            <MenuItem Id="TSplineSubsetCmd" />
+            <MenuItem Id="TSplineInsertEdgeCommand" />
+            <MenuItem Id="TSplineUnWeldCommand" />
+            <MenuItem Id="TSplineInsertPointCommand" />
+            <MenuItem Id="TSplineThickenCommand" />
+            <Separator />
+            <MenuItem Id="TSplineCreasedEdgeCommand" />
+            <MenuItem Id="TSplineUnCreaseEdgeCmd" />
+            <MenuItem Id="TSplineWeldCommand" />
+            <MenuItem Id="TSplineFlattenSubDCmd" />
+            <MenuItem Id="TSplineMakeUniformCmd" />
+            <Separator />
+            <MenuItem Id="TSplineInternalCircularSymmetryCmd" />
+            <MenuItem Id="TSplineInternalMirrorSymmetryCmd" />
+            <MenuItem Id="TSplineReflectionCircularSymmetryCmd" />
+            <MenuItem Id="TSplineReflectionMirrorSymmetryCmd" />
+            <MenuItem Id="TSplineClearSymmetryCommand" />
+            <Separator />
+            <MenuItem Id="TSplineMatchCmd" />
+            <MenuItem Id="TSplineFillHoleCmd" />
+            <MenuItem Id="TSplineBridgeSubDCmd" />
+            <MenuItem Id="TSplineRevolveCommand" />
+            <MenuItem Id="TSplineSweepCommand" />
+            <Separator />
+            <MenuItem Id="TSplineToggleTessModeCmd" />
+            <Separator />
+            
+            
+            <!-- Canvas -->
+            <MenuItem Id="FusionEditCanvasCommand" />
+            <MenuItem Id="FusionCalibrateCanvasCommand" />
+            <MenuItem Id="FusionReplaceCanvasImageCommand" />
+            
+            
+            <!-- Decal -->
+            <MenuItem Id="FusionEditDecalCommand" />
+            <MenuItem Id="FusionReplaceDecalImageCommand" />
+            <Separator />
+            
+            
+            <!-- Visual analysis (browser) -->
+            <MenuItem Id="FusionEditCurvatureCombAnalysisCommand" />
+            <MenuItem Id="FusionEditZebraAnalysisCommand" />
+            <MenuItem Id="FusionEditDraftAnalysisCommand" />
+            <MenuItem Id="FusionEditCurvatureMapAnalysisCommand" />
+            <MenuItem Id="FusionEditHalfSectionViewCommand" />
+            <Separator />
+            
+            
+            <!-- NamedViews (browser)-->
+            <MenuItem Id="AddNamedViewCommand" />
+            <MenuItem Id="RemoveNamedViewCommand" />
+            <MenuItem Id="UpdateNamedViewCameraCommand" />
+            
+            
+            <!-- Delete -->
+            <MenuItem Id="FusionDeleteCommand" />
+            <Separator />
+            
+            
+            <!-- Object Visibility -->
+            <MenuItem Id="VisibilityToggleCmd"/>
+            <MenuItem Id="PlanesVisibilityToggleCmd"/>
+            <MenuItem Id="AxesVisibilityToggleCmd" />
+            <MenuItem Id="PointsVisibilityToggleCmd" />
+            <MenuItem Id="OpacityControlCmd" />
+            <MenuItem Id="IsolateCmd" />
+            <MenuItem Id="UnisolateCmd" />
+            <MenuItem Id="UnisolateAllCmd" />
+            <Separator />
+            
+            
+            <!-- ******** Common Commands/Options ******** -->
+            
+            <!-- Material & Properties -->
+            <MenuItem Id="FusionMaterialCommand"/>
+            <MenuItem Id="RemoveOverrideCommand"/>
+            <MenuItem Id="FusionPropertiesCommand"/>
+            <Separator />
+            
+            
+            <!-- Copy/Paste -->
+            <MenuItem Id="CopyCommand" />
+            <MenuItem Id="CutCommand" />
+            <MenuItem Id="PasteCommand" />
+            <MenuItem Id="FusionPasteNewCommand" />
+            <Separator />
+            
+            
+            <!-- Find in Canvas / Browser -->
+            <MenuItem Id="FindInBrowser" />
+            <MenuItem Id="FindInCanvas" />
+
+            
+        </Menu>
+    </MarkingMenu>
+    
+    
+    
+  <!-- ********************* -->
+  <!-- ** Model (BREP solid modeling) Workspace ** -->
+  <!-- ********************* -->
+  <MarkingMenu EnvId="FusionSolidEnvironment">
+    <Menu TypeId="BaseMenu">
+      <MenuItem Id="RepeatCommand" Position="North" />
+      <MenuItem Id="FusionPressPullCommand" Position="Northeast" />
+      <MenuItem Id="RedoCommand" Position="East" />
+      <MenuItem Id="FusionHoleCommand" Position="Southeast" />
+      <!-- Sketch 2nd tier marking menu -->
+      <MenuItem Text="Sketch" Position="South">
+        <MenuItem Id="SketchStop" Position="North" />
+        <MenuItem Id="ShapeRectangleTwoPoint" Position="Northeast" />
+        <MenuItem Id="SketchGeomConstraintCmd" Position="East" />
+        <MenuItem Id="Project" Position="Southeast" />
+        <MenuItem Id="DrawPolyline" Position="South" />
+        <MenuItem Id="Offset" Position="Southwest" />
+        <MenuItem Id="SketchDimension" Position="West" />
+        <MenuItem Id="CircleCenterRadius" Position="Northwest" />
+      </MenuItem>
+      <MenuItem Id="FusionTweakFacesCommand" Position="Southwest" />
+      <MenuItem Id="UndoCommand" Position="West" />
+      <MenuItem Id="FusionDeleteCommand" Position="Northwest" />
+    </Menu>
+
+    <Menu TypeId="Overflow">
+
+        <!-- ******** Object-Specific Commands/Options ******** -->
+        
+        <!--Various quick-access commands -->
+		<MenuItem Id="AlignComponentsCmd"/>
+        <Separator />
+        
+        <MenuItem Id="FusionMoveCommand" />
+        
+        <MenuItem Id="SketchCreate"/>
+        <MenuItem Id="Extrude" />
+        <MenuItem Id="WorkPlaneOffsetFromPlaneCommand" />
+        
+        <MenuItem Id="WorkAxisThroughCylinderCommand" />
+        
+        <MenuItem Id="FusionFilletEdgesCommand" />
+        <MenuItem Id="FusionChamferCommand" />
+        <Separator />
+
+        
+        <!--Structure-type commands -->
+        <MenuItem Id="FusionGroundComponentsCommand" />
+        <MenuItem Id="FusionUnGroundComponentsCommand" />
+        <MenuItem Id="FusionMoveComponentsCommand" />
+        <Separator />
+        
+        <MenuItem Id="FusionCreateEmptyComponentCommand" />
+        <MenuItem Id="FusionCreateComponentFromBodyCommand" />
+        
+        <MenuItem Id="FusionFindFeaturesCommand" />
+        <MenuItem Id="DissolveFeaturesCmdDef" />
+        
+        <MenuItem Id="FusionMakeIndependentCommand" />
+        
+        <MenuItem Id="FusionCreateSurfaceGroupCommand" />
+        <MenuItem Id="FusionMoveToSurfaceGroupCommand" />
+        
+        <MenuItem Id="TSpline2BRepCommand" />
+
+        <MenuItem Id="FusionInsertComponentCommand" />
+        <MenuItem Id="FusionSaveAsComponentCommand" />
+        <Separator />
+        
+        
+        <!-- Feature Edit & Dissolve -->
+        <MenuItem Id="FusionFilletEditCommand" />
+        <MenuItem Id="FusionChamferEditCommand" />
+        <MenuItem Id="FusionHoleEditCommand" />
+		<MenuItem Id="FusionThreadEditCommand" />
+        <MenuItem Id="PatternCircularEdit" />
+        <MenuItem Id="PatternRectangularEdit" />
+        <MenuItem Id="PatternOnPathEdit" />
+        <MenuItem Id="DissolveFeatureCmdDef" />
+
+      
+        <!-- Sketch Selection -->
+        <MenuItem Id="SketchActivate"/>
+        <MenuItem Id="SliceSketchCommand" />
+        <MenuItem Id="UnsliceSketchCommand" />
+        <MenuItem Id="ShowProfile"/>
+        <MenuItem Id="HideProfile"/>
+        <!-- <MenuItem Id="SketchGridOn"/> -->
+        <!-- <MenuItem Id="SketchGridOff"/> -->
+        <!-- <MenuItem Id="SketchSnapOn"/> -->
+        <!-- <MenuItem Id="SketchSnapOff"/> -->
+        <MenuItem Id="SketchFixConstraintCmd" />
+        <MenuItem Id="DeleteCoincidentConstraintCmd" />
+        <MenuItem Id="SaveSketchAsDWG"/>
+        <Separator />
+
+        <MenuItem Id="SketchLookAt"/>
+
+
+        <!-- Spline -->
+        <MenuItem Id="SplineCloseCurve" />
+        <MenuItem Id="SplineInsertPoint" />
+        <MenuItem Id="AddTangentHandle" />
+        <MenuItem Id="AddCurvatureHandle" />
+        <MenuItem Id="DeleteCurvatureCommand" />
+        <MenuItem Id="DeleteTangentCommand" />
+        <!-- Curvature comb -->
+        <MenuItem Id="FusionToggleSetupCurveCurvatureCombCommand" />
+        <MenuItem Id="FusionCurveCurvatureCombSetupCommand" />
+        <Separator />
+
+        
+        <!-- Joint Selection -->
+		<MenuItem Id="FusionMoveJointsCommand" />
+		<MenuItem Id="EditJointCmd" />
+		<MenuItem Id="EditJointDOFLimitsCmd" />
+        <MenuItem Id="LockJointDOFCmd" />
+        <MenuItem Id="UnlockJointDOFCmd" />
+        <MenuItem Id="LockJointCmd" />
+        <MenuItem Id="UnlockJointCmd" />
+        <MenuItem Id="SuppressJointOccurrenceCmd" />
+        <MenuItem Id="UnsuppressJointOccurrenceCmd" />
+        <MenuItem Id="AnimateJointCmd" />
+        <MenuItem Id="AnimateModelCmd" />
+        <Separator />
+        <MenuItem Id="RestoreJointCmd" />
+		<MenuItem Id="RedefineJointHomeCmd" />
+        <Separator />
+        
+        
+        <!-- Select corresponding Joints/Components -->
+        <MenuItem Id="SelectJointsByComponentCmd" />
+        <MenuItem Id="SelectJointComponentsCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Relationship Selection -->
+        <MenuItem Id="EditMotionRelationshipCmd" />
+        <MenuItem Id="SuppressMotionRelationshipCmd" />
+        <MenuItem Id="UnsuppressMotionRelationshipCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Study Selection -->
+        <MenuItem Id="EditMotionStudyCmd" />
+        <Separator />
+        
+        <!-- Joint Origin Selection -->
+        <MenuItem Id="EditJointOriginCmd" />
+        <Separator />
+      
+        
+		<!-- ContactSet Selection -->
+        <MenuItem Id="EditContactSetCmd" />
+		<MenuItem Id="SuppressContactSetCmd" />
+		<MenuItem Id="UnsuppressContactSetCmd" />
+
+        
+		<!-- ContactSets Selection -->
+		<MenuItem Id="ContactSetCmd" />
+		<MenuItem Id="EnableAllContactCmd" />
+		<MenuItem Id="EnableContactSetsCmd" />
+		<MenuItem Id="DisableAllContactCmd" />
+        
+        
+        <!-- Tspline Selection -->
+        <MenuItem Id="TSplineSubsetCmd" />
+        <MenuItem Id="TSplineInsertEdgeCommand" />
+        <MenuItem Id="TSplineUnWeldCommand" />
+        <MenuItem Id="TSplineInsertPointCommand" />
+        <MenuItem Id="TSplineThickenCommand" />
+        <Separator />
+        <MenuItem Id="TSplineCreasedEdgeCommand" />
+        <MenuItem Id="TSplineUnCreaseEdgeCmd" />
+        <MenuItem Id="TSplineWeldCommand" />
+        <MenuItem Id="TSplineFlattenSubDCmd" />
+        <MenuItem Id="TSplineMakeUniformCmd" />
+        <Separator />
+        <MenuItem Id="TSplineInternalCircularSymmetryCmd" />
+        <MenuItem Id="TSplineInternalMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionCircularSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineClearSymmetryCommand" />
+        <Separator />
+        <MenuItem Id="TSplineMatchCmd" />
+        <MenuItem Id="TSplineFillHoleCmd" />
+        <MenuItem Id="TSplineBridgeSubDCmd" />
+        <MenuItem Id="TSplineRevolveCommand" />
+        <MenuItem Id="TSplineSweepCommand" />
+        <Separator />
+        <MenuItem Id="TSplineToggleTessModeCmd" />
+        <Separator />
+
+        
+        <!-- Canvas -->
+        <MenuItem Id="FusionEditCanvasCommand" />
+        <MenuItem Id="FusionCalibrateCanvasCommand" />
+        <MenuItem Id="FusionReplaceCanvasImageCommand" />
+        
+        
+        <!-- Decal -->
+        <MenuItem Id="FusionEditDecalCommand" />
+        <MenuItem Id="FusionReplaceDecalImageCommand" />
+        <Separator />
+
+        
+        <!-- Visual analysis (browser) -->
+        <MenuItem Id="FusionEditCurvatureCombAnalysisCommand" />
+        <MenuItem Id="FusionEditZebraAnalysisCommand" />
+        <MenuItem Id="FusionEditDraftAnalysisCommand" />
+        <MenuItem Id="FusionEditCurvatureMapAnalysisCommand" />
+        <MenuItem Id="FusionEditHalfSectionViewCommand" />
+        <Separator />
+
+        
+        <!-- NamedViews (browser)-->
+        <MenuItem Id="AddNamedViewCommand" />
+        <MenuItem Id="RemoveNamedViewCommand" />
+        <MenuItem Id="UpdateNamedViewCameraCommand" />
+        
+        
+        <!-- Delete -->
+        <MenuItem Id="FusionDeleteCommand" />
+		<Separator />
+        
+
+        <!-- Object Visibility -->
+        <MenuItem Id="VisibilityToggleCmd"/>
+        <MenuItem Id="PlanesVisibilityToggleCmd"/>
+        <MenuItem Id="AxesVisibilityToggleCmd" />
+        <MenuItem Id="PointsVisibilityToggleCmd" />
+        <MenuItem Id="OpacityControlCmd" />
+        <MenuItem Id="IsolateCmd" />
+        <MenuItem Id="UnisolateCmd" />
+        <MenuItem Id="UnisolateAllCmd" />
+        <Separator />
+
+        
+        <!-- ******** Common Commands/Options ******** -->
+        
+        <!-- Material & Properties -->
+        <MenuItem Id="FusionMaterialCommand"/>
+        <MenuItem Id="RemoveOverrideCommand"/>
+        <MenuItem Id="FusionPropertiesCommand"/>
+        <Separator />
+
+        
+        <!-- Copy/Paste -->
+        <MenuItem Id="CopyCommand" />
+        <MenuItem Id="CutCommand" />
+        <MenuItem Id="PasteCommand" />
+        <MenuItem Id="FusionPasteNewCommand" />
+		<Separator />
+
+        
+        <!-- Find in Canvas / Browser -->
+        <MenuItem Id="FindInBrowser" />
+        <MenuItem Id="FindInCanvas" />
+
+      
+    </Menu>
+  </MarkingMenu>
+
+
+  <!-- *********************** -->
+  <!-- ** Patch (Nurbs surface) Workspace ** -->
+  <!-- *********************** -->
+  <MarkingMenu EnvId="FusionSurfaceEnvironment">
+    <Menu TypeId="BaseMenu">
+      <MenuItem Id="RepeatCommand" Position="North" />
+      <MenuItem Id="FusionPressPullCommand" Position="Northeast" />
+      <MenuItem Id="RedoCommand" Position="East" />
+      <MenuItem Id="FusionSurfacePatchCommand" Position="Southeast" />
+      <!-- Sketch 2nd tier marking menu -->
+      <MenuItem Text="Sketch" Position="South">
+        <MenuItem Id="SketchStop" Position="North" />
+        <MenuItem Id="ShapeRectangleTwoPoint" Position="Northeast" />
+        <MenuItem Id="SketchGeomConstraintCmd" Position="East" />
+        <MenuItem Id="Project" Position="Southeast" />
+        <MenuItem Id="DrawPolyline" Position="South" />
+        <MenuItem Id="Offset" Position="Southwest" />
+        <MenuItem Id="SketchDimension" Position="West" />
+        <MenuItem Id="CircleCenterRadius" Position="Northwest" />
+      </MenuItem>
+      <MenuItem Id="FusionSurfaceReverseNormalCommand" Position="Southwest" />
+      <MenuItem Id="UndoCommand" Position="West" />
+      <MenuItem Id="FusionDeleteCommand" Position="Northwest" />
+    </Menu>
+
+    <Menu TypeId="Overflow">
+        
+        <!-- ** Maybe... ** -->
+        
+        
+        <!-- ******** Object-Specific Commands/Options ******** -->
+        
+        <!--Various quick-access commands -->
+		<MenuItem Id="AlignComponentsCmd"/>
+        <Separator />
+        
+        <MenuItem Id="FusionMoveCommand" />
+        
+        <MenuItem Id="SketchCreate"/>
+        <MenuItem Id="Extrude" />
+        <MenuItem Id="SurfaceExtrude" /> <!-- /// Workspace-specific /// -->
+        <MenuItem Id="WorkPlaneOffsetFromPlaneCommand" />
+        
+        <MenuItem Id="WorkAxisThroughCylinderCommand" />
+        
+        <MenuItem Id="FusionFilletEdgesCommand" />
+        <MenuItem Id="FusionChamferCommand" />
+        <Separator />
+        
+        
+        <!--Structure-type commands -->
+        <MenuItem Id="FusionGroundComponentsCommand" />
+        <MenuItem Id="FusionUnGroundComponentsCommand" />
+        <MenuItem Id="FusionMoveComponentsCommand" />
+        <Separator />
+        
+        <MenuItem Id="FusionCreateEmptyComponentCommand" />
+        <MenuItem Id="FusionCreateComponentFromBodyCommand" />
+        
+        <MenuItem Id="FusionFindFeaturesCommand" />
+        <MenuItem Id="DissolveFeaturesCmdDef" />
+        
+        <MenuItem Id="FusionMakeIndependentCommand" />
+        
+        <MenuItem Id="FusionCreateSurfaceGroupCommand" />
+        <MenuItem Id="FusionMoveToSurfaceGroupCommand" />
+        
+        <MenuItem Id="TSpline2BRepCommand" />
+        
+        <MenuItem Id="FusionInsertComponentCommand" />
+        <MenuItem Id="FusionSaveAsComponentCommand" />
+        <Separator />
+        
+        
+        <!-- Feature Edit & Dissolve -->
+        <MenuItem Id="FusionFilletEditCommand" />
+        <MenuItem Id="FusionChamferEditCommand" />
+        <MenuItem Id="FusionHoleEditCommand" />
+		<MenuItem Id="FusionThreadEditCommand" />
+        <MenuItem Id="PatternCircularEdit" />
+        <MenuItem Id="PatternRectangularEdit" />
+        <MenuItem Id="PatternOnPathEdit" />
+        <MenuItem Id="DissolveFeatureCmdDef" />
+        
+        
+        <!-- Sketch Selection -->
+        <MenuItem Id="SketchActivate"/>
+        <MenuItem Id="SliceSketchCommand" />
+        <MenuItem Id="UnsliceSketchCommand" />
+        <MenuItem Id="ShowProfile"/>
+        <MenuItem Id="HideProfile"/>
+        <!-- <MenuItem Id="SketchGridOn"/> -->
+        <!-- <MenuItem Id="SketchGridOff"/> -->
+        <!-- <MenuItem Id="SketchSnapOn"/> -->
+        <!-- <MenuItem Id="SketchSnapOff"/> -->
+        <MenuItem Id="SketchFixConstraintCmd" />
+        <MenuItem Id="DeleteCoincidentConstraintCmd" />
+        <MenuItem Id="SaveSketchAsDWG"/>
+        <Separator />
+        
+        <MenuItem Id="SketchLookAt"/>
+        
+        
+        <!-- Spline -->
+        <MenuItem Id="SplineCloseCurve" />
+        <MenuItem Id="SplineInsertPoint" />
+        <MenuItem Id="AddTangentHandle" />
+        <MenuItem Id="AddCurvatureHandle" />
+        <MenuItem Id="DeleteCurvatureCommand" />
+        <MenuItem Id="DeleteTangentCommand" />
+        <!-- Curvature comb -->
+        <MenuItem Id="FusionToggleSetupCurveCurvatureCombCommand" />
+        <MenuItem Id="FusionCurveCurvatureCombSetupCommand" />
+        <Separator />
+        
+        
+        <!-- Joint Selection -->
+		<MenuItem Id="FusionMoveJointsCommand" />
+		<MenuItem Id="EditJointCmd" />
+		<MenuItem Id="EditJointDOFLimitsCmd" />
+        <MenuItem Id="LockJointDOFCmd" />
+        <MenuItem Id="UnlockJointDOFCmd" />
+        <MenuItem Id="LockJointCmd" />
+        <MenuItem Id="UnlockJointCmd" />
+        <MenuItem Id="SuppressJointOccurrenceCmd" />
+        <MenuItem Id="UnsuppressJointOccurrenceCmd" />
+        <MenuItem Id="AnimateJointCmd" />
+        <MenuItem Id="AnimateModelCmd" />
+        <Separator />
+        <MenuItem Id="RestoreJointCmd" />
+		<MenuItem Id="RedefineJointHomeCmd" />
+        <Separator />
+        
+        
+        <!-- Select corresponding Joints/Components -->
+        <MenuItem Id="SelectJointsByComponentCmd" />
+        <MenuItem Id="SelectJointComponentsCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Relationship Selection -->
+        <MenuItem Id="EditMotionRelationshipCmd" />
+        <MenuItem Id="SuppressMotionRelationshipCmd" />
+        <MenuItem Id="UnsuppressMotionRelationshipCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Study Selection -->
+        <MenuItem Id="EditMotionStudyCmd" />
+        <Separator />
+        
+        <!-- Joint Origin Selection -->
+        <MenuItem Id="EditJointOriginCmd" />
+        <Separator />
+        
+        
+		<!-- ContactSet Selection -->
+        <MenuItem Id="EditContactSetCmd" />
+		<MenuItem Id="SuppressContactSetCmd" />
+		<MenuItem Id="UnsuppressContactSetCmd" />
+        
+        
+		<!-- ContactSets Selection -->
+		<MenuItem Id="ContactSetCmd" />
+		<MenuItem Id="EnableAllContactCmd" />
+		<MenuItem Id="EnableContactSetsCmd" />
+		<MenuItem Id="DisableAllContactCmd" />
+        
+        
+        <!-- Tspline Selection -->
+        <MenuItem Id="TSplineSubsetCmd" />
+        <MenuItem Id="TSplineInsertEdgeCommand" />
+        <MenuItem Id="TSplineUnWeldCommand" />
+        <MenuItem Id="TSplineInsertPointCommand" />
+        <MenuItem Id="TSplineThickenCommand" />
+        <Separator />
+        <MenuItem Id="TSplineCreasedEdgeCommand" />
+        <MenuItem Id="TSplineUnCreaseEdgeCmd" />
+        <MenuItem Id="TSplineWeldCommand" />
+        <MenuItem Id="TSplineFlattenSubDCmd" />
+        <MenuItem Id="TSplineMakeUniformCmd" />
+        <Separator />
+        <MenuItem Id="TSplineInternalCircularSymmetryCmd" />
+        <MenuItem Id="TSplineInternalMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionCircularSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineClearSymmetryCommand" />
+        <Separator />
+        <MenuItem Id="TSplineMatchCmd" />
+        <MenuItem Id="TSplineFillHoleCmd" />
+        <MenuItem Id="TSplineBridgeSubDCmd" />
+        <MenuItem Id="TSplineRevolveCommand" />
+        <MenuItem Id="TSplineSweepCommand" />
+        <Separator />
+        <MenuItem Id="TSplineToggleTessModeCmd" />
+        <Separator />
+        
+        
+        <!-- Canvas -->
+        <MenuItem Id="FusionEditCanvasCommand" />
+        <MenuItem Id="FusionCalibrateCanvasCommand" />
+        <MenuItem Id="FusionReplaceCanvasImageCommand" />
+        
+        
+        <!-- Decal -->
+        <MenuItem Id="FusionEditDecalCommand" />
+        <MenuItem Id="FusionReplaceDecalImageCommand" />
+        <Separator />
+        
+        
+        <!-- Visual analysis (browser) -->
+        <MenuItem Id="FusionEditCurvatureCombAnalysisCommand" />
+        <MenuItem Id="FusionEditZebraAnalysisCommand" />
+        <MenuItem Id="FusionEditDraftAnalysisCommand" />
+        <MenuItem Id="FusionEditCurvatureMapAnalysisCommand" />
+        <MenuItem Id="FusionEditHalfSectionViewCommand" />
+        <Separator />
+        
+        
+        <!-- NamedViews (browser)-->
+        <MenuItem Id="AddNamedViewCommand" />
+        <MenuItem Id="RemoveNamedViewCommand" />
+        <MenuItem Id="UpdateNamedViewCameraCommand" />
+        
+        
+        <!-- Delete -->
+        <MenuItem Id="FusionDeleteCommand" />
+		<Separator />
+        
+        
+        <!-- Object Visibility -->
+        <MenuItem Id="VisibilityToggleCmd"/>
+        <MenuItem Id="PlanesVisibilityToggleCmd"/>
+        <MenuItem Id="AxesVisibilityToggleCmd" />
+        <MenuItem Id="PointsVisibilityToggleCmd" />
+        <MenuItem Id="OpacityControlCmd" />
+        <MenuItem Id="IsolateCmd" />
+        <MenuItem Id="UnisolateCmd" />
+        <MenuItem Id="UnisolateAllCmd" />
+        <Separator />
+        
+        
+        <!-- ******** Common Commands/Options ******** -->
+        
+        <!-- Material & Properties -->
+        <MenuItem Id="FusionMaterialCommand"/>
+        <MenuItem Id="RemoveOverrideCommand"/>
+        <MenuItem Id="FusionPropertiesCommand"/>
+        <Separator />
+        
+        
+        <!-- Copy/Paste -->
+        <MenuItem Id="CopyCommand" />
+        <MenuItem Id="CutCommand" />
+        <MenuItem Id="PasteCommand" />
+        <MenuItem Id="FusionPasteNewCommand" />
+		<Separator />
+        
+        
+        <!-- Find in Canvas / Browser -->
+        <MenuItem Id="FindInBrowser" />
+        <MenuItem Id="FindInCanvas" />
+
+      
+    </Menu>
+  </MarkingMenu>
+
+
+ 
+
+  <!-- ************************ -->
+  <!-- ** Sketch Environment ** -->
+  <!-- ************************ -->
+  <MarkingMenu EnvId="FusionSketchEnvironment">
+    <Menu TypeId="BaseMenu">
+      <MenuItem Id="RepeatCommand" Position="North" />
+      <MenuItem Id="FusionPressPullCommand" Position="Northeast" />
+      <MenuItem Id="RedoCommand" Position="East" />
+      <MenuItem Id="FusionHoleCommand" Position="Southeast" />
+      <!-- Sketch 2nd tier marking menu -->
+      <MenuItem Text="Sketch" Position="South">
+        <MenuItem Id="SketchStop" Position="North" />
+        <MenuItem Id="ShapeRectangleTwoPoint" Position="Northeast" />
+        <MenuItem Id="SketchGeomConstraintCmd" Position="East" />
+        <MenuItem Id="Project" Position="Southeast" />
+        <MenuItem Id="DrawPolyline" Position="South" />
+        <MenuItem Id="Offset" Position="Southwest" />
+        <MenuItem Id="SketchDimension" Position="West" />
+        <MenuItem Id="CircleCenterRadius" Position="Northwest" />
+      </MenuItem>
+      <MenuItem Id="FusionTweakFacesCommand" Position="Southwest" />
+      <MenuItem Id="UndoCommand" Position="West" />
+      <MenuItem Id="FusionDeleteCommand" Position="Northwest" />
+    </Menu>
+
+    <Menu TypeId="Overflow">
+     
+        <!-- ******** Object-Specific Commands/Options ******** -->
+        
+        <!--Various quick-access commands -->
+		<MenuItem Id="AlignComponentsCmd"/>
+        <Separator />
+        
+        <MenuItem Id="FusionMoveCommand" />
+        
+        <MenuItem Id="SketchCreate"/>
+        <MenuItem Id="Extrude" />
+        <MenuItem Id="WorkPlaneOffsetFromPlaneCommand" />
+        
+        <MenuItem Id="WorkAxisThroughCylinderCommand" />
+        
+        <MenuItem Id="FusionFilletEdgesCommand" />
+        <MenuItem Id="FusionChamferCommand" />
+        <Separator />
+        
+        
+        <!--Structure-type commands -->
+        <MenuItem Id="FusionGroundComponentsCommand" />
+        <MenuItem Id="FusionUnGroundComponentsCommand" />
+        <MenuItem Id="FusionMoveComponentsCommand" />
+        <Separator />
+        
+        <MenuItem Id="FusionCreateEmptyComponentCommand" />
+        <MenuItem Id="FusionCreateComponentFromBodyCommand" />
+        
+        <MenuItem Id="FusionFindFeaturesCommand" />
+        <MenuItem Id="DissolveFeaturesCmdDef" />
+        
+        <MenuItem Id="FusionMakeIndependentCommand" />
+        
+        <MenuItem Id="FusionCreateSurfaceGroupCommand" />
+        <MenuItem Id="FusionMoveToSurfaceGroupCommand" />
+        
+        <MenuItem Id="TSpline2BRepCommand" />
+        
+        <MenuItem Id="FusionInsertComponentCommand" />
+        <MenuItem Id="FusionSaveAsComponentCommand" />
+        <Separator />
+        
+        
+        <!-- Feature Edit & Dissolve -->
+        <MenuItem Id="FusionFilletEditCommand" />
+        <MenuItem Id="FusionChamferEditCommand" />
+        <MenuItem Id="FusionHoleEditCommand" />
+		<MenuItem Id="FusionThreadEditCommand" />
+        <MenuItem Id="PatternCircularEdit" />
+        <MenuItem Id="PatternRectangularEdit" />
+        <MenuItem Id="PatternOnPathEdit" />
+        <MenuItem Id="DissolveFeatureCmdDef" />
+        
+        
+        <!-- Sketch Selection -->
+        <MenuItem Id="SketchActivate"/>
+        <MenuItem Id="SliceSketchCommand" />
+        <MenuItem Id="UnsliceSketchCommand" />
+        <MenuItem Id="ShowProfile"/>
+        <MenuItem Id="HideProfile"/>
+        <!-- <MenuItem Id="SketchGridOn"/> -->
+        <!-- <MenuItem Id="SketchGridOff"/> -->
+        <!-- <MenuItem Id="SketchSnapOn"/> -->
+        <!-- <MenuItem Id="SketchSnapOff"/> -->
+        <MenuItem Id="SketchFixConstraintCmd" />
+        <MenuItem Id="DeleteCoincidentConstraintCmd" />
+        <MenuItem Id="SaveSketchAsDWG"/>
+        <Separator />
+        
+        <MenuItem Id="SketchLookAt"/>
+        
+        
+        <!-- Spline -->
+        <MenuItem Id="SplineCloseCurve" />
+        <MenuItem Id="SplineInsertPoint" />
+        <MenuItem Id="AddTangentHandle" />
+        <MenuItem Id="AddCurvatureHandle" />
+        <MenuItem Id="DeleteCurvatureCommand" />
+        <MenuItem Id="DeleteTangentCommand" />
+        <!-- Curvature comb -->
+        <MenuItem Id="FusionToggleSetupCurveCurvatureCombCommand" />
+        <MenuItem Id="FusionCurveCurvatureCombSetupCommand" />
+        <Separator />
+        
+        
+        <!-- Joint Selection -->
+		<MenuItem Id="FusionMoveJointsCommand" />
+		<MenuItem Id="EditJointCmd" />
+		<MenuItem Id="EditJointDOFLimitsCmd" />
+        <MenuItem Id="LockJointDOFCmd" />
+        <MenuItem Id="UnlockJointDOFCmd" />
+        <MenuItem Id="LockJointCmd" />
+        <MenuItem Id="UnlockJointCmd" />
+        <MenuItem Id="SuppressJointOccurrenceCmd" />
+        <MenuItem Id="UnsuppressJointOccurrenceCmd" />
+        <MenuItem Id="AnimateJointCmd" />
+        <MenuItem Id="AnimateModelCmd" />
+        <Separator />
+        <MenuItem Id="RestoreJointCmd" />
+		<MenuItem Id="RedefineJointHomeCmd" />
+        <Separator />
+        
+        
+        <!-- Select corresponding Joints/Components -->
+        <MenuItem Id="SelectJointsByComponentCmd" />
+        <MenuItem Id="SelectJointComponentsCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Relationship Selection -->
+        <MenuItem Id="EditMotionRelationshipCmd" />
+        <MenuItem Id="SuppressMotionRelationshipCmd" />
+        <MenuItem Id="UnsuppressMotionRelationshipCmd" />
+        <Separator />
+        
+        
+        <!-- Motion Study Selection -->
+        <MenuItem Id="EditMotionStudyCmd" />
+        <Separator />
+        
+        <!-- Joint Origin Selection -->
+        <MenuItem Id="EditJointOriginCmd" />
+        <Separator />
+        
+        
+		<!-- ContactSet Selection -->
+        <MenuItem Id="EditContactSetCmd" />
+		<MenuItem Id="SuppressContactSetCmd" />
+		<MenuItem Id="UnsuppressContactSetCmd" />
+        
+        
+		<!-- ContactSets Selection -->
+		<MenuItem Id="ContactSetCmd" />
+		<MenuItem Id="EnableAllContactCmd" />
+		<MenuItem Id="EnableContactSetsCmd" />
+		<MenuItem Id="DisableAllContactCmd" />
+        
+        
+        <!-- Tspline Selection -->
+        <MenuItem Id="TSplineSubsetCmd" />
+        <MenuItem Id="TSplineInsertEdgeCommand" />
+        <MenuItem Id="TSplineUnWeldCommand" />
+        <MenuItem Id="TSplineInsertPointCommand" />
+        <MenuItem Id="TSplineThickenCommand" />
+        <Separator />
+        <MenuItem Id="TSplineCreasedEdgeCommand" />
+        <MenuItem Id="TSplineUnCreaseEdgeCmd" />
+        <MenuItem Id="TSplineWeldCommand" />
+        <MenuItem Id="TSplineFlattenSubDCmd" />
+        <MenuItem Id="TSplineMakeUniformCmd" />
+        <Separator />
+        <MenuItem Id="TSplineInternalCircularSymmetryCmd" />
+        <MenuItem Id="TSplineInternalMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionCircularSymmetryCmd" />
+        <MenuItem Id="TSplineReflectionMirrorSymmetryCmd" />
+        <MenuItem Id="TSplineClearSymmetryCommand" />
+        <Separator />
+        <MenuItem Id="TSplineMatchCmd" />
+        <MenuItem Id="TSplineFillHoleCmd" />
+        <MenuItem Id="TSplineBridgeSubDCmd" />
+        <MenuItem Id="TSplineRevolveCommand" />
+        <MenuItem Id="TSplineSweepCommand" />
+        <Separator />
+        <MenuItem Id="TSplineToggleTessModeCmd" />
+        <Separator />
+        
+        
+        <!-- Canvas -->
+        <MenuItem Id="FusionEditCanvasCommand" />
+        <MenuItem Id="FusionCalibrateCanvasCommand" />
+        <MenuItem Id="FusionReplaceCanvasImageCommand" />
+        
+        
+        <!-- Decal -->
+        <MenuItem Id="FusionEditDecalCommand" />
+        <MenuItem Id="FusionReplaceDecalImageCommand" />
+        <Separator />
+        
+        
+        <!-- Visual analysis (browser) -->
+        <MenuItem Id="FusionEditCurvatureCombAnalysisCommand" />
+        <MenuItem Id="FusionEditZebraAnalysisCommand" />
+        <MenuItem Id="FusionEditDraftAnalysisCommand" />
+        <MenuItem Id="FusionEditCurvatureMapAnalysisCommand" />
+        <MenuItem Id="FusionEditHalfSectionViewCommand" />
+        <Separator />
+        
+        
+        <!-- NamedViews (browser)-->
+        <MenuItem Id="AddNamedViewCommand" />
+        <MenuItem Id="RemoveNamedViewCommand" />
+        <MenuItem Id="UpdateNamedViewCameraCommand" />
+        
+        
+        <!-- Delete -->
+        <MenuItem Id="FusionDeleteCommand" />
+		<Separator />
+        
+        
+        <!-- Object Visibility -->
+        <MenuItem Id="VisibilityToggleCmd"/>
+        <MenuItem Id="PlanesVisibilityToggleCmd"/>
+        <MenuItem Id="AxesVisibilityToggleCmd" />
+        <MenuItem Id="PointsVisibilityToggleCmd" />
+        <MenuItem Id="OpacityControlCmd" />
+        <MenuItem Id="IsolateCmd" />
+        <MenuItem Id="UnisolateCmd" />
+        <MenuItem Id="UnisolateAllCmd" />
+        <Separator />
+        
+        
+        <!-- ******** Common Commands/Options ******** -->
+        
+        <!-- Material & Properties -->
+        <MenuItem Id="FusionMaterialCommand"/>
+        <MenuItem Id="RemoveOverrideCommand"/>
+        <MenuItem Id="FusionPropertiesCommand"/>
+        <Separator />
+        
+        
+        <!-- Copy/Paste -->
+        <MenuItem Id="CopyCommand" />
+        <MenuItem Id="CutCommand" />
+        <MenuItem Id="PasteCommand" />
+        <MenuItem Id="FusionPasteNewCommand" />
+		<Separator />
+        
+        
+        <!-- Find in Canvas / Browser -->
+        <MenuItem Id="FindInBrowser" />
+        <MenuItem Id="FindInCanvas" />
+        
+        
+    </Menu>
+  </MarkingMenu>
+
+
+
+    
+    
+    
+        <!-- ********************* -->
+        <!-- ** Debug Workspace ** -->
+        <!-- ********************* -->
+        <MarkingMenu EnvId="DebugEnvironment">
+            <Menu TypeId="BaseMenu">
+                <MenuItem Id="RepeatCommand" Position="North" />
+                <MenuItem Id="ShowTextCommandsCommand" Position="South" />
+            </Menu>
+        </MarkingMenu>
+
+
+
+
+
+  
+</Menus>

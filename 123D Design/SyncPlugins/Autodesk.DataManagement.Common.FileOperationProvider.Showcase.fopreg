@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectivity.ExtensionSettings3>
+    
+    <!-- IFileReferencesProvider implementation -->
+    <extension
+      interface="Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core.IFileReferencesProvider, Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core"
+      type="Autodesk.DataManagement.Common.FileOperationProvider.Showcase.FileReferenceProvider, Autodesk.DataManagement.Common.FileOperationProvider.Showcase"
+      runtime="x64">
+
+      <setting key="Id" value="{5C92D6E9-AB4B-485C-AB71-88E08F6123DC}"/>
+      <setting key="Name" value="Showcase"/>
+      <setting key="LoadEnabled" value="true"/>
+      <setting key="Enabled" value="true"/>
+      <setting key="SupportedExtensions" value=".a3s; .html"/>
+      <setting key="UnsupportedExtensions" value=""/>
+      <setting key="AdhereToExtensions" value="true"/>
+      <setting key="Priority" value="10"/>
+     
+      <!-- IFileReferencesProvider settings -->
+      <!-- SupportsUpdate: indicates if the UpdateReference method is supported by the provider implementation -->
+      <setting key="SupportsUpdate" value="false"/>
+    </extension>
+
+  </connectivity.ExtensionSettings3>
+</configuration>

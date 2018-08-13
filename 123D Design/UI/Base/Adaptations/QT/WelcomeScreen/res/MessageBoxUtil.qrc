@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/W2IqtToolkit">
+  <file alias="DownArrowImg">tree_title_down_arrow.png</file>
+  <file alias="RightArrowImg">tree_title_right_arrow.png</file>
+  <file alias="LeftArrowImg">tree_title_left_arrow.png</file>
+</qresource>
+</RCC>

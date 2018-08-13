@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Marble
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap3dSchema"
+        file="../Common/TextureMap3dSchema.xml" />
+
+  <UID  val="MarbleSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Marble" />
+  <Color id="marble_Color1"
+         valR="0.2"
+         valG="0.2"
+         valB="0.099"
+         label="Stone Color"
+         allowconnectedassets="single" />
+  
+  <Color id="marble_Color2"
+         valR="0.8"
+         valG="0.8"
+         valB="0.6"
+         label="Vein Color"
+         allowconnectedassets="single" />
+  
+  <Float id="marble_Size"
+         val="1"
+         label="Vein Spacing">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <Float id="marble_Width"
+         val="0.01"
+         label="Vein Width">
+    <Bounds minimum="0"
+            maximum="100"  
+            percentage="true"/>
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Marble/MarbleUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Marble/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Marble/OGS.xml"/>
+
+
+  <PropertyAlias alias="marble_Offset"
+                 id="texture_Offset" />
+  <PropertyAlias alias="marble_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="marble_Tiling"
+                 id="texture_Tiling" />
+  <PropertyAlias alias="marble_Angle"
+                 id="texture_Angle" />
+  <PropertyAlias alias="marble_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="marble_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="marble_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="marble_RealWorldOffsetZ"
+                 id="texture_RealWorldOffsetZ" />
+</AssetSchema>

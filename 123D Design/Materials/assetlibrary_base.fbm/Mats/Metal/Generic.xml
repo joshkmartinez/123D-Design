@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <float   name="metal_diffuse_image_fade"             val="1."/>
+    <float   name="metal_reflectivity_at_90deg"          val="1."/>
+    <float   name="metal_transparency"                   val="0.0"/>
+    <float   name="metal_transparency_image_fade"        val="1."/>
+    <float   name="metal_refraction_index"               val="1.4"/>
+    <float   name="metal_refraction_translucency_weight" val=".5"/>
+    <boolean name="metal_backface_cull"                  val="false"/>
+    <float   name="metal_self_illum_luminance"           val="0.0"/>
+    <float   name="metal_self_illum_color_temperature"   val="0.0"/>
+    <integer name="metal_refraction_glossy_samples"      val="1"/>
+  </constants>
+
+  <operator function="MetalDiffuseColorBOF" name="diffuse_color">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+    <map_interface source="metal_color"      destination="diffuse_color"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegBOF" name="reflectivity_at_0deg">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <operator function="MetalReflGlossBOF" name="refl_gloss">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <operator function="MetalIsMetalBOF" name="is_metal">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="metal_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="metal_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <desc val="external.dependency/Simple_Metal_Mtl_Cloverleaf_Pattern.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern01.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern02.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern03.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern04.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern05.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern06.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern07.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern08.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern09.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern10.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern11.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern12.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern13.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern14.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern15.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern16.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern17.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern18.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern19.png|external.dependency/Simple_Metal_Mtl_StaggeredCircles_Pattern20.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern01.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern02.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern03.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern04.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern05.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern06.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern07.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern08.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern09.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern10.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern11.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern12.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern13.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern14.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern15.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern16.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern17.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern18.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern19.png|external.dependency/Simple_Metal_Mtl_StaggeredSquares_Pattern20.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern01.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern02.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern03.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern04.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern05.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern06.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern07.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern08.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern09.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern10.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern11.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern12.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern13.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern14.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern15.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern16.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern17.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern18.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern19.png|external.dependency/Simple_Metal_Mtl_StraightCircles_Pattern20.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern01.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern02.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern03.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern04.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern05.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern06.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern07.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern08.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern09.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern10.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern11.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern12.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern13.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern14.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern15.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern16.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern17.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern18.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern19.png|external.dependency/Simple_Metal_Mtl_Hexagons_Pattern20.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern01.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern02.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern03.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern04.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern05.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern06.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern07.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern08.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern09.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern10.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern11.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern12.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern13.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern14.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern15.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern16.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern17.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern18.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern19.png|external.dependency/Simple_Metal_Mtl_Grecian_Pattern20.png"
+          tag="adsk_Mtl_Metal_V2"/>
+    <map_interface source="metal_color_by_object"                destination="color_by_object"/>
+    <map_operator  source="diffuse_color"                        destination="generic_diffuse"/>
+    <map_bindings  source="diffuse_asset"                        destination="generic_diffuse"/>
+    <map_constant  source="metal_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+    <map_operator  source="reflectivity_at_0deg"                 destination="generic_reflectivity_at_0deg"/>
+    <map_bindings  source="reflectivity_at_0deg_asset"           destination="generic_reflectivity_at_0deg"/>
+    <map_constant  source="metal_reflectivity_at_90deg"          destination="generic_reflectivity_at_90deg"/>  
+    <map_operator  source="refl_gloss"                           destination="generic_glossiness"/>
+    <map_operator  source="is_metal"                             destination="generic_is_metal"/>
+    <map_constant  source="metal_transparency"                   destination="generic_transparency"/>
+    <map_constant  source="metal_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+    <map_constant  source="metal_refraction_index"               destination="generic_refraction_index"/>
+    <map_constant  source="metal_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+    <map_bindings  source="cutout_opacity_asset"                   destination="generic_cutout_opacity"/>
+    <map_constant  source="metal_backface_cull"                  destination="generic_backface_cull"/>
+    <map_constant  source="metal_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+    <map_constant  source="metal_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+    <map_interface source="metal_pattern_height"                 destination="generic_bump_amount"/>
+    <map_bindings  source="bump_map_asset"                       destination="generic_bump_map"/>
+    <map_interface source="reflection_glossy_samples"            destination="generic_reflection_glossy_samples"/>
+    <map_constant  source="metal_refraction_glossy_samples"      destination="generic_refraction_glossy_samples"/>
+    <map_interface source="metal_ao_on"                          destination="generic_ao_on"/>
+    <map_interface source="metal_ao_samples"                     destination="generic_ao_samples"/>
+    <map_interface source="metal_ao_distance"                    destination="generic_ao_distance"/>
+    <map_interface source="metal_ao_details"                     destination="generic_ao_details"/>
+    <map_bindings  source="round_corner_radius_map"              destination="generic_roundcorners_radius"/>
+    <map_operator  source="round_corner_radius_BOF"              destination="generic_roundcorners_radius"/>  
+    <map_interface source="metal_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+    <map_interface source="metal_refl_depth"                     destination="generic_refl_depth"/>
+    <map_interface source="common_Tint_toggle"                   destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                    destination="common_Tint_color"/>  
+  </bindings>
+
+  <!--  Defines the connected assets for "generic_diffuse" property.  -->
+  <operator function="MetalDiffuseAssetNameBOF" name="diffuse_asset_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseAssetBindingsNameBOF" name="diffuse_asset_bindings">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="diffuse_asset_instance" name="diffuse_asset">
+    <map_operator  source="diffuse_asset_name"                                 destination="asset_name"/>
+    <map_operator  source="diffuse_asset_bindings"                             destination="bindings_name"/>
+  </bindings>
+
+  <!--  Noise Asset binding opertators for "generic_diffuse" property.  -->
+  <operator function="MetalDiffuseNoiseSizeBOF" name="diffuse_noise_Size">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1BOF" name="diffuse_noise_Color1">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+    <map_interface source="metal_patina"     destination="patina"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor2BOF" name="diffuse_noise_Color2">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/> 
+  </operator>
+
+  <operator function="MetalDiffuseNoiseThresholdLowBOF" name="diffuse_noise_ThresholdLow">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_patina"     destination="patina"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseThresholdHighBOF" name="diffuse_noise_ThresholdHigh">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_patina"     destination="patina"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseTypeBOF" name="diffuse_noise_Type">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="diffuse_asset_instance_bindings" name="diffuse_asset_bindings">
+    <map_operator  source="diffuse_noise_Size"                destination="noise_Size"/>
+    <map_operator  source="diffuse_noise_Color1"              destination="noise_Color1"/>
+    <map_bindings  source="diffuse_noise_Color1_asset"        destination="noise_Color1"/>
+    <map_operator  source="diffuse_noise_Color2"              destination="noise_Color2"/>
+    <map_operator  source="diffuse_noise_ThresholdLow"        destination="noise_ThresholdLow"/>
+    <map_operator  source="diffuse_noise_ThresholdHigh"       destination="noise_ThresholdHigh"/>
+    <map_operator  source="diffuse_noise_Type"                destination="noise_Type"/>
+  </bindings>
+
+
+  <!--  Defines the connected assets for "noise_Color1" property of the Noise asset which is connected to "generic_diffuse" property. -->
+  <operator function="MetalDiffuseNoiseColor1AssetNameBOF" name="diffuse_noise_Color1_asset_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1AssetBindingsNameBOF" name="diffuse_noise_Color1_asset_bindings">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="diffuse_noise_Color1_asset_instance" name="diffuse_noise_Color1_asset">
+    <map_operator  source="diffuse_noise_Color1_asset_name"                    destination="asset_name"/>
+    <map_operator  source="diffuse_noise_Color1_asset_bindings"                destination="asset"/>
+  </bindings>
+
+
+  <!--  Noise Asset binding opertators for "noise_Color1" property of the Noise asset which is connected to "generic_diffuse" property.  -->
+  <operator function="MetalDiffuseNoiseColor1NoiseSizeBOF" name="diffuse_noise_color1_noise_Size">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1NoiseColor1BOF" name="diffuse_noise_Color1_noise_Color1">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1NoiseColor2BOF" name="diffuse_noise_Color1_noise_Color2">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1NoiseThresholdLowBOF" name="diffuse_noise_Color1_noise_ThresholdLow">
+    <map_interface source="metal_type"       destination="type"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1NoiseThresholdHighBOF" name="diffuse_noise_Color1_noise_ThresholdHigh">
+    <map_interface source="metal_type"       destination="type"/>
+  </operator>
+
+  <operator function="MetalDiffuseNoiseColor1NoiseTypeBOF" name="diffuse_noise_Color1_noise_Type">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="diffuse_noise_Color1_asset_instance_bindings" name="diffuse_noise_Color1_asset_bindings">
+    <map_operator  source="diffuse_noise_color1_noise_Size"                       destination="noise_Size"/>
+    <map_operator  source="diffuse_noise_Color1_noise_Color1"                     destination="noise_Color1"/>
+    <map_operator  source="diffuse_noise_Color1_noise_Color2"                     destination="noise_Color2"/>
+    <map_operator  source="diffuse_noise_Color1_noise_ThresholdLow"               destination="noise_ThresholdLow"/>
+    <map_operator  source="diffuse_noise_Color1_noise_ThresholdHigh"              destination="noise_ThresholdHigh"/>
+    <map_operator  source="diffuse_noise_Color1_noise_Type"                       destination="noise_Type"/>
+  </bindings>
+
+
+  <!--  Defines the connected assets for "generic_reflectivity_at_0deg" property.  -->
+  <operator function="MetalReflectivityAt0DegAssetNameBOF" name="reflectivity_at_0deg_asset_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegBindingsNameBOF" name="reflectivity_at_0deg_bindings_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="reflectivity_at_0deg_asset_instance" name="reflectivity_at_0deg_asset">
+    <map_operator  source="reflectivity_at_0deg_asset_name"                            destination="asset_name"/>
+    <map_operator  source="reflectivity_at_0deg_bindings_name"                         destination="bindings_name"/>
+  </bindings>
+
+
+  <!--  Noise Asset binding opertators for "generic_reflectivity_at_0deg" property.  -->
+  <operator function="MetalReflectivityAt0DegNoiseSizeBOF" name="reflectivity_at_0deg_noise_Size">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor1BOF" name="reflectivity_at_0deg_noise_Color1">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor2BOF" name="reflectivity_at_0deg_noise_Color2">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseThresholdLowBOF" name="reflectivity_at_0deg_noise_ThresholdLow">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+    <map_interface source="metal_patina"     destination="patina"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseThresholdHighBOF" name="reflectivity_at_0deg_noise_ThresholdHigh">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+    <map_interface source="metal_patina"     destination="patina"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseTypeBOF" name="reflectivity_at_0deg_noise_Type">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="reflectivity_at_0deg_noise_instance" name="reflectivity_at_0deg_noise_asset">
+    <map_operator  source="reflectivity_at_0deg_noise_Size"                            destination="noise_Size"/>
+    <map_operator  source="reflectivity_at_0deg_noise_Color1"                          destination="noise_Color1"/>
+    <map_operator  source="reflectivity_at_0deg_noise_Color2"                          destination="noise_Color2"/>
+    <map_operator  source="reflectivity_at_0deg_noise_ThresholdLow"                    destination="noise_ThresholdLow"/>
+    <map_operator  source="reflectivity_at_0deg_noise_ThresholdHigh"                   destination="noise_ThresholdHigh"/>
+    <map_operator  source="reflectivity_at_0deg_noise_Type"                            destination="noise_type"/>
+  </bindings>
+
+  
+  <!--  UnifiedBitmap Asset binding opertators for "generic_reflectivity_at_0deg" property.  -->
+  <operator function="MetalReflectivityAt0DegUnifiedbitmapBitmapBOF" name="reflectivity_at_0deg_unifiedbitmap_Bitmap">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegUnifiedbitmapInvertBOF" name="reflectivity_at_0deg_unifiedbitmap_Invert">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegUnifiedbitmapUScaleBOF" name="reflectivity_at_0deg_unifiedbitmap_UScale">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegUnifiedbitmapBrightnessBOF" name="reflectivity_at_0deg_unifiedbitmap_Brightness">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="reflectivity_at_0deg_unifiedbitmap_instance" name="reflectivity_at_0deg_UnifiedBitmap_asset">
+    <map_operator  source="reflectivity_at_0deg_unifiedbitmap_Bitmap"                  destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="reflectivity_at_0deg_unifiedbitmap_Invert"                  destination="unifiedbitmap_Invert"/>
+    <map_operator  source="reflectivity_at_0deg_unifiedbitmap_UScale"                  destination="unifiedbitmap_UScale"/>"
+    <map_operator  source="reflectivity_at_0deg_unifiedbitmap_Brightness"              destination="unifiedbitmap_RGBAmount"/>"
+  </bindings>
+
+
+  <!--  Defines the connected assets for "noise_Color1" property of the Noise asset which is connected to "generic_reflectivity_at_0deg" property. -->
+  <operator function="MetalReflectivityAt0DegNoiseColor1AssetNameBOF" name="reflectivity_at_0deg_noise_color1_asset_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor1BindingsNameBOF" name="reflectivity_at_0deg_noise_color1_bindings_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="reflectivity_at_0deg_noise_color1_asset_instance" name="reflectivity_at_0deg_noise_color1_asset">
+    <map_operator  source="reflectivity_at_0deg_noise_color1_asset_name"                            destination="asset_name"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color1_bindings_name"                         destination="bindings_name"/>
+  </bindings>
+
+
+  <!--  UnifiedBitmap Asset binding opertators for "noise_Color1" property of the Noise asset which is connected to "generic_reflectivity_at_0deg" property.  --> 
+  <operator function="MetalReflectivityAt0DegNoiseColor1UnifiedbitmapBitmapBOF" name="reflectivity_at_0deg_noise_color1_unifiedbitmap_Bitmap">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor1UnifiedbitmapInvertBOF" name="reflectivity_at_0deg_noise_color1_unifiedbitmap_Invert">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor1UnifiedbitmapUScaleBOF" name="reflectivity_at_0deg_noise_color1_unifiedbitmap_UScale">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor1UnifiedbitmapBrightnessBOF" name="reflectivity_at_0deg_noise_color1_unifiedbitmap_Brightness">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  
+  <bindings target="reflectivity_at_0deg_noise_color1_asset_instance" name="reflectivity_at_0deg_noise_color1_unifiedbitmap">
+    <map_operator  source="reflectivity_at_0deg_noise_color1_unifiedbitmap_Bitmap"                  destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color1_unifiedbitmap_Invert"                  destination="unifiedbitmap_Invert"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color1_unifiedbitmap_UScale"                  destination="unifiedbitmap_UScale"/>"
+    <map_operator  source="reflectivity_at_0deg_noise_color1_unifiedbitmap_Brightness"              destination="unifiedbitmap_RGBAmount"/>"
+  </bindings>
+
+  
+  <!--  Defines the connected assets for "noise_Color2" property of the Noise asset which is connected to "generic_reflectivity_at_0deg" property. -->
+  <operator function="MetalReflectivityAt0DegNoiseColor2AssetNameBOF" name="reflectivity_at_0deg_noise_color2_asset_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor2BindingsNameBOF" name="reflectivity_at_0deg_noise_color2_bindings_name">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <bindings target="reflectivity_at_0deg_noise_color2_asset_instance" name="reflectivity_at_0deg_noise_color2_asset">
+    <map_operator  source="reflectivity_at_0deg_noise_color2_asset_name"                            destination="asset_name"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color2_bindings_name"                         destination="bindings_name"/>
+  </bindings>
+
+
+  <!--  UnifiedBitmap Asset binding opertators for "noise_Color2" property of the Noise asset which is connected to "generic_reflectivity_at_0deg" property.  -->
+  <operator function="MetalReflectivityAt0DegNoiseColor2UnifiedbitmapBitmapBOF" name="reflectivity_at_0deg_noise_color2_unifiedbitmap_Bitmap">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor2UnifiedbitmapInvertBOF" name="reflectivity_at_0deg_noise_color2_unifiedbitmap_Invert">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor2UnifiedbitmapUScaleBOF" name="reflectivity_at_0deg_noise_color2_unifiedbitmap_UScale">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+
+  <operator function="MetalReflectivityAt0DegNoiseColor2UnifiedbitmapBrightnessBOF" name="reflectivity_at_0deg_noise_color2_unifiedbitmap_Brightness">
+    <map_interface source="metal_type"       destination="type"/>
+    <map_interface source="metal_finish"     destination="finish"/>
+  </operator>
+  
+  <bindings target="reflectivity_at_0deg_noise_color2_asset_instance" name="reflectivity_at_0deg_noise_color2_unifiedbitmap">
+    <map_operator  source="reflectivity_at_0deg_noise_color2_unifiedbitmap_Bitmap"                  destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color2_unifiedbitmap_Invert"                  destination="unifiedbitmap_Invert"/>
+    <map_operator  source="reflectivity_at_0deg_noise_color2_unifiedbitmap_UScale"                  destination="unifiedbitmap_UScale"/>"
+    <map_operator  source="reflectivity_at_0deg_noise_color2_unifiedbitmap_Brightness"              destination="unifiedbitmap_RGBAmount"/>"
+  </bindings>
+
+
+  <!--  Defines the connected assets for "generic_cutout_opacity" property.  -->
+  <operator function="MetalCutoutOpacityAssetNameBOF" name="cutout_opacity_asset_name">
+    <map_interface source="metal_perforations"       destination="perforations"/>
+  </operator>
+
+  <operator function="MetalCutoutOpacityAssetBindingsNameBOF" name="cutout_opacity_asset_bindings">
+    <map_interface source="metal_perforations"       destination="perforations"/>
+  </operator>
+
+  <operator function="MetalCutoutOpacityAssetPropertyNameBOF" name="cutout_opacity_asset_property_name">
+    <map_interface source="metal_perforations"       destination="perforations"/>
+  </operator>
+      
+  <bindings target="cutout_opacity_asset_instance" name="cutout_opacity_asset">
+    <map_operator  source="cutout_opacity_asset_name"                                 destination="asset_name"/>
+    <map_operator  source="cutout_opacity_asset_bindings"                             destination="bindings_name"/>
+    <map_operator  source="cutout_opacity_asset_property_name"                        destination="property_name"/>
+  </bindings>
+
+  <!--  UnifiedBitmap Asset binding opertators for "generic_cutout_opacity" property.  -->
+  <operator function="MetalCutoutOpacityUnifiedBitmapBOF" name="cutout_opacity_unifiedbitmap_Bitmap">
+    <map_interface source="metal_perforations"            destination="perforations"/>
+    <map_interface source="metal_perforations_size"       destination="perforations_size"/>
+  </operator>
+
+  <operator function="MetalCutoutOpacityUnifiedBitmapRealWorldScaleXBOF" name="cutout_opacity_unifiedbitmap_RealWorldScaleX">
+    <map_interface source="metal_perforations"            destination="perforations"/>
+    <map_interface source="metal_perforations_size"       destination="perforations_size"/>
+  </operator>
+
+  <operator function="MetalCutoutOpacityUnifiedBitmapRealWorldScaleYBOF" name="cutout_opacity_unifiedbitmap_RealWorldScaleY">
+    <map_interface source="metal_perforations"            destination="perforations"/>
+    <map_interface source="metal_perforations_size"       destination="perforations_size"/>
+  </operator>
+
+  <operator function="MetalCutoutOpacityUnifiedBitmapRealWorldOffsetXBOF" name="cutout_opacity_unifiedbitmap_RealWorldOffsetX">
+    <map_interface source="metal_perforations"            destination="perforations"/>
+    <map_interface source="metal_perforations_size"       destination="perforations_size"/>
+    <map_interface source="metal_perforations_center"     destination="perforations_center"/>
+  </operator>
+  
+  <operator function="MetalCutoutOpacityUnifiedBitmapRealWorldOffsetYBOF" name="cutout_opacity_unifiedbitmap_RealWorldOffsetY">
+    <map_interface source="metal_perforations"            destination="perforations"/>
+    <map_interface source="metal_perforations_size"       destination="perforations_size"/>
+    <map_interface source="metal_perforations_center"     destination="perforations_center"/>
+  </operator>
+
+  <bindings target="cutout_opacity_asset_instance_unifiedbitmap" name="cutout_opacity_unifiedbitmap">
+    <map_operator  source="cutout_opacity_unifiedbitmap_Bitmap"                  destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="cutout_opacity_unifiedbitmap_RealWorldScaleX"         destination="unifiedbitmap_RealWorldScaleX"/>
+    <map_operator  source="cutout_opacity_unifiedbitmap_RealWorldScaleY"         destination="unifiedbitmap_RealWorldScaleY"/>
+    <map_operator  source="cutout_opacity_unifiedbitmap_RealWorldOffsetX"        destination="unifiedbitmap_RealWorldOffsetX"/>
+    <map_operator  source="cutout_opacity_unifiedbitmap_RealWorldOffsetY"        destination="unifiedbitmap_RealWorldOffsetY"/>
+  </bindings>
+  
+  <!--  Defines the connected assets for "generic_bump_map" property.  -->
+  <operator function="MetalBumpMapAssetNameBOF" name="bump_map_asset_name">
+    <map_interface source="metal_type"        destination="type"/>
+    <map_interface source="metal_pattern"     destination="pattern"/>
+  </operator>
+
+  <operator function="MetalBumpMapAssetBindingsNameBOF" name="bump_map_asset_bindings">
+    <map_interface source="metal_type"        destination="type"/>
+    <map_interface source="metal_pattern"     destination="pattern"/>
+  </operator>
+
+  <operator function="MetalBumpMapAssetPropertyNameBOF" name="bump_map_asset_property_name">
+    <map_interface source="metal_type"        destination="type"/>
+    <map_interface source="metal_pattern"     destination="pattern"/>
+  </operator>
+  
+  <bindings target="bump_map_asset_instance" name="bump_map_asset">
+    <map_operator  source="bump_map_asset_name"                                 destination="asset_name"/>
+    <map_operator  source="bump_map_asset_bindings"                             destination="bindings_name"/>
+    <map_operator  source="bump_map_asset_property_name"                        destination="property_name"/>
+  </bindings>
+  
+  <!--  UnifiedBitmap Asset binding opertators for "generic_bump_map" property.  -->
+  <operator function="MetalBumpMapUnifiedBitmapBOF" name="bump_map_unifiedbitmap_Bitmap">
+    <map_interface source="metal_type"        destination="type"/>
+    <map_interface source="metal_pattern"     destination="pattern"/>
+  </operator>
+
+  <operator function="MetalBumpMapUnifiedBitmapRealWorldScaleXBOF" name="bump_map_unifiedbitmap_RealWorldScaleX">
+    <map_interface source="metal_type"              destination="type"/>
+    <map_interface source="metal_pattern"           destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <operator function="MetalBumpMapUnifiedBitmapRealWorldScaleYBOF" name="bump_map_unifiedbitmap_RealWorldScaleY">
+    <map_interface source="metal_type"              destination="type"/>
+    <map_interface source="metal_pattern"           destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <operator function="MetalBumpMapUnifiedBitmapBrightnessBOF" name="bump_map_unifiedbitmap_Brightness">
+    <map_interface source="metal_type"              destination="type"/>
+    <map_interface source="metal_pattern"           destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <bindings target="bump_map_asset_instance_unifiedbitmap" name="bump_map_unifiedbitmap">
+    <map_operator  source="bump_map_unifiedbitmap_Bitmap"                  destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="bump_map_unifiedbitmap_RealWorldScaleX"         destination="unifiedbitmap_RealWorldScaleX"/>
+    <map_operator  source="bump_map_unifiedbitmap_RealWorldScaleY"         destination="unifiedbitmap_RealWorldScaleY"/>
+    <map_operator  source="bump_map_unifiedbitmap_Brightness"              destination="unifiedbitmap_RGBAmount"/>"
+  </bindings>
+
+  <!--  //Gradient Asset binding opertators for "generic_bump_map" property.  -->
+  <operator function="MetalBumpMapGradientTypeBOF" name="bump_map_gradient_type">
+    <map_interface source="metal_pattern"     destination="pattern"/>
+  </operator>
+
+  <operator function="MetalBumpMapGradientUVScaleBOF" name="bump_map_gradient_UVScale">
+    <map_interface source="metal_pattern"     destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <operator function="MetalBumpMapGradientRealWorldScaleXBOF" name="bump_map_gradient_RealWorldScaleX">
+    <map_interface source="metal_pattern"     destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <operator function="MetalBumpMapGradientRealWorldScaleYBOF" name="bump_map_gradient_RealWorldScaleY">
+    <map_interface source="metal_pattern"     destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+
+  <operator function="MetalBumpMapGradientPositionBOF" name="bump_map_gradient_Position">
+    <map_interface source="metal_pattern"     destination="pattern"/>
+    <map_interface source="metal_pattern_scale"     destination="pattern_scale"/>
+  </operator>
+  
+  <bindings target="bump_map_asset_instance_gradient" name="bump_map_gradient">
+    <map_operator  source="bump_map_gradient_type"                  destination="gradient_type"/>
+    <map_operator  source="bump_map_gradient_UVScale"               destination="gradient_UVScale"/>
+    <map_operator  source="bump_map_gradient_RealWorldScaleX"       destination="gradient_RealWorldScaleX"/>
+    <map_operator  source="bump_map_gradient_RealWorldScaleY"       destination="gradient_RealWorldScaleY"/>
+    <map_operator  source="bump_map_gradient_Position"              destination="gradient_Position"/>
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="metal_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="metal_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

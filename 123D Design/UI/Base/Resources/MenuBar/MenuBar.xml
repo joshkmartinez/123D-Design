@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MenuBar MenuBarId="MainMenu" Id="MainMenuBar">
+    
+  <Menu TypeId="BaseMenu" Id="Window" >
+    <MenuItem Id="MinimizeCommand"  />
+    <MenuItem Id="ZoomWindowCommand" />    
+    <MenuItem Id="BringAllToFrontCommand" />
+    <Separator />
+    <Menu TypeId="SubMenu" Id="ShareSheetsCommand" />
+  </Menu>
+
+  <Menu TypeId="BaseMenu" Id="Help">
+    <MenuItem Id="AboutBoxCommand" />
+  </Menu>
+</MenuBar>

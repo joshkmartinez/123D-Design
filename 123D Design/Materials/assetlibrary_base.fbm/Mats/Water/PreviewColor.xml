@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+    <implementation render="PreviewColor">
+      <language name="PreviewColorLanguage" version="1.0"/>
+      <api name="PreviewColorAPI" version="1.0"/>
+      <root_bindings name="root"/>
+
+      <constants>
+        <color name="swimming_pool" valR="0.000" valG="0.016" valB="0.043"/>
+        <color name="tropical" valR="0.200" valG="0.920" valB="0.770"/>
+        <color name="algae" valR="0.412" valG="0.490" valB="0.270"/>
+        <color name="murky" valR="0.486" valG="0.298" valB="0.078"/>
+        <color name="reflecting_pool" valR="0.059" valG="0.071" valB="0.007"/>
+        <color name="river" valR="0.773" valG="0.773" valB="0.675"/>
+        <color name="lake" valR="0.098" valG="0.137" valB="0.019"/>
+        <color name="ocean" valR="0.141" valG="0.357" valB="0.314"/>
+
+        <float name="swimming_pool_alpha" val="0.920"/>
+        <float name="reflecting_pool_alpha" val="1.000"/>
+        <float name="river_alpha" val="0.887"/>
+        <float name="lake_alpha" val="0.979"/>
+        <float name="ocean_alpha" val="1.000"/>
+      </constants>
+
+      <operator function="EvaluateColor" name="eval_color">
+        <map_interface source="water_tint_color" destination="color"/>
+        <map_constant source="tropical" destination="default_color"/>
+      </operator>
+
+      <operator function="SwitchOperator" name="color_switch1">
+        <map_interface source="water_tint_enable" destination="switch"/>
+        <map_constant source="tropical" destination="case_0"/>
+        <map_constant source="algae" destination="case_1"/>
+        <map_constant source="murky" destination="case_2"/>
+        <map_constant source="reflecting_pool" destination="case_3"/>
+        <map_constant source="river" destination="case_4"/>
+        <map_constant source="lake" destination="case_5"/>
+        <map_constant source="ocean" destination="case_6"/>
+        <map_operator source="eval_color" destination="case_7"/>
+      </operator>
+
+      <operator function="SwitchOperator" name="color_switch2">
+        <map_interface source="water_type" destination="switch"/>
+        <map_constant source="swimming_pool" destination="case_0"/>
+        <map_operator source="color_switch1" destination="default"/>
+      </operator>
+
+      <operator function="SwitchOperator" name="alpha_switch">
+        <map_interface source="water_type" destination="switch"/>
+        <map_constant source="swimming_pool_alpha" destination="case_0"/>
+        <map_constant source="reflecting_pool_alpha" destination="case_1"/>
+        <map_constant source="river_alpha" destination="case_2"/>
+        <map_constant source="lake_alpha" destination="case_3"/>
+        <map_constant source="ocean_alpha" destination="case_4"/>
+      </operator>
+
+      <bindings target="previewcolor" name="root">
+        <map_operator source="color_switch2" destination="color"/>
+        <map_operator source="alpha_switch" destination="alpha"/>
+      </bindings>
+    </implementation>

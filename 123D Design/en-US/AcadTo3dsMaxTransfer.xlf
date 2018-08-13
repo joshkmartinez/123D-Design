@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="acadto3dsmaxtransfer.workflow" target-language="en-US" datatype="plaintext" source-language="en-US">
+        <body>
+            <trans-unit id="80bbc8346709a9fc11971361b38ff948">
+                <source>"3ds Max", "AutoCAD", "file translation", "send to"</source>
+                <target>"3ds Max", "AutoCAD", "file translation", "send to"</target>
+            </trans-unit>
+            <trans-unit id="f0a571b484c0754fe6443b1deccb80a9">
+                <source>&lt;h3>Send to 3ds Max for Final Rendering&lt;/h3>&#xd;
+            This workflow transfers data to 3DsMax with setting that are optimized to preserve highest interactive frame rate, but sacrifices some edit features. Use this workflow if you do not plan on doing additional modeling in 3ds Max, and instead plan to focus on sdjusting materials and lighting for rendering. Your result will have Average model detail, high viewport optimization.&#xd;
+            &lt;br/></source>
+                <target>&lt;h3>Send to 3ds Max for Final Rendering&lt;/h3>&#xd;
+            This workflow transfers data to 3DsMax with setting that are optimized to preserve highest interactive frame rate, but sacrifices some edit features. Use this workflow if you do not plan on doing additional modeling in 3ds Max, and instead plan to focus on sdjusting materials and lighting for rendering. Your result will have Average model detail, high viewport optimization.&#xd;
+            &lt;br/></target>
+            </trans-unit>
+            <trans-unit id="3bee3da5b4df728178048f5b41f112fc">
+                <source>AutoCAD 2013, 3ds Max 2013</source>
+                <target>AutoCAD 2013, 3ds Max 2013</target>
+            </trans-unit>
+            <trans-unit id="51833903f72389f248ad494dc8aea020">
+                <source>Send the currently loaded AutoCAD drawing to 3ds Max as a new scene file.</source>
+                <target>Send the currently loaded AutoCAD drawing to 3ds Max as a new scene file.</target>
+            </trans-unit>
+            <trans-unit id="1842b9069145af624fd608da375b639e">
+                <source>Send to 3ds Max</source>
+                <target>Send to 3ds Max</target>
+            </trans-unit>
+        </body>
+    </file>
+    <file original="acadto3dsmaxtransfer.workflowui" target-language="en-US" datatype="plaintext" source-language="en-US">
+        <body>
+            <trans-unit id="68eec46437c384d8dad18d5464ebc35c">
+                <source>Always</source>
+                <target>Always</target>
+            </trans-unit>
+            <trans-unit id="45f4ce6c3306644b1efe333f4f8d6929">
+                <source>Angle</source>
+                <target>Angle</target>
+            </trans-unit>
+            <trans-unit id="b9998e71277563222e1e5072501180a8">
+                <source>Angstroms</source>
+                <target>Angstroms</target>
+            </trans-unit>
+            <trans-unit id="946d94f7de5632b43778522f69263f09">
+                <source>Ask the user</source>
+                <target>Ask the user</target>
+            </trans-unit>
+            <trans-unit id="de55f3429efef9d994dbe410026143e3">
+                <source>Aspect</source>
+                <target>Aspect</target>
+            </trans-unit>
+            <trans-unit id="3d7981f668381942f4097f83e949f28c">
+                <source>Astronomical Units</source>
+                <target>Astronomical Units</target>
+            </trans-unit>
+            <trans-unit id="4220d8d2e9e942e14f167d9c7b87a1e6">
+                <source>Auto-smooth adjacent faces</source>
+                <target>Auto-smooth adjacent faces</target>
+            </trans-unit>
+            <trans-unit id="0bff0266776653fc1a1a0878f0f58c20">
+                <source>Auto-smooth renderable splines</source>
+                <target>Auto-smooth renderable splines</target>
+            </trans-unit>
+            <trans-unit id="8d4de5c6c0d480116328132876973dc9">
+                <source>Building scale model, high detail</source>
+                <target>Building scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="06db535eac0b83931b44500e454bcb26">
+                <source>Building scale model, low detail</source>
+                <target>Building scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="296d97119e2e21eaf35c534502fcea2e">
+                <source>Car scale model, high detail</source>
+                <target>Car scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="5be97f008c902d0897af47341393503e">
+                <source>Car scale model, low detail</source>
+                <target>Car scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="3040cc6624f5c309963dee141936b299">
+                <source>Centimeters</source>
+                <target>Centimeters</target>
+            </trans-unit>
+            <trans-unit id="1133c606418f52cbff495fa31ba7339f">
+                <source>Chair scale model, high detail</source>
+                <target>Chair scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="101ae74035e88f32cf0d1d34d9592dfb">
+                <source>Chair scale model, low detail</source>
+                <target>Chair scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="30954d90085f6eaaf5817917fc5fecb3">
+                <source>Circle</source>
+                <target>Circle</target>
+            </trans-unit>
+            <trans-unit id="1df0a1feed263a9bd7d23b98cc143705">
+                <source>City or terrain scale model, high detail</source>
+                <target>City or terrain scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="4e2f1dd0ae200ab7d8571017f8649881">
+                <source>City or terrain scale model, low detail</source>
+                <target>City or terrain scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="cfa44b31d7b00d4d660e18afd3b4d589">
+                <source>Closer than</source>
+                <target>Closer than</target>
+            </trans-unit>
+            <trans-unit id="cb5feb1b7314637725a2e73bdc9f7295">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="32df66b26a303831c9e4d01e06ae3c66">
+                <source>Color and Material</source>
+                <target>Color and Material</target>
+            </trans-unit>
+            <trans-unit id="eb5801f43b32914440ce444be22b3c29">
+                <source>Convert AutoCAD Primitives</source>
+                <target>Convert AutoCAD Primitives</target>
+            </trans-unit>
+            <trans-unit id="73cf564daf89a7c0efe4232d217340e2">
+                <source>Create a new Max object for each</source>
+                <target>Create a new Max object for each</target>
+            </trans-unit>
+            <trans-unit id="cc92df6e507cc13fcb9298f6f1aca64a">
+                <source>Create helper object at the drawing's origin</source>
+                <target>Create helper object at the drawing's origin</target>
+            </trans-unit>
+            <trans-unit id="f8565a254107f6d22ea197cceb680ac7">
+                <source>Create one Max scene object for each AutoCAD Architecture one</source>
+                <target>Create one Max scene object for each AutoCAD Architecture one</target>
+            </trans-unit>
+            <trans-unit id="9b7680a25462283023f8afb98c99edcb">
+                <source>Cross section</source>
+                <target>Cross section</target>
+            </trans-unit>
+            <trans-unit id="90589c47f06eb971d548591f23c285af">
+                <source>Custom</source>
+                <target>Custom</target>
+            </trans-unit>
+            <trans-unit id="b1105e0a59ed03ac1e6209893e094c82">
+                <source>Decameters</source>
+                <target>Decameters</target>
+            </trans-unit>
+            <trans-unit id="ec2d5af11b58242ae01218a108427d3c">
+                <source>Decimeters</source>
+                <target>Decimeters</target>
+            </trans-unit>
+            <trans-unit id="9ef125630442bb42e2e367e0cf70d892">
+                <source>Degrees</source>
+                <target>Degrees</target>
+            </trans-unit>
+            <trans-unit id="b91d0ed9969be36beef75b7cd6e7a4a7">
+                <source>Detach, and create a new link</source>
+                <target>Detach, and create a new link</target>
+            </trans-unit>
+            <trans-unit id="2e43e934dc404f994a2803ee6264f796">
+                <source>Enable in the Renderer</source>
+                <target>Enable in the Renderer</target>
+            </trans-unit>
+            <trans-unit id="32bdf093c8ba0b38ca0cedf0b8c4b4f5">
+                <source>Enable in the Viewport</source>
+                <target>Enable in the Viewport</target>
+            </trans-unit>
+            <trans-unit id="1a434befae3f49ae09347ded52032f6f">
+                <source>Entity</source>
+                <target>Entity</target>
+            </trans-unit>
+            <trans-unit id="aeecebf1cb4fc4c622faa586b6aebc94">
+                <source>Entity, Blocks as Node Hierarchy</source>
+                <target>Entity, Blocks as Node Hierarchy</target>
+            </trans-unit>
+            <trans-unit id="56585662948d0e85d512f19b15911a4e">
+                <source>Existing link found with Target scene</source>
+                <target>Existing link found with Target scene</target>
+            </trans-unit>
+            <trans-unit id="92938e14055139315c1a12c44e082482">
+                <source>External References (xrefs)</source>
+                <target>External References (xrefs)</target>
+            </trans-unit>
+            <trans-unit id="0f2e8e047e38898ec859c631576985e7">
+                <source>Feet</source>
+                <target>Feet</target>
+            </trans-unit>
+            <trans-unit id="36e6e6afed0975e92155074e309f1b94">
+                <source>File Linking</source>
+                <target>File Linking</target>
+            </trans-unit>
+            <trans-unit id="1d17992a8f0318e30ce225d9edef2a58">
+                <source>Fill (cap) closed splines</source>
+                <target>Fill (cap) closed splines</target>
+            </trans-unit>
+            <trans-unit id="584654d5efd213140d4b77daa97a2633">
+                <source>Generate coordinates for all objects</source>
+                <target>Generate coordinates for all objects</target>
+            </trans-unit>
+            <trans-unit id="485bce1e6d9296e5201a02aa17ee32f3">
+                <source>Generate mapping coordinates</source>
+                <target>Generate mapping coordinates</target>
+            </trans-unit>
+            <trans-unit id="d9c6333623e6357515fcbf17be806273">
+                <source>Geometry</source>
+                <target>Geometry</target>
+            </trans-unit>
+            <trans-unit id="ab3b280a8c4069c5ae4c3b436d8147f0">
+                <source>Gigameters</source>
+                <target>Gigameters</target>
+            </trans-unit>
+            <trans-unit id="f2c9947c2694ba684eeabd4bb3ea6759">
+                <source>Hatches</source>
+                <target>Hatches</target>
+            </trans-unit>
+            <trans-unit id="bf2bc47fbde76cbad0c7bf4cdf21e97f">
+                <source>Hectometers</source>
+                <target>Hectometers</target>
+            </trans-unit>
+            <trans-unit id="d73325cdb1cb4f9a1ed11bdab879321d">
+                <source>Inches</source>
+                <target>Inches</target>
+            </trans-unit>
+            <trans-unit id="59fb5d13430b85fd8ac09080cf3fb886">
+                <source>Include by Type</source>
+                <target>Include by Type</target>
+            </trans-unit>
+            <trans-unit id="1a226fd6cbcf7ac765898990fc519089">
+                <source>Keep the current Max scene material assignments on Reload</source>
+                <target>Keep the current Max scene material assignments on Reload</target>
+            </trans-unit>
+            <trans-unit id="3f0122227efa8e3e78e3df66cab4d254">
+                <source>Keep, and add a new link instance</source>
+                <target>Keep, and add a new link instance</target>
+            </trans-unit>
+            <trans-unit id="ee86f23755d4ce16a2df9b51d92eeca1">
+                <source>Kilometers</source>
+                <target>Kilometers</target>
+            </trans-unit>
+            <trans-unit id="359b71e88f40029251366609358a302f">
+                <source>Layer</source>
+                <target>Layer</target>
+            </trans-unit>
+            <trans-unit id="8bbfec1d476524bc04e2b9ca4b81d23a">
+                <source>Layer Filtering</source>
+                <target>Layer Filtering</target>
+            </trans-unit>
+            <trans-unit id="7eb43c0f3570e9450ddea7f0b4587a2c">
+                <source>Layer, Blocks as Node Hierarchy</source>
+                <target>Layer, Blocks as Node Hierarchy</target>
+            </trans-unit>
+            <trans-unit id="84c08b7c9ec361c0c873880c49b2f67a">
+                <source>Layer, Blocks as Node Hierarchy, Split by Material</source>
+                <target>Layer, Blocks as Node Hierarchy, Split by Material</target>
+            </trans-unit>
+            <trans-unit id="ba2a9c6c8c77e03f83ef8bf543612275">
+                <source>Length</source>
+                <target>Length</target>
+            </trans-unit>
+            <trans-unit id="940226716164aeae2d5659093950d581">
+                <source>Level of Detail</source>
+                <target>Level of Detail</target>
+            </trans-unit>
+            <trans-unit id="fe2858ad7156ea881fd868dedbbcd39e">
+                <source>Light Years</source>
+                <target>Light Years</target>
+            </trans-unit>
+            <trans-unit id="e1f238e1860b16d1139607d92f612098">
+                <source>Lights</source>
+                <target>Lights</target>
+            </trans-unit>
+            <trans-unit id="23ce0eb7d180f3dc8391d4af48572d21">
+                <source>Materials</source>
+                <target>Materials</target>
+            </trans-unit>
+            <trans-unit id="e793ede0cf161b80fa3541f4021170d6">
+                <source>Maximum 3D Solid surface deviation</source>
+                <target>Maximum 3D Solid surface deviation</target>
+            </trans-unit>
+            <trans-unit id="80b4a3eed88aed8a1c7d8a4418b7f469">
+                <source>Meters</source>
+                <target>Meters</target>
+            </trans-unit>
+            <trans-unit id="227fc3b9b9db0c0e9ec55456ea210d5f">
+                <source>Microinches</source>
+                <target>Microinches</target>
+            </trans-unit>
+            <trans-unit id="26bbd046bbd7bc6651af2eb1ed52f344">
+                <source>Microns</source>
+                <target>Microns</target>
+            </trans-unit>
+            <trans-unit id="6e02fb12e2553176759ef52952b5b037">
+                <source>Miles</source>
+                <target>Miles</target>
+            </trans-unit>
+            <trans-unit id="3be6521a73bcafce5b38459ec548bd11">
+                <source>Millimeters</source>
+                <target>Millimeters</target>
+            </trans-unit>
+            <trans-unit id="6d30620f624c71b7b91b982c7de7cbc0">
+                <source>Mils</source>
+                <target>Mils</target>
+            </trans-unit>
+            <trans-unit id="60e372fb775252bb329c3446fe734ee4">
+                <source>Model Unit</source>
+                <target>Model Unit</target>
+            </trans-unit>
+            <trans-unit id="06ee1635ec67aa5e9eff29a6e728b915">
+                <source>Nanometers</source>
+                <target>Nanometers</target>
+            </trans-unit>
+            <trans-unit id="3414d3ce454a82be575f8fb9f5c35ab5">
+                <source>No mapping coordinates</source>
+                <target>No mapping coordinates</target>
+            </trans-unit>
+            <trans-unit id="122ffda23c0979a594c970e6d5cb6a8c">
+                <source>One Object</source>
+                <target>One Object</target>
+            </trans-unit>
+            <trans-unit id="560bf3095069566eb7ef575bffa3c133">
+                <source>Parsecs</source>
+                <target>Parsecs</target>
+            </trans-unit>
+            <trans-unit id="75dd5f1160a3f02b6fae89c54361a1b3">
+                <source>Points</source>
+                <target>Points</target>
+            </trans-unit>
+            <trans-unit id="eb81441fe20963ff9e8e69c5b32fc625">
+                <source>Presets</source>
+                <target>Presets</target>
+            </trans-unit>
+            <trans-unit id="ce9291906a4c3b042650b70d7f3b152e">
+                <source>Rectangle</source>
+                <target>Rectangle</target>
+            </trans-unit>
+            <trans-unit id="e2db323b81a8a0ffddf4b7fc51664a7c">
+                <source>Reload the source file</source>
+                <target>Reload the source file</target>
+            </trans-unit>
+            <trans-unit id="d43a89e8e8689c2d00eb071ac540ac15">
+                <source>Rescale source drawing</source>
+                <target>Rescale source drawing</target>
+            </trans-unit>
+            <trans-unit id="1ecac0fe3c80ac8447e4f7a0cab13582">
+                <source>Room scale model, high detail</source>
+                <target>Room scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="c603ede1e44b246e16c16d05300fa940">
+                <source>Room scale model, low detail</source>
+                <target>Room scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="17454e1aedc596b2111198c3c7b6440a">
+                <source>Show the workflow complete dialog</source>
+                <target>Show the workflow complete dialog</target>
+            </trans-unit>
+            <trans-unit id="23cacdef82dcc2b928a439e224c75d3f">
+                <source>Sides</source>
+                <target>Sides</target>
+            </trans-unit>
+            <trans-unit id="8b7ca8b9433ae95062231e0df616c3a7">
+                <source>Skip all Frozen layers</source>
+                <target>Skip all Frozen layers</target>
+            </trans-unit>
+            <trans-unit id="d8ba123d38028c2ce7a4c489aeac4852">
+                <source>Skip all Hidden layers</source>
+                <target>Skip all Hidden layers</target>
+            </trans-unit>
+            <trans-unit id="c8be400dc8e7e3bdc3f0334d59f7de77">
+                <source>Spline Rendering</source>
+                <target>Spline Rendering</target>
+            </trans-unit>
+            <trans-unit id="868370afb0a36c40ab90861e7da3b32b">
+                <source>Spline curve steps</source>
+                <target>Spline curve steps</target>
+            </trans-unit>
+            <trans-unit id="c5ea8d2a14cc6f4a10e3fdf126d8ce8c">
+                <source>Sun and Sky lighting</source>
+                <target>Sun and Sky lighting</target>
+            </trans-unit>
+            <trans-unit id="935b39523ebe620a71079c640427d452">
+                <source>Target a new 3ds Max scene file</source>
+                <target>Target a new 3ds Max scene file</target>
+            </trans-unit>
+            <trans-unit id="54d02e6c66265ff9b854fe37fea5b3bf">
+                <source>Target scene</source>
+                <target>Target scene</target>
+            </trans-unit>
+            <trans-unit id="c98c98e728d2079942b16bf6fff83f3a">
+                <source>Target the active 3ds Max session</source>
+                <target>Target the active 3ds Max session</target>
+            </trans-unit>
+            <trans-unit id="48fc4f59403803a7cc3ecbe417595ed7">
+                <source>Teacup scale model, high detail</source>
+                <target>Teacup scale model, high detail</target>
+            </trans-unit>
+            <trans-unit id="04514bb4e4354f9a5cac516dc5403cbf">
+                <source>Teacup scale model, low detail</source>
+                <target>Teacup scale model, low detail</target>
+            </trans-unit>
+            <trans-unit id="65209a758c3e2f328b04850aff2397f5">
+                <source>Texture mapping</source>
+                <target>Texture mapping</target>
+            </trans-unit>
+            <trans-unit id="2431eae3d1fb711c3a6f44a48ad7da5e">
+                <source>Thickness</source>
+                <target>Thickness</target>
+            </trans-unit>
+            <trans-unit id="3822405e4ea861abefee47ffee27185e">
+                <source>Transform and Scale</source>
+                <target>Transform and Scale</target>
+            </trans-unit>
+            <trans-unit id="cff729b2e9645b8eae3f8794f3510635">
+                <source>UCSs (grids)</source>
+                <target>UCSs (grids)</target>
+            </trans-unit>
+            <trans-unit id="8e43b88f4c9e0bb50ef4f3d2cf64f0d5">
+                <source>Unify normals of adjacent faces</source>
+                <target>Unify normals of adjacent faces</target>
+            </trans-unit>
+            <trans-unit id="8526d44bed6871607c36ec949e3eb324">
+                <source>Use 3ds Max system units (inches)</source>
+                <target>Use 3ds Max system units (inches)</target>
+            </trans-unit>
+            <trans-unit id="4523f28601f6d3468a555f8bffe98f01">
+                <source>Use real-world texture map size</source>
+                <target>Use real-world texture map size</target>
+            </trans-unit>
+            <trans-unit id="7af08af825e4758bea202f3f470ba543">
+                <source>Use the Extrude modifier to represent thickness</source>
+                <target>Use the Extrude modifier to represent thickness</target>
+            </trans-unit>
+            <trans-unit id="bcc3a0d57e7ad269af30a1a353d5b63d">
+                <source>Use the Max scene material definitions</source>
+                <target>Use the Max scene material definitions</target>
+            </trans-unit>
+            <trans-unit id="adde0a13dd38e39b191be9e9fafc2782">
+                <source>Use the renderer settings shown above</source>
+                <target>Use the renderer settings shown above</target>
+            </trans-unit>
+            <trans-unit id="1c817eb65bea9c82da58afa7ef631c13">
+                <source>Views and Cameras</source>
+                <target>Views and Cameras</target>
+            </trans-unit>
+            <trans-unit id="623e616de858b528ea53c5e60b51c7fd">
+                <source>Weld nearby vertices</source>
+                <target>Weld nearby vertices</target>
+            </trans-unit>
+            <trans-unit id="32954654ac8fe66a1d09be19001de2d4">
+                <source>Width</source>
+                <target>Width</target>
+            </trans-unit>
+            <trans-unit id="8bac03cff66621b242f55d524ae3f8db">
+                <source>Yards</source>
+                <target>Yards</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

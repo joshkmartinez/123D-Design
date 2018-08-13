@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource prefix="/NotificationCenter">
+    <file>NotificationCenterView.qml</file>
+    <file>NotificationItemDelegate.qml</file>
+    <file>ScrollBarHover.png</file>
+    <file>ScrollBarIdle.png</file>
+    <file>ScrollBarDown.png</file>
+    <file>ScrollBar.qml</file>
+    <file>Close32.png</file>
+    <file>CloseNotificationCenter.png</file>
+  </qresource>
+</RCC>
+

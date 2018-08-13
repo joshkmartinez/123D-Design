@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for:
+     Marble, Noise, Specle, Wave, Wood
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="TextureMap3dSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <Vector3 id="texture_Offset"
+           public="true"
+           valX="0."
+           valY="0."
+           valZ="0."
+           label="Offset" />
+  
+  <Boolean id="texture_OffsetLock"
+           public="true"
+           val="false"
+           label="Offset Lock" />
+
+  <Vector3 id="texture_Tiling"
+           public="true"
+           valX="1." 
+           valY="1." 
+           valZ="1." 
+           label="Tiling" />
+  
+  <Vector3 id="texture_Angle" 
+           public="true"
+           valX="0." 
+           valY="0." 
+           valZ="0."
+           label="Angle" />
+
+  <Boolean id="texture_LinkTextureTransforms"
+         public="true"
+         val="false"
+         label="Link Transforms" />
+
+  <Distance id="texture_RealWorldOffsetX"
+       public="true"
+       val="0."
+       unit="in"
+       label="Offset X" />
+
+  <Distance id="texture_RealWorldOffsetY"
+         public="true"
+         val="0."
+            
+         unit="in"
+         label="Offset Y" />
+
+  <Distance id="texture_RealWorldOffsetZ"
+         public="true"
+         val="0."
+         unit="in"
+         label="Offset Z" />
+  
+</AssetSchema>

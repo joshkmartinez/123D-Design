@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for:
+     UnifiedBitmap, Checker, Gradient, Tile
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="TextureMap2dSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <!-- =====================================================================
+     UnifiedBitmap uses UScale and VScale. 
+     Checker, Gradient and Tile use UVScale.
+ ===================================================================== -->
+  
+  <Float id="texture_UScale"
+         public="true"
+         val="1."
+         label="U Scale" />
+  
+  <Float id="texture_VScale"
+         public="true"
+         val="1."
+         label="V Scale" />
+
+  <Float id="texture_UVScale"
+         public="true"
+         val="1." 
+         label="UV Scale" />
+  
+  <Boolean id="texture_ScaleLock"
+           public="true"
+           val="true"
+           label="Scale Lock" />
+
+  <Float id="texture_WAngle"
+         public="true"
+         val="0."
+         label="Angle"  >
+    <Bounds minimum="0.0"
+            maximum="360.0" />
+  </Float>
+     
+  
+  
+  <Float id="texture_UOffset"
+         public="true"
+         val="0."
+         label="U Offset" />
+  
+  <Float id="texture_VOffset"
+         public="true"
+         val="0."
+         label="V Offset" />
+  
+  <Boolean id="texture_OffsetLock"
+           public="true"
+           val="false"
+           label="Offset Lock" />
+
+  <Distance id="texture_RealWorldScaleX"
+         public="true"
+         val="12."
+         unit="in"
+         label="Size X" >
+    <Bounds minimum="0.01" />
+  </Distance>
+  
+  <Distance id="texture_RealWorldScaleY"
+         public="true"
+         val="12."
+         unit="in"
+         label="Size Y" >
+    <Bounds minimum="0.01" />
+  </Distance>
+  
+  <Distance id="texture_RealWorldOffsetX"
+         public="true"
+         val="0."
+         unit="in"
+         label="Offset X" />
+  
+  <Distance id="texture_RealWorldOffsetY"
+         public="true"
+         val="0."
+         unit="in"
+         label="Offset Y" />
+
+  <Integer id="texture_MapChannel"
+          public="true"
+          val="1"
+          label="Map Channel" />
+  
+  <!-- This is the MapChannel Number-->
+  <Integer id="texture_MapChannel_ID_Advanced"
+           public="true"
+           val="1"
+           label="Map Channel ID" />
+  
+  <!-- This is the UVWSource. It's type enum for ExplicitMapChannel|VertexCOlorChannel|PlanarFromObjectXYZ|PlanarFromWorldXYZ-->
+  <Integer id="texture_MapChannel_UVWSource_Advanced"
+           public="true"
+           val="0"
+           label="UVW Source" />
+  
+  <Boolean id="texture_LinkTextureTransforms"
+           public="true"
+           val="false"
+           label="Link Transforms" />
+  
+  <Boolean id="texture_URepeat"
+           public="true"
+           val="true"
+           label="U Repeat" />
+  
+  <Boolean id="texture_VRepeat"
+           public="true"
+           val="true"
+           label="V Repeat" />
+  
+</AssetSchema>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Bitmap
+    </Title>
+  </PageInfo>
+  <Fields>
+    <ImageFileReference id="decalmap_Bitmap" label="Image File:">
+        <Float id="decalmap_RGBAmount" label="Brightness:" tooltip="Adjust the brightness of the image"> </Float>
+    </ImageFileReference>
+  </Fields>
+</adsui>

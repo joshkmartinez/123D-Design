@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <float   name="metallicpaint_diffuse_image_fade"           val="1."/>
+    <boolean name="metallicpaint_is_metal"                     val="false"/>
+    <float   name="metallicpaint_transparency"                 val="0.0"/>
+    <float   name="metallicpaint_transparency_image_fade"      val="1."/>
+    <float   name="metallicpaint_cutout_opacity"               val="1.0"/>
+    <boolean name="metallicpaint_backface_cull"                val="false"/>
+	  <float   name="metallicpaint_self_illum_luminance"         val="0.0"/>
+    <float   name="metallicpaint_self_illum_color_temperature" val="0.0"/>
+    <integer name="metallicpaint_refraction_glossy_samples"    val="1"/>
+    <float   name="noise_Size"                                 val="1.0"/>
+    <string  name="bump_map_asset_name"                        val="Noise"/>
+    <string  name="bump_map_bindings_name"                     val="bump_map_noise_asset"/>
+  </constants>
+
+  <operator function="MetallicpaintDiffuseBOF" name="diffuse">
+    <map_interface source="metallicpaint_base_color" 		       destination="color"/>
+    <map_interface source="metallicpaint_base_highlightspread" destination="highlightspread"/>
+  </operator>
+
+  <operator function="MetallicpaintReflectivityAt0DegBOF" name="reflectivity_at_0deg">
+    <map_interface source="metallicpaint_topcoat" destination="type"/>
+    <map_interface source="metallicpaint_topcoat_falloff" destination="falloff"/> 
+  </operator>
+
+  <operator function="MetallicpaintReflectivityAt90DegBOF" name="reflectivity_at_90deg">
+    <map_interface source="metallicpaint_topcoat" destination="type"/>
+    <map_interface source="metallicpaint_topcoat_falloff" destination="falloff"/>
+  </operator>
+  
+  <operator function="MetallicpaintGlossinessBOF" name="glossiness">
+    <map_interface source="metallicpaint_topcoat" destination="type"/>
+    <map_interface source="metallicpaint_topcoat_glossy" destination="glossy"/>
+  </operator>
+
+  <operator function="MetallicpaintBumpAmountBOF" name="bump_amount">
+    <map_interface source="metallicpaint_finish" destination="finish"/>
+    <map_interface source="metallicpaint_finish_peelamount" destination="finish_peelamount"/>
+  </operator>
+    
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="metallicpaint_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="metallicpaint_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <map_interface source="metallicpaint_pearl_color_by_object"        destination="color_by_object"/>
+    <map_interface source="metallicpaint_base_color"                   destination="generic_diffuse"/>
+    <map_operator  source="diffuse"                     			         destination="generic_diffuse"/>
+    <map_constant  source="metallicpaint_diffuse_image_fade"           destination="generic_diffuse_image_fade"/>
+    <map_operator  source="reflectivity_at_0deg"                       destination="generic_reflectivity_at_0deg"/>
+    <map_operator  source="reflectivity_at_90deg"                      destination="generic_reflectivity_at_90deg"/>
+    <map_operator  source="glossiness"                             	   destination="generic_glossiness"/>
+    <map_constant  source="metallicpaint_is_metal"                     destination="generic_is_metal"/>
+    <map_constant  source="metallicpaint_transparency"                 destination="generic_transparency"/>
+    <map_constant  source="metallicpaint_transparency_image_fade"      destination="generic_transparency_image_fade"/>
+    <map_interface source="metallicpaint_pearl_ior"                    destination="generic_refraction_index"/>
+    <map_constant  source="metallicpaint_cutout_opacity"               destination="generic_cutout_opacity"/>
+    <map_constant  source="metallicpaint_backface_cull"                destination="generic_backface_cull"/>
+    <map_constant  source="metallicpaint_self_illum_luminance"         destination="generic_self_illum_luminance"/>
+    <map_constant  source="metallicpaint_self_illum_color_temperature" destination="generic_self_illum_color_temperature"/>
+    <map_operator  source="bump_amount"                                destination="generic_bump_amount"/>
+  	<map_bindings  source="bump_map_asset"                         	   destination="generic_bump_map"/>
+    <map_interface source="metallicpaint_reflection_glossy_samples"    destination="generic_reflection_glossy_samples"/>
+    <map_constant  source="metallicpaint_refraction_glossy_samples"    destination="generic_refraction_glossy_samples"/>
+    <map_interface source="metallicpaint_ao_on"                        destination="generic_ao_on"/>
+    <map_interface source="metallicpaint_ao_samples"                   destination="generic_ao_samples"/>
+    <map_interface source="metallicpaint_ao_distance"                  destination="generic_ao_distance"/>
+    <map_interface source="metallicpaint_ao_details"                   destination="generic_ao_details"/>
+    <map_bindings  source="round_corner_radius_map"                    destination="generic_roundcorners_radius"/>
+    <map_operator  source="round_corner_radius_BOF"                    destination="generic_roundcorners_radius"/> 
+    <map_interface source="metallicpaint_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+    <map_interface source="metallicpaint_refl_depth"                   destination="generic_refl_depth"/>
+    <map_interface source="common_Tint_toggle"                     destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                      destination="common_Tint_color"/>  
+  </bindings>
+
+  <!-- Connected Asset for Bump_map -->
+  <operator function="MetallicpaintBumpMapAssetNameBOF" name="bump_map_asset_name">
+    <map_constant  source="bump_map_asset_name"                        destination="asset_name"/>
+  </operator>
+
+  <operator function="MetallicpaintBumpMapBindingsNameBOF" name="bump_map_bindings_name">
+    <map_constant  source="bump_map_bindings_name"                     destination="bindings_name"/>
+  </operator>
+  
+  <bindings target="bump_map_asset_instance" name="bump_map_asset">
+    <map_operator  source="bump_map_asset_name"                        destination="asset_name"/>
+    <map_operator  source="bump_map_bindings_name"                     destination="bindings_name"/>
+  </bindings>
+
+  <bindings target="bump_map_noise_asset_instance" name="bump_map_noise_asset">
+    <map_constant  source="noise_Size"                                 destination="noise_Size"/>
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="metallicpaint_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="metallicpaint_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

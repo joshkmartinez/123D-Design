@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Noise
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap3dSchema"
+        file="../Common/TextureMap3dSchema.xml" />
+
+  <UID  val="NoiseSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Noise" />
+  <Choice id="noise_Type"
+          val="noise_regular"
+          label="Noise Type">
+    <ChoiceValue id="noise_regular"
+                 val="0"
+                 label="Regular"/>
+    <ChoiceValue id="noise_fractal"
+                 val="1"
+                 label="Fractal"/>
+    <ChoiceValue id="noise_turbulence"
+                 val="2"
+                 label="Turbulence"/>
+  </Choice>
+  
+  <Float id="noise_Size"
+         val="0.98"
+         label="Size">
+    <Bounds minimum="0.001"
+            maximum="10000000000" />
+  </Float>
+  
+  <Color id="noise_Color1"
+         valR="0"
+         valG="0"
+         valB="0"
+         label="Color 1"
+         allowconnectedassets="single" />
+  
+  <Color id="noise_Color2"
+         valR="1"
+         valG="1"
+         valB="1"
+         label="Color 2"
+         allowconnectedassets="single" />
+  
+  <Float id="noise_ThresholdLow"
+         val="0"
+         label="Low">
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+  
+  <Float id="noise_ThresholdHigh"
+         val="1"
+         label="High">
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+  
+  <Float id="noise_Levels"
+         val="3"
+         label="Levels">
+    <Bounds minimum="1"
+            maximum="10" />
+  </Float>
+  
+  <Float id="noise_Phase"
+         val="0"
+         label="Phase">
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Noise/NoiseUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Noise/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Noise/OGS.xml"/>
+
+  <PropertyAlias alias="noise_Offset"
+                 id="texture_Offset" />
+  <PropertyAlias alias="noise_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="noise_Tiling"
+                 id="texture_Tiling" />
+  <PropertyAlias alias="noise_Angle"
+                 id="texture_Angle" />
+  <PropertyAlias alias="noise_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="noise_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="noise_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="noise_RealWorldOffsetZ"
+                 id="texture_RealWorldOffsetZ" />
+</AssetSchema>

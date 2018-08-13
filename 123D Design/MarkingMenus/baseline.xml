@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+
+<markMenuParameters>
+	<menuStructure>
+		<markMenu name="root">
+			<markMenuItem text="File" position="north" icon="Faceted_Merged.svg">
+				<markMenu name="File">
+					<markMenuItem text="New" value="Janus.NewDocument" position="northWest"/>
+					<markMenuItem text="Open..." value="Janus.OpenDocument" position="northEast" />
+					<markMenuItem text="Open Turnpike..." value="Janus.TurnpikeOpen" position="east"/>
+					<markMenuItem text="FBX Export with 2.5 Materials" value="JanusOGS.TurnpikeExport_2_5" position="southEast" />
+					<markMenuItem text="FBX Export with 2.5 and 2.0 Materials" value="JanusOGS.TurnpikeExport_2_5_And_2_0" position="south" />
+					<markMenuItem text="Close" value="Janus.CloseDocument" position="southWest" />
+					<markMenuItem text="Exit" value="Janus.Exit" position="west" />
+				</markMenu>
+			</markMenuItem>
+			
+			<markMenuItem text="Materials" position="northEast" icon="dcs_flyrs.svg">
+				<markMenu name="Materials">
+					<markMenuItem text="Show Material Browser" value="JanusMaterial.ToggleBrowser" position="northWest" checkBoxState="on"/>
+					<markMenuItem text="Close Material Browser" value="JanusMaterial.CloseBrowser" position="northEast"/>
+					<markMenuItem text="Show Material Editor" value="JanusMaterial.ToggleEditor" position="east"/>
+					<markMenuItem text="Close Material Editor" value="JanusMaterial.CloseEditor" position="southEast"/>
+					<markMenuItem text="Modal Material Editor" value="JanusMaterial.ToggleModalEditor" position="south"/>
+					<markMenuItem text="Add Legacy Material" value="JanusMaterial.AddLegacyMaterial" position="southWest"/>
+					<markMenuItem text="Enable Hardware Acceleration" value="JanusMaterial.ToggleHardwareAcceleration" position="west"/>
+					<markMenuItem text="Customize Material Browser" position="overflow">
+						<markMenu name="CustomizeMaterialBrowser">
+							<markMenuItem text="Apply On Click" value="JanusMaterial.ApplyOnClick" position="overflow"/>
+							<markMenuItem text="Select On Click" value="JanusMaterial.SelectOnClick" position="overflow"/>
+							<markMenuItem text="Select On Click In Scene" value="JanusMaterial.SelectOnClickInScene" position="overflow"/>
+							<markMenuSeparator/>
+							<markMenuItem text="Enable In-Scene Material Filter" value="JanusMaterial.EnableInSceneMaterialsFilter" position="overflow"/>
+						</markMenu>
+					</markMenuItem>
+					<markMenuItem text="Customize Material Editor" position="overflow">
+						<markMenu text="CustomizeMaterialEditor" position="overflow">
+							<markMenuItem text="Enable Color By Object" value="JanusMaterial.EnableColorByObject" position="overflow"/>
+							<markMenuItem text="Show Mateiral Name" value="JanusMaterial.ShowMaterialName" position="overflow"/>
+							<markMenuItem text="Allow Material Creation" value="JanusMaterial.AllowMaterialCreation" position="overflow"/>
+							<markMenuItem text="Show Browser Button" value="JanusMaterial.ShowBrowserButtonInEditor" position="overflow"/>
+							<markMenuItem text="Show Browser Preview" value="JanusMaterial.ShowMaterialPreview" position="overflow"/>
+							<markMenuItem text="Enable Use Properties ComboBox" value="JanusMaterial.EnableUsePropertiesComboBox" position="overflow"/>
+							<markMenuItem text="Configure Units..." value="JanusMaterial.ConfigureUnits" position="overflow"/>
+							<markMenuItem text="Use English numeric separators" value="JanusMaterial.UseEnglishnumericseparators" position="overflow"/>
+						</markMenu>
+					</markMenuItem>
+					<markMenuItem text="Action Recording/Playing back" position="overflow">
+						<markMenu name="ActionRecordingPlayingBack">
+							<markMenuItem text="Record" value="JanusMaterial.ActionRecording" position="overflow"/>
+							<markMenuItem text="Stop recording" value="JanusMaterial.StopActionRecording" position="overflow"/>
+							<markMenuItem text="Play back" value="JanusMaterial.ActionPlayingBack" position="overflow"/>
+						</markMenu>
+					</markMenuItem>
+				</markMenu>
+			</markMenuItem>
+			
+			<markMenuItem text="Undo Faces" position="east" icon="FreeOrbit.svg">
+			<markMenu name="East">
+				<markMenuItem text="Up" position="north"/>
+				<markMenuItem text="UpRight" position="northEast" />
+				<markMenuItem text="Right" position="east"/>
+				<markMenuItem text="DownRight" position="southEast" />
+				<markMenuItem text="Down" position="south">
+				<markMenu name="East">
+					<markMenuItem text="Up2" position="north">
+					<markMenu name="East">
+						<markMenuItem text="Up3" position="north"/>
+						<markMenuItem text="UpRight3" position="northEast" />
+						<markMenuItem text="Right3" position="east"/>
+						<markMenuItem text="DownRight3" position="southEast" />
+						<markMenuItem text="Down3" position="south" />
+						<markMenuItem text="DownLeft3" position="southWest" />
+						<markMenuItem text="Left3" position="west" />
+						<markMenuItem text="UpLeft3" position="northWest" />
+					</markMenu>
+					</markMenuItem>
+					<markMenuItem text="UpRight2" position="northEast" />
+					<markMenuItem text="Right2" position="east">
+					<markMenu name="East">
+						<markMenuItem text="Up3" position="north"/>
+						<markMenuItem text="UpRight3" position="northEast" />
+						<markMenuItem text="Right3" position="east"/>
+						<markMenuItem text="DownRight3" position="southEast" />
+						<markMenuItem text="Down3" position="south" />
+						<markMenuItem text="DownLeft3" position="southWest" />
+						<markMenuItem text="Left3" position="west" />
+						<markMenuItem text="UpLeft3" position="northWest" />
+					</markMenu>
+					</markMenuItem>
+					<markMenuItem text="DownRight2" position="southEast" />
+					<markMenuItem text="Down2" position="south" />
+					<markMenuItem text="DownLeft2" position="southWest" />
+					<markMenuItem text="Left2" position="west" enabled="no">
+					<markMenu name="East">
+						<markMenuItem text="Up3" position="north"/>
+						<markMenuItem text="UpRight3" position="northEast" />
+						<markMenuItem text="Right3" position="east"/>
+						<markMenuItem text="DownRight3" position="southEast" />
+						<markMenuItem text="Down3" position="south" />
+						<markMenuItem text="DownLeft3" position="southWest" />
+						<markMenuItem text="Left3" position="west" />
+						<markMenuItem text="UpLeft3" position="northWest" />
+					</markMenu>
+					</markMenuItem>
+					<markMenuItem text="UpLeft2" position="northWest" />
+				</markMenu>
+				</markMenuItem>
+				<markMenuItem text="DownLeft" position="southWest" />
+				<markMenuItem text="Left" position="west" />
+				<markMenuItem text="UpLeft" position="northWest" />
+			</markMenu>
+			</markMenuItem>
+			
+			<markMenuItem text="Copy Plane" position="southEast" checkBoxState="on" icon="hide.svg"
+				toolTip="&lt;b&gt;Copy Plane&lt;/b&gt;&lt;br&gt;Short description." />
+			
+			<markMenuItem text="Coordinates" position="south" icon="dcs_flyrs.svg">
+			<markMenu name="South">
+				<markMenuItem text="Up" position="north"/>
+				<markMenuItem text="UpRight" position="northEast" />
+				<markMenuItem text="Right" position="east"/>
+				<markMenuItem text="DownRight" position="southEast" />
+				<markMenuItem text="Down" position="south" />
+				<markMenuItem text="DownLeft" position="southWest" />
+				<markMenuItem text="Left" position="west" />
+				<markMenuItem text="UpLeft" position="northWest" enabled="no"/>
+			</markMenu>
+			</markMenuItem>
+			
+			<markMenuItem text="Consolidate" position="southWest" icon="Faceted_Merged.svg" optionBox="yes">
+
+			</markMenuItem>
+			
+			
+			<markMenuItem text="Select" position="west" icon="dcs_flyrs.svg">
+			<markMenu name="West">
+				<markMenuItem text="Up" position="north" icon="dcs_flyrs.svg" 
+					toolTip="&lt;b&gt;Up&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="UpRight" position="northEast" icon="dcs_flyrs.svg" 
+					toolTip="&lt;b&gt;UpRight&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="Right" position="east" icon="dcs_flyrs.svg" enabled="no"
+					toolTip="&lt;b&gt;Right&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="DownRight" position="southEast" icon="dcs_flyrs.svg" optionBox="yes"
+					toolTip="&lt;b&gt;DownRight&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="Down" position="south" icon="dcs_flyrs.svg" 
+					toolTip="&lt;b&gt;Down&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="DownLeft" position="southWest" icon="dcs_flyrs.svg" optionBox="yes"
+					toolTip="&lt;b&gt;DownLeft&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="Left" position="west" icon="dcs_flyrs.svg" 
+					toolTip="&lt;b&gt;Left&lt;/b&gt;&lt;br&gt;Short description." />
+				<markMenuItem text="UpLeft" position="northWest" icon="dcs_flyrs.svg" 
+					toolTip="&lt;b&gt;UpLeft&lt;/b&gt;&lt;br&gt;Short description." />
+			</markMenu>
+			</markMenuItem>
+			
+			<markMenuItem text="Redo Faces" position="northWest" icon="FreeOrbit.svg">
+			<markMenu name="NorthWest">
+				<markMenuItem text="Up" position="north"/>
+				<markMenuItem text="Invisible" position="northEast" visible="no" />
+				<!--
+				<markMenuItem text="Right" position="east"/>
+				<markMenuItem text="DownRight" position="southEast" />
+				-->
+				<markMenuItem text="Down" position="south" />
+				<markMenuItem text="DownLeft" position="southWest" />
+				<!--
+				<markMenuItem text="Left" position="west" />
+				<markMenuItem text="UpLeft" position="northWest" />
+				-->
+			</markMenu>
+			</markMenuItem>
+			
+			
+			<!-- Overflow Menu -->
+			<markMenuItem text="Copy Plane"  position="overflow" checkBoxState="on" />
+			<markMenuSeparator/>
+			<markMenuItem text="Remove Plane" position="overflow" icon="hide.svg" hotkey="Ctrl+H"/>
+			<markMenuItem text="Edit" position="overflow" hotkey="Ctrl+Shift+H"/>
+			<markMenuItem text="Select all" position="overflow" icon = "convertToSolid_16.png" hotkey="Ctrl+A" enabled="no" />
+			<markMenuSeparator/>
+			<markMenuItem text="Get Coordinates" position="overflow" optionBox="yes">
+
+			</markMenuItem>
+			<markMenuItem text="Send Coordinates" position="overflow" icon="Faceted_Merged.svg">
+			<markMenu>
+				<markMenuItem text="First sub item" icon = "dcs_flyrs.svg"/>
+				<markMenuItem text="Second longer sub item"/>
+				<markMenuItem text="Third sub menu">
+				<markMenu>
+				<markMenuItem text="very deep item 1"/>
+				<markMenuItem text="very deep item 2"/>
+				<markMenuItem text="very deep item 3"/>
+				</markMenu>
+				</markMenuItem>
+				<markMenuItem text="Fourth sub item" enabled="no" />
+				<markMenuItem text="Fifth sub menu" enabled="no" >
+				<markMenu>
+				<markMenuItem text="very deep item 4"/>
+				<markMenuItem text="very deep item 5"/>
+				<markMenuItem text="very deep item 6"/>
+				</markMenu>
+				</markMenuItem>
+				<markMenuItem text="Sixth sub item"/>
+				<markMenuItem text="Seventh sub item"/>
+				<markMenuSeparator/>
+				<markMenuItem text="Empty sub menu">
+				<markMenu></markMenu>
+				</markMenuItem>
+			</markMenu>
+			</markMenuItem>
+			<markMenuItem text="Invisible" position="overflow" visible="no" />
+			<markMenuItem text="Render" position="overflow" checkBoxState="on" />
+			<markMenuItem text="Straighten" position="overflow" checkBoxState="on" enabled="no" />
+			<markMenuSeparator/>
+			<markMenuItem text="Align" position="overflow" optionBox="yes" enabled="no" />
+
+		</markMenu>
+		
+		<markMenu name="secondary" bounds="3,3,32,32"
+				boundsImage="Sample.png" boundsRolloverImage="Sample_over.png" boundsPressedImage="Sample_press.png">
+			<markMenuItem text="Left" position="west" />
+			<markMenuItem text="Top" position="north" />
+			<markMenuItem text="Right" position="east" />
+			<markMenuItem text="Bottom" position="south" />
+		</markMenu>
+
+		<markMenu name="ViewCube" bounds="1240,50,64,60">
+			<markMenuItem text="Home" position="overflow" />
+			<markMenuSeparator/>
+			<markMenuItem text="Orthographic" position="overflow" />
+			<markMenuItem text="Perspective" position="overflow" />
+			<markMenuSeparator/>
+			<markMenuItem text="Properties..." position="overflow" />
+		</markMenu>
+
+		<defaultIconOnlyLayoutIcon>pencil.svg</defaultIconOnlyLayoutIcon>
+
+	</menuStructure>
+
+</markMenuParameters>

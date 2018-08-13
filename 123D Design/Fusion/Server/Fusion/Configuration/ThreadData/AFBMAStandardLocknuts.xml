@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreadType>
+  <Name>AFBMA Standard Locknuts</Name>
+  <CustomName>AFBMA Standard Locknuts</CustomName>
+  <Unit>inch</Unit>
+  <Angle>60</Angle>
+  <SortOrder>24</SortOrder>
+  <ThreadSize>
+    <Size>0.391</Size>
+    <Designation>
+      <ThreadDesignation>N 00</ThreadDesignation>
+      <CTD>N 00-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.3883</MajorDia>
+        <PitchDia>0.3694</PitchDia>
+        <MinorDia>0.3527</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.391</MajorDia>
+        <PitchDia>0.372</PitchDia>
+        <MinorDia>0.3589</MinorDia>
+        <TapDrill>0.3527</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>0.469</Size>
+    <Designation>
+      <ThreadDesignation>N 01</ThreadDesignation>
+      <CTD>N 01-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.4663</MajorDia>
+        <PitchDia>0.4474</PitchDia>
+        <MinorDia>0.4307</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.469</MajorDia>
+        <PitchDia>0.45</PitchDia>
+        <MinorDia>0.4369</MinorDia>
+        <TapDrill>0.4307</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>0.586</Size>
+    <Designation>
+      <ThreadDesignation>N 02</ThreadDesignation>
+      <CTD>N 02-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.5833</MajorDia>
+        <PitchDia>0.5642</PitchDia>
+        <MinorDia>0.5477</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.586</MajorDia>
+        <PitchDia>0.5672</PitchDia>
+        <MinorDia>0.5539</MinorDia>
+        <TapDrill>0.5477</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>0.664</Size>
+    <Designation>
+      <ThreadDesignation>N 03</ThreadDesignation>
+      <CTD>N 03-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.6613</MajorDia>
+        <PitchDia>0.6422</PitchDia>
+        <MinorDia>0.6257</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.664</MajorDia>
+        <PitchDia>0.6452</PitchDia>
+        <MinorDia>0.6319</MinorDia>
+        <TapDrill>0.6257</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>0.781</Size>
+    <Designation>
+      <ThreadDesignation>N 04</ThreadDesignation>
+      <CTD>N 04-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.7783</MajorDia>
+        <PitchDia>0.759</PitchDia>
+        <MinorDia>0.7427</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.781</MajorDia>
+        <PitchDia>0.7624</PitchDia>
+        <MinorDia>0.7489</MinorDia>
+        <TapDrill>0.7427</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>0.969</Size>
+    <Designation>
+      <ThreadDesignation>N 05</ThreadDesignation>
+      <CTD>N 05-32</CTD>
+      <TPI>32.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.9663</MajorDia>
+        <PitchDia>0.947</PitchDia>
+        <MinorDia>0.9307</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>0.969</MajorDia>
+        <PitchDia>0.9504</PitchDia>
+        <MinorDia>0.9369</MinorDia>
+        <TapDrill>0.9307</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.173</Size>
+    <Designation>
+      <ThreadDesignation>N 06</ThreadDesignation>
+      <CTD>N 06-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.1689</MajorDia>
+        <PitchDia>1.1349</PitchDia>
+        <MinorDia>1.1048</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.173</MajorDia>
+        <PitchDia>1.1389</PitchDia>
+        <MinorDia>1.1159</MinorDia>
+        <TapDrill>1.1048</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.312</Size>
+    <Designation>
+      <ThreadDesignation>TN 065</ThreadDesignation>
+      <CTD>TN 065-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.3082</MajorDia>
+        <PitchDia>1.2744</PitchDia>
+        <MinorDia>1.2443</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.312</MajorDia>
+        <PitchDia>1.2784</PitchDia>
+        <MinorDia>1.2554</MinorDia>
+        <TapDrill>1.2443</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.376</Size>
+    <Designation>
+      <ThreadDesignation>TN 07</ThreadDesignation>
+      <CTD>TN 07-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.3719</MajorDia>
+        <PitchDia>1.3379</PitchDia>
+        <MinorDia>1.3078</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.376</MajorDia>
+        <PitchDia>1.3419</PitchDia>
+        <MinorDia>1.3189</MinorDia>
+        <TapDrill>1.3078</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.563</Size>
+    <Designation>
+      <ThreadDesignation>TN 08</ThreadDesignation>
+      <CTD>TN 08-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.5589</MajorDia>
+        <PitchDia>1.5246</PitchDia>
+        <MinorDia>1.4948</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.563</MajorDia>
+        <PitchDia>1.5292</PitchDia>
+        <MinorDia>1.5059</MinorDia>
+        <TapDrill>1.4948</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.767</Size>
+    <Designation>
+      <ThreadDesignation>TN 09</ThreadDesignation>
+      <CTD>TN 09-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.7629</MajorDia>
+        <PitchDia>1.7287</PitchDia>
+        <MinorDia>1.6988</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.767</MajorDia>
+        <PitchDia>1.7332</PitchDia>
+        <MinorDia>1.7099</MinorDia>
+        <TapDrill>1.6988</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>1.967</Size>
+    <Designation>
+      <ThreadDesignation>TN 10</ThreadDesignation>
+      <CTD>TN 10-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.9629</MajorDia>
+        <PitchDia>1.9287</PitchDia>
+        <MinorDia>1.8988</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>1.967</MajorDia>
+        <PitchDia>1.9332</PitchDia>
+        <MinorDia>1.9099</MinorDia>
+        <TapDrill>1.8988</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.157</Size>
+    <Designation>
+      <ThreadDesignation>TN 11</ThreadDesignation>
+      <CTD>TN 11-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.1529</MajorDia>
+        <PitchDia>2.1184</PitchDia>
+        <MinorDia>2.0888</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.157</MajorDia>
+        <PitchDia>2.1235</PitchDia>
+        <MinorDia>2.0999</MinorDia>
+        <TapDrill>2.0888</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.36</Size>
+    <Designation>
+      <ThreadDesignation>TN 12</ThreadDesignation>
+      <CTD>TN 12-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.3559</MajorDia>
+        <PitchDia>2.3213</PitchDia>
+        <MinorDia>2.2918</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.36</MajorDia>
+        <PitchDia>2.3265</PitchDia>
+        <MinorDia>2.3029</MinorDia>
+        <TapDrill>2.2918</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.548</Size>
+    <Designation>
+      <ThreadDesignation>TN 13</ThreadDesignation>
+      <CTD>TN 13-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.5439</MajorDia>
+        <PitchDia>2.5094</PitchDia>
+        <MinorDia>2.4798</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.548</MajorDia>
+        <PitchDia>2.5145</PitchDia>
+        <MinorDia>2.4914</MinorDia>
+        <TapDrill>2.4798</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.751</Size>
+    <Designation>
+      <ThreadDesignation>TN 14</ThreadDesignation>
+      <CTD>TN 14-18</CTD>
+      <TPI>18.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.7469</MajorDia>
+        <PitchDia>2.7123</PitchDia>
+        <MinorDia>2.6828</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.751</MajorDia>
+        <PitchDia>2.7175</PitchDia>
+        <MinorDia>2.6939</MinorDia>
+        <TapDrill>2.6828</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>2.933</Size>
+    <Designation>
+      <ThreadDesignation>TAN 15</ThreadDesignation>
+      <CTD>TAN 15-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.9274</MajorDia>
+        <PitchDia>2.8762</PitchDia>
+        <MinorDia>2.8308</MinorDia>
+      </Thread>
+      <Thread>
+        <Gender>internal</Gender>
+        <Class>3A</Class>
+        <MajorDia>2.933</MajorDia>
+        <PitchDia>2.8816</PitchDia>
+        <MinorDia>2.8473</MinorDia>
+        <TapDrill>2.8308</TapDrill>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.137</Size>
+    <Designation>
+      <ThreadDesignation>TAN 16</ThreadDesignation>
+      <CTD>TAN 16-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>3.1314</MajorDia>
+        <PitchDia>3.08</PitchDia>
+        <MinorDia>3.0348</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.34</Size>
+    <Designation>
+      <ThreadDesignation>TAN 17</ThreadDesignation>
+      <CTD>TAN 17-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>3.3344</MajorDia>
+        <PitchDia>3.2829</PitchDia>
+        <MinorDia>3.2378</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.527</Size>
+    <Designation>
+      <ThreadDesignation>TAN 18</ThreadDesignation>
+      <CTD>TAN 18-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>3.5214</MajorDia>
+        <PitchDia>3.4692</PitchDia>
+        <MinorDia>3.4248</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.73</Size>
+    <Designation>
+      <ThreadDesignation>TAN 19</ThreadDesignation>
+      <CTD>TAN 19-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>3.7244</MajorDia>
+        <PitchDia>3.6722</PitchDia>
+        <MinorDia>3.6278</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>3.918</Size>
+    <Designation>
+      <ThreadDesignation>TAN 20</ThreadDesignation>
+      <CTD>TAN 20-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>3.9124</MajorDia>
+        <PitchDia>3.8602</PitchDia>
+        <MinorDia>3.8158</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>4.122</Size>
+    <Designation>
+      <ThreadDesignation>TAN 21</ThreadDesignation>
+      <CTD>TAN 21-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>4.1164</MajorDia>
+        <PitchDia>4.0638</PitchDia>
+        <MinorDia>4.0198</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>4.325</Size>
+    <Designation>
+      <ThreadDesignation>TAN 22</ThreadDesignation>
+      <CTD>TAN 22-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>4.3194</MajorDia>
+        <PitchDia>4.2668</PitchDia>
+        <MinorDia>4.2228</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>4.716</Size>
+    <Designation>
+      <ThreadDesignation>TAN 24</ThreadDesignation>
+      <CTD>TAN 24-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>4.7104</MajorDia>
+        <PitchDia>4.6578</PitchDia>
+        <MinorDia>4.6138</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>5.106</Size>
+    <Designation>
+      <ThreadDesignation>TAN 26</ThreadDesignation>
+      <CTD>TAN 26-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>5.1004</MajorDia>
+        <PitchDia>5.0478</PitchDia>
+        <MinorDia>5.0038</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>5.497</Size>
+    <Designation>
+      <ThreadDesignation>TAN 128</ThreadDesignation>
+      <CTD>TAN 128-12</CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>5.4914</MajorDia>
+        <PitchDia>5.4388</PitchDia>
+        <MinorDia>5.3948</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>5.888</Size>
+    <Designation>
+      <ThreadDesignation>TAN 130</ThreadDesignation>
+      <CTD>TAN 130-12 </CTD>
+      <TPI>12.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>5.8824</MajorDia>
+        <PitchDia>5.8298</PitchDia>
+        <MinorDia>5.7858</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>6.284</Size>
+    <Designation>
+      <ThreadDesignation>TAN 132</ThreadDesignation>
+      <CTD>TAN 132-8</CTD>
+      <TPI>8.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>6.2764</MajorDia>
+        <PitchDia>6.1983</PitchDia>
+        <MinorDia>6.1306</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>6.659</Size>
+    <Designation>
+      <ThreadDesignation>TAN 134</ThreadDesignation>
+      <CTD>TAN 134-8</CTD>
+      <TPI>8.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>6.6514</MajorDia>
+        <PitchDia>6.5733</PitchDia>
+        <MinorDia>6.5056</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>7.066</Size>
+    <Designation>
+      <ThreadDesignation>TAN 136</ThreadDesignation>
+      <CTD>TAN 136-8</CTD>
+      <TPI>8.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>7.0584</MajorDia>
+        <PitchDia>6.9803</PitchDia>
+        <MinorDia>6.9126</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>7.472</Size>
+    <Designation>
+      <ThreadDesignation>TAN 138</ThreadDesignation>
+      <CTD>TAN 138-8</CTD>
+      <TPI>8.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>7.4644</MajorDia>
+        <PitchDia>7.3863</PitchDia>
+        <MinorDia>7.3186</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+  <ThreadSize>
+    <Size>7.847</Size>
+    <Designation>
+      <ThreadDesignation>TAN 140</ThreadDesignation>
+      <CTD>TAN 140-8</CTD>
+      <TPI>8.0</TPI>
+      <Thread>
+        <Gender>external</Gender>
+        <Class>3A</Class>
+        <MajorDia>7.8394</MajorDia>
+        <PitchDia>7.7601</PitchDia>
+        <MinorDia>7.6936</MinorDia>
+      </Thread>
+    </Designation>
+  </ThreadSize>
+</ThreadType>

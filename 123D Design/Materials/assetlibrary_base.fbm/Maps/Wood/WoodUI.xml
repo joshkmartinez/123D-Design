@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Wood map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="wood_Appearance"
+                label="Appearance"
+                orientation="Vertical"
+                expanded="true">
+      <MappableColor id="wood_Color1"
+                     label="Color 1"
+                     noimagetexture="true"
+                     swappartner="wood_Color2"
+                     tooltip="Specifies the first color of the wood texture." />
+      <MappableColor id="wood_Color2"
+                     label="Color 2"
+                     noimagetexture="true"
+                     swappartner="wood_Color1"
+                     tooltip="Specifies the second color of the wood texture." />
+      <Float id="wood_RadialNoise"
+             label="Radial Noise"
+             min="0" max="100"
+             tooltip="Sets the relative randomness of the radial noise pattern on a plane perpendicular to the grain on the wood. Range = 0 to 100; Default  = 1.00."
+             forcenumeric="spinbox"/>
+      <Float id="wood_AxialNoise"
+             label="Axial Noise"
+             min="0" max="100"
+             tooltip="Sets the relative randomness of the axial noise pattern on a plane parallel with the grain on the wood. Range = 0 to 100; Default  = 1.00."
+             forcenumeric="spinbox"/>
+      <Float id="wood_Thickness"
+             label="Grain Thickness"
+             min="0" max="100"
+             tooltip="Sets the relative thickness of the color bands that make up the grain on the wood. Range = 0 to 100; Default = 0.50."
+             forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="wood_transforms_group"
+                label="Transforms"
+                orientation="Vertical"
+                expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="wood_Position"
+                  label="Position"
+                  orientation="Vertical"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <SampleSize id="texture_RealWorldOffsetZ"
+                    label=""
+                    rightlabel="Z"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Z axis."/>
+        <Vector3 id="texture_Angle"
+                 label="XYZ Rotation"
+                 forcenumeric="slider"
+                 tooltip="Specify the Rotation of the area represented by the image above."/>
+      </StackPanel>
+    </StackPanel>
+  </Fields>
+</adsui>

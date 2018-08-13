@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Hemispherical
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="HemisphericalSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+   <localname val="Hemispherical Map" />
+  <TextureURI id="hemispherical_Bitmap"
+       val=""
+       label="Image File"/>
+  
+  <Float id="hemispherical_RGBAmount"
+         val="8"
+         label="Relative Brightness:">
+    <Bounds minimum="0"
+            maximum="100" />
+  </Float>
+  
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/Hemispherical/HemisphericalUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Hemispherical/MentalImage.xml"/>
+</AssetSchema>

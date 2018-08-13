@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the schema for UnifiedBitmap
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="TextureMap2dSchema"
+        file="../Common/TextureMap2dSchema.xml" />
+
+  <UID  val="UnifiedBitmapSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Bitmap Texture" />
+  <!--Texture-->
+  <TextureURI id="unifiedbitmap_Bitmap"
+       val=""
+       label="Source"/>
+  
+  <Float id="unifiedbitmap_RGBAmount"
+         val="1.0"
+         label="Brightness" >
+    <Bounds percentage="true"/>
+  </Float>
+  
+  <Boolean id="unifiedbitmap_Invert"
+           val="false"
+           label="Invert Image"  />
+
+  <Integer id="unifiedbitmap_Filtering"
+           val="0"
+           label="Filtering" />
+  
+  <Float id="unifiedbitmap_Blur"
+         val="0.01"
+         label="Blur" >
+    <Bounds minimum="0.01"
+            maximum="100" />
+  </Float>
+  
+  <Float id="unifiedbitmap_Blur_Offset"
+         val="0."
+         label="Blur Offset">
+    <Bounds minimum="0.00"
+            maximum="1.00" />
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/UnifiedBitmap/UnifiedBitmapUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Maps/UnifiedBitmap/UnifiedBitmapAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/UnifiedBitmap/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/UnifiedBitmap/OGS.xml"/>
+
+  <PropertyAlias alias="unifiedbitmap_VScale"
+                 id="texture_VScale" />
+  <PropertyAlias alias="unifiedbitmap_UScale"
+                 id="texture_UScale" />
+  <PropertyAlias alias="unifiedbitmap_ScaleLock"
+                 id="texture_ScaleLock" />
+  <PropertyAlias alias="unifiedbitmap_WAngle"
+                 id="texture_WAngle" />
+  <PropertyAlias alias="unifiedbitmap_UOffset"
+                 id="texture_UOffset" />
+  <PropertyAlias alias="unifiedbitmap_VOffset"
+                 id="texture_VOffset" />
+  <PropertyAlias alias="unifiedbitmap_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="unifiedbitmap_RealWorldScaleX"
+                 id="texture_RealWorldScaleX" />
+  <PropertyAlias alias="unifiedbitmap_RealWorldScaleY"
+                 id="texture_RealWorldScaleY" />
+  <PropertyAlias alias="unifiedbitmap_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="unifiedbitmap_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="unifiedbitmap_MapChannel"
+                 id="texture_MapChannel" />
+  <PropertyAlias alias="unifiedbitmap_MapChannel_ID_Advanced"
+                 id="texture_MapChannel_ID_Advanced" />
+  <PropertyAlias alias="unifiedbitmap_MapChannel_UVWSource_Advanced"
+                 id="texture_MapChannel_UVWSource_Advanced" />
+  <PropertyAlias alias="unifiedbitmap_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="unifiedbitmap_URepeat"
+                 id="texture_URepeat" />
+  <PropertyAlias alias="unifiedbitmap_VRepeat"
+                 id="texture_VRepeat" />
+
+</AssetSchema>
+

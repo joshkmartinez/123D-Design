@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      UnifiedBitmap
+    </Title>
+  </PageInfo>
+  <Fields>
+    <TextureLabel id="unifiedbitmap_Bitmap" label="Source" />
+    <Percent id="unifiedbitmap_RGBAmount"
+         label="Brightness"
+         precision="0"
+         tooltip="Adjust the brightness of the image."/>
+    <Boolean id="unifiedbitmap_Invert"
+         label="Invert Image"
+         tooltip="Swap the bright and dark areas of the image."/>
+    <StackPanel id="unifiedbitmap_transforms_group" label="Transforms" orientation="Vertical" expanded="true">
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="unifiedbitmap_position_group" label="Position" orientation="Vertical" expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <ParamLock id="texture_OffsetLock"
+                   tooltip="Constrains the offset. When the X offset is changed, the Y offset is changed by the same amount."
+                   topParamLock="texture_RealWorldOffsetX"
+                   bottomParamLock="texture_RealWorldOffsetY" />
+        <Angle id="texture_WAngle"
+               label="Rotation"
+               min="0.0"
+               max="360.0"
+               tooltip="Rotates the map from 0 degrees to 360 degrees."/>
+      </StackPanel>
+      <StackPanel id="unifiedbitmap_scale_group" label="Scale" orientation="Vertical" expanded="true">
+        <SampleSize id="texture_RealWorldScaleX"
+                    label="Sample Size"
+                    rightlabel="Width"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the horizontal scaling for this texture."/>
+
+        <SampleSize id="texture_RealWorldScaleY"
+                    label=""
+                    rightlabel="Height"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the vertical scaling for this texture."/>
+        <ParamLock id="texture_ScaleLock"
+                   tooltip="Locks the aspect ratio of the map. When the height or width value is changed, the other value changes as needed to maintain the aspect ratio."
+                   topParamLock="texture_RealWorldScaleX"
+                   bottomParamLock="texture_RealWorldScaleY" />
+      </StackPanel>
+      <StackPanel id="unifiedbitmap_repeat_group" label="Repeat" orientation="vertical" expanded="true">
+        <Boolean id="texture_URepeat"
+                 label="Horizontal"
+                 tooltip="Adjusts the tiling of the map along the X axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+        <Boolean id="texture_VRepeat"
+                 label="Vertical"
+                 tooltip="Adjusts the tiling of the map along the Y axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+      </StackPanel>
+    </StackPanel>
+</Fields>
+</adsui>

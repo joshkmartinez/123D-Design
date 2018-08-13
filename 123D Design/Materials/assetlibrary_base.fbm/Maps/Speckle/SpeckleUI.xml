@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Speckle map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="speckle_Appearance"
+                label="Appearance"
+                orientation="Vertical"
+                expanded="true">
+      <MappableColor id="speckle_Color1"
+                     label="Color 1"
+                     noimagetexture="true"
+                     swappartner="speckle_Color2"
+                     tooltip="Specifies the first color of the speckle." />
+      <MappableColor id="speckle_Color2"
+                     label="Color 2"
+                     noimagetexture="true"
+                     swappartner="speckle_Color1"
+                     tooltip="Specifies the second color of the speckle." />
+      <Float id="speckle_Size"
+             label="Size"
+             min="0" max="100"
+             tooltip="Adjusts the size of the speckles."/>      
+    </StackPanel>
+    <StackPanel id="speckle_transforms_group"
+                label="Transforms"
+                orientation="Vertical"
+                expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="speckle_Position"
+                  label="Position"
+                  orientation="Vertical"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <SampleSize id="texture_RealWorldOffsetZ"
+                    label=""
+                    rightlabel="Z"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Z axis."/>
+        <Vector3 id="texture_Angle"
+                 label="XYZ Rotation"
+                 forcenumeric="slider"
+                 tooltip="Specify the Rotation of the area represented by the image above."/>
+      </StackPanel>
+    </StackPanel>
+  </Fields>
+</adsui>
+

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Resource><label commandName="DWGFileIsBeingUsed" devLabel="The file is opened in another software, failed to load it: %1%, please close it and try again." translation="该文件已在其他软件中打开，无法加载: %1%，请将其关闭，然后重试。" /></Resource>

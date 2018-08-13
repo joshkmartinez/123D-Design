@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="eng" target-language="eng" datatype="FBX">
+    <body>
+      <trans-unit id="ExposureValue">
+        <source>Exposure Value:</source>
+        <target>Exposure Value:</target>
+      </trans-unit>
+      <trans-unit id="ExposureValue:maxlabel">
+        <source>Darker</source>
+        <target>Darker</target>
+      </trans-unit>
+      <trans-unit id="ExposureValue:minlabel">
+        <source>Brighter</source>
+        <target>Brighter</target>
+      </trans-unit>
+      <trans-unit id="ExposureValue:tooltip">
+        <source>Default exposure value based on Lighting Scheme</source>
+        <target>Default exposure value based on Lighting Scheme</target>
+      </trans-unit>
+      <trans-unit id="Highlights">
+        <source>Highlights:</source>
+        <target>Highlights:</target>
+      </trans-unit>
+      <trans-unit id="Highlights:maxlabel">
+        <source>Brighter</source>
+        <target>Brighter</target>
+      </trans-unit>
+      <trans-unit id="Highlights:minlabel">
+        <source>Darker</source>
+        <target>Darker</target>
+      </trans-unit>
+      <trans-unit id="Highlights:tooltip">
+        <source>Increase this value to get brighter highlights</source>
+        <target>Increase this value to get brighter highlights</target>
+      </trans-unit>
+      <trans-unit id="Mental Ray System Library 1.0">
+        <source>Mental Ray System Library 1.0</source>
+        <target>Mental Ray System Library 1.0</target>
+      </trans-unit>
+      <trans-unit id="Midtones">
+        <source>Mid Tones:</source>
+        <target>Mid Tones:</target>
+      </trans-unit>
+      <trans-unit id="Midtones:maxlabel">
+        <source>Brighter</source>
+        <target>Brighter</target>
+      </trans-unit>
+      <trans-unit id="Midtones:minlabel">
+        <source>Darker</source>
+        <target>Darker</target>
+      </trans-unit>
+      <trans-unit id="Midtones:tooltip">
+        <source>Increase this value to get brighter midtones</source>
+        <target>Increase this value to get brighter midtones</target>
+      </trans-unit>
+      <trans-unit id="Saturation">
+        <source>Saturation:</source>
+        <target>Saturation:</target>
+      </trans-unit>
+      <trans-unit id="Saturation:maxlabel">
+        <source>Intense</source>
+        <target>Intense</target>
+      </trans-unit>
+      <trans-unit id="Saturation:minlabel">
+        <source>Grey</source>
+        <target>Grey</target>
+      </trans-unit>
+      <trans-unit id="Saturation:tooltip">
+        <source>Increase this value to get more intense colors</source>
+        <target>Increase this value to get more intense colors</target>
+      </trans-unit>
+      <trans-unit id="Shadows">
+        <source>Shadows:</source>
+        <target>Shadows:</target>
+      </trans-unit>
+      <trans-unit id="Shadows:maxlabel">
+        <source>Darker</source>
+        <target>Darker</target>
+      </trans-unit>
+      <trans-unit id="Shadows:minlabel">
+        <source>Lighter</source>
+        <target>Lighter</target>
+      </trans-unit>
+      <trans-unit id="Shadows:tooltip">
+        <source>Increase this value to get darker shadows</source>
+        <target>Increase this value to get darker shadows</target>
+      </trans-unit>
+      <trans-unit id="Simple Tone Mapper">
+        <source>Simple Tone Mapper</source>
+        <target>Simple Tone Mapper</target>
+      </trans-unit>
+      <trans-unit id="User Render Settings">
+        <source>User Render Settings</source>
+        <target>User Render Settings</target>
+      </trans-unit>
+      <trans-unit id="WhitePoint">
+        <source>White Point:</source>
+        <target>White Point:</target>
+      </trans-unit>
+      <trans-unit id="WhitePoint:maxlabel">
+        <source>Warmer</source>
+        <target>Warmer</target>
+      </trans-unit>
+      <trans-unit id="WhitePoint:minlabel">
+        <source>Cooler</source>
+        <target>Cooler</target>
+      </trans-unit>
+      <trans-unit id="WhitePoint:tooltip">
+        <source>Specify the white balance of your rendering (measured in Kelvin).  Incandescent lighting: 2800K; Daylight: 6500K.</source>
+        <target>Specify the white balance of your rendering (measured in Kelvin).  Incandescent lighting: 2800K; Daylight: 6500K.</target>
+      </trans-unit>
+      <trans-unit id="basic|image precision">
+        <source>Image Precision (Antialiasing):</source>
+        <target>Image Precision (Antialiasing):</target>
+      </trans-unit>
+      <trans-unit id="basic|image precision:tooltip">
+        <source>Increase this value to smooth out jagged edges in the rendering.</source>
+        <target>Increase this value to smooth out jagged edges in the rendering.</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|curtain walls">
+        <source>Curtain Walls</source>
+        <target>Curtain Walls</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|curtain walls:tooltip">
+        <source>Turn this on when sunlight coming through a curtain wall looks splotchy.  This can slow down rendering, but helps for rooms with few places for sunlight to enter.</source>
+        <target>Turn this on when sunlight coming through a curtain wall looks splotchy.  This can slow down rendering, but helps for rooms with few places for sunlight to enter.</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|doors">
+        <source>Doors</source>
+        <target>Doors</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|doors:tooltip">
+        <source>Turn this on when sunlight coming through a door looks splotchy.  This can slow down rendering, but helps for rooms with few places for sunlight to enter.</source>
+        <target>Turn this on when sunlight coming through a door looks splotchy.  This can slow down rendering, but helps for rooms with few places for sunlight to enter.</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|windows">
+        <source>Windows</source>
+        <target>Windows</target>
+      </trans-unit>
+      <trans-unit id="daylight portals|windows:tooltip">
+        <source>Turn this on when sunlight coming through windows looks splotchy.  This can slow down rendering, but helps for rooms with few or small windows.</source>
+        <target>Turn this on when sunlight coming through windows looks splotchy.  This can slow down rendering, but helps for rooms with few or small windows.</target>
+      </trans-unit>
+      <trans-unit id="general_options">
+        <source>General Options</source>
+        <target>General Options</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect and sky illumination">
+        <source>Compute Indirect and Sky Illumination</source>
+        <target>Compute Indirect and Sky Illumination</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect and sky illumination:tooltip">
+        <source>Include light that bounces off other objects, and light from the sky when calculating the lighting for this scene.</source>
+        <target>Include light that bounces off other objects, and light from the sky when calculating the lighting for this scene.</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination bounces">
+        <source>Indirect Illumination Bounces:</source>
+        <target>Indirect Illumination Bounces:</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination bounces:tooltip">
+        <source>Increase this value when areas of the scene that should be indirectly illuminated are left in darkness.</source>
+        <target>Increase this value when areas of the scene that should be indirectly illuminated are left in darkness.</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination precision">
+        <source>Indirect Illumination Precision:</source>
+        <target>Indirect Illumination Precision:</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination precision:tooltip">
+        <source>Increase this value to get more detailed indirect illumination and shadows.</source>
+        <target>Increase this value to get more detailed indirect illumination and shadows.</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination smoothness">
+        <source>Indirect Illumination Smoothness:</source>
+        <target>Indirect Illumination Smoothness:</target>
+      </trans-unit>
+      <trans-unit id="indirect illumination options|indirect illumination smoothness:tooltip">
+        <source>Increase this value when the indirect illumination looks splotchy or scaly.</source>
+        <target>Increase this value when the indirect illumination looks splotchy or scaly.</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|blurred reflection multiplier">
+        <source>Blurred Reflections Precision:</source>
+        <target>Blurred Reflections Precision:</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|blurred reflection multiplier:tooltip">
+        <source>Increase this value when the edges of objects in blurred reflections are speckled, rather than smoothly blurred.</source>
+        <target>Increase this value when the edges of objects in blurred reflections are speckled, rather than smoothly blurred.</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|blurred refraction multiplier">
+        <source>Blurred Refractions Precision:</source>
+        <target>Blurred Refractions Precision:</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|blurred refraction multiplier:tooltip">
+        <source>Increase this value when the edges of objects seen through rough glass are speckled, rather than smoothly blurred.</source>
+        <target>Increase this value when the edges of objects seen through rough glass are speckled, rather than smoothly blurred.</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|max reflections">
+        <source>Maximum Number of Reflections:</source>
+        <target>Maximum Number of Reflections:</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|max reflections:tooltip">
+        <source>Increase this value when objects are missing from reflections.</source>
+        <target>Increase this value when objects are missing from reflections.</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|max refractions">
+        <source>Maximum Number of Refractions:</source>
+        <target>Maximum Number of Refractions:</target>
+      </trans-unit>
+      <trans-unit id="reflection and transparency|max refractions:tooltip">
+        <source>Increase this value when you cannot see objects through multiple panes of glass.</source>
+        <target>Increase this value when you cannot see objects through multiple panes of glass.</target>
+      </trans-unit>
+      <trans-unit id="render_daylightportals">
+        <source>Daylight Portal Options (only applies to sunlit interiors)</source>
+        <target>Daylight Portal Options (only applies to sunlit interiors)</target>
+      </trans-unit>
+      <trans-unit id="render_illumination">
+        <source>Indirect Illumination Options</source>
+        <target>Indirect Illumination Options</target>
+      </trans-unit>
+      <trans-unit id="render_reflection_refraction">
+        <source>Reflection and Transparency Options</source>
+        <target>Reflection and Transparency Options</target>
+      </trans-unit>
+      <trans-unit id="render_shadows">
+        <source>Shadow Options</source>
+        <target>Shadow Options</target>
+      </trans-unit>
+      <trans-unit id="shadows|soft shadows">
+        <source>Enable Soft Shadows:</source>
+        <target>Enable Soft Shadows:</target>
+      </trans-unit>
+      <trans-unit id="shadows|soft shadows precision">
+        <source>Soft Shadow Precision:</source>
+        <target>Soft Shadow Precision:</target>
+      </trans-unit>
+      <trans-unit id="shadows|soft shadows precision:tooltip">
+        <source>Increase this value when the edges of soft shadows appear to be speckled, rather than smoothly blurred.</source>
+        <target>Increase this value when the edges of soft shadows appear to be speckled, rather than smoothly blurred.</target>
+      </trans-unit>
+      <trans-unit id="shadows|soft shadows:tooltip">
+        <source>Make shadow edges soft (blurred)</source>
+        <target>Make shadow edges soft (blurred)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+

@@ -1,0 +1,35 @@
+<UpiDllConfig>
+  <UpiValueRetrieval>
+    <upi_element name='upivalue'>
+      <upi_attribute name='version' value='1.0'/>
+      <upi_attribute name='type' value='product'/>
+
+      <upi_element name='level'>
+        <upi_attribute name='name' value='productline'/>
+        <upi_attribute name='id' value='123D' />
+
+        <upi_element name='level'>
+          <upi_attribute name='name' value='release'/>
+          <upi_attribute name='id' value='2012'/>
+
+          <upi_element name='level'>
+            <upi_attribute name='name' value='master'/>
+            <upi_attribute name='id'  value='123DWin32'/>
+
+            <upi_element name='level'>
+              <upi_attribute name='name' value='build'/>
+              <upi_attribute name='id'>
+		            <upi_reader name="FileAttributeReader" path="..\NsBase10.dll" attribute="FileVersion" appliesto="installed" />
+              </upi_attribute>
+
+            </upi_element>
+
+          </upi_element>
+
+        </upi_element>
+
+      </upi_element>
+
+    </upi_element>
+  </UpiValueRetrieval>
+</UpiDllConfig>

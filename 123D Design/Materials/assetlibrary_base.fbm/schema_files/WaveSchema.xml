@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="TextureMap3dSchema"
+        file="../Common/TextureMap3dSchema.xml" />
+
+  <UID  val="WaveSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture" />
+
+  <localtype val="Texture" />
+  <localname val="Wave" />
+  <Color id="wave_Color1" 
+         valR="0" 
+         valG="0" 
+         valB="0"
+         label="Color 1"
+         allowconnectedassets="single" />
+  
+  <Color id="wave_Color2" 
+         valR="1" 
+         valG="1" 
+         valB="1"
+         label="Color 2"
+         allowconnectedassets="single" />
+  
+  <Choice id="wave_Distribution" 
+          val="wave_3D" 
+          label="Distribution" >
+    <ChoiceValue id="wave_2D"
+                 val="0"
+                 label="2D"/>
+    <ChoiceValue id="wave_3D"
+                 val="1"
+                 label="3D" />
+  </Choice>
+  
+  <Integer id="wave_NumWaveSets" 
+           val="3" 
+           label="Number" >
+    <Bounds minimum="1"
+            maximum="50" />
+  </Integer>
+  
+  <Float id="wave_WaveRadius" 
+         val="39.37" 
+         label="Radius" >
+    <Bounds minimum="0"
+            maximum="1000000000.0" />
+  </Float>
+  
+  <Float id="wave_WaveLenMin" 
+         val="1.97"
+         label="Len Min" >
+    <Bounds minimum="0"
+            maximum="1000000000.0" />
+  </Float>
+  
+  <Float id="wave_WaveLenMax" 
+         val="1.97"
+         label="Len Max" >
+    <Bounds minimum="0"
+            maximum="1000000000.0" />
+  </Float>
+  
+  <Float id="wave_Amplitude" 
+         val="1"
+         label="Amplitude" >
+    <Bounds minimum="0"
+            maximum="10000" />
+  </Float>
+  
+  <Float id="wave_Phase" 
+         val="0"
+         label="Phase" >
+    <Bounds minimum="0"
+            maximum="10000" />
+  </Float>
+  
+  <Integer id="wave_RandomSeed" 
+           val="30159"
+           label="Random Seed" >
+    <Bounds minimum="0"
+            maximum="65535" />
+  </Integer>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition" 
+      val="Maps/Wave/WaveUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Wave/MentalImage.xml" />
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Wave/OGS.xml" />
+  
+  <PropertyAlias alias="wave_Offset"
+                 id="texture_Offset" />
+  <PropertyAlias alias="wave_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="wave_Tiling"
+                 id="texture_Tiling" />
+  <PropertyAlias alias="wave_Angle"
+                 id="texture_Angle" />
+  <PropertyAlias alias="wave_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="wave_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="wave_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="wave_RealWorldOffsetZ"
+                 id="texture_RealWorldOffsetZ" />
+
+</AssetSchema>

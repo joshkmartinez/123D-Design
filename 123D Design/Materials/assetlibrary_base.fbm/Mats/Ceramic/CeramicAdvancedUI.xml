@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Ceramic
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="ceramic_props" 
+                label="Ceramic" 
+                orientation="Vertical" 
+                expanded="true">
+      <ChooseList id="ceramic_type"
+                  label="Type"
+                  tooltip="Chooses Type of material: Ceramic or Porcelain.">
+        <Choice id="ceramic_ceramic" label="Ceramic"/>
+        <Choice id="ceramic_porcelain" label="Porcelain"/>
+      </ChooseList>
+      <MappableColor id="ceramic_color"
+                     label="Color"
+                     colorbyobject="true"
+                     tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+        <BoolColorByObject id="ceramic_color_by_object" />
+      </MappableColor>
+      <ChooseList id="ceramic_application" label="Finish"
+                  tooltip="Adjusts the texture of the finished surface.">
+        <Choice id="ceramic_high_glossy" label="High Gloss / Glazed"/>
+        <Choice id="ceramic_satin" label="Satin"/>
+        <Choice id="ceramic_matte" label="Matte"/>
+      </ChooseList>
+      
+    </StackPanel>
+    
+    <StackPanel id="ceramic_bump" 
+                label="Finish Bumps" 
+                labelid="ceramic_bump_panel_label" 
+                orientation="Vertical" 
+                checkbox="true" 
+                checkonvalue="ceramic_wavy">
+      <ChooseList id="ceramic_bump" 
+                  onebased="true" 
+                  label="Type"
+                  labelid="ceramic_bump_list_label" 
+                  tooltip="Adjusts the pattern used to portray the low frequency waves often found in ceramics.">
+        <Choice id="ceramic_wavy" label="Wavy"/>
+        <ChoiceDetail id="ceramic_custom" label="Custom">
+          <MappableFloat id="ceramic_bump_map"
+                         label="Image"
+                         bump="true"
+                         nosinglevalue="true"/>
+        </ChoiceDetail>
+      </ChooseList>
+      <Float id="ceramic_bump_amount"
+             label="Amount"
+             min="0.0" max="1.0"
+             tooltip="Controls the low frequency waves often found in ceramics. Enter higher decimal values (up to 1.0) to increase the depth of the surface irregularities.">
+      </Float>
+      
+    </StackPanel>
+    
+    <StackPanel id="ceramic_pattern" 
+                label="Relief Pattern"
+                labelid="ceramic_pattern_map_stack_label" 
+                checkbox="true"
+                checkonvalue="ceramic_custom"
+                checkboxid2="ceramic_pattern_map"
+                orientation="Vertical">
+      <ChooseList id="ceramic_pattern" 
+                  onebased="true" 
+                  label="Type"
+                  labelid="ceramic_pattern_list_label">
+        <Choice id="ceramic_custom" label="Custom"/>
+      </ChooseList>
+      <MappableFloat id="ceramic_pattern_map"
+                     label="Image"
+                     labelid="ceramic_pattern_map_slider_label" 
+                     bump="true"
+                     tooltip="Shows decorative relief patterns."
+                     nosinglevalue="true"/>
+      <Float id="ceramic_pattern_amount"
+             tooltip="Controls decorative relief patterns."
+             label="Amount"
+             min="0.0" max="2.0"/>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="ceramic_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">  
+      <Integer id="ceramic_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="ceramic_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="ceramic_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="ceramic_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="ceramic_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="ceramic_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="ceramic_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="ceramic_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+  </Fields>
+</adsui>

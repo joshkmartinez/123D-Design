@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="CommonSchema"
+        file="../Common/CommonSchema.xml" />
+
+  <UID  val="RPCSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="RPCGeometry" />
+   <localtype val="RPC" />
+    <localname val="RPC" />
+  <String id="RPCTypeId"
+          val=""
+          label="RPCTypeId" />
+  
+  <Float id="RPCPlantHeight"
+          val="0."
+          label="RPCPlantHeight" />
+
+  <URL id="RPCImage"
+          val=""
+          label="RPCImage" />
+
+  <Integer id="RPCCategory"
+          val="0"
+          label="RPCCategory" />
+
+  <String id="LocalizedUID"
+          val=""
+          label="LocalizedUID" />
+
+  <Binary id="RPCinstance"
+          val=""
+          label="RPCinstance" />
+  
+
+</AssetSchema>
+
+

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Resource><label commandName="run case error" devLabel="Cannot find script file." translation="找不到脚本文件。" /><label commandName="UnknownStatusMessageType" devLabel="Unknown status message type." translation="未知状态消息类型。" /><label commandName="LocalSocketIsNull" devLabel="QLocalSocket object is NULL." translation="QLocalSocket 对象为空。" /><label commandName="DataNotRecieved" devLabel="The data is not received." translation="未接收到数据。" /><label commandName="Parse Message" devLabel="Unknown message type." translation="未知消息类型。" /></Resource>

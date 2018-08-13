@@ -1,0 +1,293 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Generic
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="generic_general"
+                label="Generic"
+                orientation="Vertical"
+                expanded="true">
+      <MappableColorByObject id="generic_diffuse"
+                             label="Color"
+                             labelid="generic_diffuse_color"
+                             tooltip="Adjusts the color of the surface. Affects both light bounding off (reflectance) and light passing through (transmittance).">
+        <BoolColorByObject id="color_by_object" />
+      </MappableColorByObject>
+      <MappableImageFade id="generic_diffuse"
+                         label="Image"
+                         labelid="generic_diffuse_image"
+                         tooltip="Displays the diffuse color map of the material." />
+      <Float id="generic_diffuse_image_fade"
+             label="Image Fade"
+             units="%" min="0" max="100"
+             forcenumeric="slider" precision="0"
+             tooltip="Adjusts the composite between the base color and the diffuse image. Active only when an image is chosen."/>
+      <MappableFloat id="generic_glossiness"
+                     label="Glossiness"
+                     tooltip="Specifies the smoothness of the surface, which affects both reflectivity and transparency. Reduce glossiness to create matte surfaces or frosted glass. Enter a value between 0 (dull) and 100 (a perfect mirror)."/>
+      <Boolean id="generic_is_metal"
+               label="Highlights"
+               usedropdown="true" onlabel="Metallic" offlabel="Non-Metallic"
+               tooltip="Adjusts adding metallic highlights. Default = non-metallic." />
+      
+    </StackPanel>
+    
+    <StackPanel id="generic_reflectivity_at_0deg"
+                label="Reflectivity"
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="0.5"
+                checkoffvalue="0.0"
+                checkboxid2="generic_reflectivity_at_90deg"
+                checkonvalue2="0.5"
+                checkoffvalue2="0.0">
+      <MappableFloat id="generic_reflectivity_at_0deg"
+                     bump="true"
+                     label="Direct"
+                     labelid="generic_reflectivity_at_0deg_slider"
+                     tooltip="Adjusts how much light the material reflects when the surface is directly facing the camera. Enter a value between 0 (no reflections) and 100 (maximum reflections)."/>
+      <MappableFloat id="generic_reflectivity_at_90deg"
+                     bump="true"
+                     label="Oblique"
+                     tooltip="Adjusts how much light the material reflects when the surface is at an angle to the camera. Enter a value between 0 (no reflections) and 100 (maximum reflections)."/>
+    </StackPanel>
+    
+    <StackPanel id="generic_transparency"
+                label="Transparency"
+                labelid="generic_transparency_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkoffvalue="0.0"
+                checkonvalue="0.3">
+      <Float id="generic_transparency"
+             bump="true"
+             label="Amount"
+             labelid="generic_transparency_slider_label" 
+             units="%" precision="0"
+             min="0" max="100" forcenumeric="slider"
+             tooltip="Adjusts the amount of light that passes through a surface rather than reflecting off or being absorbed. Enter a value between 0% (completely opaque) and 100% (completely transparent)."/>
+      <MappableImageFade id="generic_transparency"
+                         label="Image"
+                         labelid="generic_transparancy_fade"
+                         tooltip="Adds an image to combine with the overall transparency amount." />
+      <Float id="generic_transparency_image_fade"
+                label="Image Fade"
+                units="%" min="0" max="100" forcenumeric="slider" precision="0"
+                tooltip="Controls the composite of image and transparency amount, e.g., the white of the image will be transparent at the overall amount, and the degree to which the black is opaque is determined by the fade value."/>
+      <MappableFloat id="generic_refraction_translucency_weight"
+                     bump="true"
+                     label="Translucency"
+                     units="%" precision="0"
+                     min="0" max="100" 
+                     tooltip="Adjusts the percentage of light that is absorbed and retranmitted as it passes through the surface, as if the surface were a back-lit movie screen. Enter a value between 0 (not translucent) and 100 (completely translucent, such as frosted glass). Active only when Transparency has a value greater than 0.">
+        <Dependency id="generic_transparent_dep1"
+                    on="generic_transparency"
+                    requires="0.0" not="true" else="disable"/>
+      </MappableFloat>
+      <FloatMenu id="generic_refraction_index"
+                 label="Refraction"
+                 max="5" min="0.01"
+                 tooltip="Adjusts the amount that light bends when it passes through a surface. Active only when Transparency has a value greater than 0. Specify an index number between 0 (no refraction) and 5 (most refraction). ">
+        <FloatMenuChoice id="generic_refraction_index_air"
+                         label="Air" value="1.0" />
+        <FloatMenuChoice id="generic_refraction_index_water"
+                         label="Water" value="1.33" />
+        <FloatMenuChoice id="generic_refraction_index_alcohol"
+                         label="Alcohol" value="1.36" />
+        <FloatMenuChoice id="generic_refraction_index_quartz"
+                         label="Quartz" value="1.46" />
+        <FloatMenuChoice id="generic_refraction_index_glass"
+                         label="Glass" value="1.52" />
+        <FloatMenuChoice id="generic_refraction_index_diamond"
+                         label="Diamond" value="2.3" />
+        <FloatMenuChoice id="generic_refraction_custom"
+                         label="Custom" value="1.0" />
+        
+        <Dependency id="generic_transparent_dep2"
+                    on="generic_transparency"
+                    requires="0.0" not="true" else="disable"/>
+      </FloatMenu>
+    </StackPanel>
+    
+    <StackPanel id="generic_cutout_opacity"
+                label="Cutouts"
+                labelid="generic_cutout_opacity_panel_label" 
+                orientation="Vertical"
+                checkbox="true">
+      <MappableFloat id="generic_cutout_opacity"
+                     bump="true"
+                     label="Image"
+                     labelid="generic_cutout_opacity_image_label" 
+                     nosinglevalue="true"
+                     tooltip="Uses a a texture map to control the shapes cut into the surface of the material."/>
+    </StackPanel>
+    
+    <StackPanel id="generic_self_illum_luminance"
+                label="Self Illumination"
+                labelid="generic_self_illum_panel_label" 
+                checkbox="true"
+                checkoffvalue="0.0"
+                checkonvalue="generic_self_illumination_dim_glow"
+                orientation="Vertical">
+      <MappableColor id="generic_self_illum_filter_map"
+                     bump="true"
+                     label="Filter Color"
+                     tooltip="Adjusts the color of light transmitted through a transparent or semi-transparent material, such as glass.">
+        <Dependency id="generic_illum_dep2"
+                    on="generic_self_illum_luminance"
+                    else="disable" requires="0.0" not="true"/> 
+      </MappableColor>
+      <FloatMenu id="generic_self_illum_luminance"
+                 label="Luminance"
+                 labelid="generic_self_illum_list_label" 
+                 tooltip="Adjusts the brightness of the light emitted by this surface, measured in candelas per square meter; e.g., Dim Glow = 10, Halogen Lamp Lens = 10000.">
+        <FloatMenuChoice id="generic_self_illumination_dim_glow"
+                         label="Dim Glow" value="10" />
+        <FloatMenuChoice id="generic_self_illumination_led_panel"
+                         label="LED Panel" value="100" />
+        <FloatMenuChoice id="generic_self_illumination_led_screen"
+                         label="LED Screen" value="140" />
+        <FloatMenuChoice id="generic_self_illumination_cell_phone_screen"
+                         label="Cell Phone Screen" value="200" />
+        <FloatMenuChoice id="generic_self_illumination_crt_television"
+                         label="CRT Television" value="250" />
+        <FloatMenuChoice id="generic_self_illumination_lamp_shade_exterior"
+                         label="Lamp Shade Exterior" value="1300" />
+        <FloatMenuChoice id="generic_self_illumination_lamp_shade_interior"
+                         label="Lamp Shade Interior" value="2500" />
+        <FloatMenuChoice id="generic_self_illumination_desk_lamp_lens"
+                         label="Desk Lamp Lens" value="10000" />
+        <FloatMenuChoice id="generic_self_illumination_halogen_lamp_lens"
+                         label="Halogen Lamp Lens" value="10000" />
+        <FloatMenuChoice id="generic_self_illumination_frosted_bulb"
+                         label="Frosted Bulb" value="210000" />
+        <FloatMenuChoice id="generic_self_illumination_custom" label="Custom" value="1000" />
+      </FloatMenu>
+      
+      <FloatMenu id="generic_self_illum_color_temperature"
+                 label="Color Temperature"
+                 tooltip="Adjusts the color temperature (warmth vs. coolness) of the light emitted by this material in degress Kelvin;  e.g., Candle = 1850, Xenon Arc Lamp = 6420.">
+        <FloatMenuChoice id="generic_self_illum_color_temperature_candle"
+                         label="Candle" value="1850" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_incadescent_bulb"
+                         label="Incandescent Bulb" value="2800" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_floodlight"
+                         label="Floodlight" value="3400" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_moonlight"
+                         label="Moonlight" value="4100" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_daylight_warm"
+                         label="Daylight Warm" value="5000" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_daylight_cool"
+                         label="Daylight Cool" value="6000" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_daylight_xenon_arc_lamp"
+                         label="Xenon Arc Lamp" value="6420" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_daylight_tv_screen"
+                         label="TV Screen" value="9320" />
+        <FloatMenuChoice id="generic_self_illum_color_temperature_custom"
+                         label="Custom" value="1000" />
+        
+        <Dependency id="generic_illum_dep1"
+                    on="generic_self_illum_luminance"
+                    else="disable" requires="0.0" not="true"/>
+      </FloatMenu>
+    </StackPanel>
+    
+    
+    <StackPanel id="generic_bump_map"
+                label="Bump"
+                labelid="generic_bump_map_panel_label" 
+                orientation="Vertical"
+                checkbox="true">
+      <MappableColor id="generic_bump_map"
+                     bump="true"
+                     label="Image"
+                     labelid="generic_bump_map_image_label" 
+                     nosinglevalue="true"
+                     tooltip="Uses a texture map to select a bump relief pattern for the material. A bump pattern defines raised and lowered areas based on dark and light areas of an image file."/>
+      <MappableFloat id="generic_bump_amount"
+                     label="Amount"
+                     min="-1000" max="1000"
+                     tooltip="Adjusts the relative height of the specified bump pattern. Enter 0 to make the surface flat. Enter higher decimal values (up to 1000.0) to increase the height of the surface irregularities."/>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="generic_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">
+      <Integer id="generic_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="generic_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="generic_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="generic_roundcorners_radius"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        checkoffvalue="0.0"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="generic_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="generic_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="generic_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="generic_reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="generic_refraction_glossy_samples"
+         label="Refraction Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy refractions."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="generic_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="generic_refr_depth"
+       label="Override Refraction Depth"
+       labelid="generic_refr_depth_control_label"
+       checkbox="true"
+       checkonvalue="4"
+       checkoffvalue="-1"
+       orientation="Vertical">
+      <Integer id="generic_refr_depth"
+         label="Refraction Max Trace Depth"
+         tooltip="When checked, the material's refraction depth is controlled locally and an additional transparency ray will be casted when the limit is reached, limiting the 'dark edge' effect typically found on solid glass objects."
+         min="-1"
+         max="20"
+         forcenumeric="spinbox">
+      </Integer>
+    </StackPanel>
+  </Fields>
+</adsui>

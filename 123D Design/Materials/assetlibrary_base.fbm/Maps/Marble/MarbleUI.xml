@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+    <PageInfo>
+        <Title>
+            Marble map
+        </Title>
+    </PageInfo>
+    <Fields>
+      <StackPanel id="marble_Appearance"
+                  label="Appearance" orientation="Vertical" expanded="true">
+        <MappableColor id="marble_Color1"
+                       noimagetexture="true"
+                       swappartner="marble_Color2"
+                       label="Stone Color"
+                       tooltip="Specifies the color of the stone"/>
+        <MappableColor id="marble_Color2"
+                       noimagetexture="true"
+                       swappartner="marble_Color1"
+                       label="Vein Color"
+                       tooltip="Specifies the vein color of the marble."/>
+        <Float id="marble_Size"
+               label="Vein Spacing"
+               min="0" max="100"
+               tooltip="Sets the space between veins. Range = 0 to 100; Default = 1." />
+        <Float id="marble_Width"
+               label="Vein Width"
+               units="%"
+               min="0" max="100"
+               tooltip="Sets the width of the veins. Range = 0 to 100; Default = 1." />
+      </StackPanel>
+      <StackPanel id="marble_transforms_group"
+                  label="Transforms"
+                  orientation="Vertical"
+                  expanded="true">
+        <!--hook the correct transform property ids up when Protein code is ready-->
+        <Boolean id="texture_LinkTextureTransforms"
+                 label="Link texture transforms"
+                 tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+        <StackPanel id="marble_Position"
+                    label="Position"
+                    orientation="Vertical"
+                    expanded="true">
+          <SampleSize id="texture_RealWorldOffsetX"
+                      label="Offset"
+                      rightlabel="X"
+                      type="offset"
+                      tooltip="Moves the starting point of the map along the X axis."/>
+          <SampleSize id="texture_RealWorldOffsetY"
+                      label=""
+                      rightlabel="Y"
+                      type="offset"
+                      tooltip="Moves the starting point of the map along the Y axis."/>
+          <SampleSize id="texture_RealWorldOffsetZ"
+                      label=""
+                      rightlabel="Z"
+                      type="offset"
+                      tooltip="Moves the starting point of the map along the Z axis."/>
+          <Vector3 id="texture_Angle"
+                   label="XYZ Rotation"
+                   forcenumeric="slider"
+                   tooltip="Specify the Rotation of the area represented by the image above."/>
+        </StackPanel>
+      </StackPanel>
+    </Fields>
+</adsui>

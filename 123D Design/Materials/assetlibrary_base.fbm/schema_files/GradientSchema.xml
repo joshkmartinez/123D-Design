@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="TextureMap2dSchema"
+        file="../Common/TextureMap2dSchema.xml" />
+
+  <UID  val="GradientSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="texture" />
+
+  <localtype val="Texture" />
+  <localname val="Gradient" />
+  <!-- Type -->
+  <Choice id="gradient_type" 
+          val="gradient_type_linear"
+          label="Gradient Type" >
+    <ChoiceValue id="gradient_type_4corner"
+                 val="0"
+                 label="Linear asymmetrical" />
+    <ChoiceValue id="gradient_type_box" 
+                 val="1"
+                 label="Box" />
+    <ChoiceValue id="gradient_type_diagonal"
+                 val="2"
+                 label="Diagonal" />
+    <ChoiceValue id="gradient_type_lighting"
+                 val="3"
+                 label="Light normal" />
+    <ChoiceValue id="gradient_type_linear"
+                 val="4"
+                 label="Linear" />
+    <ChoiceValue id="gradient_type_mapped"
+                 val="5"
+                 label="Mapped" />
+    <ChoiceValue id="gradient_type_normal"
+                 val="6"
+                 label="Camera normal" />
+    <ChoiceValue id="gradient_type_pong"
+                 val="7"
+                 label="Pong" />
+    <ChoiceValue id="gradient_type_radial"
+                 val="8"
+                 label="Radial" />
+    <ChoiceValue id="gradient_type_spiral"
+                 val="9"
+                 label="Spiral" />
+    <ChoiceValue id="gradient_type_sweep"
+                 val="10"
+                 label="Sweep" />
+    <ChoiceValue id="gradient_type_tartan"
+                 val="11"
+                 label="Tartan" />
+  </Choice>
+
+  <!-- Noise -->
+  <Choice id="gradient_noise" 
+          val="gradient_noise_regular"
+          label="Noise Type" >
+    <ChoiceValue id="gradient_noise_regular"
+                 val="0"
+                 label="Regular"/>
+    <ChoiceValue id="gradient_noise_fractal"
+                 val="1"
+                 label="Fractal"/>
+    <ChoiceValue id="gradient_noise_turbulence"
+                 val="2"
+                 label="Turbulence"/>
+  </Choice>
+  
+  <Float  id="gradient_noise_amount" 
+          val=".0"
+          label="Amount" >
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+
+  <Float  id="gradient_noise_phase" 
+          val=".0"
+          label="Phase" >
+    <Bounds minimum="0"
+            maximum="1000000000" />
+  </Float>
+  
+  <Float  id="gradient_noise_size" 
+          val="1.0" 
+          label="Size" >
+    <Bounds minimum="0"
+            maximum="1000000000" />
+  </Float>
+  
+  <Float  id="gradient_noise_levels" 
+          val="4"
+          label="Levels" >
+    <Bounds minimum="1"
+            maximum="10" />
+  </Float>
+
+  <!-- Noise Threshold -->
+  <Float  id="gradient_noise_low" 
+          val=".0"
+          label="Low" >
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+  
+  <Float  id="gradient_noise_high" 
+          val="1.0"
+          label="High" >
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+  
+  <Float  id="gradient_noise_smooth" 
+          val=".0"
+          label="Smooth" >
+    <Bounds minimum="0"
+            maximum="1" />
+  </Float>
+
+  <!-- Per gradient flag properties -->
+  <!-- Interpolation -->
+  <Choice id="gradient_interpolation"
+          val="gradient_interp_linear,gradient_interp_linear,gradient_interp_linear"
+          label="Interpolation"
+          allowmultiplevalues="true" >
+      <ChoiceValue id="gradient_interp_custom"
+                   val="0"
+                   label="Custom" />
+      <ChoiceValue id="gradient_interp_easyin"
+                   val="1"
+                   label="Ease in" />
+      <ChoiceValue id="gradient_interp_easyinout"
+                   val="2"
+                   label="Turbulence" />
+      <ChoiceValue id="gradient_interp_easyout"
+                   val="3"
+                   label="Ease out" />
+      <ChoiceValue id="gradient_interp_linear"
+                   val="4"
+                   label="Linear" />
+      <ChoiceValue id="gradient_interp_solid"
+                   val="5"
+                   label="Solid" />
+  </Choice>
+
+  <Float id="gradient_Position"
+         val="0.0,0.5,1.0"
+         label="Position"
+         allowmultiplevalues="true" />
+ 
+  <!-- Internal parameter -->     
+  <Color id="gradient_Color"
+         valR="0.,0.499,1."
+         valG="0.,0.499,1."
+         valB="0.,0.499,1."
+         label="Color"
+         allowmultiplevalues="true" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition" 
+      val="Maps/Gradient/GradientUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/Gradient/MentalImage.xml" />
+
+  <implementation id="ImplementationOGS"
+                  val="Maps/Gradient/OGS.xml" />
+  
+  <PropertyAlias alias="gradient_UVScale"
+                 id="texture_UVScale" />
+  <PropertyAlias alias="gradient_ScaleLock"
+                 id="texture_ScaleLock" />
+  <PropertyAlias alias="gradient_WAngle"
+                 id="texture_WAngle" />
+  <PropertyAlias alias="gradient_UOffset"
+                 id="texture_UOffset" />
+  <PropertyAlias alias="gradient_VOffset"
+                 id="texture_VOffset" />
+  <PropertyAlias alias="gradient_OffsetLock"
+                 id="texture_OffsetLock" />
+  <PropertyAlias alias="gradient_RealWorldScaleX"
+                 id="texture_RealWorldScaleX" />
+  <PropertyAlias alias="gradient_RealWorldScaleY"
+                 id="texture_RealWorldScaleY" />
+  <PropertyAlias alias="gradient_RealWorldOffsetX"
+                 id="texture_RealWorldOffsetX" />
+  <PropertyAlias alias="gradient_RealWorldOffsetY"
+                 id="texture_RealWorldOffsetY" />
+  <PropertyAlias alias="gradient_MapChannel"
+                 id="texture_MapChannel" />
+  <PropertyAlias alias="gradient_MapChannel_ID_Advanced"
+                 id="texture_MapChannel_ID_Advanced" />
+  <PropertyAlias alias="gradient_MapChannel_UVWSource_Advanced"
+                 id="texture_MapChannel_UVWSource_Advanced" />
+  <PropertyAlias alias="gradient_LinkTextureTransforms"
+                 id="texture_LinkTextureTransforms" />
+  <PropertyAlias alias="gradient_RepeatX"
+                 id="texture_URepeat" />
+  <PropertyAlias alias="gradient_RepeatY"
+                 id="texture_VRepeat" />
+
+</AssetSchema>

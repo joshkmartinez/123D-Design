@@ -1,0 +1,394 @@
+/* ------------------------------------------------------------
+   QTShellButton
+------------------------------------------------------------ */
+QTShellButton
+{
+    background: #333333;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/normal.png)) 4px 4px 4px 4px stretch stretch;
+    margin: 0px;
+    padding: 0px;
+}
+
+QTShellButton QHBoxLayout
+{
+    spacing: 8px;
+    margin: 2px 2px 2px 2px;
+}
+
+QTShellButton QVBoxLayout
+{
+    spacing: 2px;
+    margin: 0px 0px 0px 0px;
+}
+
+QTShellButton QLabel#Icon
+{
+    background: none;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+}
+
+QTShellButton QLabel#Name
+{
+    background: none;
+    color: white;
+    alignment: left;
+    font-weight: bold;
+    max-height: 14px;
+    min-height: 14px;
+}
+
+QTShellButton QLabel#Description
+{
+    background: none;
+    color: white;
+    alignment: left; 
+    max-height: 32px;
+    min-height: 32px;
+}
+
+QTShellButton:hover
+{
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 4px 4px 4px 4px stretch stretch;
+}
+
+/* ------------------------------------------------------------
+   QTShellListButton
+------------------------------------------------------------ */
+QTShellListButton
+{
+    background: #333333;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/normal.png)) 4px 4px 4px 4px stretch stretch;
+    margin: 0px;
+    padding: 0px;
+}
+
+QTShellListButton QHBoxLayout
+{
+    spacing: 8px;
+    margin: 2px 2px 2px 2px;
+}
+
+QTShellListButton QVBoxLayout
+{
+    spacing: 2px;
+    margin: 0px 0px 0px 0px;
+}
+
+QTShellListButton QLabel#Icon
+{
+    background: none;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+}
+
+QTShellListButton QLabel#Name
+{
+    background: none;
+    color: white;
+    alignment: left;
+    font-weight: bold;
+    max-height: 14px;
+    min-height: 14px;
+}
+
+QTShellListButton QLabel#Description
+{
+    background: none;
+    color: white;
+    alignment: left; 
+	max-height: 32px;
+    min-height: 32px;
+}
+
+QTShellListButton:hover
+{
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellListButton QMenu
+{
+    margin: 1px;
+}
+
+QTShellListButton QMenu::item
+{
+    background-color:#333333;
+    color: white;
+}
+
+QTShellListButton QMenu::item:selected
+{
+	background-color: #0099FF;
+}
+
+/* ------------------------------------------------------------
+   QTShellRecentFile
+------------------------------------------------------------ */
+QTShellRecentFile
+{
+    background: #333333;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/normal.png)) 4px 4px 4px 4px stretch stretch;
+    padding: 0px;
+}
+
+QTShellRecentFile QHBoxLayout
+{
+    spacing: 8px;
+    margin: 2px 2px 2px 2px;
+}
+
+QTShellRecentFile QVBoxLayout
+{
+    spacing: 2px;
+    margin: 0px 0px 0px 0px;
+}
+
+QTShellRecentFile QLabel#Icon
+{
+    background: none;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+}
+
+QTShellRecentFile QLabel#Name
+{
+    background: none;
+    color: white;
+    alignment: left;
+    font-weight: bold;
+    max-height: 14px;
+    min-height: 14px;
+}
+
+QTShellRecentFile QLabel#Description
+{
+    background: none;
+    color: white;
+    alignment: left; 
+}
+
+QTShellRecentFile QToolButton#Delete
+{
+    image: url(resource(UI/Commands/Resources/Shell/DeleteMRU/16x16.png));
+    border: none;
+    max-width: 15px;
+    max-height: 15px;
+}
+QTShellRecentFile QToolButton#Delete:hover
+{
+    background: #004488;
+    border: 1px solid #0099FF;
+    border-radius: 3px;
+}
+
+QTShellRecentFile QToolButton#Pin
+{
+    image: url(resource(UI/Commands/Resources/Shell/UnpinnedMRU/16x16.png));
+    border: none;
+    max-width: 15px;
+    max-height: 15px;
+}
+QTShellRecentFile QToolButton#Pin::checked
+{
+    image: url(resource(UI/Commands/Resources/Shell/PinnedMRU/16x16.png));
+}
+QTShellRecentFile QToolButton#Pin:hover
+{
+    background: #004488;
+    border: 1px solid #0099FF;
+    border-radius: 3px;
+}
+
+QTShellRecentFile:hover
+{
+	border-width: 16px 16px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellRecentFilePreview
+{
+    background: #222222;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 4px 4px 4px 4px stretch stretch;
+}
+
+QTShellRecentFilePreview QLabel#Preview
+{
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+QTShellRecentFilePreview QLabel#Description
+{
+	color: white;
+	alignment: center center;
+}
+
+/* ------------------------------------------------------------
+   QTShellAssetPreview
+------------------------------------------------------------ */
+QTShellAssetPreview
+{
+    background: #333333;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/normal.png)) 4px 4px 4px 4px stretch stretch;
+    padding: 0px;
+    max-height: 172px;
+    max-width: 172px;
+}
+
+QTShellAssetPreview QVBoxLayout
+{
+    spacing: 2px;
+    margin: 2px 2px 2px 2px;
+}
+
+QTShellAssetPreview QLabel#Icon
+{
+    background: none;
+	alignment: center center;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+QTShellAssetPreview QLabel#Name
+{
+    background: none;
+    color: white;
+    alignment: center center;
+    font-weight: bold;
+    max-height: 16px;
+    min-height: 16px;
+}
+
+QTShellAssetPreview:hover
+{
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellAssetPreview[active="true"]
+{
+	border-width: 16px 16px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/checked.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+/* ------------------------------------------------------------
+   QTShellDocumentPreview
+------------------------------------------------------------ */
+QTShellDocumentPreview
+{
+    background: #333333;
+	border-width: 4px 4px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/normal.png)) 4px 4px 4px 4px stretch stretch;
+    padding: 0px;
+}
+
+QTShellDocumentPreview QHBoxLayout
+{
+    spacing: 8px;
+    margin: 2px 2px 2px 2px;
+}
+
+QTShellDocumentPreview QVBoxLayout
+{
+    spacing: 2px;
+    margin: 0px 0px 0px 0px;
+}
+
+QTShellDocumentPreview QLabel#Icon
+{
+    background: none;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+}
+
+QTShellDocumentPreview QLabel#Name
+{
+    background: none;
+    color: white;
+    alignment: left;
+    font-weight: bold;
+    max-height: 14px;
+    min-height: 14px;
+}
+
+QTShellDocumentPreview QLabel#Description
+{
+    background: none;
+    color: white;
+    alignment: left; 
+}
+
+QTShellDocumentPreview:hover
+{
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/highlight.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellDocumentPreview[opened="true"]
+{
+	border-width: 16px 16px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/opened.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellDocumentPreview[active="true"]
+{
+	border-width: 16px 16px 4px 4px;
+	border-image: url(resource(UI/Base/Resources/Backgrounds/Tile/checked.png)) 16px 16px 4px 4px stretch stretch;
+}
+
+QTShellDocumentPreview QHBoxLayout#CloseDocument
+{
+    margin: 0px 15px 0px 0px;
+}
+
+QTShellDocumentPreview QToolButton#CloseDocument
+{
+    image: url(resource(UI/Commands/Resources/Shell/DeleteMRU/16x16.png));
+    border: none;
+    max-width: 15px;
+    max-height: 15px;
+}
+
+QTShellDocumentPreview QToolButton#CloseDocument:hover
+{
+    background: #004488;
+    border: 1px solid #0099FF;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------------------
+   QTShellHorizontalSeparator
+------------------------------------------------------------ */
+QTShellHorizontalSeparator
+{
+    padding: 0px;
+    background: #666666;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #000000;
+    max-height: 0px;
+}

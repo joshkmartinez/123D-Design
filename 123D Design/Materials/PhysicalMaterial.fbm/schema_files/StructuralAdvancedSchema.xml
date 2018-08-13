@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="StructuralCommonSchema"
+        file="../Common/StructuralCommonSchema.xml" />
+
+  <UID  val="StructuralAdvancedSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="4"
+           public="false"
+           readonly="true" />
+
+  <type val="Structural" />
+
+  <localtype val="Physical" />
+  <localname val="Advanced" />
+
+  <!--Meta-data properties-->
+
+  <String id="structural_source"
+          val=""
+          label="Source" />
+  <String id="structural_sourceURL"
+          val=""
+          label="Source URL" />
+
+  <!--Data properties-->
+  
+  <!--Isotropic/Orthotropic Behavior-->
+  <Choice id="structural_Behavior"
+          val="structural_isotropic"
+          label="Behavior" >
+    <ChoiceValue id="structural_isotropic"
+                 val="0"
+                 label="Isotropic" />
+    <ChoiceValue id="structural_orthotropic"
+                 val="1"
+                 label="Orthotropic" />
+    <ChoiceValue id="structural_transverse_isotropic"
+                 val="2"
+                 label="Transverse Isotropic" />
+  </Choice>
+
+  <!--Young's Modulus-->
+  <Float id="structural_Young_modulus" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus" >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+  
+  <!--3d Young's Modulus-->
+  <Float id="structural_Young_modulus_X" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus X" >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+  
+  <Float id="structural_Young_modulus_Y" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus Y"  >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+  
+  <Float id="structural_Young_modulus_Z" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus Z"  >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+
+  <Float id="structural_Young_modulus_1" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus 1"  >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+  
+  <Float id="structural_Young_modulus_2" 
+         val="0.03"
+         unit="Kilopascal"
+         label="Young's Modulus 2"  >
+    <Bounds minimum=".01"
+            maximum="1.3e+9" />
+  </Float>
+
+  <!--Poisson Ratio-->
+  <Float id="structural_Poisson_ratio"
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio" >
+    <Bounds minimum="0.0"
+            maximum="0.5"  />
+  </Float>
+  
+  <!--3d Poisson Ratio-->
+  <Float id="structural_Poisson_ratio_X"
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio X" >
+    <Bounds minimum="0.0"
+            maximum="0.5"  />
+  </Float>
+  
+  <Float id="structural_Poisson_ratio_Y" 
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio Y" >
+    <Bounds minimum="0.0"
+            maximum="0.5" />
+  </Float>
+  
+  <Float id="structural_Poisson_ratio_Z" 
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio Z"  >
+    <Bounds minimum="0.0"
+            maximum="0.5" />
+  </Float>
+
+  <Float id="structural_Poisson_ratio_12" 
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio 12" >
+    <Bounds minimum="0.0"
+            maximum="0.5" />
+  </Float>
+  
+  <Float id="structural_Poisson_ratio_23" 
+         val="0.03"
+         unit="Unitless"
+         label="Poisson's Ratio 23"  >
+    <Bounds minimum="0.0"
+            maximum="0.5" />
+  </Float>
+
+  <!--Shear Modulus-->
+  <Float id="structural_Shear_modulus" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Shear Modulus"  >
+    <Bounds minimum="0.0005"
+            maximum="5e+8" />
+  </Float>
+
+  <!--3d Shear Modulus-->
+  <Float id="structural_Shear_modulus_X" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Shear Modulus X"  >
+    <Bounds minimum="0.0005"
+            maximum="5e+8" />
+  </Float>
+  
+  <Float id="structural_Shear_modulus_Y" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Shear Modulus Y"  >
+    <Bounds minimum="0.0005"
+            maximum="5e+8" />
+  </Float>
+  
+  <Float id="structural_Shear_modulus_Z" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Shear Modulus Z"  >
+    <Bounds minimum="0.0005"
+            maximum="5e+8" />
+  </Float>
+
+  <Float id="structural_Shear_modulus_12" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Shear Modulus 12"  >
+    <Bounds minimum="0.0005"
+            maximum="5e+8" />
+  </Float>
+  
+
+  <!--Thermal Expansion Coefficient-->
+  <Float id="structural_Thermal_expansion_coefficient" 
+         val="0.1"
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient" >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+
+  <!--3d Thermal Expansion Coefficient-->
+  <Float id="structural_Thermal_expansion_coefficient_X" 
+         val="0.1"
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient X"  >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+  
+  <Float id="structural_Thermal_expansion_coefficient_Y" 
+         val="0.1"
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient Y"  >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+  
+  <Float id="structural_Thermal_expansion_coefficient_Z" 
+         val="0.1" 
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient Z"  >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+
+  <Float id="structural_Thermal_expansion_coefficient_1" 
+         val="0.1"
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient 1"  >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+  
+  <Float id="structural_Thermal_expansion_coefficient_2" 
+         val="0.1" 
+         unit="MicrometerPerMeterCelsius"
+         label="Thermal Expansion Coefficient 2"  >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+
+  <!--Thermal Conductivity-->
+  <Float id="structural_Thermal_conductivity_X" 
+         val="1.00"
+         unit="WattPerMeterKelvin"
+         label="Thermal Conductivity X"  >
+    <Bounds minimum="0.001"
+            maximum="5000" />
+  </Float>
+
+  <Float id="structural_Thermal_conductivity_Y" 
+         val="1.00"
+         unit="WattPerMeterKelvin"
+         label="Thermal Conductivity Y"  >
+    <Bounds minimum="0.001"
+            maximum="5000" />
+  </Float>
+
+  <Float id="structural_Thermal_conductivity_Z" 
+         val="1.00"
+         unit="WattPerMeterKelvin"
+         label="Thermal Conductivity Z"  >
+    <Bounds minimum="0.001"
+            maximum="5000" />
+  </Float>
+
+  <!--Yield Strength-->
+  <Float id="structural_Minimum_yield_stress" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Yield Strength"  >
+    <Bounds minimum="0"
+            maximum="1e+7" />
+  </Float>
+
+  <!--Tensile Strength-->
+  <Float id="structural_Minimum_tensile_strength" 
+         val="0.01"
+         unit="Kilopascal"
+         label="Tensile Strength"  >
+    <Bounds minimum="0"
+            maximum="1e+8" />
+  </Float>
+
+</AssetSchema>
+
+

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+<!-- =====================================================================
+     This is the common schema for Water
+ ===================================================================== -->
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="WaterSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Water" />
+	
+  <Choice id="water_type"
+          val="water_swimming_pool"
+          label="Type">
+    <ChoiceValue id="water_swimming_pool"
+                 val="0"
+                 label="Swimming Pool"/>
+    <ChoiceValue id="water_reflecting_pool"
+                 val="1"
+                 label="Generic Reflecting Pool"/>
+    <ChoiceValue id="water_river"
+                 val="2"
+                 label="Generic Stream/River"/>
+    <ChoiceValue id="water_lake"
+                 val="3"
+                 label="Generic Pond/Lake"/>
+    <ChoiceValue id="water_ocean"
+                 val="4"
+                 label="Generic Sea/Ocean"/>
+  </Choice>
+
+  <Boolean id="water_color_by_object"
+           val="false"
+           label="Custom Color"/>
+
+  <Choice id="water_tint_enable"
+          val="water_tropical"
+          label="Color">
+    <ChoiceValue id="water_tropical"
+                 val="0"
+                 label="Tropical"/>
+    <ChoiceValue id="water_algae"
+                 val="1"
+                 label="Algae/Green"/>
+    <ChoiceValue id="water_murky"
+                 val="2"
+                 label="Murky/Brown"/>
+    <ChoiceValue id="water_reflecting_pool"
+                 val="3"
+                 label="Generic Reflecting Pool"/>
+    <ChoiceValue id="water_river"
+                 val="4"
+                 label="Generic Stream/River"/>
+    <ChoiceValue id="water_lake"
+                 val="5"
+                 label="Generic Pond/Lake"/>
+    <ChoiceValue id="water_ocean"
+                 val="6"
+                 label="Generic Sea/Ocean"/>
+    <ChoiceValue id="water_custom"
+                 val="7"
+                 label="Custom"/>
+  </Choice>
+
+  <Color id="water_tint_color"
+         valR="0.865"
+         valG="0.91"
+         valB="0.866"
+         label="Custom Color"
+         allowconnectedassets="single" />
+
+  <Float id="water_bump_amount"
+         val="1.0"
+         label="Wave Height">
+    <Bounds minimum="0.0"
+            maximum="5.0"/>
+  </Float>
+
+  <Integer id="water_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth">
+    <Bounds minimum="0"
+            maximum="20"/>
+  </Integer>
+  <Integer id="water_refr_depth"
+           val="-1"
+           label="Refraction Max Trace Depth">
+    <Bounds minimum="-1"
+            maximum="20"/>
+  </Integer>
+  <Integer id="reflection_glossy_samples"
+           val="8"
+           label="Reflection Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128"/>
+  </Integer>
+  <Integer id="refraction_glossy_samples"
+           val="12"
+           label="Refraction Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128"/>
+  </Integer>
+
+  <!-- Internal parameters -->
+  <Integer id="mode"
+           val="4"
+           label="Mode"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Water/WaterUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Water/WaterAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Water/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/Water/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Water/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/Water/Generic.xml" />
+
+</AssetSchema>
+

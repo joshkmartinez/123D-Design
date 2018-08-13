@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for DaylightPortal
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="DaylightPortalSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="lightappearance"/>
+
+  <localtype val="Light" />
+  <localname val="Sun Light" />
+  <!-- Daylight portal parameters -->
+
+  <Boolean  id="on"
+            val="true"
+            label="On" />
+
+  <Float id="multiplier"
+         val="1.0"
+         label="Multiplier" />
+
+  <Color id="tint_color"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Light Tint" />
+
+  <Boolean  id="reverse"
+            val="false"
+            label="Reverse" />
+
+  <Float id="cutoff_threshold"
+         val="5.0"
+         label="Cutoff Threshold (lx)" />
+
+  <!-- no label info in UI definition -->
+  <Boolean  id="shadows"
+            val="true"
+            label="Shadows" />
+
+  <!-- no label info in UI definition -->
+  <Boolean  id="use_custom_environment"
+            val="false"
+            label="Use Custom Environment" />
+
+  <Reference  id="custom_environment"
+              type="texture"
+              allowconnectedassets="single"
+              label="Custom Environment" />
+	    
+  <Boolean  id="visible"
+            val="false"
+            label="Visible" />
+  
+  <!-- no label info in UI definition -->
+  <Boolean  id="lookup_using_fg_rays"
+            val="true"
+            label="Lookup Using Fg Rays" />
+  
+  <Float id="shadow_ray_extension"
+         val="0.0"
+         label="Shadow Ray Extension" />
+  
+  <Boolean  id="emit_direct_photons"
+            val="false"
+            label="Emit Direct Photons" />
+  
+  <Color id="transparency"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Transparency" />
+
+  <Float id="length"
+         val="1.0"
+         label="Length" />
+  
+  <Float id="width"
+         val="1.0"
+         label="Width" />
+
+
+  <!-- Internal light parameters (not to be changed) -->
+
+  <Choice id="lightobjecttype"
+          val="spot"
+          label="Type:" >
+    <ChoiceValue id="origin"
+                 val="0"
+                 label="Point" />
+    <ChoiceValue id="spot"
+                 val="1"
+                 label="Spot" />
+    <ChoiceValue id="directional"
+                 val="2"
+                 label="Directional" />
+  </Choice>
+
+  <Choice id="lightobjectareatype"
+          val="rectangle"
+          label="Area Type:" >
+    <ChoiceValue id="none"
+                 val="0"
+                 label="No Area" />
+    <ChoiceValue id="rectangle"
+                 val="1"
+                 label="Rectangle" />
+    <ChoiceValue id="disc"
+                 val="2"
+                 label="Disc" />
+    <ChoiceValue id="sphere"
+                 val="3"
+                 label="Sphere" />
+    <ChoiceValue id="cylinder"
+                 val="4"
+                 label="Cylinder" />
+    <ChoiceValue id="object"
+                 val="5"
+                 label="Object" />
+    <ChoiceValue id="user"
+                 val="6"
+                 label="User" />
+  </Choice>
+
+  <Float id="lightobjectexponent"
+         val="2.0"
+         label="Attenuation:" />
+
+  <!-- no label info in UI definition -->
+  <Float id="spread"
+         val="0.0"
+         label="Spread:" />
+  <!-- no label info in UI definition -->
+  <Boolean id="lightobject_force_area_light_enable"
+           val="true"
+           label="Enable Force Area Light:" />
+
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Lights/DaylightPortal/DaylightPortalUI.xml" />
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Lights/DaylightPortal/MentalImage.xml" />
+</AssetSchema>

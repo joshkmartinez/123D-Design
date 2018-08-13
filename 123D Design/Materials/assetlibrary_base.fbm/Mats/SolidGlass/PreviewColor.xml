@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+    <implementation render="PreviewColor">
+      <language name="PreviewColorLanguage" version="1.0"/>
+      <api name="PreviewColorAPI" version="1.0"/>
+      <root_bindings name="root"/>
+
+      <constants>
+        <color name="clear" valR="0.858" valG="0.893" valB="0.879"/>
+        <color name="green" valR="0.676" valG="0.797" valB="0.737"/>
+        <color name="gray" valR="0.451" valG="0.449" valB="0.472"/>
+        <color name="blue" valR="0.367" valG="0.514" valB="0.651"/>
+        <color name="bluegreen" valR="0.654" valG="0.788" valB="0.772"/>
+        <color name="bronze" valR="0.583" valG="0.516" valB="0.467"/>
+      </constants>
+
+      <operator function="EvaluateColor" name="eval_color">
+        <map_interface source="solidglass_transmittance_custom_color" destination="color"/>
+        <map_constant source="clear" destination="default_color"/>
+      </operator>
+
+      <operator function="SwitchOperator" name="color_switch">
+        <map_interface source="solidglass_transmittance" destination="switch"/>
+        <map_constant source="clear" destination="case_0"/>
+        <map_constant source="green" destination="case_1"/>
+        <map_constant source="gray" destination="case_2"/>
+        <map_constant source="blue" destination="case_3"/>
+        <map_constant source="bluegreen" destination="case_4"/>
+        <map_constant source="bronze" destination="case_5"/>
+        <map_operator source="eval_color" destination="case_6"/>
+      </operator>
+
+      <bindings target="previewcolor" name="root">
+        <map_operator source="color_switch" destination="color"/>
+        <map_interface source="solidglass_reflectance" destination="alpha"/>
+      </bindings>
+    </implementation>

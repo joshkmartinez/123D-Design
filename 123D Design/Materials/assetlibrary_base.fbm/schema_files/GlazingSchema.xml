@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="GlazingSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+   <localtype val="Appearance" />
+   <localname val="Glazing" />
+	
+  <Boolean id="glazing_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Choice id="glazing_transmittance_color" 
+          val="glazing_clear"
+          label="Color" >
+    <ChoiceValue id="glazing_clear"
+                 val="0"
+                 label="Clear" />
+    <ChoiceValue id="glazing_green"
+                 val="1"
+                 label="Green" />
+    <ChoiceValue id="glazing_gray"
+                 val="2"
+                 label="Gray" />
+    <ChoiceValue id="glazing_blue"
+                 val="3"
+                 label="Blue" />
+    <ChoiceValue id="glazing_bluegreen"
+                 val="4"
+                 label="Blue Green" />
+    <ChoiceValue id="glazing_bronze"
+                 val="5"
+                 label="Bronze" />
+    <ChoiceValue id="glazing_custom"
+                 val="6"
+                 label="Custom" />
+  </Choice>
+  
+  <Color id="glazing_transmittance_map" 
+         valR="0.776" 
+         valG="0.827" 
+         valB="0.769"
+         label="Custom Color"
+         allowconnectedassets="single" />
+  
+  <Integer id="glazing_no_levels" 
+           val="2"
+           label="Sheets of Glass" >
+    <Bounds minimum="1"
+            maximum="6" />
+  </Integer>
+  
+  <Float id="glazing_reflectance" 
+         val="0.15" 
+         label="Reflectance" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <Integer id="glazing_refl_depth"
+           val="0"
+          label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="glazing_refr_depth"
+           val="-1"
+           label="Override Refraction Depth" >
+    <Bounds minimum="-1"
+            maximum="20" />
+  </Integer>
+
+  <!-- Internal parameter-->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Glazing/GlazingUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Glazing/GlazingAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Glazing/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/Glazing/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Glazing/PreviewColor.xml" />
+
+  <implementation id="ImplementationGeneric"
+                  val="Mats/Glazing/Generic.xml" />
+
+</AssetSchema>
+
+

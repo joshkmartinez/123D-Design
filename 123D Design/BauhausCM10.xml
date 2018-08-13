@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16" standalone="no"?>
+<root Name="BauhausCM" DllName="BauhausCM10" Identifier="BauhausCM" IsCoreAddIn="0" IsUIAddIn="0" AppName="Forge">
+    <NeededAddIns>
+    </NeededAddIns>
+</root>

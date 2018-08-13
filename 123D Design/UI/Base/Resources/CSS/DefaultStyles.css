@@ -1,0 +1,157 @@
+
+/* ------------------------------------------------------------
+   QTWorkspaceWindow
+------------------------------------------------------------ */
+QTWorkspaceWindow 
+{
+	/*
+	This color is same with the background of palette.
+	QTWorkspaceWindow isn't really shown to the user, except for
+	the border between two views in the case of split view.
+	*/
+	background-color: #cccccc;
+}
+
+/* ------------------------------------------------------------
+   QTTextCommandControl
+------------------------------------------------------------ */
+QTTextCommandControl QWidget#ctlCommand
+{
+}
+
+QTTextCommandControl QWidget#ctlResults
+{
+}
+
+/* ------------------------------------------------------------
+   QTSplitter
+------------------------------------------------------------ */
+QTSplitter
+{
+    padding: 0px;
+    margin: 0px;
+    background: #0099FF;
+    border-top: 1px solid #0099FF;
+    border-bottom: 1px solid #0099FF;
+}
+
+
+/* ------------------------------------------------------------
+   QTDockingIndicator
+------------------------------------------------------------ */
+QTDockingIndicator
+{
+    padding: 0px;
+    margin: 0px;
+    background: #6CE26C;
+    border-top: 1px solid #6CE26C;
+    border-bottom: 1px solid #6CE26C;
+}
+
+/* ------------------------------------------------------------
+   QTTestControl - This is a test control not used in production.
+------------------------------------------------------------ */
+QTTestControl
+{
+    margin: 1px;
+    border-width: 4px;
+}
+
+QTTestControl QLabel
+{
+    background: none;
+    color: orange;
+    font-weight: bold;
+}
+
+QMenu#WelcomeScreenNewMenu::item
+{
+    background-color:#333333;
+    color: white;
+}
+
+QMenu#WelcomeScreenNewMenu::item:selected
+{
+	background-color: #0099FF;
+}
+
+QDialog#tourGuide QPushButton#buttonClose
+{
+	min-width: 24px;
+	min-height: 24px;
+	max-width: 24px;
+	max-height: 24px;
+	border: none;
+    image: url(resource(UI/Base/Resources/TourGuide/Close24.png));
+}
+/*
+QFrame#tourGuide QPushButton#buttonClose:pressed {
+     background-color: qradialgradient(cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1, radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+ }
+ */
+QDialog#tourGuide QPushButton#buttonClose:hover {
+     /*background-color: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.5, stop: 0 #0099FF, stop: 1 #eee);*/
+	 background-image: url(resource(UI/Base/Resources/Icons/ActiveBackground24.png));
+ }
+
+QDialog#tourGuide QLabel#labelTitle
+{
+    font-weight: bold;
+}
+
+QDialog#tourGuide QPushButton#buttonBackward
+{
+	min-width: 32px;
+	min-height: 32px;
+	max-width: 32px;
+	max-height: 32px;
+	border: none;
+    image: url(resource(UI/Base/Resources/TourGuide/Backward32.png));	
+}
+QDialog#tourGuide QPushButton:hover {
+	 background-image: url(resource(UI/Base/Resources/Icons/ActiveBackground32.png));
+}
+
+QDialog#tourGuide QPushButton#buttonForward
+{
+	min-width: 32px;
+	min-height: 32px;
+	max-width: 32px;
+	max-height: 32px;
+	border: none;
+    image: url(resource(UI/Base/Resources/TourGuide/Forward32.png));
+}
+
+QDialog#tourGuide QPushButton#buttonCloseLarge
+{
+	min-width: 32px;
+	min-height: 32px;
+	max-width: 32px;
+	max-height: 32px;
+	border: none;
+    image: url(resource(UI/Base/Resources/TourGuide/Close32.png));
+}
+
+QDialog#tourGuideExitFrame QPushButton#buttonClose
+{
+	min-width: 24px;
+	min-height: 24px;
+	max-width: 24px;
+	max-height: 24px;
+	border: none;
+    image: url(resource(UI/Base/Resources/TourGuide/Close24.png));
+}
+
+QDialog#tourGuideExitFrame QPushButton#buttonClose:hover {
+     /*background-color: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.5, stop: 0 #0099FF, stop: 1 #eee);*/
+	 background-image: url(resource(UI/Base/Resources/Icons/ActiveBackground24.png));
+ }
+ 
+QWidget#BackgroundWidget
+{
+	background-color: rgb(50,50,50);
+}
+QWidget#BackgroundWidget:pressed
+{
+	background-color: rgb(50,50,50);
+}

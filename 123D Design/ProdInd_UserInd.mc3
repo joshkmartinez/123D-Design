@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROD_IND_USER_IND version="7.0.1.0">
+    <MC3Enabled value="1" />
+    <ActiveNotification value="1" />
+    <ProductSpecificNotification value="1" />
+    <ActiveNotificationWaitTimeBeta value="2" />
+    <ActiveNotificationWaitTimeRelease value="7" />
+    <ActiveNotificationWaitTimeBetaFirstStartup value="0" />
+    <ActiveNotificationWaitTimeReleaseFirstStartup value="2" />
+    <SICheckInterval value="7" />
+    <LastSICheckDate value="0" />
+    <MachineID value="" />
+</PROD_IND_USER_IND>

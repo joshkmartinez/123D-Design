@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Decalbumpmap
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="DecalmapSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type  val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Decal Map" />
+  <URL id="decalmap_Bitmap"
+       val=""
+       label="Image File:" />
+  <Float id="decalmap_RGBAmount"
+         val="1.0"
+         label="Brightness"/>
+  <!-- Label below is not defined in previous UI -->
+  <Integer id="decalmap_Filtering"
+           val="2"
+           label="Filtering"/>
+  <Float id="decalmap_Blur"
+         val="0.01"
+         label="Blur"/>
+  <Boolean id="decalmap_Invert"
+           val="false"
+           label="Invert:"/>
+
+  <Float id="decalmap_UOffset"
+         val="0."
+         label="U Offset"/>
+  <Float id="decalmap_VOffset"
+         val="0."
+         label="V Offset"/>
+  <Float id="decalmap_WAngle"
+         val="0."
+         label="Angle"/>
+  <Boolean id="decalmap_UWrap"
+           val="false"
+           label="U Wrap"/>
+  <Boolean id="decalmap_VWrap"
+           val="false"
+           label="V Wrap"/>
+  <Boolean id="decalmap_UMirror"
+           val="false"
+           label="U Mirror"/>
+  <Boolean id="decalmap_VMirror"
+           val="false"
+           label="V Mirror"/>
+  <Float id="decalmap_UVScale"
+         val="1."
+         label="UV Scale" />
+  <String id="decalmap_MapChannel"
+          val="UVChannel_1"
+          label="Map Channel"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/DecalMap/DecalmapUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/DecalMap/MentalImage.xml"/>
+</AssetSchema>

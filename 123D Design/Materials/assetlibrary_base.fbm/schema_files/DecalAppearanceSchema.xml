@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="DecalAppearanceSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="DecalAppearance" />
+	
+  <Reference id="decApp_diffuse"
+             type="texture"
+             allowconnectedassets="single"
+             label ="Decal Image File:" />
+
+  <Float id="decApp_reflectivity_at_0deg" 
+         val="0.0" 
+         label="Reflectivity:" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <!-- Internal parameter-->
+  <Float id="decApp_reflectivity_at_90deg" 
+         val="0.2" 
+         label="Reflectivity:" />
+  
+  <Float id="decApp_glossiness" 
+         val="1.0" 
+         label="Finish:" >
+    <Bounds minimum="0.0"
+            maximum="1.0" />
+  </Float>
+
+  <!-- Not every parameter has bounds defined in previous UI, but obviously this has limits, 
+  I suggest content and render experts can provide these info if possible sometime -->
+  <Float id="decApp_transparency" 
+         val="0.0" 
+         label="Transparency:" >
+    <Bounds percentage="true" />
+  </Float>
+
+  <!-- Internal parameter-->
+  <Float id="decApp_refraction_index" 
+         val="1.00" 
+         label="Refraction Index:"/>
+
+  <!-- Internal parameter-->
+  <Float id="decApp_refraction_translucency_weight" 
+         val="0.0"
+         label="Refraction Translucency Weight:" />
+  
+  <Float id="decApp_cutout_opacity" 
+         val="1.0" 
+         label="Cutouts:"
+         allowconnectedassets="single" />
+
+  <!-- Internal parameter-->
+  <Boolean id="decApp_backface_cull" 
+           val="false" 
+           label="Backface Cull:" />
+
+  <Float id="decApp_self_illum_luminance" 
+         val="0."
+         label="Luminance (cd/m^2):" />
+
+  <!-- Internal parameter-->
+  <Float id="decApp_self_illum_color_temperature" 
+         val="6500"
+         label="Luminance Color Temperature" />
+
+  <!-- Internal parameter-->
+  <Color id="decApp_self_illum_filter_map" 
+         valR="1" 
+         valG="1" 
+         valB="1"
+         label="Luminance Filter Map:"
+         allowconnectedassets="single" />
+
+  <Float id="decApp_bump_amount" 
+         val="0.3"
+         label="Bump Amount:" >
+    <Bounds percentage="true" />
+  </Float>
+  
+  <Color id="decApp_bump_map" 
+         valR="0" 
+         valG="0" 
+         valB="0"
+         label="Bump Pattern:"
+         allowconnectedassets="single" />
+
+  <!-- Internal parameter-->
+  <Integer id="decApp_reflection_glossy_samples" 
+           val="12"
+           label="Reflection Glossy Samples:" />
+
+  <!-- Internal parameter-->
+  <Integer id="decApp_refraction_glossy_samples" 
+           val="12"
+           label="Refraction Glossy Samples:" />
+
+  <!-- Internal parameter-->
+  <Integer id="mode" 
+           val="4"
+           label="Mode:" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/DecalAppearance/DecalAppearanceUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/DecalAppearance/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/DecalAppearance/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/DecalAppearance/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/DecalAppearance/Generic.xml" />
+
+</AssetSchema>
+

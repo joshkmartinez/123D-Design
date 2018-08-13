@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="MasonryCMUSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Masonry" />
+	
+  <Choice id="masonrycmu_type" 
+          val="masonrycmu_masonry"
+          label="Type" >
+    <ChoiceValue id="masonrycmu_cmu"
+                 val="0"
+                 label="CMU" />
+    <ChoiceValue id="masonrycmu_masonry"
+                 val="1"
+                 label="Masonry" />
+  </Choice>
+
+  <Boolean id="masonrycmu_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="masonrycmu_color" 
+          valR=".471" 
+          valG=".471" 
+          valB=".471"
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Choice id="masonrycmu_application" 
+          val="masonrycmu_unfinished"
+          label="Finish" >
+    <ChoiceValue id="masonrycmu_glossy"
+                 val="0"
+                 label="Glossy" />
+    <ChoiceValue id="masonrycmu_matte"
+                 val="1"
+                 label="Matte" />
+    <ChoiceValue id="masonrycmu_unfinished"
+                 val="2"
+                 label="Unfinished" />
+  </Choice>
+
+  <Choice id="masonrycmu_pattern" 
+          val="masonrycmu_custom"
+          label="Relief Pattern" >
+    <ChoiceValue id="masonrycmu_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="masonrycmu_custom"
+                 val="1"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="masonrycmu_pattern_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="masonrycmu_pattern_height" 
+         val="0.15" 
+         label="Amount" >
+    <Bounds minimum="0.0"
+        maximum="2.0" />
+  </Float>
+
+  <Boolean id="masonrycmu_ao_on"
+         val="false"
+         label="Ambient Occlusion" />
+
+  <Integer id="masonrycmu_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="masonrycmu_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="masonrycmu_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="masonrycmu_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="masonrycmu_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="masonrycmu_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="masonrycmu_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter -->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/MasonryCMU/MasonryCMUUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/MasonryCMU/MasonryCMUAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/MasonryCMU/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/MasonryCMU/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/MasonryCMU/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric" 
+                  val="Mats/MasonryCMU/Generic.xml" />
+
+</AssetSchema>
+
+

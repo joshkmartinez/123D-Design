@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Hardwood
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="hardwood_hardwoodgroup"
+                label="Wood"
+                orientation="Vertical"
+                expanded="true">
+      <MappableFloat id="hardwood_color"
+                     nosinglevalue="true"
+                     label="Image"
+                     tooltip="Uses a bitmap image to adjust the color and texture of the wood."/>
+      
+      <ChooseList id="hardwood_tint_enabled"
+                  label="Stain"
+                  usecheckbox="true"
+                  checkonvalue="hardwood_color_choice"
+                  checkoffvalue="hardwood_no_color"
+                  tooltip="Specifies whether the wood is stained.">
+        <Choice id="hardwood_no_color" label="None"/>
+        <ChoiceDetail id="hardwood_color_choice" label="Color">
+          <Color id="hardwood_tint_color"
+                 label="Stain Color"
+                 tooltip="Adjusts the color of the stain."
+                 coloronly="true"/>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      
+      <ChooseList id="hardwood_finish" label="Finish"
+                  tooltip="Selects from among glossy varnish, semi-gloss varnish, satin varnish, and unfinished.">
+        <Choice id="hardwood_glossy" label="Glossy Varnish"/>
+        <Choice id="hardwood_semigloss" label="Semi-gloss Varnish"/>
+        <Choice id="hardwood_satin" label="Satin Varnish"/>
+        <Choice id="hardwood_unfinished" label="Unfinished"/>
+      </ChooseList>
+      
+      <ChooseList id="hardwood_application"
+                  label="Used For"
+                  tooltip="Selects how the wood surface gets used (flooring or furniture).">
+        <Choice id="hardwood_flooring" label="Flooring"/>
+        <Choice id="hardwood_furniture" label="Furniture"/>
+      </ChooseList>
+      
+    </StackPanel>
+    <StackPanel id="hardwood_imperfections"
+                label="Relief  Pattern"
+                labelid="hardwood_imperfections_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="hardwood_automatic">
+
+      <ChooseList id="hardwood_imperfections"
+                  label="Type"
+                  labelid="hardwood_imperfections_list_label" 
+                  onebased="true"
+                  tooltip="Selects a surface pattern of wood or custom.">
+        <Choice id="hardwood_automatic" label="Based on Wood Grain"/>
+        <ChoiceDetail id="hardwood_custom" label="Custom">
+          <MappableFloat id="hardwood_imperfections_shader"
+                         nosinglevalue="true"
+                         bump="true"
+                         tooltip="Uses a bitmap image to adjust the relief pattern of the wood."
+                         label="Image"/>
+        </ChoiceDetail>
+      </ChooseList>
+      <Float id="hardwood_imperfections_amount"
+             label="Amount"
+             min="-10.0"
+             max="10.0"
+             tooltip="Adjusts the height of the surface bumps. Enter 0 for a flat surface, a positive number (between 0 and 10) to raise the grain, or a negative number (between 0 and -10) to reverse the grain.">
+      </Float>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="hardwood_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">
+      <Integer id="hardwood_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="hardwood_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="hardwood_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="hardwood_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="hardwood_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="hardwood_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="hardwood_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="hardwood_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+  </Fields>
+</adsui>

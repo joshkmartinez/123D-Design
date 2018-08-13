@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+<!-- =====================================================================
+     This is the common schema for Unknown
+ ===================================================================== -->
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="UnknownSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  <Choice id="water_type"
+          val="water_swimming_pool"
+          label="Type">
+    <ChoiceValue id="water_swimming_pool"
+                 val="0"
+                 label="Swimming Pool"/>
+    <ChoiceValue id="water_reflecting_pool"
+                 val="1"
+                 label="Generic Reflecting Pool"/>
+    <ChoiceValue id="water_river"
+                 val="2"
+                 label="Generic Stream/River"/>
+    <ChoiceValue id="water_lake"
+                 val="3"
+                 label="Generic Pond/Lake"/>
+    <ChoiceValue id="water_ocean"
+                 val="4"
+                 label="Generic Sea/Ocean"/>
+  </Choice>
+
+  <Choice id="water_tint_enable"
+          val="water_tropical"
+          label="Color">
+    <ChoiceValue id="water_tropical"
+                 val="0"
+                 label="Tropical"/>
+    <ChoiceValue id="water_algae"
+                 val="1"
+                 label="Algae/Green"/>
+    <ChoiceValue id="water_murky"
+                 val="2"
+                 label="Murky/Brown"/>
+    <ChoiceValue id="water_reflecting_pool"
+                 val="3"
+                 label="Generic Reflecting Pool"/>
+    <ChoiceValue id="water_river"
+                 val="4"
+                 label="Generic Stream/River"/>
+    <ChoiceValue id="water_lake"
+                 val="5"
+                 label="Generic Pond/Lake"/>
+    <ChoiceValue id="water_ocean"
+                 val="6"
+                 label="Generic Sea/Ocean"/>
+    <ChoiceValue id="water_custom"
+                 val="7"
+                 label="Custom"/>
+  </Choice>
+
+  <Color id="water_tint_color"
+         valR="0.865"
+         valG="0.91"
+         valB="0.866"
+         label="Custom Color"/>
+
+  <Float id="water_bump_amount"
+         val="1.0"
+         label="Wave Height">
+    <Bounds minimum="0.0"
+            maximum="5.0"/>
+  </Float>
+
+  <Integer id="reflection_glossy_samples"
+           val="8"
+           label="Reflection Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128"/>
+  </Integer>
+  <Integer id="refraction_glossy_samples"
+           val="12"
+           label="Refraction Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128"/>
+  </Integer>
+
+  <!-- Internal parameters - not exposed to the UI -->
+  <Integer id="mode"
+           val="4"
+           label="Mode"/>
+
+  <Reference id="generic_instance"
+             type="materialappearance"
+             allowconnectedassets="single"
+             label="Generic Instance" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/UnknownMaterial/UnknownClassUI3.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/UnknownMaterial/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/UnknownMaterial/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/UnknownMaterial/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/UnknownMaterial/Generic.xml" />
+
+</AssetSchema>
+

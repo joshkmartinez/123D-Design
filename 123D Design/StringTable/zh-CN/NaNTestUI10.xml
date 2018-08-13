@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Resource><label commandName="NTest Project" devLabel="NTest Project (*.ntp)" translation="NTest 项目(*.ntp)" /><label commandName="lclzHarness" devLabel="Harness" translation="线束" /><label commandName="Harness Environment" devLabel="Harness" translation="线束" /><label commandName="NTestImportCommand" devLabel="TestImport" translation="测试导入" /><label commandName="lclzDebug" devLabel="Debug" translation="调试" /></Resource>

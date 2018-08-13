@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+    <implementation render="PreviewColor">
+      <language name="PreviewColorLanguage" version="1.0"/>
+      <api name="PreviewColorAPI" version="1.0"/>
+      <root_bindings name="root"/>
+
+      <constants>
+        <float name="one" val="1." />
+        <color name="default" valR="0.8" valG="0.8" valB="0.8"/>
+      </constants>
+
+      <operator function="EvaluateColor" name="eval_color">
+        <map_interface source="decApp_diffuse" destination="color"/>
+        <map_constant source="default" destination="default_color"/>
+      </operator>
+
+      <operator function ="SubstractOp" name="opacity">
+        <map_constant source="one" destination="X"/>
+        <map_interface source="decApp_transparency" destination="Y"/>
+      </operator>
+
+      <bindings target="previewcolor" name="root">
+        <map_operator source="eval_color" destination="color"/>
+        <map_operator source="opacity" destination="alpha"/>
+      </bindings>
+    </implementation>

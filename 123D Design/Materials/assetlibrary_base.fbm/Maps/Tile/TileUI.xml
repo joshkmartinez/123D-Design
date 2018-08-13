@@ -1,0 +1,215 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Tile map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="tile_Pattern"
+                label="Pattern"
+                orientation="Vertical"
+                expanded="true">
+      <ChooseList id="tile_BrickType"
+                  label="Type"
+                  tilepresetlist="true"
+                  tooltip="Determines either a preset or custom tile pattern. Preset patterns typically disable most or all of the stacking layout and row/column edit controls.">
+        <Choice id="tile_BrickType_running_bond" label="Running Bond"/>
+        <Choice id="tile_BrickType_common_flemish_bond" label="Common Flemish Bond"/>
+        <Choice id="tile_BrickType_english_bond" label="English Bond"/>
+        <Choice id="tile_BrickType_half_running_bond" label="1/2 Running Bond"/>
+        <Choice id="tile_BrickType_stack_bond" label="Stack Bond"/>
+        <Choice id="tile_BrickType_fine_running_bond" label="Fine Running Bond"/>
+        <Choice id="tile_BrickType_fine_stack_bond" label="Fine Stack Bond"/>
+        <Choice id="tile_BrickType_custom" label="Custom"/>
+      </ChooseList>
+      <Float id="tile_HorizontalCount"
+             label="Tile Count"
+             rightlabel="Per Row" min="0" max="100"
+             forcenumeric="spinbox"
+             tooltip="Controls the number of tiles in a row."/>
+      <Float id="tile_VerticalCount"
+             label=""
+             rightlabel="Per Column"
+             min="0" max="100" forcenumeric="spinbox"
+             tooltip="Controls the number of tiles in a column."/>
+    </StackPanel>
+    
+    <StackPanel id="tile_Appearance"
+                label="Tile Appearance"
+                orientation="Vertical">
+      <MappableProcedureColor id="tile_BrickColor"
+                              label="Tile Color"
+                              tooltip="Provides the option of selecting a color or texture map for one of the components."
+                              swappartner="tile_MortarColor"/>
+      <Float id="tile_ColorVariance"
+             label="Color Variance"
+             min="0" max="100"
+             tooltip="Controls the color variation of the tiles. Range = 0 to 100. Default = 0."> </Float>
+      <Float id="tile_FadeVariance"
+             label="Fade Variance"
+             min="0" max="100"
+             tooltip="Controls the fading variation of the tiles. Range = 0 to 100. Default = 0.05."> </Float>
+      <Integer id="tile_RandomSeed"
+               label="Randomize"
+               rightlabel="Seed Value"
+               min="0" forcenumeric="spinbox"
+               tooltip="Randomly applies patterns of color variation to the tiles. Does not require any other setting to generate completely different patterns."/>
+    </StackPanel>
+    
+    <StackPanel id="tile_GroutAppearance"
+                label="Grout Appearance"
+                orientation="Vertical">
+      <MappableProcedureColor id="tile_MortarColor"
+                              label="Grout Color"
+                              tooltip="Provides the option of selecting a color or texture map for one of the components."
+                              swappartner="tile_BrickColor"/>
+      <Float id="tile_HorizontalGap"
+                  rightlabel="Horiz"
+                  label="Gap Width"
+                  type="offset"
+                  min="0" max="100"
+                  forcenumeric="spinbox"
+                  tooltip="Controls the horizontal size of the grout between the tiles. These value are locked by default to each other, so that both values change as you edit one or the other. Range = 0 to 100; Default = 0.50."/>
+      <Float id="tile_VerticalGap"
+                  rightlabel="Vert"
+                  type="offset"
+                  min="0" max="100"
+                  forcenumeric="spinbox"
+                  tooltip="Controls the vertical size of the grout between the tiles. These value are locked by default to each other, so that both values change as you edit one or the other. Range = 0 to 100; Default = 0.50."/>
+      <ParamLock id="tile_Gap_lock"
+                 topParamLock="tile_HorizontalGap"
+                 bottomParamLock="tile_VerticalGap" 
+                 tooltip="Locks the horizontal and vertical gap widths. When one value is changed, the other value changes to match it."/>
+      <Float id="tile_EdgeRoughness"
+             label="Roughness"
+             forcenumeric="slider"
+             tooltip="Controls the roughness of the edges of the mortar. Range = 0 to 200; Default = 0."
+             min="0" max="200"/>
+    </StackPanel>
+    
+    <StackPanel id="tile_StackingLayout"
+                label="Stacking Layout"
+                orientation="Vertical">
+      <Float id="tile_LineShift"
+             label="Line Shift"
+             forcenumeric="slider"
+             min="0" max="100"
+             tooltip="Shifts every second row of tiles a distance of one unit. Range = 0 to 100; Default = 0.50"/>
+      <Float id="tile_RandomShift"
+             label="Random"
+             forcenumeric="slider"
+             min="0" max="100"
+             tooltip="Randomly shifts all rows of tiles a distance of one unit.  Range = 0 to 100; Default = 0."/>
+    </StackPanel>
+    
+    <StackPanel id="tile_UseRowEdit"
+                label="Row Modify"
+                labelid="tile_PerRow_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="true"
+                checkoffvalue="false">
+      <Integer id="tile_PerRow"
+               label="Every"
+               labelid="tile_PerRow_slider_label" 
+               rightlabel="Rows"
+               min="0" max="50" forcenumeric="spinbox"
+               tooltip="Specifies which rows to change. When the value equals 0, no rows change. When the value equals 1, every row changes."/>
+      <Float id="tile_ChangeRow"
+             label="Amount"
+             min="0.0" max="5.0"
+             tooltip="Changes the width of tiles in the affected rows. A value of 1.0 is the default tile width. Values greater than 1.0 increase the width of tiles, and values less than 1.0 decrease it. Range = 0.0 to 5.0. When the change value is 0.0, no tiles appear in that row and the underlying material shows through."/>
+    </StackPanel>
+    
+    <StackPanel id="tile_UseColumnEdit"
+                label="Column Modify"
+                labelid="tile_PerColumn_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="true"
+                checkoffvalue="false">
+      <Integer id="tile_PerColumn"
+               label="Every"
+               labelid="tile_PerColumn_slider_label" 
+               rightlabel="Columns"
+               min="0" max="50" forcenumeric="spinbox"
+               tooltip="Specifies which columns to change. When the value equals 0, no columns change. When the value equals 1, every column changes."/>
+      <Float id="tile_ChangeColumn"
+             label="Amount"
+             min="0.0" max="5.0"
+             tooltip="Changes the height of tiles in the affected columns. A value of 1.0 is the default tile height. Values greater than 1.0 increase the height of tiles, and values less than 1.0 decrease it. Range = 0.0 to 5.0. When the change value is 0.0, no tiles appear in that column and the underlying material shows through."/>
+    </StackPanel>
+    
+    <StackPanel id="tile_transforms_group"
+                label="Transforms" orientation="Vertical" expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="tile_Position"
+                  label="Position"
+                  orientation="Vertical"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <ParamLock id="texture_OffsetLock"
+                   tooltip="Constrains the offset. When the X offset is changed, the Y offset is changed by the same amount."
+                   topParamLock="texture_RealWorldOffsetX"
+                   bottomParamLock="texture_RealWorldOffsetY" />
+        <Angle id="texture_WAngle"
+               label="Rotation"
+               tooltip="Rotates the map from 0 degrees to 360 degrees. "
+               min="0.0" max="360.0"/>
+      </StackPanel>
+      
+      <StackPanel id="tile_Scale" label="Scale" orientation="Vertical" expanded="true">
+        <SampleSize id="texture_RealWorldScaleX"
+                    label="Sample Size"
+                    rightlabel="Width"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the horizontal scaling for procedural maps on materials. This functionality is only available on  Checker, Gradient, and Tiles."/>
+
+        <SampleSize id="texture_RealWorldScaleY"
+                    label=""
+                    rightlabel="Height"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the vertical scaling for procedural maps on materials. This functionality is only available on  Checker, Gradient, and Tiles."/>
+        <ParamLock id="texture_ScaleLock"
+                   tooltip="Locks the aspect ratio of the map. When the height or width value is changed, the other value changes as needed to maintain the aspect ratio."
+                   topParamLock="texture_RealWorldScaleX"
+                   bottomParamLock="texture_RealWorldScaleY" />
+        <!--hook the correct scaletofit property ids up when Protein code is ready-->
+      </StackPanel>
+      
+      <StackPanel id="tile_Repeat" label="Repeat" orientation="Vertical" expanded="true">
+        <Boolean id="texture_URepeat"
+                 label="Horizontal"
+                 tooltip="Adjusts the tiling of the map along the X axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+        <Boolean id="texture_VRepeat"
+                 label="Vertical"
+                 tooltip="Adjusts the tiling of the map along the Y axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+      </StackPanel>
+    </StackPanel>    
+    
+  </Fields>
+</adsui>

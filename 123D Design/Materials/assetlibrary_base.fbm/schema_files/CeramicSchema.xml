@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="CeramicSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+
+  <localtype val="Appearance" />
+  <localname val="Ceramic" />
+
+  <Choice id="ceramic_type"
+          val="ceramic_porcelain"
+          label="Type" >
+    <ChoiceValue id="ceramic_ceramic"
+                 val="0"
+                 label="Ceramic" />
+    <ChoiceValue id="ceramic_porcelain"
+                 val="1"
+                 label="Porcelain" />
+  </Choice>
+
+  <Boolean id="ceramic_color_by_object"
+	         val="false"
+	         label="Color" />
+
+  <Color  id="ceramic_color"
+          valR="1."
+          valG="1."
+          valB="1."
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Choice id="ceramic_application"
+          val="ceramic_high_glossy"
+          label="Finish" >
+    <ChoiceValue id="ceramic_high_glossy"
+                 val="0"
+                 label="High Gloss / Glazed" />
+    <ChoiceValue id="ceramic_satin"
+                 val="1"
+                 label="Satin" />
+    <ChoiceValue id="ceramic_matte"
+                 val="2"
+                 label="Matte" />
+  </Choice>
+
+  <Choice id="ceramic_bump"
+          val="ceramic_none"
+          label="Type" >
+    <ChoiceValue id="ceramic_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="ceramic_wavy"
+                 val="1"
+                 label="Wavy" />
+    <ChoiceValue id="ceramic_custom"
+                 val="2"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="ceramic_bump_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="ceramic_bump_amount"
+         val="0.05"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="1.0" />
+  </Float>
+
+  <Choice id="ceramic_pattern"
+          val="ceramic_none"
+          label="Type" >
+    <ChoiceValue id="ceramic_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="ceramic_custom"
+                 val="1"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="ceramic_pattern_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="ceramic_pattern_amount"
+         val="0.25"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="2.0" />
+  </Float>
+
+  <Boolean id="ceramic_ao_on"
+           val="false"
+           label="Ambient Occlusion" />
+
+  <Integer id="ceramic_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="ceramic_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="ceramic_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="ceramic_roundcorners_on"
+           val="false"
+           label="Round Corners" />
+
+  <Float id="ceramic_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+
+  <Boolean id="ceramic_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="ceramic_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter-->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/Ceramic/CeramicUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/Ceramic/CeramicAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/Ceramic/MentalImage.xml" />
+
+  <implementation id="ImplementationOGS"
+                  val="Mats/Ceramic/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/Ceramic/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/Ceramic/Generic.xml" />
+
+</AssetSchema>
+
+

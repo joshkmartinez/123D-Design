@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PartsBin>
+	<ItemCategory name="ジオメトリ シェイプ">
+		<Item name="立方体" icon="shapes/cube.png" path="shapes/cube.123dx"/>
+		<Item name="球" icon="shapes/sphere.png" path="shapes/sphere.123dx"/>
+		<Item name="円柱" icon="shapes/cylinder.png" path="shapes/cylinder.123dx"/>
+		<Item name="円錐" icon="shapes/cone.png" path="shapes/cone.123dx"/>
+		<Item name="トーラス" icon="shapes/torus.png" path="shapes/torus.123dx"/>
+		<Item name="屋根" icon="shapes/roof.png" path="shapes/roof.123dx"/>
+		<Item name="半球体" icon="shapes/half-sphere.png" path="shapes/halfsphere.123dx"/>
+		<Item name="角錐" icon="shapes/pyramid.png" path="shapes/pyramid.123dx"/>
+        <Item name="ウェッジ" icon="shapes/wedge.png" path="shapes/wedge.123dx"/>
+		<Item name="六角形のプリズム" icon="shapes/hexa.png" path="shapes/hexagonalsolid.123dx"/>
+	</ItemCategory>
+	<ItemCategory name="番号">
+		<Item name="0" icon="numbers/0.png" path="numbers/0.123dx"/>
+		<Item name="1" icon="numbers/1.png" path="numbers/1.123dx"/>
+		<Item name="2" icon="numbers/2.png" path="numbers/2.123dx"/>
+		<Item name="3" icon="numbers/3.png" path="numbers/3.123dx"/>
+		<Item name="4" icon="numbers/4.png" path="numbers/4.123dx"/>
+		<Item name="5" icon="numbers/5.png" path="numbers/5.123dx"/>
+		<Item name="6" icon="numbers/6.png" path="numbers/6.123dx"/>
+		<Item name="7" icon="numbers/7.png" path="numbers/7.123dx"/>
+		<Item name="8" icon="numbers/8.png" path="numbers/8.123dx"/>
+		<Item name="9" icon="numbers/9.png" path="numbers/9.123dx"/>
+	</ItemCategory>
+	<ItemCategory name="文字">
+		<Item name="A" icon="letters/a.png" path="letters/A.123dx"/>
+		<Item name="B" icon="letters/b.png" path="letters/B.123dx"/>
+		<Item name="C" icon="letters/c.png" path="letters/C.123dx"/>
+		<Item name="D" icon="letters/d.png" path="letters/D.123dx"/>
+		<Item name="E" icon="letters/e.png" path="letters/E.123dx"/>
+		<Item name="F" icon="letters/f.png" path="letters/F.123dx"/>
+		<Item name="G" icon="letters/g.png" path="letters/G.123dx"/>
+		<Item name="H" icon="letters/h.png" path="letters/H.123dx"/>
+		<Item name="I" icon="letters/i.png" path="letters/I.123dx"/>
+		<Item name="J" icon="letters/j.png" path="letters/J.123dx"/>
+		<Item name="K" icon="letters/k.png" path="letters/K.123dx"/>
+		<Item name="L" icon="letters/l.png" path="letters/L.123dx"/>
+		<Item name="M" icon="letters/m.png" path="letters/M.123dx"/>
+		<Item name="N" icon="letters/n.png" path="letters/N.123dx"/>
+		<Item name="O" icon="letters/o.png" path="letters/O.123dx"/>
+		<Item name="P" icon="letters/p.png" path="letters/P.123dx"/>
+		<Item name="Q" icon="letters/q.png" path="letters/Q.123dx"/>
+		<Item name="R" icon="letters/r.png" path="letters/R.123dx"/>
+		<Item name="S" icon="letters/s.png" path="letters/S.123dx"/>
+		<Item name="T" icon="letters/t.png" path="letters/T.123dx"/>
+		<Item name="U" icon="letters/u.png" path="letters/U.123dx"/>
+		<Item name="V" icon="letters/v.png" path="letters/V.123dx"/>
+		<Item name="W" icon="letters/w.png" path="letters/W.123dx"/>
+		<Item name="X" icon="letters/x.png" path="letters/X.123dx"/>
+		<Item name="Y" icon="letters/y.png" path="letters/Y.123dx"/>
+		<Item name="Z" icon="letters/z.png" path="letters/Z.123dx"/>
+	</ItemCategory>
+	<ItemCategory name="ガジェット">
+		<Item name="Galaxy S III - Case A" icon="gadget/Galaxy_S_III_-_Case_A.png" path="gadget/Galaxy_S_III_-_Case_A.123dx" />
+		<Item name="Galaxy S III - Case B" icon="gadget/Galaxy_S_III_-_Case_B.png" path="gadget/Galaxy_S_III_-_Case_B.123dx" />
+		<Item name="Galaxy S III - Case C" icon="gadget/Galaxy_S_III_-_Case_C.png" path="gadget/Galaxy_S_III_-_Case_C.123dx" />
+		<Item name="Galaxy S III - Case D" icon="gadget/Galaxy_S_III_-_Case_D.png" path="gadget/Galaxy_S_III_-_Case_D.123dx" />
+		<Item name="Galaxy S III - Case E" icon="gadget/Galaxy_S_III_-_Case_E.png" path="gadget/Galaxy_S_III_-_Case_E.123dx" />
+		<Item name="iPhone 5 - Case A" icon="gadget/iPhone_5_-_Case_A.png" path="gadget/iPhone_5_-_Case_A.123dx" />
+		<Item name="iPhone 5 - Case B" icon="gadget/iPhone_5_-_Case_B.png" path="gadget/iPhone_5_-_Case_B.123dx" />
+		<Item name="iPhone 5 - Case C" icon="gadget/iPhone_5_-_Case_C.png" path="gadget/iPhone_5_-_Case_C.123dx" />
+		<Item name="iPhone 5 - Case D" icon="gadget/iPhone_5_-_Case_D.png" path="gadget/iPhone_5_-_Case_D.123dx" />
+		<Item name="iPhone 5 - Case E" icon="gadget/iPhone_5_-_Case_E.png" path="gadget/iPhone_5_-_Case_E.123dx" />
+	</ItemCategory>
+	<ItemCategory name="ギア">
+		<Item name="10CA 08T Spur" icon="gear/10CA_08T_Spur.png" path="gear/10CA_08T_Spur.123dx" />
+		<Item name="10CA 10T Rack" icon="gear/10CA_10T_Rack.png" path="gear/10CA_10T_Rack.123dx" />
+		<Item name="10CA 12T Spur" icon="gear/10CA_12T_Spur.png" path="gear/10CA_12T_Spur.123dx" />
+		<Item name="10CA 14T Ring" icon="gear/10CA_14T_Ring.png" path="gear/10CA_14T_Ring.123dx" />
+		<Item name="10CA 14T Spur" icon="gear/10CA_14T_Spur.png" path="gear/10CA_14T_Spur.123dx" />
+		<Item name="10CA 20T Ring" icon="gear/10CA_20T_Ring.png" path="gear/10CA_20T_Ring.123dx" />
+		<Item name="10CA 20T Spur" icon="gear/10CA_20T_Spur.png" path="gear/10CA_20T_Spur.123dx" />
+		<Item name="10CA 24T Spur" icon="gear/10CA_24T_Spur.png" path="gear/10CA_24T_Spur.123dx" />
+		<Item name="10CA 36T Ring" icon="gear/10CA_36T_Ring.png" path="gear/10CA_36T_Ring.123dx" />
+		<Item name="10CA 36T Spur" icon="gear/10CA_36T_Spur.png" path="gear/10CA_36T_Spur.123dx" />
+		<Item name="20CA 08T Spur" icon="gear/20CA_08T_Spur.png" path="gear/20CA_08T_Spur.123dx" />
+		<Item name="20CA 10T Rack" icon="gear/20CA_10T_Rack.png" path="gear/20CA_10T_Rack.123dx" />
+		<Item name="20CA 12T Spur" icon="gear/20CA_12T_Spur.png" path="gear/20CA_12T_Spur.123dx" />
+		<Item name="20CA 14T Ring" icon="gear/20CA_14T_Ring.png" path="gear/20CA_14T_Ring.123dx" />
+		<Item name="20CA 14T Spur" icon="gear/20CA_14T_Spur.png" path="gear/20CA_14T_Spur.123dx" />
+		<Item name="20CA 20T Ring" icon="gear/20CA_20T_Ring.png" path="gear/20CA_20T_Ring.123dx" />
+		<Item name="20CA 20T Spur" icon="gear/20CA_20T_Spur.png" path="gear/20CA_20T_Spur.123dx" />
+		<Item name="20CA 24T Spur" icon="gear/20CA_24T_Spur.png" path="gear/20CA_24T_Spur.123dx" />
+		<Item name="20CA 36T Ring" icon="gear/20CA_36T_Ring.png" path="gear/20CA_36T_Ring.123dx" />
+		<Item name="20CA 36T Spur" icon="gear/20CA_36T_Spur.png" path="gear/20CA_36T_Spur.123dx" />
+		<Item name="30CA 08T Spur" icon="gear/30CA_08T_Spur.png" path="gear/30CA_08T_Spur.123dx" />
+		<Item name="30CA 10T Rack" icon="gear/30CA_10T_Rack.png" path="gear/30CA_10T_Rack.123dx" />
+		<Item name="30CA 12T Spur" icon="gear/30CA_12T_Spur.png" path="gear/30CA_12T_Spur.123dx" />
+		<Item name="30CA 14T Ring" icon="gear/30CA_14T_Ring.png" path="gear/30CA_14T_Ring.123dx" />
+		<Item name="30CA 14T Spur" icon="gear/30CA_14T_Spur.png" path="gear/30CA_14T_Spur.123dx" />
+		<Item name="30CA 20T Ring" icon="gear/30CA_20T_Ring.png" path="gear/30CA_20T_Ring.123dx" />
+		<Item name="30CA 20T Spur" icon="gear/30CA_20T_Spur.png" path="gear/30CA_20T_Spur.123dx" />
+		<Item name="30CA 24T Spur" icon="gear/30CA_24T_Spur.png" path="gear/30CA_24T_Spur.123dx" />
+		<Item name="30CA 36T Ring" icon="gear/30CA_36T_Ring.png" path="gear/30CA_36T_Ring.123dx" />
+		<Item name="30CA 36T Spur" icon="gear/30CA_36T_Spur.png" path="gear/30CA_36T_Spur.123dx" />
+		<Item name="40CA 08T Spur" icon="gear/40CA_08T_Spur.png" path="gear/40CA_08T_Spur.123dx" />
+		<Item name="40CA 10T Rack" icon="gear/40CA_10T_Rack.png" path="gear/40CA_10T_Rack.123dx" />
+		<Item name="40CA 12T Spur" icon="gear/40CA_12T_Spur.png" path="gear/40CA_12T_Spur.123dx" />
+		<Item name="40CA 14T Ring" icon="gear/40CA_14T_Ring.png" path="gear/40CA_14T_Ring.123dx" />
+		<Item name="40CA 14T Spur" icon="gear/40CA_14T_Spur.png" path="gear/40CA_14T_Spur.123dx" />
+		<Item name="40CA 20T Ring" icon="gear/40CA_20T_Ring.png" path="gear/40CA_20T_Ring.123dx" />
+		<Item name="40CA 20T Spur" icon="gear/40CA_20T_Spur.png" path="gear/40CA_20T_Spur.123dx" />
+		<Item name="40CA 24T Spur" icon="gear/40CA_24T_Spur.png" path="gear/40CA_24T_Spur.123dx" />
+		<Item name="40CA 36T Ring" icon="gear/40CA_36T_Ring.png" path="gear/40CA_36T_Ring.123dx" />
+		<Item name="40CA 36T Spur" icon="gear/40CA_36T_Spur.png" path="gear/40CA_36T_Spur.123dx" />
+		<Item name="50CA 08T Spur" icon="gear/50CA_08T_Spur.png" path="gear/50CA_08T_Spur.123dx" />
+		<Item name="50CA 10T Rack" icon="gear/50CA_10T_Rack.png" path="gear/50CA_10T_Rack.123dx" />
+		<Item name="50CA 12T Spur" icon="gear/50CA_12T_Spur.png" path="gear/50CA_12T_Spur.123dx" />
+		<Item name="50CA 14T Ring" icon="gear/50CA_14T_Ring.png" path="gear/50CA_14T_Ring.123dx" />
+		<Item name="50CA 14T Spur" icon="gear/50CA_14T_Spur.png" path="gear/50CA_14T_Spur.123dx" />
+		<Item name="50CA 20T Ring" icon="gear/50CA_20T_Ring.png" path="gear/50CA_20T_Ring.123dx" />
+		<Item name="50CA 20T Spur" icon="gear/50CA_20T_Spur.png" path="gear/50CA_20T_Spur.123dx" />
+		<Item name="50CA 24T Spur" icon="gear/50CA_24T_Spur.png" path="gear/50CA_24T_Spur.123dx" />
+		<Item name="50CA 36T Ring" icon="gear/50CA_36T_Ring.png" path="gear/50CA_36T_Ring.123dx" />
+		<Item name="50CA 36T Spur" icon="gear/50CA_36T_Spur.png" path="gear/50CA_36T_Spur.123dx" />
+		<Item name="60CA 08T Spur" icon="gear/60CA_08T_Spur.png" path="gear/60CA_08T_Spur.123dx" />
+		<Item name="60CA 10T Rack" icon="gear/60CA_10T_Rack.png" path="gear/60CA_10T_Rack.123dx" />
+		<Item name="60CA 12T Spur" icon="gear/60CA_12T_Spur.png" path="gear/60CA_12T_Spur.123dx" />
+		<Item name="60CA 14T Ring" icon="gear/60CA_14T_Ring.png" path="gear/60CA_14T_Ring.123dx" />
+		<Item name="60CA 14T Spur" icon="gear/60CA_14T_Spur.png" path="gear/60CA_14T_Spur.123dx" />
+		<Item name="60CA 20T Ring" icon="gear/60CA_20T_Ring.png" path="gear/60CA_20T_Ring.123dx" />
+		<Item name="60CA 20T Spur" icon="gear/60CA_20T_Spur.png" path="gear/60CA_20T_Spur.123dx" />
+		<Item name="60CA 24T Spur" icon="gear/60CA_24T_Spur.png" path="gear/60CA_24T_Spur.123dx" />
+		<Item name="60CA 36T Ring" icon="gear/60CA_36T_Ring.png" path="gear/60CA_36T_Ring.123dx" />
+		<Item name="60CA 36T Spur" icon="gear/60CA_36T_Spur.png" path="gear/60CA_36T_Spur.123dx" />
+	</ItemCategory>
+	<ItemCategory name="ハードウェア">
+		<Item name="Bolt - 01" icon="hardware/Bolt_-_01.png" path="hardware/Bolt_-_01.123dx" />
+		<Item name="Bolt - 02" icon="hardware/Bolt_-_02.png" path="hardware/Bolt_-_02.123dx" />
+		<Item name="Bolt - 03" icon="hardware/Bolt_-_03.png" path="hardware/Bolt_-_03.123dx" />
+		<Item name="Bracket - 01" icon="hardware/Bracket_-_01.png" path="hardware/Bracket_-_01.123dx" />
+		<Item name="Bracket - 02" icon="hardware/Bracket_-_02.png" path="hardware/Bracket_-_02.123dx" />
+		<Item name="Bracket - 03" icon="hardware/Bracket_-_03.png" path="hardware/Bracket_-_03.123dx" />
+		<Item name="Bung - 02" icon="hardware/Bung_-_02.png" path="hardware/Bung_-_02.123dx" />
+		<Item name="Bung - 03" icon="hardware/Bung_-_03.png" path="hardware/Bung_-_03.123dx" />
+		<Item name="Hinge - 01" icon="hardware/Hinge_-_01.png" path="hardware/Hinge_-_01.123dx" />
+		<Item name="Hinge - 02" icon="hardware/Hinge_-_02.png" path="hardware/Hinge_-_02.123dx" />
+		<Item name="Hinge - 03" icon="hardware/Hinge_-_03.png" path="hardware/Hinge_-_03.123dx" />
+		<Item name="Latch - 01" icon="hardware/Latch_-_01.png" path="hardware/Latch_-_01.123dx" />
+		<Item name="Latch - 02" icon="hardware/Latch_-_02.png" path="hardware/Latch_-_02.123dx" />
+		<Item name="Latch - 03" icon="hardware/Latch_-_03.png" path="hardware/Latch_-_03.123dx" />
+		<Item name="Nail - 01" icon="hardware/Nail_-_01.png" path="hardware/Nail_-_01.123dx" />
+		<Item name="Nail - 02" icon="hardware/Nail_-_02.png" path="hardware/Nail_-_02.123dx" />
+		<Item name="Nail - 03" icon="hardware/Nail_-_03.png" path="hardware/Nail_-_03.123dx" />
+		<Item name="Nut - 01" icon="hardware/Nut_-_01.png" path="hardware/Nut_-_01.123dx" />
+		<Item name="Nut - 02" icon="hardware/Nut_-_02.png" path="hardware/Nut_-_02.123dx" />
+		<Item name="Nut - 03" icon="hardware/Nut_-_03.png" path="hardware/Nut_-_03.123dx" />
+		<Item name="Pulley - 01" icon="hardware/Pulley_-_01.png" path="hardware/Pulley_-_01.123dx" />
+		<Item name="Pulley - 02" icon="hardware/Pulley_-_02.png" path="hardware/Pulley_-_02.123dx" />
+		<Item name="Pulley - 03" icon="hardware/Pulley_-_03.png" path="hardware/Pulley_-_03.123dx" />
+		<Item name="Screw - Machine" icon="hardware/Screw_-_Machine.png" path="hardware/Screw_-_Machine.123dx" />
+		<Item name="Screw - Self-Drilling" icon="hardware/Screw_-_Self-Drilling.png" path="hardware/Screw_-_Self-Drilling.123dx" />
+		<Item name="Screw - Sheet Metal" icon="hardware/Screw_-_Sheet_Metal.png" path="hardware/Screw_-_Sheet_Metal.123dx" />
+		<Item name="Screw - Thread Cutting Machine" icon="hardware/Screw_-_Thread_Cutting_Machine.png" path="hardware/Screw_-_Thread_Cutting_Machine.123dx" />
+		<Item name="Screw - Wood" icon="hardware/Screw_-_Wood.png" path="hardware/Screw_-_Wood.123dx" />
+	</ItemCategory>
+	<ItemCategory name="照明器具">
+		<Item name="Bulb Fixture - 01" icon="lightingfixture/Bulb_Fixture_-_01.png" path="lightingfixture/Bulb_Fixture_-_01.123dx" />
+		<Item name="Bulb Fixture - 02" icon="lightingfixture/Bulb_Fixture_-_02.png" path="lightingfixture/Bulb_Fixture_-_02.123dx" />
+		<Item name="Bulb Fixture - 03" icon="lightingfixture/Bulb_Fixture_-_03.png" path="lightingfixture/Bulb_Fixture_-_03.123dx" />
+		<Item name="Ceiling Canopy - 02" icon="lightingfixture/Ceiling_Canopy_-_02.png" path="lightingfixture/Ceiling_Canopy_-_02.123dx" />
+		<Item name="Ceiling Canopy - 03" icon="lightingfixture/Ceiling_Canopy_-_03.png" path="lightingfixture/Ceiling_Canopy_-_03.123dx" />
+		<Item name="Light Switch Plate - 01" icon="lightingfixture/Light_Switch_Plate_-_01.png" path="lightingfixture/Light_Switch_Plate_-_01.123dx" />
+		<Item name="Light Switch Plate - 02" icon="lightingfixture/Light_Switch_Plate_-_02.png" path="lightingfixture/Light_Switch_Plate_-_02.123dx" />
+		<Item name="Light Switch Plate - 03" icon="lightingfixture/Light_Switch_Plate_-_03.png" path="lightingfixture/Light_Switch_Plate_-_03.123dx" />
+		<Item name="Lightbulb - 01" icon="lightingfixture/Lightbulb_-_01.png" path="lightingfixture/Lightbulb_-_01.123dx" />
+		<Item name="Lightbulb - 02" icon="lightingfixture/Lightbulb_-_02.png" path="lightingfixture/Lightbulb_-_02.123dx" />
+		<Item name="Lightbulb - 03" icon="lightingfixture/Lightbulb_-_03.png" path="lightingfixture/Lightbulb_-_03.123dx" />
+		<Item name="Lightbulb - 04" icon="lightingfixture/Lightbulb - 04.png" path="lightingfixture/Lightbulb - 04.123dx" />
+		<Item name="Shade - 01" icon="lightingfixture/Shade_-_01.png" path="lightingfixture/Shade_-_01.123dx" />
+		<Item name="Shade - 02" icon="lightingfixture/Shade_-_02.png" path="lightingfixture/Shade_-_02.123dx" />
+		<Item name="Shade - 03" icon="lightingfixture/Shade_-_03.png" path="lightingfixture/Shade_-_03.123dx" />
+	</ItemCategory>
+</PartsBin>

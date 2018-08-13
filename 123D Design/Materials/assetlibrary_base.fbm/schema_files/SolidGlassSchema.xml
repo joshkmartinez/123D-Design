@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+<!-- =====================================================================
+     This is the common schema for SolidGlass
+ ===================================================================== -->
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="SolidGlassSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+  <localname val="Solid Glass" />
+
+  <Boolean id="solidglass_color_by_object"
+           val="false"
+           label="Custom Color"/>
+  <Choice id="solidglass_transmittance"
+          val="solidglass_clear"
+          label="Color">
+    <ChoiceValue id="solidglass_clear"
+                 val="0"
+                 label="Clear"/>
+    <ChoiceValue id="solidglass_green"
+                 val="1"
+                 label="Green"/>
+    <ChoiceValue id="solidglass_gray"
+                 val="2"
+                 label="Gray"/>
+    <ChoiceValue id="solidglass_blue"
+                 val="3"
+                 label="Blue"/>
+    <ChoiceValue id="solidglass_bluegreen"
+                 val="4"
+                 label="Blue Green"/>
+    <ChoiceValue id="solidglass_bronze"
+                 val="5"
+                 label="Bronze"/>
+    <ChoiceValue id="solidglass_custom"
+                 val="6"
+                 label="Custom"/>
+  </Choice>
+
+  <Color id="solidglass_transmittance_custom_color"
+         valR="0.865"
+         valG="0.91"
+         valB="0.866"
+         label="Custom Color"
+         allowconnectedassets="single" />
+  
+  <Float id="solidglass_reflectance"
+         val="0.15"
+         label="Reflectance">
+    <Bounds minimum="0"
+            maximum="100"
+            percentage="true"/>
+  </Float>
+
+  <Float id="solidglass_refr_ior"
+         val="1.52"
+         label="Refraction">
+    <Bounds minimum="0.01"
+            maximum="5"/>
+  </Float>
+  
+  <Distance id="solidglass_refr_falloff_dist"
+            label="Fall Off Distance"
+            val="6.0"
+            unit="mm"/>
+
+  <Float id="solidglass_glossiness"
+         val="0."
+         label="Roughness">
+    <Bounds minimum="0.0"
+            maximum="1.0"/>
+  </Float>
+
+  <Choice id="solidglass_bump_enable"
+          val="solidglass_none"
+          label="Type">
+    <ChoiceValue id="solidglass_none"
+                 val="0"
+                 label="None"/>
+    <ChoiceValue id="solidglass_rippled"
+                 val="1"
+                 label="Rippled"/>
+    <ChoiceValue id="solidglass_wavy"
+                 val="2"
+                 label="Wavy"/>
+    <ChoiceValue id="solidglass_custom"
+                 val="3"
+                 label="Custom"/>
+  </Choice>
+
+  <Float id="solidglass_bump_amount"
+         val="0.3"
+         label="Amount">
+    <Bounds minimum="0.0"
+            maximum="2.0"/>
+  </Float>
+  
+  <Reference id="solidglass_bump_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image"/>
+
+  <Boolean id="solidglass_roundcorners_on"
+           val="false"
+           label="Round Corners"/>
+  
+  <Float id="solidglass_roundcorners_radius"
+         val="0.25"
+         label="Source"
+         allowconnectedassets="single" />
+  
+  <Boolean id="solidglass_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials"/>
+  
+  <Integer id="solidglass_refl_depth"
+           val="0"
+           label="Reflection Max Trace Depth">
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+  
+  <Integer id="solidglass_refr_depth"
+           val="-1"
+           label="Override Refraction Depth">
+    <Bounds minimum="-1"
+            maximum="20" />
+  </Integer>
+  
+  <!-- The below internal parameters are exposed in 3ds Max, NOTE: one issue is protein1's default val is 8 while it is 32 in protein2-->
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <Integer id="refraction_glossy_samples"
+           val="32"
+           label="Refraction Glossy Samples">
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+
+  <!-- Internal parameters - not exposed to the UI -->
+  <Integer id="mode"
+           val="4"
+           label="Mode"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/SolidGlass/SolidGlassUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/SolidGlass/SolidGlassAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/SolidGlass/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/SolidGlass/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/SolidGlass/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric"
+                  val="Mats/SolidGlass/Generic.xml" />
+
+</AssetSchema>
+

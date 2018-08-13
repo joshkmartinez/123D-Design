@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Checker map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="checker_Appearance" label="Appearance" expanded="true">
+      <MappableProcedureColor id="checker_color1"
+                              swappartner="checker_color2"
+                              label="Color 1"
+                              tooltip="Provides the option of selecting a color or a sub-procedural map for one of the checkers"  />
+      <MappableProcedureColor id="checker_color2"
+                              swappartner="checker_color1"
+                              label="Color 2"
+                              tooltip="Provides the option of selecting a color or a sub-procedural map for the other checker." />
+      <Float id="checker_soften"
+             label="Soften"
+             tooltip="Adjusts the value in the amount of softness or blurring between the edge of the two colors or map types. Higher values blur more. A value of 0.0 indicates sharp edges. Range = 0 to 5.00; Default = 0."
+             min="0" max="5" forcenumeric="spinbox"/>
+    </StackPanel>
+    <StackPanel id="checker_transforms_group"
+                label="Transforms"
+                orientation="Vertical"
+                expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"
+               tooltip="When this setting is enabled, all changes made to the Position, Scale, and Repeat settings of this attribute will be propagated to all other attributes within the material that use a texture."/>
+      <StackPanel id="checker_Position"
+                  label="Position"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <ParamLock id="texture_OffsetLock"
+                   tooltip="Constrains the offset. When the X offset is changed, the Y offset is changed by the same amount."
+                   topParamLock="texture_RealWorldOffsetX"
+                   bottomParamLock="texture_RealWorldOffsetY" />
+        <Angle id="texture_WAngle"
+               label="Rotation"
+               min="0" max="360.0"
+               tooltip="Rotates the map from 0 degrees to 360 degrees."/>
+      </StackPanel>
+      <StackPanel id="checker_Scale" label="Scale" expanded="true">
+        <SampleSize id="texture_RealWorldScaleX"
+                    label="Sample Size"
+                    rightlabel="Width"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the horizontal scaling for procedural maps on materials. This functionality is only available on  Checker, Gradient, and Tiles."/>
+
+        <SampleSize id="texture_RealWorldScaleY"
+                    label=""
+                    rightlabel="Height"
+                    notifyImageOnChange="true"      
+                    min="0.01"
+                    type="scale"
+                    tooltip="Specifies the vertical scaling for procedural maps on materials. This functionality is only available on  Checker, Gradient, and Tiles."/>
+        <ParamLock id="texture_ScaleLock"
+                   tooltip="Locks the aspect ratio of the map. When the height or width value is changed, the other value changes as needed to maintain the aspect ratio."
+                   topParamLock="texture_RealWorldScaleX"
+                   bottomParamLock="texture_RealWorldScaleY" />
+      </StackPanel>
+      <StackPanel id="checker_Repeat"
+                  label="Repeat"
+                  orientation="Vertical"
+                  expanded="true">
+        <Boolean id="texture_URepeat"
+                 label="Horizontal"
+                 tooltip="Adjusts the tiling of the map along the X axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+        <Boolean id="texture_VRepeat"
+                 label="Vertical"
+                 tooltip="Adjusts the tiling of the map along the Y axis. None controls the map to not be tiled within the material. Tile causes the map to be tiled within the material."
+                 usedropdown="true"
+                 onlabel="Tile"
+                 offlabel="None"/>
+      </StackPanel>
+    </StackPanel>
+  </Fields>
+</adsui>

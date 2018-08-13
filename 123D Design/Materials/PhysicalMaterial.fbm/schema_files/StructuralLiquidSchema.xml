@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="StructuralCommonSchema"
+        file="../Common/StructuralCommonSchema.xml" />
+
+  <UID  val="StructuralLiquidSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="Structural" />
+
+  <localtype val="Physical" />
+  <localname val="Liquid" />
+
+  <!--Thermal Expansion Coefficient-->
+  <Float id="structural_Thermal_expansion_coefficient" 
+         val="0.1"
+         unit="InvCelsius"
+         label="Thermal Expansion Coefficient" >
+    <Bounds minimum="0.1"
+            maximum="500" />
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Structural/Liquid/LiquidStructuralUI.xml"/>
+
+</AssetSchema>
+
+

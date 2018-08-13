@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for SwatchScene
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="CommonSchema"
+        file="../Common/CommonSchema.xml" />
+
+  <UID  val="SwatchSceneSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="swatchscene"/>
+   <localtype val="Swatch Scene" />
+    <localname val="Swatch Scene" />
+  <!-- No label defined in UI -->
+  <URL id="Scene"
+       label="Scene"/>
+  
+  <!-- No label defined in UI -->
+  <URL id="Settings"
+       label="Settings"/>
+
+  <String id="asset_type"
+          val=""
+          public="false"/>
+
+  <String id="asset_render"
+          val=""
+          public="false"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="SwatchScenes/SwatchUI.xml"/>
+</AssetSchema>

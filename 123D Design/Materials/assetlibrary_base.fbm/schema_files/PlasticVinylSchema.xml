@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="PlasticVinylSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="materialappearance" />
+  
+  <localtype val="Appearance" />
+  <localname val="Plastic" />
+
+  <Choice id="plasticvinyl_type" 
+          val="plasticvinyl_plasticsolid"
+          label="Type" >
+    <ChoiceValue id="plasticvinyl_plasticsolid"
+                 val="0"
+                 label="Plastic (Solid)" />
+    <ChoiceValue id="plasticvinyl_plastictransparent"
+                 val="1"
+                 label="Plastic (Transparent)" />
+    <ChoiceValue id="plasticvinyl_vinyl"
+                 val="2"
+                 label="Vinyl" />
+  </Choice>
+
+  <Boolean id="plasticvinyl_color_by_object" 
+           val="false"
+           label="Color By Object" />
+  
+  <Color  id="plasticvinyl_color" 
+          valR="1.0" 
+          valG="1.0" 
+          valB="1.0"
+          label="Color"
+          allowconnectedassets="single" />
+
+  <Choice id="plasticvinyl_application" 
+          val="plasticvinyl_polished"
+          label="Finish" >
+    <ChoiceValue id="plasticvinyl_polished"
+                 val="0"
+                 label="Polished" />
+    <ChoiceValue id="plasticvinyl_glossy"
+                 val="1"
+                 label="Glossy" />
+    <ChoiceValue id="plasticvinyl_matte"
+                 val="2"
+                 label="Matte" />
+  </Choice>
+
+  <Choice id="plasticvinyl_bump" 
+          val="plasticvinyl_none"
+          label="Finish Bumps" >
+    <ChoiceValue id="plasticvinyl_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="plasticvinyl_custom"
+                 val="1"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="plasticvinyl_bump_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="plasticvinyl_bump_amount" 
+         val="0.05"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="1.0" />
+  </Float>
+
+  <Choice id="plasticvinyl_pattern" 
+          val="plasticvinyl_none"
+          label="Relief Pattern" >
+    <ChoiceValue id="plasticvinyl_none"
+                 val="0"
+                 label="None" />
+    <ChoiceValue id="plasticvinyl_custom"
+                 val="1"
+                 label="Custom" />
+  </Choice>
+
+  <Reference id="plasticvinyl_pattern_map"
+             type="texture"
+             allowconnectedassets="single"
+             label="Image" />
+
+  <Float id="plasticvinyl_pattern_amount" 
+         val="0.25"
+         label="Amount" >
+    <Bounds minimum="0.0"
+            maximum="2.0" />
+  </Float>
+
+  <Boolean id="plasticvinyl_ao_on"
+         val="false"
+         label="Ambient Occlusion" />
+
+  <Integer id="plasticvinyl_ao_samples"
+           val="16"
+           label="Samples" >
+    <Bounds minimum="2"
+            maximum="256" />
+  </Integer>
+
+  <Float id="plasticvinyl_ao_distance"
+         val="4"
+         label="Max Distance" />
+
+  <Boolean id="plasticvinyl_ao_details"
+           val="false"
+           label="Use Color From Other Materials" />
+
+  <Boolean id="plasticvinyl_roundcorners_on" 
+           val="false"
+           label="Round Corners" />
+
+  <Float id="plasticvinyl_roundcorners_radius"
+         val="0.25"
+         label="Round Corners"
+         allowconnectedassets="single" />
+
+  <Boolean id="plasticvinyl_roundcorners_allow_different_materials"
+           val="false"
+           label="Blend with Other Materials" />
+
+  <Integer id="plasticvinyl_refl_depth"
+           val="0"
+          label="Reflection Max Trace Depth" >
+    <Bounds minimum="0"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="plasticvinyl_refr_depth"
+           val="-1"
+           label="Override Refraction Depth" >
+    <Bounds minimum="-1"
+            maximum="20" />
+  </Integer>
+
+  <Integer id="reflection_glossy_samples"
+           val="32"
+           label="Reflection Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <Integer id="refraction_glossy_samples"
+           val="32"
+           label="Refraction Glossy Samples" >
+    <Bounds minimum="0"
+            maximum="128" />
+  </Integer>
+
+  <!-- Internal parameter-->
+  <Integer id="mode"
+           val="4"
+           label="Mode" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Mats/PlasticVinyl/PlasticVinylUI.xml"/>
+  
+  <ui id="AdvancedUIDefinition"
+      val="Mats/PlasticVinyl/PlasticVinylAdvancedUI.xml"/>
+
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Mats/PlasticVinyl/MentalImage.xml" />
+  
+  <implementation id="ImplementationOGS"
+                  val="Mats/PlasticVinyl/OGS.xml" />
+  
+  <implementation id="ImplementationPreview"
+                  val="Mats/PlasticVinyl/PreviewColor.xml" />
+  
+  <implementation id="ImplementationGeneric" 
+                  val="Mats/PlasticVinyl/Generic.xml" />
+
+</AssetSchema>
+
+

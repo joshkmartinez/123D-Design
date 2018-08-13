@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Paint
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="wallpaint_paintgroup" label="Wall Paint" orientation="Vertical" expanded="true">
+      <MappableColorByObject id="wallpaint_color"
+             label="Color"
+             coloronly="true"
+             tooltip="Adjusts the color and amount of light reflected from the paint.">
+        <BoolColorByObject id="wallpaint_color_by_object" />
+      </MappableColorByObject>
+      <ChooseList id="wallpaint_finish"
+                  tooltip="Adjusts paint glossiness (6 preset choices)."
+                  label="Finish">
+        <Choice id="wallpaint_flat" label="Flat/Matte"/>
+	<Choice id="wallpaint_eggshell" label="Eggshell"/>
+	<Choice id="wallpaint_platinum" label="Platinum"/>
+	<Choice id="wallpaint_pearl" label="Pearl"/>
+	<Choice id="wallpaint_semigloss" label="Semi-gloss"/>
+        <Choice id="wallpaint_gloss" label="Gloss"/>
+      </ChooseList>
+      <ChooseList id="wallpaint_application"
+                  label="Application"
+                  tooltip="Adjusts paint texture to roller (fine bump), brush (streaks), or spray (smooth).">
+	<Choice id="wallpaint_roller" label="Roller"/>
+	<Choice id="wallpaint_brush" label="Brush"/>
+	<Choice id="wallpaint_spray" label="Spray"/>
+      </ChooseList>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="wallpaint_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">
+      <Integer id="wallpaint_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="wallpaint_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="wallpaint_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="wallpaint_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="wallpaint_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="wallpaint_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="wallpaint_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="wallpaint_reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="wallpaint_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+  </Fields>
+</adsui>

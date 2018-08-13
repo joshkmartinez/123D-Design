@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectivity.ExtensionSettings3>
+
+    <!-- IFileReferencesProvider implementation -->
+    <extension interface="Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core.IFileReferencesProvider, Autodesk.DataManagement.Common.FileOperationProvider.Interface.Core"
+               type="Autodesk.DataManagement.Common.FileOperationProvider.AutoCADSynergy.FileReferenceProvider, Autodesk.DataManagement.Common.FileOperationProvider.AutoCADSynergy"
+               runtime="x64">
+
+      <!-- FOS core settings for a provider -->
+      <setting key="Id" value="{CE8DC3BA-DDE7-4009-A8B9-5835CF64D518}"/>
+      <setting key="Name" value="AutoCADSynergy"/>
+      <setting key="LoadEnabled" value="true"/>
+      <setting key="Enabled" value="true"/>
+      <setting key="SupportedExtensions" value=".dwg; .dwt; .dws"/>
+      <setting key="UnsupportedExtensions" value=""/>
+      <setting key="AdhereToExtensions" value="true"/>
+      <setting key="Priority" value="20"/>
+      
+      <!-- IFileReferencesProvider settings -->
+      <!-- SupportsUpdate: indicates if the UpdateReference method is supported by the provider implementation -->
+      <setting key="SupportsUpdate" value="true"/>
+
+      <!-- include dll resolution to the folder that the provider resides in -->
+      <resolveFolder lookup="RelativeToExtension" path="." appendToPath="true"/>
+      <!-- include dll resolution to the folder that ObjectDBX resides in. This one is relative to the location of the provider dll -->
+      <resolveFolder lookup="RelativeToExtension" path="..\RealDwg" appendToPath="true"/>
+      <!--<resolveFolder lookup="RelativeToExtension" path="..\..\..\..\..\..\..\..\RealDwg\19.1.6.0.0\binary\win_vc10\x64\Release" appendToPath="true"/>-->
+      
+    </extension>
+  </connectivity.ExtensionSettings3>
+</configuration>

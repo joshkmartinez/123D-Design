@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<HardwareLibrary>
+  <OS value="Windows">
+    <Vendor value="NVIDIA">
+	  <Device value="GeForce 9600M GT" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="GeForce GT 630" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="GeForce GT 620" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="Quadro FX 1800M" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="Quadro FX 1600M" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="Quadro 2000M" Rating="Yellow" Workarounds="00000008">
+	  </Device>
+	  <Device value="Quadro FX 2800M" Rating="Yellow" Workarounds="00000008">
+	  </Device>
+    </Vendor>
+    <Vendor value="ATI">
+    </Vendor>
+    <Vendor value="INTEL">
+	  <Device value="Intel(R) HD Graphics Family" Rating="Yellow" Workarounds="00000001">
+	  </Device>
+	  <Device value="Intel(R) GMA 3100" Rating="Red" Workarounds="00000002">
+	  </Device>
+	  <Device value="Intel(R) GMA 950" Rating="Red" Workarounds="00000002">
+	  </Device>
+    </Vendor>
+  </OS>
+</HardwareLibrary>

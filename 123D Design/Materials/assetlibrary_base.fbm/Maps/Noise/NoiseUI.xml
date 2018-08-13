@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Noise map
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="noise_Appearance" label="Appearance" expanded="true">
+      <ChooseList id="noise_Type"
+                  label="Noise Type"
+                  tooltip="Creates random perturbation of a surface based on the interaction of two colors. Available choices are Regular, Fractal, and Turbulence.">
+        <Choice id="noise_regular" label="Regular"/>
+        <Choice id="noise_fractal" label="Fractal"/>
+        <Choice id="noise_turbulence" label="Turbulence"/>
+      </ChooseList>
+      <Float id="noise_Size"
+             label="Size"
+             min="0.001" max="10000000000" forcenumeric="spinbox"
+             tooltip="Sets the scale of the noise function. Smaller values give smaller chunks of noise."/>
+      <MappableProcedureColor id="noise_Color1"
+                              label="Color 1"
+                              swappartner="noise_Color2"
+                              tooltip="Provides the option of selecting a color or a sub-procedural map for one of the components." />
+      <MappableProcedureColor id="noise_Color2"
+                              label="Color 2"
+                              swappartner="noise_Color1"
+                              tooltip="Provides the option of selecting a color or a sub-procedural map for the other  component." />
+    </StackPanel>
+    <StackPanel id="noise_Threshold"
+                label="Noise Threshold">
+      <Float id="noise_ThresholdLow"
+             label="Low"
+             min="0" max="1" forcenumeric="spinbox"
+             tooltip="Specifies the low noise threshold. Range = 0 to 1; Default = 0. "/>
+      <Float id="noise_ThresholdHigh"
+             label="High"
+             min="0" max="1"
+             forcenumeric="spinbox"
+             tooltip="Specifies the high noise threshold. Range = 0 to 1; Default = 1."/>
+      <Float id="noise_Levels"
+             label="Levels"
+             forcenumeric="spinbox"
+             min="1" max="10"
+             tooltip="Determines the number of iterations used for  Fractal and Turbulence noise.  Default = 3.">
+        <Dependency id="noise_Type_dependency"
+	            on="noise_Type"
+                    not="true"
+	            requires="noise_regular"
+		    else="disable"/>
+      </Float>
+      <Float id="noise_Phase"
+             label="Phase"
+             forcenumeric="spinbox"
+             tooltip="Specifies the noise threshold phase."/>
+    </StackPanel>
+    <StackPanel id="noise_transforms_group"
+                label="Transforms"
+                orientation="Vertical"
+                expanded="true">
+      <!--hook the correct transform property ids up when Protein code is ready-->
+      <Boolean id="texture_LinkTextureTransforms"
+               label="Link texture transforms"/>
+      <StackPanel id="noise_Position"
+                  label="Position"
+                  expanded="true">
+        <SampleSize id="texture_RealWorldOffsetX"
+                    label="Offset"
+                    rightlabel="X"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the X axis."/>
+        <SampleSize id="texture_RealWorldOffsetY"
+                    label=""
+                    rightlabel="Y"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Y axis."/>
+        <SampleSize id="texture_RealWorldOffsetZ"
+                    label=""
+                    rightlabel="Z"
+                    type="offset"
+                    tooltip="Moves the starting point of the map along the Z axis."/>
+        <Vector3 id="texture_Angle"
+                 label="XYZ Rotation"
+                 forcenumeric="slider"
+                 tooltip="Specify the Rotation of the area represented by the image above."/>
+      </StackPanel>
+    </StackPanel>
+  </Fields>
+</adsui>

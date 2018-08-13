@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <float   name="wallpaint_diffuse_image_fade"             val="1."/>
+    <boolean name="wallpaint_is_metal"                       val="false"/>
+    <float   name="wallpaint_transparency"                   val="0."/>
+    <float   name="wallpaint_transparency_image_fade"        val="1."/>
+    <float   name="wallpaint_refraction_index"               val="1.4"/>
+    <float   name="wallpaint_refraction_translucency_weight" val=".5"/>
+    <float   name="wallpaint_cutout_opacity"                 val="1."/>
+    <boolean name="wallpaint_backface_cull"                  val="false"/>
+    <float   name="wallpaint_self_illum_luminance"           val="0"/>
+    <float   name="wallpaint_self_illum_color_temperature"   val="0.0"/>
+    <integer name="wallpaint_refraction_glossy_samples"      val="1"/>
+  </constants>
+
+  <operator function="WallPaintRefl0DegBOF" name="Refl_0_deg">
+    <map_interface source="wallpaint_finish"       destination="finish"/>
+    <map_interface source="wallpaint_application"  destination="application"/>
+  </operator>
+  
+  <operator function="WallPaintRefl90DegBOF" name="Refl_90_deg">
+    <map_interface source="wallpaint_finish"       destination="finish"/>
+    <map_interface source="wallpaint_application"  destination="application"/>
+  </operator>
+  
+  <operator function="WallPaintReflGlossBOF" name="refl_gloss">
+    <map_interface source="wallpaint_finish"       destination="finish"/>
+    <map_interface source="wallpaint_application"  destination="application"/>
+  </operator>
+
+  <operator function="WallPaintBumpAmountBOF" name="bump_amount">
+    <map_interface source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="RoundCornerRadiusSpiderBOF" name="round_corner_radius_BOF">
+    <map_interface source="wallpaint_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="wallpaint_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <map_interface source="wallpaint_color_by_object"                       destination="color_by_object"/>
+    <map_interface source="wallpaint_color"                                 destination="generic_diffuse"/>
+    <map_constant  source="wallpaint_diffuse_image_fade"                    destination="generic_diffuse_image_fade"/>
+    <map_operator  source="Refl_0_deg"                                      destination="generic_reflectivity_at_0deg"/>
+    <map_operator  source="Refl_90_deg"                                     destination="generic_reflectivity_at_90deg"/>
+    <map_operator  source="refl_gloss"                                      destination="generic_glossiness"/>
+    <map_constant  source="wallpaint_is_metal"                              destination="generic_is_metal"/>
+    <map_constant  source="wallpaint_transparency"                          destination="generic_transparency"/>
+    <map_constant  source="wallpaint_transparency_image_fade"               destination="generic_transparency_image_fade"/>
+    <map_constant  source="wallpaint_refraction_index"                      destination="generic_refraction_index"/>
+    <map_constant  source="wallpaint_refraction_translucency_weight"        destination="generic_refraction_translucency_weight"/>
+    <map_constant  source="wallpaint_cutout_opacity"                        destination="generic_cutout_opacity"/>
+    <map_constant  source="wallpaint_backface_cull"                         destination="generic_backface_cull"/>
+    <map_constant  source="wallpaint_self_illum_luminance"                  destination="generic_self_illum_luminance"/>
+    <map_constant  source="wallpaint_self_illum_color_temperature"          destination="generic_self_illum_color_temperature"/>
+    <map_operator  source="bump_amount"                                     destination="generic_bump_amount"/>
+    <map_bindings  source="bump_map_asset"                                  destination="generic_bump_map"/>
+    <map_interface source="wallpaint_reflection_glossy_samples"             destination="generic_reflection_glossy_samples"/>
+    <map_constant  source="wallpaint_refraction_glossy_samples"             destination="generic_refraction_glossy_samples"/>
+    <map_interface source="wallpaint_ao_on"                                 destination="generic_ao_on"/>
+    <map_interface source="wallpaint_ao_samples"                            destination="generic_ao_samples"/>
+    <map_interface source="wallpaint_ao_distance"                           destination="generic_ao_distance"/>
+    <map_interface source="wallpaint_ao_details"                            destination="generic_ao_details"/>
+    <map_bindings  source="round_corner_radius_map"                         destination="generic_roundcorners_radius"/>
+    <map_operator  source="round_corner_radius_BOF"                         destination="generic_roundcorners_radius"/>
+    <map_interface source="wallpaint_roundcorners_allow_different_materials" destination="generic_roundcorners_allow_different_materials"/>
+    <map_interface source="wallpaint_refl_depth"                            destination="generic_refl_depth"/>
+    <map_interface source="common_Tint_toggle"                     destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                      destination="common_Tint_color"/>  
+  </bindings>
+
+  <!-- Connected Asset for Bump_map -->
+  <operator function="WallpaintBumpMapAssetNameBOF" name="bump_map_asset_name">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetBindingsBOF" name="bump_map_asset_bindings">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <bindings target="bump_map_asset_instance" name="bump_map_asset">
+    <map_operator  source="bump_map_asset_name"     destination="asset_name"/>
+    <map_operator  source="bump_map_asset_bindings" destination="bindings_name"/>
+  </bindings>
+
+  <!-- Speckle Asset Binding Operators for Bump_map -->
+  <operator function="WallpaintBumpMapAssetSpeckleColor1BOF" name="bump_map_asset_speckle_Color1">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetSpeckleColor2BOF" name="bump_map_asset_speckle_Color2">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetSpeckleSizeBOF" name="bump_map_asset_speckle_Size">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <bindings target="bump_map_asset_speckle_instance" name="bump_map_asset_speckle">
+    <map_operator  source="bump_map_asset_speckle_Color1" destination="speckle_Color1"/>
+    <map_operator  source="bump_map_asset_speckle_Color2" destination="speckle_Color2"/>
+    <map_operator  source="bump_map_asset_speckle_Size" destination="speckle_Size"/>
+  </bindings>
+
+  <!-- UnifiedBitmap Asset Binding Operators for Bump_map -->
+  <operator function="WallpaintBumpMapAssetUnifiedbitmapBitmapBOF" name="bump_map_asset_unifiedbitmap_Bitmap">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetUnifiedbitmapWAngleBOF" name="bump_map_asset_unifiedbitmap_WAngle">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetUnifiedbitmapRealWorldScaleXBOF" name="bump_map_asset_unifiedbitmap_RealWorldScaleX">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <operator function="WallpaintBumpMapAssetUnifiedbitmapRealWorldScaleYBOF" name="bump_map_asset_unifiedbitmap_RealWorldScaleY">
+    <map_interface  source="wallpaint_application" destination="application"/>
+  </operator>
+
+  <bindings target="bump_map_asset_unifiedbitmap_instance" name="bump_map_asset_unifiedbitmap">
+    <map_operator  source="bump_map_asset_unifiedbitmap_Bitmap"   destination="unifiedbitmap_Bitmap"/>
+    <map_operator  source="bump_map_asset_unifiedbitmap_WAngle" destination="unifiedbitmap_WAngle"/>
+    <map_operator  source="bump_map_asset_unifiedbitmap_RealWorldScaleX" destination="unifiedbitmap_RealWorldScaleX"/>
+    <map_operator  source="bump_map_asset_unifiedbitmap_RealWorldScaleY" destination="unifiedbitmap_RealWorldScaleY"/>
+  </bindings>
+
+  <!-- Basically, when the XXX_roundcorners_on is true, we should map the value or connected asset of xxxx_rouncornders_radius to generic_roundcorners_radius. Or set generic_roundcorners_radius to 0.0 -->
+  <operator function="RoundCornersRadiusMapSpiderBOF" name="round_corner_radius_map_property_name">
+    <map_interface source="wallpaint_roundcorners_on"     destination="round_corners_on"/>
+    <map_interface source="wallpaint_roundcorners_radius" destination="round_corners_radius"/>
+  </operator>
+
+  <bindings target="round_corner_radius_map" name="round_corner_radius_map">
+    <map_operator source="round_corner_radius_map_property_name" destination="property_name" />
+  </bindings>
+  
+</implementation>

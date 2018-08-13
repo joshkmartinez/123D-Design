@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for GenericPhotometricLight
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="GenericPhotometricLightSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="lightappearance"/>
+
+  <localtype val="Light" />
+  <localname val="Light" />
+  <!-- These are the light object parameters -->
+
+  <Choice id="lightobjecttype"
+          val="origin"
+          label="Type:">
+    <ChoiceValue id="origin"
+                 val="0"
+                 label="Point"/>
+    <ChoiceValue id="spot"
+                 val="1"
+                 label="Spot"/>
+    <ChoiceValue id="directional"
+                 val="2"
+                 label="Directional"/>
+  </Choice>
+
+  <Choice id="lightobjectareatype"
+          val="none"
+          label="Area Type:">
+    <ChoiceValue id="none"
+                 val="0"
+                 label="No Area"/>
+    <ChoiceValue id="rectangle"
+                 val="1"
+                 label="Rectangle"/>
+    <ChoiceValue id="disc"
+                 val="2"
+                 label="Disc"/>
+    <ChoiceValue id="sphere"
+                 val="3"
+                 label="Sphere"/>
+    <ChoiceValue id="cylinder"
+                 val="4"
+                 label="Cylinder"/>
+    <ChoiceValue id="line"
+                 val="5"
+                 label="Line"/>
+  </Choice>
+
+  <Float id="lightobjectexponent"
+         val="2.0"
+         label="Attenuation:"/>
+
+  <!-- For rectangle area lights -->
+  <Float id="rectangle_width"
+         val="1.0"
+         label="Width:"/>
+  <Float id="rectangle_length"
+         val="1.0"
+         label="Length:"/>
+
+  <!-- For disc area lights -->
+  <Vector3 id="disc_normal"
+           valX="0.0"
+           valY="0.0"
+           valZ="-1.0"
+           label="Normal:"/>
+  <Float id="disc_radius"
+         val="1.0"
+         label="Radius:"/>
+
+  <!-- For cylinder area lights -->
+  <Vector3 id="cylinder_axis"
+           valX="0.0"
+           valY="1.0"
+           valZ="0.0"
+           label="Axis:"/>
+  <Float id="cylinder_radius"
+         val="1.0"
+         label="Radius:"/>
+
+  <!-- For sphere area lights -->
+  <Float id="sphere_radius"
+         val="1.0"
+         label="Radius:"/>
+
+  <!-- Let's ignore these for now...
+		<Choice id="lightobjectshadowtype" val="raytraced">
+			<ChoiceValue id="raytraced" />
+			<ChoiceValue id="shadowmaps" />
+		</Choice>
+		-->
+
+  <Boolean id="lightobjectvisible"
+           val="false"
+           label="Light Visible:"/>
+
+  <!-- These are the shader parameters -->
+
+  <Boolean  id="on"
+            val="true"
+            label="On:"/>
+  <Boolean  id="shadowOn"
+            val="true"
+            label="Compute Shadows:"/>
+
+  <Choice id="distribution"
+          val="isotropic"
+          label="Distribution:">
+    <ChoiceValue id="isotropic"
+                 val="0"
+                 label="Uniform"/>
+    <ChoiceValue id="spot"
+                 val="1"
+                 label="Spot"/>
+    <ChoiceValue id="diffuse"
+                 val="2"
+                 label="Diffuse"/>
+    <ChoiceValue id="web"
+                 val="3"
+                 label="Use Light Profile"/>
+  </Choice>
+
+  <Choice id="lightColorUnits"
+          val="kelvin"
+          label="Light Color Units:">
+    <ChoiceValue id="kelvin"
+                 val="0"
+                 label="Kelvin"/>
+    <ChoiceValue id="rgb"
+                 val="1"
+                 label="RGB"/>
+  </Choice>
+  <Choice id="lightTempPresets"
+          val="halogen"
+          label="Light Temperature:">
+    <ChoiceValue id="halogenWarm"
+                 val="0"
+                 label="Halogen (Warm)"/>
+    <ChoiceValue id="halogen"
+                 val="1"
+                 label="Halogen"/>
+    <ChoiceValue id="halogenCool"
+                 val="2"
+                 label="Halogen (Cool)"/>
+    <ChoiceValue id="a_incandescent"
+                 val="3"
+                 label="Incandescent Filament Lamp"/>
+    <ChoiceValue id="f4_fluorescentWarmWhite"
+                 val="4"
+                 label="Fluorescent (Warm White)"/>
+    <ChoiceValue id="f2_fluorescentCoolWhite"
+                 val="5"
+                 label="Fluorescent (Cool White)"/>
+    <ChoiceValue id="f3_fluorescentWhite"
+                 val="6"
+                 label="Fluorescent (White)"/>
+    <ChoiceValue id="f5_fluorescentDaylight"
+                 val="7"
+                 label="Fluorescent (Daylight)"/>
+    <ChoiceValue id="f6_fluorescentLightWhite"
+                 val="8"
+                 label="Fluorescent (Light White)"/>
+    <ChoiceValue id="ceramicWarm"
+                 val="9"
+                 label="HID Ceramic Metal Halide (Warm)"/>
+    <ChoiceValue id="ceramicCool"
+                 val="10"
+                 label="HID Ceramic Metal Halide (Cool)"/>
+    <ChoiceValue id="quartzWarm"
+                 val="11"
+                 label="HID Quartz Metal Halide (Warm)"/>
+    <ChoiceValue id="quartz"
+                 val="12"
+                 label="HID Quartz Metal Halide"/>
+    <ChoiceValue id="quartzCool"
+                 val="13"
+                 label="HID Quartz Metal Halide (Cool)"/>
+    <ChoiceValue id="mercury"
+                 val="14"
+                 label="HID Mercury"/>
+    <ChoiceValue id="xenon"
+                 val="15"
+                 label="HID Xenon"/>
+    <ChoiceValue id="highPressureSodium"
+                 val="16"
+                 label="HID High Pressure Sodium"/>
+    <ChoiceValue id="lowPressureSodium"
+                 val="17"
+                 label="HID Low Pressure Sodium"/>
+    <ChoiceValue id="d65"
+                 val="18"
+                 label="D65 Illuminant (Reference White)"/>
+    <ChoiceValue id="d50"
+                 val="19"
+                 label="D50 Illuminant (Reference White)"/>
+    <ChoiceValue id="custom"
+                 val="20"
+                 label="Custom"/>
+  </Choice>
+  <Float id="lightTemperature"
+         val="3500.0"
+         label="Custom Light Temperature:"/>
+  <Color id="rgbLightColor"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Light Color:"/>
+  <Choice id="colorShifting"
+          val="none"
+          label="Color Shifting:">
+    <ChoiceValue id="none"
+                 val="0"
+                 label="None"/>
+    <ChoiceValue id="std_incandescent"
+                 val="1"
+                 label="Standard Incandescent Light"/>
+  </Choice>
+
+  <Color id="filterColor"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Filter Color:"/>
+
+  <Choice id="intensityUnits"
+          val="candela"
+          label="Intensity Units:">
+    <ChoiceValue id="candela"
+                 val="0"
+                 label="candelas"/>
+    <ChoiceValue id="lumen"
+                 val="1"
+                 label="lumens"/>
+    <ChoiceValue id="lux_at"
+                 val="2"
+                 label="lux at"/>
+    <ChoiceValue id="watt"
+                 val="3"
+                 label="watts"/>
+    <ChoiceValue id="unitless"
+                 val="4"
+                 label="unitless"/>
+  </Choice>
+  <Float id="intensityValue"
+         val="1500.0"
+         label="Value:"/>
+  <Float id="illuminanceAt"
+         val="1.0"
+         label="At (meters):"/>
+  <Float id="electricalEfficiency"
+         val="15.0"
+         label="Electrical Efficiency (lm/W):"/>
+  <Float id="dimmer"
+         val="1.0"
+         label="Multiplier:"/>
+  <Float id="lightLossFactor"
+         val="1.0"
+         label="Light Loss Factor:"/>
+
+  <Color id="shadowCol"
+         valR="0.0"
+         valG="0.0"
+         valB="0.0"
+         label="Color:"/>
+  <Float id="shadowDensity"
+         val="1.0" />
+  <Boolean  id="useShadowColMap"
+            val="false"
+            label="Use Shadow Color Map:"/>
+  <URL id="shadowColMap"
+       val=""
+       label="File Name:"/>
+  <Boolean  id="lightAffectShadowCol"
+            val="true"
+            label="Light Affects Color:"/>
+  <Boolean  id="atmosShadowOn"
+            val="false"
+            label="On:"/>
+  <Float id="atmosShadowOpacity"
+         val="1.0"
+         label="Opacity:"/>
+  <Float id="atmosShadowColAmnt"
+         val="1.0"
+         label="Amount:"/>
+
+  <Float id="contrast"
+         val="1.0"
+         label="Contrast:"/>
+  <Float id="softDiffEdges"
+         val="1.0"
+         label="Soften Diffuse Edges:"/>
+  <Boolean  id="diffuse"
+            val="true"
+            label="Diffuse:"/>
+  <Boolean  id="specular"
+            val="true"
+            label="Specular:"/>
+  <Boolean  id="ambientOnly"
+            val="false"
+            label="Ambient Only:"/>
+  <Boolean  id="projMapOn"
+            val="false"
+            label="On:"/>
+  <URL id="projMap"
+       val=""
+       label="File Name:"/>
+
+  <Float id="hotSpot"
+         val="0.5"
+         label="Hot Spot:"/>
+  <Float id="fallOff"
+         val="1.0"
+         label="Fall Off:"/>
+
+  <URL id="lightProfileFileName"
+       val=""
+       label="Light Profile:"/>
+  <Vector3 id="webTranslation"
+           valX="0."
+           valY="0."
+           valZ="0." />
+  <Vector3 id="webRotation"
+           valX="0."
+           valY="0."
+           valZ="0."
+           label="Rotation:" />
+  <Vector3 id="webScaling"
+           valX="1."
+           valY="1."
+           valZ="1." />
+  <Boolean id="webHasSymmetry"
+           val="true"
+           label="Symmetric:"/>
+
+  <!-- Forces a different algorithm that makes linear/elongated lighs look more realistic, 
+			  at the cost of noise in the image. Only has an impact on rectangle lights. -->
+  <Boolean id="isLinearLight"
+           val="false"
+           label="Is Linear Light:"/>
+  
+ <!-- The following properties will only be enabled when lightingUnits is set to unitless for standard light. -->
+  <Float id="decayStartDistance"
+       val="1.0"
+       label="Decay Start:"/>
+
+  <Choice id="decayType"
+          val="none"
+          label="Decay Type:">
+    <ChoiceValue id="none"
+                 val="0"
+                 label="None"/>
+    <ChoiceValue id="inverse"
+                 val="1"
+                 label="Inverse"/>
+    <ChoiceValue id="inverseSquare"
+                 val="2"
+                 label="Inverse Square"/>
+  </Choice>
+  
+  <Boolean id="nearAttenuationOn"
+           val="False"
+           label="Near Attenuation:"/>
+  
+  <Float id="nearAttenuationStart"
+       val="1.0"
+       label="Start Point:"/>
+  
+  <Float id="nearAttenuationEnd"
+       val="1.0"
+       label="End Point:"/>
+  
+  <Boolean id="farAttenuationOn"
+           val="False"
+           label="Far Attenuation:"/>
+  
+  <Float id="farAttenuationStart"
+       val="1.0"
+       label="Start Point:"/>
+  
+  <Float id="farAttenuationEnd"
+       val="1.0"
+       label="End Point:"/>
+
+  <Color id="ambientColor"
+         valR="0.0"
+         valG="0.0"
+         valB="0.0"
+         label="Ambient Color:"/>
+  
+  <Color id="specularColor"
+         valR="1.0"
+         valG="1.0"
+         valB="1.0"
+         label="Specular Color:"/>
+  
+  <String id="lightName"
+          val=""
+          label="Name:"/>
+
+  <Boolean id="plotGlyph"
+           val="False"
+           label="Plot glyph:"/>
+
+  <Boolean id="glyphDisplay"
+           val="True"
+           label="Glyph display:"/>
+  
+  <Boolean id="targeted"
+           val="False"
+           label="Targeted:"/>
+
+  <PropertyAlias alias="mr_atmosShadowOn"
+                 id="atmosShadowOn" />
+  <PropertyAlias alias="mr_atmosShadowOpacity"
+                 id="atmosShadowOpacity" />
+  <PropertyAlias alias="mr_atmosShadowColAmnt"
+                 id="atmosShadowColAmnt" />
+  <PropertyAlias alias="mr_lightobjectvisible"
+                 id="lightobjectvisible" />
+  <PropertyAlias alias="mr_contrast"
+                 id="contrast" />
+  <PropertyAlias alias="mr_softDiffEdges"
+                 id="softDiffEdges" />
+  <PropertyAlias alias="multiplier"
+                 id="dimmer" />
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Lights/GenericPhotometricLight/GenericPhotometricLightUI.xml"/>
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Lights/GenericPhotometricLight/MentalImage.xml"/>
+
+  <implementation id="ImplementationOGS"
+                  val="Lights/GenericPhotometricLight/OGS.xml"/>
+</AssetSchema>

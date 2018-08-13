@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="StructuralAdvancedSchema"
+        file="../Advanced/StructuralAdvancedSchema.xml" />
+
+  <UID  val="StructuralMetalSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="3"
+           public="false"
+           readonly="true" />
+
+  <type val="Structural" />
+
+  <localtype val="Physical" />
+  <localname val="Metal" />
+
+
+  <!--Reduction Factor for Shear-->
+  <Float id="structural_Reduction_factor_for_shear" 
+         val="1.0"
+         unit="Unitless"
+         label="Reduction Factor for Shear"  >
+    <Bounds minimum="1.0"
+            maximum="2.0" />
+  </Float>
+
+  <Boolean id="structural_Thermally_treated"
+           val="false"
+           label="Thermally Treated" />
+
+  <!--Damping Ratio-->
+  <Float id="structural_Damping_ratio" 
+         val="0.06"
+         unit="Unitless"
+         label="Damping Ratio"  >
+    <Bounds minimum="0"
+            maximum="2" />
+  </Float>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Structural/Metal/MetalStructuralUI.xml"/>
+
+</AssetSchema>
+
+

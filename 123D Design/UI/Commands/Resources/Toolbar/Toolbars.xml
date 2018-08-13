@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Toolbars>
+  <Toolbar Id="QAT" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ManagementShellCommand">
+      <DropDownButton Id="NewDocumentCommand" />
+      <DropDownItem Id="NewSingleDocumentCommand" />
+      <Separator />
+      <DropDownItem Id="OpenDocumentCommand" />
+      <DropDownItem Id="SaveDocumentCommand" />
+      <DropDownItem Id="SaveDocumentAsCommand" />
+      <DropDownItem Id="PLM360SaveCommand" />
+      <Separator />
+      <DropDownItem Id="ExportCommand" />
+      <DropDownItem Id="SaveAsImageCommand" />
+      <Separator />
+
+      <DropDownButton Id="CurrentlyOpenDocumentsCommand" />
+      <DropDownButton Id="RecentDocumentsCommand" />
+      <Separator /> 
+      <DropDownButton Id="ViewWidgetCommand">
+        <DropDownItem Id="HideViewCubeCommand" />
+        <DropDownItem Id="ShowViewCubeCommand" />
+        <DropDownItem Id="HideBrowserCommand" />
+        <DropDownItem Id="ShowBrowserCommand" />
+        <DropDownItem Id="HideCommandPaletteCommand" />
+        <DropDownItem Id="ShowCommandPaletteCommand" />
+        <DropDownItem Id="HideCommandToolbarCommand" />
+        <DropDownItem Id="ShowCommandToolbarCommand" />
+        <DropDownItem Id="HideNavigationToolbarCommand" />
+        <DropDownItem Id="ShowNavigationToolbarCommand" />
+        <DropDownItem Id="HideTextCommandsCommand" />
+        <DropDownItem Id="ShowTextCommandsCommand" />
+        <DropDownItem Id="HideDesignFeedCommand" />
+        <DropDownItem Id="ShowDesignFeedCommand" />
+        <DropDownItem Id="ResetToDefaultLayoutCommand" />
+      </DropDownButton>
+      <DropDownItem Id="DashboardShellCommand" />
+      <Separator />
+      <DropDownItem Id="PreferencesCommand" />
+      <Separator />
+      <DropDownItem Id="CloseDocumentCommand" />
+      <DropDownItem Id="CloseAllDocumentsCommand" />
+      <Separator />
+      <DropDownItem Id="VideosCommand" />
+      <Separator />
+      <DropDownItem Id="ExitApplicationCommand" />
+    </DropDownButton>
+    <DropDownButton Id="NewDocumentCommand" />
+    <Button Id="NewSingleDocumentCommand" />
+    <Button Id="OpenDocumentCommand" />
+    <Button Id="SaveDocumentCommand" />
+    <DropDownButton Id="UndoDropDown" HasSplitter="True" />
+    <DropDownButton Id="RedoDropDown" HasSplitter="True" />
+    <Button Id="GoBackwardCommand" />
+    <Button Id="GoForwardCommand" />
+  </Toolbar>
+    
+    <!-- *******************-->
+    <!-- Navigation Toolbar -->
+    <!-- *******************-->
+  <Toolbar Id="NavToolbar" Style="ToolbarSmallStyle">
+    <DropDownButton Id="OrbitCommand" HasSplitter="True" SynchronizedWithCurrentItem="true">
+    </DropDownButton>
+    <Button Id="LookAtCommand" />
+    <Button Id="PanCommand" />
+    <Button Id="ZoomCommand" />
+    <Button Id="FitCommand" />
+    <Separator />
+    <DropDownButton Id="ViewDisplayCommand"  HasSplitter="False">
+      <DropDownButton Id="ViewVisualStyleCommand" SynchronizedWithCurrentItem="true" GroupSubItemsOnly="true" />
+      <DropDownButton Id="ViewEnvCommand"  SynchronizedWithCurrentItem="true" GroupSubItemsOnly="true"/>
+      <DropDownButton Id="ViewEffectCommand"  CheckBoxList="true"/>
+      <DropDownButton Id="ViewCameraCommand"  SynchronizedWithCurrentItem="true" GroupSubItemsOnly="true"/>
+      <Separator />
+      <DropDownItem Id="ShowWorkspaceFullScreenCommand" />
+      <DropDownItem Id="ShowWorkspaceNormalCommand" />
+    </DropDownButton>
+    <DropDownButton Id="ViewLayoutGridCommand" HasSplitter="False" CheckBoxList="true">
+      <Button Id="EnableAdaptiveSnapCmd" />
+      <Button Id="DisableAdaptiveSnapCmd" />
+      <Button Id="SetSnapValueCmd" />
+    </DropDownButton>
+  </Toolbar>
+  <Toolbar Id="ActiveViewToolbar" Style="ToolbarSmallStyle">
+  </Toolbar>
+  <Toolbar Id="WebToolbar" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ManagementShellCommand" HasSplitter="True" >
+      <DropDownItem Id="ManagementShellCommand" />
+      <DropDownItem Id="AssetShellCommand" />
+      <DropDownItem Id="ExitApplicationCommand" />
+    </DropDownButton>
+    <Button Id="GoBackwardCommand" />
+    <Button Id="GoForwardCommand" />
+  </Toolbar>
+
+  <Toolbar Id="QATRight" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+	<DropDownButton Id="SubscriptionCommand" >
+	  <DropDownItem Id="SubscriptionCommand" />
+	</DropDownButton>
+	<DropDownButton Id="HelpCommand" >
+	  <DropDownItem Id="HelpCommand" />
+	  <Separator />
+	  <DropDownItem Id="CheckUpdatesCommand" />
+	  <Separator />
+	  <DropDownItem Id="VideosCommand" />
+      <DropDownItem Id="ProductTourGuideCommand" />
+	  <DropDownItem Id="FeedbackCommand" />
+    <DropDownItem Id="JoinDiscussionCommand" />
+    <DropDownItem Id="IdeaStationCommand" />
+	  <Separator />
+	  <DropDownItem Id="CIPCommand" />
+	  <Separator />
+	  <DropDownItem Id="AboutBoxCommand" />
+	</DropDownButton>
+  </Toolbar>
+
+  <Toolbar Id="MessageTray" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <Button Id="NotificationCommand" />
+    <Button Id="TipsAndTricksCommand" />
+    <Button Id="AlertCommand" />
+  </Toolbar>
+  
+  <Toolbar Id="WindowController" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+	<Button Id="CloseWndCommand" />
+  </Toolbar>
+  
+  <!--
+    Sample:    
+        <DropDownButton Id="ATBHomeMenu">
+            <DropDownItem Id="Command-1"/>
+            <Label Id="Label-1"/>                       <- Insert a label.
+            <DropDownItem Id="Command-2"/>
+            
+            <DropDownButton Id="ListControl-1"/>        <- Show the list control in the sub-menu.
+            
+            <DropDownItem Id="ListControl-2"/>          <- Insert the list control just in this menu.
+        </DropDownButton>
+    -->
+  
+  <Toolbar Id="ATBHomeMenu" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ATBHomeMenu">
+        <Label Id="PLM360MyWorkspacesCommand"/>
+		<Separator />
+			<DropDownItem Id="PLM360NavigateToHomeCommand" />
+			<DropDownItem Id="PLM360NavigateToProjectsCommand" />
+		<Separator />
+		<Label Id="PLM360MyFavoritesCommand" />
+		<Separator />
+			<DropDownItem Id="PLM360MyFavoritesCommand"/>
+		<Separator />
+        <Label Id="PLM360MyAppsCommand"/>
+		<Separator />
+			<DropDownItem Id="CurrentDesignCommand" />
+			<DropDownItem Id="CurrentSimulationCommand" />
+			<DropDownItem Id="CurrentDocumentationCommand" />
+		<Separator />
+        <Label Id="PLM360MyServicesCommand"/>
+		<Separator />
+          <DropDownItem Id="OpenGrapeVinePageCmd" />
+    </DropDownButton>
+  </Toolbar>
+  
+  <Toolbar Id="ATBAppMenu" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ATBAppMenu">
+        <DropDownItem Id="SimPromoteDesignCmd" />
+        <DropDownItem Id="AskQuestionCommand" />
+        <Separator />
+        <DropDownItem Id="PLM360SaveCommand" />
+        <DropDownButton Id="UndoDropDown" />
+        <DropDownButton Id="RedoDropDown" />
+        <DropDownItem Id="ExportCommand" />
+        <DropDownItem Id="SaveAsImageCommand" />
+        <Separator />
+        <DropDownButton Id="CurrentDesignListCommand" />
+        <DropDownButton Id="CurrentSimulationListCommand" />
+        <DropDownButton Id="CurrentDocumentationListCommand" />
+        <Separator />
+        <DropDownButton Id="ViewWidgetCommand">
+            <DropDownItem Id="HideViewCubeCommand" />
+            <DropDownItem Id="ShowViewCubeCommand" />
+            <DropDownItem Id="HideBrowserCommand" />
+            <DropDownItem Id="ShowBrowserCommand" />
+            <DropDownItem Id="HideCommandPaletteCommand" />
+            <DropDownItem Id="ShowCommandPaletteCommand" />
+            <DropDownItem Id="HideCommandToolbarCommand" />
+            <DropDownItem Id="ShowCommandToolbarCommand" />
+            <DropDownItem Id="HideNavigationToolbarCommand" />
+            <DropDownItem Id="ShowNavigationToolbarCommand" />
+            <DropDownItem Id="HideTextCommandsCommand" />
+            <DropDownItem Id="ShowTextCommandsCommand" />
+            <DropDownItem Id="HideDesignFeedCommand" />
+            <DropDownItem Id="ShowDesignFeedCommand" />
+            <DropDownItem Id="ResetToDefaultLayoutCommand" />
+        </DropDownButton>
+        <DropDownItem Id="PreferencesCommand" />
+    </DropDownButton>
+  </Toolbar>
+  
+  <Toolbar Id="CommunityAppMenu" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="CommunityAppMenu">
+        <!-- <DropDownItem Id="GrapevineMyHistoryCommand" />
+        <DropDownItem Id="GrapevineSettingsCommand" /> -->
+        <DropDownItem Id="GrapevineMyActivityCommand" />
+        <DropDownItem Id="GrapevineGuidelinesCommand" />
+        <DropDownItem Id="GrapevineReturnToDesignCommand" />
+    </DropDownButton>
+  </Toolbar>
+  
+  <Toolbar Id="ATBLoginMenu" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ATBLoginMenu">
+        <DropDownItem Id="PLM360LoginCommand" />
+        <DropDownItem Id="PLM360LogoutCommand" />
+    </DropDownButton>
+  </Toolbar>
+  
+  <Toolbar Id="ATBHelpMenu" Style="ToolbarSmallStyle" TransparentBackground="True" Movable="False">
+    <DropDownButton Id="ATBHelpMenu">
+		<DropDownItem Id="HelpCommand" />
+		<DropDownItem Id="VideosCommand" />
+		<DropDownItem Id="ProductTourGuideCommand" />
+		<Separator />
+		<DropDownItem Id="FeedbackCommand" />
+		<DropDownItem Id="JoinDiscussionCommand" />
+		<DropDownItem Id="IdeaStationCommand" />
+		<Separator />
+		<DropDownItem Id="CIPCommand" />
+		<Separator />
+		<DropDownItem Id="AboutBoxCommand" />
+    </DropDownButton>
+  </Toolbar>
+</Toolbars>

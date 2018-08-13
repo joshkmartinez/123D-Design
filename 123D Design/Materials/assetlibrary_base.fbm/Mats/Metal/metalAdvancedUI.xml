@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Metal
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="metal_metalgroup"
+                label="Metal" orientation="Vertical" expanded="true">
+      
+      <ChooseList id="metal_type" label="Type"
+                  tooltip="Chooses a type of metal and controls the base color and texture of the metal, and filters subsequent properties.">
+        <Choice id="metal_aluminum" label ="Aluminum"/>
+        <ChoiceDetail id="metal_galvanized_alu"
+                      label ="Anodized Aluminum">
+          <MappableColorByObject id="metal_color" label="Color" coloronly="true"
+                 tooltip="Chooses a color for Anodized Aluminum only.">
+            <BoolColorByObject id="metal_color_by_object" />
+          </MappableColorByObject>
+        </ChoiceDetail>
+        <Choice id="metal_chrome" label ="Chrome"/>
+        <Choice id="metal_copper" label ="Copper"/>
+        <Choice id="metal_brass" label ="Brass"/>
+        <Choice id="metal_bronze" label ="Bronze"/>
+        <Choice id="metal_stainless_steel" label ="Stainless Steel"/>
+        <Choice id="metal_zinc" label ="Zinc"/>
+      </ChooseList>
+      
+      <Float id="metal_patina"
+             label="Patina"
+             tooltip="Adjusts the degree of discoloration for copper or bronze due to oxidation or the application of a chemical compound. Enter a value between 0 (none) and 1 (full), or use the slider."
+             max="1.0"
+             maxlabel="Full"
+             min="0.0"
+             minlabel="None"
+             precision="2">
+        <Dependency else="hidden"
+                    id="metal_dep1" on="metal_type"
+                    requires="metal_copper|metal_bronze"/>
+      </Float>
+      
+      <ChooseList id="metal_finish" label="Finish"
+                  tooltip="Selects a surface finish for Aluminum, Chrome, Copper, Brass, Bronze, and Stainless Steel only.">
+        <Choice id="metal_polished" label="Polished"/>
+        <Choice id="metal_semi_polished" label="Semi-polished"/>
+        <Choice id="metal_satin" label="Satin"/>
+        <Choice id="metal_brushed" label="Brushed"/>
+        <Dependency else="hidden"
+                    id="metal_dep2"
+                    on="metal_type"
+                    requires="metal_zinc|metal_galvanized_alu"
+                    not="true"/>
+      </ChooseList>
+    </StackPanel>
+    
+    <StackPanel id="metal_pattern"
+                label="Relief Pattern"
+                labelid="metal_pattern_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="metal_knurl">
+      
+      <ChooseList id="metal_pattern"
+                  label="Type"
+                  labelid="metal_pattern_list_label" 
+                  onebased="true"
+                  tooltip="Selects a decorative design pressed onto the surface of the metal.">
+        <Choice id="metal_knurl" label="Knurl"/>
+        <Choice id="metal_diamond_plate" label="Diamond Plate"/>
+        <Choice id="metal_checker_plate" label="Checker Plate"/>
+        <ChoiceDetail id="metal_custom" label="Custom - Image">
+          <MappableFloat id="metal_pattern_shader"
+                         nosinglevalue="true"
+                         bump="true"
+                         label="Image"
+                         tooltip="Controls relief patterns or tiling. A bump pattern defines raised and lowered areas based on dark and light areas of an image file."/>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      <Float id="metal_pattern_height"
+             label="Amount"
+             min="0.0"
+             max="2.0"
+             tooltip="Slides to select relative height of the pattern. Enter 0 for flat, to 2.0 to increase the depth of the pattern.">
+      </Float>
+      
+      <Float id="metal_pattern_scale"
+             label="Scale"
+             min="0.0"
+             max="5.0"
+             tooltip="Slides to select relative size of the relief pattern. Enter a value between 0 (larger) and 5 (smaller).">
+        <Dependency else="hidden"
+                    id="metal_dep3"
+                    on="metal_pattern"
+                    requires="metal_custom"
+                    not="true"/>
+      </Float>
+    </StackPanel>
+    
+    
+    <StackPanel id="metal_perforations"
+                label="Cutouts"
+                labelid="metal_perforations_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="metal_perf_circles_staggered">
+      
+      <ChooseList id="metal_perforations"
+                  label="Type"
+                  labelid="metal_perforations_list_label" 
+                  onebased="true"
+                  tooltip="Adjusts the perforation patterns in the material, and some choices provide dimension controls. ">
+        <ChoiceDetail id="metal_perf_circles_staggered" label="Staggered Circles">
+          <Float id="metal_perforations_size"
+                 label="Diameter"
+                 tooltip="Adjusts only circles."
+                 labelid="metal_perforations_size_label1" 
+                 min="0.0001"
+                 precision="5">
+          </Float>
+          <Float id="metal_perforations_center"
+                 label="Center Spacing"
+                 tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                 min="0.0001"
+                 precision="5">
+          </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_circles_straight" label="Straight Circles">
+          <Float id="metal_perforations_size"
+                 label="Diameter"
+                 tooltip="Adjusts only circles."
+                 labelid="metal_perforations_size_label2" 
+                 min="0.0001"
+                 precision="5">
+          </Float>
+          <Float id="metal_perforations_center"
+                 label="Center Spacing"
+                 tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                 min="0.0001"
+                 precision="5">
+          </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_squares" label="Squares">
+          <Float id="metal_perforations_size"
+                 label="Size"
+                 labelid="metal_perforations_size_label3" 
+                 tooltip="Adjusts the size of square cutouts."
+                 min="0.0001"
+                 precision="5">
+          </Float>
+          <Float id="metal_perforations_center"
+                 label="Center Spacing"
+                 tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                 min="0.0001"
+                 precision="5">
+          </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_grecian" label="Grecian">
+         <Float id="metal_perforations_size"
+                 label="Size"
+                 tooltip="Adjusts the size of grecian cutouts."
+                 labelid="metal_perforations_size_label4"
+                 min="0.0001"
+                 precision="5">
+         </Float>
+         <Float id="metal_perforations_center"
+                label="Center Spacing"
+                tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                min="0.0001"
+                precision="5">
+         </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_cloverleaf" label="Cloverleaf">
+         <Float id="metal_perforations_size"
+                 label="Size"
+                 tooltip="Adjusts the size of cloverleaf cutouts."
+                 labelid="metal_perforations_size_label5"
+                 min="0.0001"
+                 precision="5">
+         </Float>
+         <Float id="metal_perforations_center"
+                label="Center Spacing"
+                tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                min="0.0001"
+                precision="5">
+         </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_hexagon" label="Hexagon">
+         <Float id="metal_perforations_size"
+                 label="Size"
+                 tooltip="Adjusts the size of hexagon cutouts."
+                 labelid="metal_perforations_size_label6"
+                 min="0.0001"
+                 precision="5">
+         </Float>
+         <Float id="metal_perforations_center"
+                label="Center Spacing"
+                tooltip="Clamped to be 0.0001 less than the diameter; for staggered, all six adjacent centers are equidistant; for straight, centers are measured to the four adjacent to top, bottom, left, and right."
+                min="0.0001"
+                precision="5">
+         </Float>
+        </ChoiceDetail>
+        <ChoiceDetail id="metal_perf_custom" label="Custom">
+          <MappableFloat id="metal_perforations_shader"
+                         nosinglevalue="true"
+                         bump="true"
+                         label="Image"/>
+        </ChoiceDetail>
+      </ChooseList>
+    </StackPanel>
+    <!-- The tooltip of a StackPanel item will appear when the stackpanel has a checkbox.-->
+    <StackPanel id="metal_ao_on"
+        label="Ambient Occlusion"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables Ambient Occlusion. Emulates the look of true global illumination by using shaders to calculate the extent that an area is occluded or prevented from receiving incoming light. Use this effect with indirect light.">
+      <Integer id="metal_ao_samples"
+         label="Samples"
+         tooltip="Ambient occlusion quality (High= Smoother/Slower; Low= Grainier/Faster)"
+         min="2"
+         max="256"
+         forcenumeric="spinbox"/>
+      <Float id="metal_ao_distance"
+         label="Max Distance"
+         forcenumeric="spinbox"
+         tooltip="Defines the ambient occlusion radius (High= Large coverage area/Slower; Low= Small coverage area/Faster)"/>
+      <Boolean id="metal_ao_details"
+               rightlabel="Use Color From Other Materials"
+               tooltip="Enables a more complex mode of Ambient Occlusion that takes object color into account. Note: This improves excessive 'corner darkening' and solves the creation of 'dark rims' by AO around self-illuminating objects."/>
+    </StackPanel>
+    <StackPanel id="metal_roundcorners_on"
+        label="Round Corners"
+        orientation="Vertical"
+        checkbox="true"
+        expanded="true"
+        tooltip="Enables simulated round corners. Note: This is only a shading effect, similar to a bump map, whereby no actual geometric changes occur.  This effect only works properly on straight edges.">
+      <!-- If forcenumeric="spinbox", then the dropdownlist should contain "Use Spinner" instead of "Use Slider"-->
+      <MappableFloat id="metal_roundcorners_radius"
+                     bump="true"
+                     label="Source"
+                     forcenumeric="spinbox"
+                     tooltip="Adjusts the radius of the round corner effect."/>
+      <Boolean id="metal_roundcorners_allow_different_materials"
+             rightlabel="Blend with Other Materials"
+             tooltip="Activate to apply corner rounding effects to any material. Disable to apply corner rounding effects to the surface of the current material only." />
+    </StackPanel>
+    <StackPanel id="metal_performance_tunning_group"
+        label="Performance Tuning"
+        orientation="Vertical"
+        expanded="true">
+      <Integer id="reflection_glossy_samples"
+         label="Reflection Glossy Samples"
+         tooltip="Defines the maximum number of samples (rays) that mental ray computes to create glossy reflections."
+         min="0"
+         max="128"
+         forcenumeric="spinbox"/>
+      <Integer id="metal_refl_depth"
+         label="Reflection Max Trace Depth"
+         tooltip="Number of times each ray is reflected. When set to zero, global render settings take precedence."
+         min="0"
+         max="20"
+         forcenumeric="spinbox"/>
+    </StackPanel>
+  </Fields>
+</adsui>

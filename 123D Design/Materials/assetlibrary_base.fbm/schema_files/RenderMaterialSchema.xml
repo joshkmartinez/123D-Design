@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+  
+  <Base val="CommonSchema"
+        file="CommonSchema.xml" />
+
+  <UID  val="RenderMaterialSchema" />
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+  
+  <URL id="ImplementationMentalRay"
+       val=""
+       public="false"
+       readonly="true" />
+
+  <URL id="ImplementationOGS"
+       val=""
+       public="false"
+       readonly="true" />
+  
+  <URL id="ImplementationPreview"
+       val=""
+       public="false"
+       readonly="true" />
+  
+  <URL id="ImplementationGeneric"
+       val=""
+       public="false"
+       readonly="true" />
+    
+  <String id="swatch"
+          val=""
+          public="false" />
+
+  <Choice id="common_Shared_Asset"
+          val="common_shared"
+          label="Sharing" >
+    <ChoiceValue id="common_shared"
+                 val="0"
+                 label="Shared" />
+    <ChoiceValue id="common_independent"
+                 val="1"
+                 label="Independent" />
+  </Choice>
+
+  <Boolean id="common_Tint_toggle"
+           val="false"
+           label="Tint" />
+  <Color id="common_Tint_color"
+         valR=".315" 
+         valG=".315" 
+         valB=".315"
+         label="Tint Color" />
+         
+
+</AssetSchema>

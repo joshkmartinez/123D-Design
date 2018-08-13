@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<implementation render="Generic">
+  <language name="Protein" version="2.0"/>
+  <api name="Protein" version="2.0"/>
+  <root_bindings name="root"/>
+
+  <constants>
+    <float   name="water_diffuse_image_fade"             val="1."/>
+    <float   name="water_reflectivity_at_0deg"           val=".1"/>
+    <float   name="water_reflectivity_at_90deg"          val=".5"/>
+    <float   name="water_glossiness"                     val="1."/>
+    <boolean name="water_is_metal"                       val="false"/>
+    <float   name="water_transparency"                   val=".6"/>
+    <float   name="water_transparency_image_fade"        val="1."/>
+    <float   name="water_refraction_index"               val="1.33"/>
+    <float   name="water_refraction_translucency_weight" val=".5"/> 
+    <float   name="water_cutout_opacity"                 val="1."/>
+    <boolean name="water_backface_cull"                  val="false"/>
+    <float   name="water_self_illum_luminance"           val="0"/>
+    <float   name="water_self_illum_color_temperature"   val="0.0"/>
+    <String  name="water_bump_map_asset_name"            val="Noise"/>
+    <String  name="water_bump_map_asset_bindings"        val="bump_map_asset_noise"/>
+  </constants>
+
+  <operator function="WaterDiffuseColorBOF" name="diffuse_color">
+    <map_interface source="water_type"               destination="type"/>
+    <map_interface source="water_tint_enable"        destination="color"/>
+    <map_interface source="water_tint_color"         destination="custom_color"/>
+  </operator>
+
+  <operator function="WaterTransparencyBOF" name="transparency">
+    <map_interface source="water_type"        destination="type"/>
+  </operator>
+
+  <operator function="WaterBumpAmountBOF" name="bump_amount">
+    <map_interface source="water_type"               destination="type"/>
+    <map_interface source="water_bump_amount"        destination="bump_amount"/>
+  </operator>
+
+  <bindings target="shader" name="root">
+    <map_interface source="water_color_by_object"                destination="color_by_object"/>
+    <map_operator  source="diffuse_color"                        destination="generic_diffuse"/>
+    <map_constant  source="water_diffuse_image_fade"             destination="generic_diffuse_image_fade"/>
+    <map_constant  source="water_reflectivity_at_0deg"           destination="generic_reflectivity_at_0deg"/>
+    <map_constant  source="water_reflectivity_at_90deg"          destination="generic_reflectivity_at_90deg"/>
+    <map_constant  source="water_glossiness"                     destination="generic_glossiness"/>
+    <map_constant  source="water_is_metal"                       destination="generic_is_metal"/>
+    <map_operator  source="transparency"                         destination="generic_transparency"/>
+    <map_constant  source="water_transparency_image_fade"        destination="generic_transparency_image_fade"/>
+    <map_constant  source="water_refraction_index"               destination="generic_refraction_index"/>
+    <map_constant  source="water_refraction_translucency_weight" destination="generic_refraction_translucency_weight"/>
+    <map_constant  source="water_cutout_opacity"                 destination="generic_cutout_opacity"/>
+    <map_constant  source="water_backface_cull"                  destination="generic_backface_cull"/>
+    <map_constant  source="water_self_illum_luminance"           destination="generic_self_illum_luminance"/>
+    <map_constant  source="water_self_illum_color_temperature"   destination="generic_self_illum_color_temperature"/>
+    <map_bindings  source="bump_map_asset"                       destination="generic_bump_map"/>
+    <map_operator  source="bump_amount"                          destination="generic_bump_amount"/>
+    <map_interface source="reflection_glossy_samples"            destination="generic_reflection_glossy_samples"/>
+    <map_interface source="refraction_glossy_samples"            destination="generic_refraction_glossy_samples"/>
+    <map_interface source="water_refl_depth"                     destination="generic_refl_depth"/>
+    <map_interface source="water_refr_depth"                     destination="generic_refr_depth"/>
+    <map_interface source="common_Tint_toggle"                   destination="common_Tint_toggle"/>
+    <map_interface source="common_Tint_color"                    destination="common_Tint_color"/>  
+  </bindings>
+
+  <!-- Connected Asset for Bump_map -->
+  <operator function="WaterBumpMapAssetNameBOF" name="bump_map_asset_name">
+    <map_constant source="water_bump_map_asset_name" destination="asset_name"/>
+  </operator>
+
+  <operator function="WaterBumpMapAssetBindingsBOF" name="bump_map_asset_bindings">
+    <map_constant source="water_bump_map_asset_bindings"  destination="bindings_name"/>
+  </operator>
+
+  <bindings target="bump_map_asset_instance" name="bump_map_asset">
+    <map_operator  source="bump_map_asset_name"     destination="asset_name"/>
+    <map_operator  source="bump_map_asset_bindings" destination="bindings_name"/>
+  </bindings>
+
+  <!-- Noise Asset Binding Operators for Bump_map -->
+  <operator function="WaterBumpMapAssetNoiseSizeBOF" name="bump_map_asset_noiseSize">
+    <map_interface source="water_type" destination="type"/>        
+  </operator>
+
+  <bindings target="bump_map_asset_noise_instance" name="bump_map_asset_noise">
+    <map_operator  source="bump_map_asset_noiseSize" destination="noise_Size"/>
+  </bindings>
+    
+</implementation>

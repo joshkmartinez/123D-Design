@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<AssetSchema>
+
+  <Base val="CommonSchema"
+        file="../../Common/CommonSchema.xml" />
+
+  <UID  val="GraphicsSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type val="Graphics" />
+  <localtype val="Graphics" />
+  <localname val="Graphics" />
+
+  <Boolean id="graphics_use_appearance"
+           val="false"
+           label="Use Render Appearance" />
+
+  <Color id="graphics_shading_color"
+         valR=".471" 
+         valG=".471" 
+         valB=".471"
+         label="Color" />
+
+  <Integer id="graphics_shading_transparency"
+           val="0"
+           label="Transparency" >
+    <Bounds minimum="0"
+            maximum="100" />
+  </Integer>
+
+  <Integer id="graphics_surface_pattern"
+           val="0"
+           label="Pattern" />
+
+  <Color id="graphics_surface_pattern_color"
+         valR=".471"
+         valG=".471"
+         valB=".471"
+         label="Color" />
+
+  <Float id="graphics_surface_pattern_alignment_x"
+         val="0"
+         label="Alignment X" />
+  
+  <Float id="graphics_surface_pattern_alignment_y"
+         val="0"
+         label="Alignment Y" />
+
+  <Integer id="graphics_cut_pattern"
+         val="0"
+         label="Pattern" />
+
+  <Color id="graphics_cut_pattern_color"
+       valR=".471"
+       valG=".471"
+       valB=".471"
+       label="Color" />
+  
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Graphics/GraphicsUI.xml"/>
+
+</AssetSchema>
+
+

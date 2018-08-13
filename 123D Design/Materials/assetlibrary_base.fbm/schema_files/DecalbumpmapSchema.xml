@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE AssetSchema SYSTEM "../../ADSKAssetSchema.dtd">
+
+<!-- =====================================================================
+     This is the common schema for Decalbumpmap
+ ===================================================================== -->
+
+<AssetSchema>
+
+  <Base val="RenderMaterialSchema"
+        file="../../Common/RenderMaterialSchema.xml" />
+
+  <UID  val="DecalbumpmapSchema"/>
+
+  <Integer id="SchemaVersion"
+           val="1"
+           public="false"
+           readonly="true" />
+
+  <type  val="texture"/>
+
+  <localtype val="Texture" />
+  <localname val="Decal Bump Map" />
+  <URL id="decalbumpmap_Bitmap"
+       val=""
+       label="Image File:" />
+  
+  <Float id="decalbumpmap_RGBAmount"
+         val="1.0"
+         label="Brightness"/>
+  
+  <!-- Label below is not defined in previous UI -->
+  <Integer id="decalbumpmap_Filtering"
+           val="2"
+           label="Filtering"/>
+  
+  <Float id="decalbumpmap_Blur"
+         val="0.01"
+         label="Blur"/>
+  
+  <Boolean id="decalbumpmap_Invert"
+           val="false"
+           label="Invert:"/>
+
+  <Float id="decalbumpmap_UOffset"
+         val="0."
+         label="U Offset"/>
+  
+  <Float id="decalbumpmap_VOffset"
+         val="0."
+         label="V Offset"/>
+  
+  <Float id="decalbumpmap_WAngle"
+         val="0."
+         label="Angle"/>
+  
+  <Boolean id="decalbumpmap_UWrap"
+           val="false"
+           label="U Wrap"/>
+  
+  <Boolean id="decalbumpmap_VWrap"
+           val="false"
+           label="V Wrap"/>
+  
+  <Boolean id="decalbumpmap_UMirror"
+           val="false"
+           label="U Mirror"/>
+  
+  <Boolean id="decalbumpmap_VMirror"
+           val="false"
+           label="V Mirror"/>
+  
+  <Float id="decalbumpmap_UVScale"
+         val="1."
+         label="UV Scale" />
+  
+  <String id="decalbumpmap_MapChannel"
+          val="UVChannel_1"
+          label="Map Channel"/>
+
+  <!-- Constant values for CommonSchema properties -->
+  <ui id="UIDefinition"
+      val="Maps/DecalBumpMap/DecalbumpmapUI.xml"/>
+  
+  <!-- Constant values for RenderMaterialSchema properties -->
+  <implementation id="ImplementationMentalRay"
+                  val="Maps/DecalBumpMap/MentalImage.xml"/>
+</AssetSchema>

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Glazing
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="glazing_glazinggroup"
+                label="Glazing"
+                orientation="Vertical"
+                expanded="true">
+      
+      <ChooseList id="glazing_transmittance_color"
+                  label="Color"
+                  tooltip="Adjusts the color of the glazing and the amount of light that is transmitted through the glass.">
+        <Choice id="glazing_clear" label="Clear"/>
+        <Choice id="glazing_green" label="Green"/>
+        <Choice id="glazing_gray" label="Gray"/>
+        <Choice id="glazing_blue" label="Blue"/>
+        <Choice id="glazing_bluegreen" label="Blue Green"/>
+        <Choice id="glazing_bronze" label="Bronze"/>
+        <ChoiceDetail id="glazing_custom_color" label="Custom">
+          <MappableColor id="glazing_transmittance_map"
+                         label="Custom Color"
+                         colorbyobject="true"
+                         tooltip="Selects a color, image, or procedural texture to create the appearance of the material.">
+            <BoolColorByObject id="glazing_color_by_object" />
+          </MappableColor>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      <Percent id="glazing_reflectance"
+               label="Reflectance"
+               min="0"
+               max="100"
+               precision="0"
+               tooltip="Adjusts the amount of light that reflects off the surface of the glass rather than passing through it. Enter a value between 0% and 100%."/>
+      <Integer id="glazing_no_levels"
+               label="Sheets of Glass"
+               tooltip="Adjusts the number of panes of glass; e.g., for double glazing, set this value to 2. Enter a number between 1 and 6."
+               min="1"
+               max="6"/>
+      
+      <!--
+          <Integer id="glazing_reflection_depth" label="Reflection Depth"/>
+          <Integer id="glazing_refraction_depth" label="Refraction Depth"/>
+          -->
+      
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>
+

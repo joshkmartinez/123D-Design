@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HUDs>
+  <HUD Id="SelectionManager">
+    <CheckBox Id="Selection1" />
+    <CheckBox Id="Selection2"  />
+  </HUD>
+  <HUD Id="FusionFilletEditCommand">
+      <DropDownEntry Id="OffsetFacesDistanceInput" WidthString="000.000 cm" />
+  </HUD>
+  <HUD Id="FusionSurfaceOffsetCommand">
+		<DropDownEntry Id="SurfaceOffsetDistance" WidthString="00.000 cm" />
+        <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionSurfaceThickenCommand">
+    <DropDownEntry Id="ThickenValue" WidthString="000.000 cm" />
+    <DropDownButton Id="infoThickenDirection" ShowText="true" SynchronizedWithCurrentItem="true" />
+    <CheckBox Id="ThickenChainSelectionOption" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionOffsetFacesCommand">
+    <DropDownEntry Id="OffsetFacesDistanceInput" WidthString="000.000 cm" />
+    <DropDownEntry Id="ReblendRadiusInput" WidthString="000.000 cm" />
+   </HUD>
+  <HUD Id="FusionMoveComponentsCommand">
+    <DynamicControls Id="MoveComponentsTransformInput"/>
+  </HUD>
+  <HUD Id="FusionMoveCommand">
+    <DynamicControls Id="MoveTransformInput"/>
+  </HUD>
+  <HUD Id="FusionEditDecalCommand">
+    <DynamicControls Id="DecalTransformInput"/>
+  </HUD>
+  <HUD Id="FusionAddCanvasCommand">
+    <DynamicControls Id="CanvasTransformInput"/>
+  </HUD>
+  <HUD Id="FusionTweakFacesCommand">
+    <DynamicControls Id="OffsetFacesTransformInput"/>
+  </HUD>
+  <HUD Id="SmartPrimitive">
+    <DynamicControls Id="TransformInput"/>
+  </HUD>
+  <HUD Id="FusionTweakEntitiesCommand">
+    <DropDownButton Id="infoMethod" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DynamicControls Id="OffsetEntitiesTransformInput"/>
+  </HUD>
+  <HUD Id="FusionChamferEditCommand">
+    <DropDownEntry Id="OffsetFacesDistanceInput" WidthString="000.000 cm" />
+  </HUD>
+  <HUD Id="FusionExtendCommand">
+    <DropDownEntry Id="ExtendValue" WidthString="000.000 cm" />
+    <DropDownButton Id="infoExtendType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionDraftCommand">
+    <DropDownEntry Id="AlongAngleValue" WidthString="000.000 deg" />
+    <DropDownEntry Id="AgainstAngleValue" WidthString="000.000 deg" />
+    <CheckBox Id="DraftFacesPlaneInput" ShowText="false" />
+    <CheckBox Id="DraftFacesFacesInput" ShowText="false" />
+    <CheckBox Id="FusionDraftflipDirection" ShowText="false" />
+    <CheckBox Id="FusionDraftTangentOption" ShowText="true" />
+    <DropDownButton Id="infoDirectionType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionHoleCommand">
+    <!--<DropDownButton Id="HoleType" ShowText="false" SynchronizedWithCurrentItem="true" />-->
+    <DropDownEntry Id="HoleDepth" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCBDepth" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCBDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCSDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCSAngle" WidthString="000.000 deg" />
+    <!--<CheckBox Id="HoleDirection" ShowText="false" />-->
+  </HUD>
+  <HUD Id="EnclosureCommand">
+    <DropDownButton Id="VolumeType" ShowText="true" SynchronizedWithCurrentItem="true"/>
+    <DropDownButton Id="ShapeType"  ShowText="true" SynchronizedWithCurrentItem="true"/>
+    <DropDownButton Id="ShapeDirection" ShowText="true" SynchronizedWithCurrentItem="true"/>
+    <DropDownEntry  Id="EnclosureOffset" WidthString="000.000 cm"/>
+  </HUD>
+  <HUD Id="FusionHoleEditCommand">
+    <DropDownButton Id="HoleType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="HoleDepth" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCBDepth" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCBDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCSDiameter" WidthString="000.000 cm" />
+    <DropDownEntry Id="HoleCSAngle" WidthString="000.000 deg" />
+  </HUD>
+  <HUD Id="Extrude">
+    <!--<DropDownButton Id="extentsType" ShowText="false" SynchronizedWithCurrentItem="true" />-->
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <!--<DropDownEntry Id="AgainstExtrudeDistance" WidthString="000.000 cm" />-->
+    <DropDownEntry Id="ExtrudeTaperAngle" WidthString="000.000 deg" />
+	  <!--<DropDownButton Id="infoDirectionType" ShowText="false" SynchronizedWithCurrentItem="true" />-->
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <!--<HUD Id="Box">
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>-->
+  <HUD Id="SurfBox">
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <!--<HUD Id="Cylinder">
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>-->
+  <HUD Id="SurfCylinder">
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <!--<HUD Id="Sphere">
+    <DropDownEntry Id="Radius" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>-->
+  <HUD Id="SurfSphere">
+    <DropDownEntry Id="Radius" WidthString="000.000 cm" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionEdgeSelect">
+    <DropDownButton Id="infoCommandType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionFaceSelect">
+    <DropDownButton Id="infoCommandType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionProfileSelect">
+    <DropDownButton Id="infoCommandType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionBodySelect">
+    <DropDownButton Id="infoCommandType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionComponentSelect">
+    <DropDownButton Id="infoCommandType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  
+  <HUD Id="Polyhedron">
+    <DropDownButton Id="infoPlatonicType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoArchimedeanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoCatalanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoKeplerType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="SurfaceExtrude">
+    <DropDownButton Id="extentsType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="AlongExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownEntry Id="AgainstExtrudeDistance" WidthString="000.000 cm" />
+    <DropDownEntry Id="ExtrudeTaperAngle" WidthString="000.000 deg" />    
+	  <DropDownButton Id="infoDirectionType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+
+  </HUD>
+  <!--<HUD Id="Torus">
+    <DropDownEntry Id="CircleRadius" WidthString="000.000 cm" />
+    <DropDownEntry Id="TorusRadius" WidthString="000.000 cm" />
+    <DropDownButton Id="infoTorusType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>-->
+  <HUD Id="SurfTorus">
+    <DropDownEntry Id="CircleRadius" WidthString="000.000 cm" />
+    <DropDownEntry Id="TorusRadius" WidthString="000.000 cm" />
+    <DropDownButton Id="infoTorusType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionSurfacePatchCommand">
+    <DropDownButton Id="Connectivity" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="Revolve">
+    <DropDownEntry Id="RevolveAlongAngle" WidthString="000.000 deg" />
+	  <!--<DropDownEntry Id="RevolveAgainstAngle" WidthString="000.000 deg" />-->
+    <CheckBox Id="Profile" ShowText="true" />
+    <CheckBox Id="Axis" ShowText="true" />
+	  <!--<DropDownButton Id="infoDirectionType" ShowText="false" SynchronizedWithCurrentItem="true" />-->    
+    <!--<DropDownButton Id="infoType" ShowText="false" SynchronizedWithCurrentItem="true" />-->
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+   <HUD Id="SurfaceRevolve">
+    <DropDownEntry Id="RevolveAlongAngle" WidthString="000.000 deg" />
+	  <DropDownEntry Id="RevolveAgainstAngle" WidthString="000.000 deg" />    
+	  <DropDownButton Id="infoDirectionType" ShowText="false" SynchronizedWithCurrentItem="true" />    
+    <DropDownButton Id="infoType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="Sweep">
+    <DropDownEntry Id="SWEEP_POP_ALONG" WidthString="0.000 " />
+    <DropDownEntry Id="SWEEP_POP_AGAINST" WidthString="0.000 " />
+    <CheckBox Id="Profile" ShowText="true" />
+    <CheckBox Id="Path" ShowText="true" />
+    <!--<DropDownButton Id="infoSweepOrientation" ShowText="false" SynchronizedWithCurrentItem="true" />-->
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="SurfaceSweep">
+    <DropDownEntry Id="SWEEP_POP_ALONG" WidthString="0.000 " />
+    <DropDownEntry Id="SWEEP_POP_AGAINST" WidthString="0.000 " />
+    <DropDownButton Id="infoSweepOrientation" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionCombineCommand">
+   <CheckBox Id="CombineTargetBodyInput" ShowText="true" />
+    <CheckBox Id="CombineToolBodiesInput" ShowText="true" />
+    <DropDownButton Id="infoBooleanOption" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionJoinCommand">
+    <CheckBox Id="CombineTargetBodyInput" ShowText="true" />
+    <CheckBox Id="CombineToolBodiesInput" ShowText="true" />
+  </HUD>
+  <HUD Id="FusionCutCommand">
+    <CheckBox Id="CombineTargetBodyInput" ShowText="true" />
+    <CheckBox Id="CombineToolBodiesInput" ShowText="true" />
+  </HUD>
+  <HUD Id="FusionIntersectCommand">
+    <CheckBox Id="CombineTargetBodyInput" ShowText="true" />
+    <CheckBox Id="CombineToolBodiesInput" ShowText="true" />
+  </HUD>
+  <HUD Id="HalfSectionViewCommand">
+    <DynamicControls Id="SectionViewTransformInput"/>
+  </HUD>
+  
+  <HUD Id="WorkPlaneOffsetFromPlaneCommand">
+    <DropDownEntry Id="OffsetWorkPlaneDistanceInput" WidthString="000.000 cm" />
+  </HUD>
+  <HUD Id="WorkPlaneFromLineAndAngleCommand">
+    <DropDownEntry Id="infoAngleForWorkplane" WidthString="000.000 deg" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="WorkPlaneTangentToCylinderCommand">
+    <DropDownEntry Id="infoAngleForTangentWorkplane" WidthString="000.000 deg" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="ShapePolygonInscribed">
+    <DropDownEntry Id="PolygonEdgeNumber"/>
+  </HUD>
+  <HUD Id="ShapePolygonEdge">
+    <DropDownEntry Id="PolygonEdgeNumber"/>
+  </HUD>
+  <HUD Id="ShapePolygonCircumscribed">
+    <DropDownEntry Id="PolygonEdgeNumber"/>
+  </HUD>
+  <HUD Id="SketchGeomConstraintCmd">
+    <DropDownButton Id="ConstraintType" ShowText="true" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="JointCmd">
+    <DropDownButton Id="infoJointType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="infoJointAlignAngle" WidthString="000.000 deg" />
+    <DropDownEntry Id="infoJointAlignOffset" WidthString="000.000 cm" />
+    <CheckBox Id="infoJointAlignFlip" ShowText="false" />
+  </HUD>
+   <HUD Id="JointOrigin">
+    <DropDownEntry Id="Offset" WidthString="000.000 cm" />
+    <DropDownEntry Id="Rotation" WidthString="000.000 deg" />
+    <CheckBox Id="Origin" ShowText="false" />
+    <CheckBox Id="PrimaryAxis" ShowText="false" />
+    <CheckBox Id="SecondaryAxis" ShowText="false" />
+   </HUD>
+  <HUD Id="EditJointCmd">
+    <DropDownButton Id="infoJointType" ShowText="false" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="infoJointAlignAngle" WidthString="000.000 deg" />
+    <DropDownEntry Id="infoJointAlignOffset" WidthString="000.000 cm" />
+    <CheckBox Id="infoJointAlignFlip" ShowText="false" />
+  </HUD>
+  <HUD Id="EditJointOriginCmd">
+    <DropDownEntry Id="Offset" WidthString="000.000 cm" />
+    <DropDownEntry Id="Rotation" WidthString="000.000 deg" />
+  </HUD>
+  <HUD Id="JointDOFLimitCmd">
+    <DynamicControls Id="infoJointDOF"/>
+  </HUD>
+  <HUD Id="EditJointDOFLimitsCmd">
+    <DynamicControls Id="infoJointDOF"/>
+  </HUD>
+  <HUD Id="FusionMoveJointsCommand">
+    <DropDownEntry Id="XDistance" WidthString="000.000 cm" />
+    <DropDownEntry Id="YDistance" WidthString="000.000 cm" />
+    <DropDownEntry Id="ZDistance" WidthString="000.000 cm" />
+    <DropDownEntry Id="XRotation" WidthString="000.000 deg" />
+    <DropDownEntry Id="YRotation" WidthString="000.000 deg" />
+    <DropDownEntry Id="ZRotation" WidthString="000.000 deg" />
+    <DropDownEntry Id="Z0Rotation" WidthString="000.000 deg" />
+    <DropDownEntry Id="X1Rotation" WidthString="000.000 deg" />
+    <DropDownEntry Id="Z2Rotation" WidthString="000.000 deg" />
+    <CheckBox Id="MoveJointsInput" ShowText="false" />
+  </HUD>
+  <HUD Id="PatternCircular">
+      <DropDownEntry Id="infoCircularGridEntryCount" WidthString="00000"/>
+      <DropDownEntry Id="infoTotalAngle" WidthString="000.000 deg" />
+      <CheckBox Id="Objects" ShowText="true" />
+      <CheckBox Id="CircularAxis" ShowText="true" />
+      <DropDownButton Id="infoCircularGridModel" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="PatternCircularEdit">
+    <DropDownEntry Id="infoCircularGridEntryCount" WidthString="00000" />
+    <DropDownEntry Id="infoTotalAngle" WidthString="000.000 deg" />
+    <DropDownButton Id="infoCircularGridModel" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="MirrorCommand">
+    <CheckBox Id="Objects" ShowText="true" />
+    <CheckBox Id="Plane" ShowText="true" />
+  </HUD>
+
+  <HUD Id="MirrorSketchCommand">
+    <CheckBox Id="Geometries" ShowText="true" />
+    <CheckBox Id="Line" ShowText="true" />
+  </HUD>
+
+  <HUD Id="RectangularSketchPatternCommand">
+    <CheckBox Id="Geometries" ShowText="true" />
+    <CheckBox Id="Line" ShowText="true" />
+    <DynamicControls Id="RectangularGrid"/>
+  </HUD>
+
+  <HUD Id="CircularSketchPatternCommand">
+    <DropDownEntry Id="infoCircularGridEntryCount" WidthString="00000"/>
+    <DropDownEntry Id="infoTotalAngle" WidthString="000.000 deg" />
+    <CheckBox Id="Geometries" ShowText="true" />
+    <CheckBox Id="CircularAxis" ShowText="true" />
+    <DropDownButton Id="infoCircularGridModel" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <HUD Id="FusionPositionBodyOnPlaneCommand">
+    <CheckBox Id="SnapFaceSelectionInput" ShowText="true" />
+    <CheckBox Id="Body" ShowText="true" />
+    <DynamicControls Id="TransformInput"/>
+  </HUD>
+
+  <HUD Id="FusionImplicitPositionBodyOnPlaneCommand">
+    <DynamicControls Id="TransformInput"/>
+  </HUD>
+
+  <!--<HUD Id="TextCmd">
+    <DropDownEntry Id="TextHeight" WidthString="000.000 cm" />
+    <DropDownEntry Id="TextAngle" WidthString="000.000 deg" SynchronizedWithCurrentItem="true"/>
+  </HUD>-->
+
+  <HUD Id="Ruler">
+    <!--<DropDownEntry Id="X" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="Y" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="Z" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />-->
+    <DropDownButton Id="infoPositionType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+
+  <!--<HUD Id="ScaleBB">
+    <DropDownEntry Id="X" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="Y" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="Z" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="XNeg" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="YNeg" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+    <DropDownEntry Id="ZNeg" WidthString="000.000 cm" SynchronizedWithCurrentItem="true" />
+  </HUD>-->
+  
+  <HUD Id="PatternRectangular">
+    <CheckBox Id="Objects" ShowText="true" />
+    <CheckBox Id="PatternDirectionInput" ShowText="true" />
+     <DynamicControls Id="RectangularGrid"/>
+  </HUD>
+  <HUD Id="PatternRectangularEdit">
+    <DynamicControls Id="RectangularGrid"/>
+  </HUD>
+  <HUD Id="PatternOnPath">
+    <CheckBox Id="Objects" ShowText="true" />
+    <CheckBox Id="Path" ShowText="true" />
+    <DynamicControls Id="PatternOnPathDistance"/>
+    <DynamicControls Id="PatternOnPathStartPoint"/>
+    <DynamicControls Id="PatternOnPathQuantity"/>
+    <DropDownButton Id="infoPOPOrientation" ShowText="false" SynchronizedWithCurrentItem="true" />    
+  </HUD>
+
+  <HUD Id="Polygon">
+    <DropDownEntry Id="PolygonSidesCount" SynchronizedWithCurrentItem="true"/>
+  </HUD>
+  <HUD Id="SolidLoft">
+    <DropDownButton Id="infoBooleanType" ShowText="false" SynchronizedWithCurrentItem="true" />
+  </HUD>
+  <HUD Id="FusionSplitFaceCommand">
+    <CheckBox Id="SplitFaceTargetInput" ShowText="true" />
+    <CheckBox Id="SplitBodyToolBodiesInput" ShowText="true" />
+  </HUD>
+  <HUD Id="FusionSplitBodyCommand">
+    <CheckBox Id="SplitBodyTargetBodyInput" ShowText="true" />
+    <CheckBox Id="SplitBodyToolBodiesInput" ShowText="true" />
+  </HUD>
+</HUDs>

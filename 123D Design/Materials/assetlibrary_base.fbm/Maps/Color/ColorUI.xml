@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Color 
+    </Title>
+  </PageInfo>
+  <Fields>
+      <Color id="color_color_input" label="Color:" coloronly="true"/>
+  </Fields>
+</adsui>

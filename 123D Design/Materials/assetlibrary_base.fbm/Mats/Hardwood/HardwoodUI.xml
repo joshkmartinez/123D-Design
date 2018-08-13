@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<!DOCTYPE adsui SYSTEM "../../ui.dtd">
+<adsui version="2.0">
+  <PageInfo>
+    <Title>
+      Hardwood
+    </Title>
+  </PageInfo>
+  <Fields>
+    <StackPanel id="asset_information" 
+                label="Information" 
+                orientation="Vertical" 
+                expanded="false">
+      <AssetName id="asset_name"
+                 label="Name"/>
+      <AssetDescription id="asset_description"
+                        label="Description"/>
+      <AssetKeywords id="asset_keywords"
+                     label="Keywords"/>
+      <AssetType id="asset_type"
+                 label="Type"/>
+      <AssetSource id="asset_source"
+                   label="Source"/>
+      <AssetVersion id="asset_version"
+                    label="Version"/>
+      <AssetTexturePaths id="asset_texture_paths"
+                         label="Texture Paths"/>
+    </StackPanel>
+
+    <StackPanel id="hardwood_hardwoodgroup"
+                label="Wood"
+                orientation="Vertical"
+                expanded="true">
+      <MappableFloat id="hardwood_color"
+                     nosinglevalue="true"
+                     label="Image"
+                     tooltip="Uses a bitmap image to adjust the color and texture of the wood."/>
+      
+      <ChooseList id="hardwood_tint_enabled"
+                  label="Stain"
+                  usecheckbox="true"
+                  checkonvalue="hardwood_color_choice"
+                  checkoffvalue="hardwood_no_color"
+                  tooltip="Specifies whether the wood is stained.">
+        <Choice id="hardwood_no_color" label="None"/>
+        <ChoiceDetail id="hardwood_color_choice" label="Color">
+          <Color id="hardwood_tint_color"
+                 label="Stain Color"
+                 tooltip="Adjusts the color of the stain."
+                 coloronly="true"/>
+        </ChoiceDetail>
+      </ChooseList>
+      
+      
+      <ChooseList id="hardwood_finish" label="Finish"
+                  tooltip="Selects from among glossy varnish, semi-gloss varnish, satin varnish, and unfinished.">
+        <Choice id="hardwood_glossy" label="Glossy Varnish"/>
+        <Choice id="hardwood_semigloss" label="Semi-gloss Varnish"/>
+        <Choice id="hardwood_satin" label="Satin Varnish"/>
+        <Choice id="hardwood_unfinished" label="Unfinished"/>
+      </ChooseList>
+      
+      <ChooseList id="hardwood_application"
+                  label="Used For"
+                  tooltip="Selects how the wood surface gets used (flooring or furniture).">
+        <Choice id="hardwood_flooring" label="Flooring"/>
+        <Choice id="hardwood_furniture" label="Furniture"/>
+      </ChooseList>
+      
+    </StackPanel>
+    <StackPanel id="hardwood_imperfections"
+                label="Relief  Pattern"
+                labelid="hardwood_imperfections_panel_label" 
+                orientation="Vertical"
+                checkbox="true"
+                checkonvalue="hardwood_automatic">
+
+      <ChooseList id="hardwood_imperfections"
+                  label="Type"
+                  labelid="hardwood_imperfections_list_label" 
+                  onebased="true"
+                  tooltip="Selects a surface pattern of wood or custom.">
+        <Choice id="hardwood_automatic" label="Based on Wood Grain"/>
+        <ChoiceDetail id="hardwood_custom" label="Custom">
+          <MappableFloat id="hardwood_imperfections_shader"
+                         nosinglevalue="true"
+                         bump="true"
+                         tooltip="Uses a bitmap image to adjust the relief pattern of the wood."
+                         label="Image"/>
+        </ChoiceDetail>
+      </ChooseList>
+      <Float id="hardwood_imperfections_amount"
+             label="Amount"
+             min="-10.0"
+             max="10.0"
+             tooltip="Adjusts the height of the surface bumps. Enter 0 for a flat surface, a positive number (between 0 and 10) to raise the grain, or a negative number (between 0 and -10) to reverse the grain.">
+      </Float>
+      
+    </StackPanel>
+
+    <StackPanel id="common_Tint_toggle" 
+                label="Tint" 
+                orientation="Vertical" 
+                checkbox="true"
+                expanded="false">
+      <Color id="common_Tint_color"
+             label="Tint Color" />
+      
+    </StackPanel>
+    
+  </Fields>
+</adsui>
